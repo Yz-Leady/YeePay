@@ -1,0 +1,30 @@
+{
+    "name": "yz-leady/yee-pay",
+    "description": "域展科技-易宝支付",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leady",
+            "email": "149307205@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "laravel/framework": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leady\\YeePay\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leady\\YeePay\\ServiceProvider"
+            ],
+            "aliases": {
+                "LeadyYeePay": "Leady\\YeePay\\Facade"
+            }
+        }
+    }
+}
