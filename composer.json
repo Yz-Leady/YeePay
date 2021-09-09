@@ -14,7 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Leady\\YeePay\\": "src/"
+            "Leady\\YeePay\\": "src/",
+            "Yeepay\\Yop\\Sdk\\": "lib/"
         }
     },
     "extra": {
