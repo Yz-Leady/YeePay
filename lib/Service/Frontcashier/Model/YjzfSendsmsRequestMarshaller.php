@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class YjzfSendsmsRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var YjzfSendsmsRequestMarshaller
      */
@@ -51,9 +50,8 @@ class YjzfSendsmsRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param YjzfSendsmsRequest $request
+     * @param  YjzfSendsmsRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,39 +67,51 @@ class YjzfSendsmsRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getRecordId() != null){
-            $internalRequest->addParameter('recordId', ObjectSerializer::sanitizeForSerialization($request->getRecordId(), 'string'));
+        if ($request->getRecordId() != null) {
+            $internalRequest->addParameter('recordId',
+                ObjectSerializer::sanitizeForSerialization($request->getRecordId(), 'string'));
         }
-        if($request->getOwner() != null){
-            $internalRequest->addParameter('owner', ObjectSerializer::sanitizeForSerialization($request->getOwner(), 'string'));
+        if ($request->getOwner() != null) {
+            $internalRequest->addParameter('owner',
+                ObjectSerializer::sanitizeForSerialization($request->getOwner(), 'string'));
         }
-        if($request->getIdNo() != null){
-            $internalRequest->addParameter('idNo', ObjectSerializer::sanitizeForSerialization($request->getIdNo(), 'string'));
+        if ($request->getIdNo() != null) {
+            $internalRequest->addParameter('idNo',
+                ObjectSerializer::sanitizeForSerialization($request->getIdNo(), 'string'));
         }
-        if($request->getPhoneNo() != null){
-            $internalRequest->addParameter('phoneNo', ObjectSerializer::sanitizeForSerialization($request->getPhoneNo(), 'string'));
+        if ($request->getPhoneNo() != null) {
+            $internalRequest->addParameter('phoneNo',
+                ObjectSerializer::sanitizeForSerialization($request->getPhoneNo(), 'string'));
         }
-        if($request->getCvv() != null){
-            $internalRequest->addParameter('cvv', ObjectSerializer::sanitizeForSerialization($request->getCvv(), 'string'));
+        if ($request->getCvv() != null) {
+            $internalRequest->addParameter('cvv',
+                ObjectSerializer::sanitizeForSerialization($request->getCvv(), 'string'));
         }
-        if($request->getAvlidDate() != null){
-            $internalRequest->addParameter('avlidDate', ObjectSerializer::sanitizeForSerialization($request->getAvlidDate(), 'string'));
+        if ($request->getAvlidDate() != null) {
+            $internalRequest->addParameter('avlidDate',
+                ObjectSerializer::sanitizeForSerialization($request->getAvlidDate(), 'string'));
         }
-        if($request->getBankPWD() != null){
-            $internalRequest->addParameter('bankPWD', ObjectSerializer::sanitizeForSerialization($request->getBankPWD(), 'string'));
+        if ($request->getBankPWD() != null) {
+            $internalRequest->addParameter('bankPWD',
+                ObjectSerializer::sanitizeForSerialization($request->getBankPWD(), 'string'));
         }
-        if($request->getPaymentExt() != null){
-            $internalRequest->addParameter('paymentExt', ObjectSerializer::sanitizeForSerialization($request->getPaymentExt(), 'string'));
+        if ($request->getPaymentExt() != null) {
+            $internalRequest->addParameter('paymentExt',
+                ObjectSerializer::sanitizeForSerialization($request->getPaymentExt(), 'string'));
         }
-        if($request->getToken() != null){
-            $internalRequest->addParameter('token', ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
+        if ($request->getToken() != null) {
+            $internalRequest->addParameter('token',
+                ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
         }
-        if($request->getVersion() != null){
-            $internalRequest->addParameter('version', ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
+        if ($request->getVersion() != null) {
+            $internalRequest->addParameter('version',
+                ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 YjzfSendsmsRequestMarshaller::__init();

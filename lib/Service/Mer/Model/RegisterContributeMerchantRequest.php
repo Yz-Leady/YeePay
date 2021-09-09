@@ -1,53 +1,62 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RegisterContributeMerchantRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $businessRole;
+
     /**
      * @var string
      */
     private $merchantSubjectInfo;
+
     /**
      * @var string
      */
     private $merchantCorporationInfo;
+
     /**
      * @var string
      */
     private $merchantContactInfo;
+
     /**
      * @var string
      */
     private $industryCategoryInfo;
+
     /**
      * @var string
      */
     private $businessAddressInfo;
+
     /**
      * @var string
      */
     private $settlementAccountInfo;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $productInfo;
+
     /**
      * @var string
      */
@@ -55,7 +64,6 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -65,18 +73,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return RegisterContributeMerchantRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets businessRole
-     *
      * @return string
      */
     public function getBusinessRole()
@@ -86,18 +94,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets businessRole
-     *
-     * @param string $businessRole
+     * @param  string  $businessRole
      * @return RegisterContributeMerchantRequest
      */
     public function setBusinessRole($businessRole)
     {
         $this->businessRole = $businessRole;
+
         return $this;
     }
+
     /**
      * Gets merchantSubjectInfo
-     *
      * @return string
      */
     public function getMerchantSubjectInfo()
@@ -107,18 +115,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets merchantSubjectInfo
-     *
-     * @param string $merchantSubjectInfo
+     * @param  string  $merchantSubjectInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setMerchantSubjectInfo($merchantSubjectInfo)
     {
         $this->merchantSubjectInfo = $merchantSubjectInfo;
+
         return $this;
     }
+
     /**
      * Gets merchantCorporationInfo
-     *
      * @return string
      */
     public function getMerchantCorporationInfo()
@@ -128,18 +136,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets merchantCorporationInfo
-     *
-     * @param string $merchantCorporationInfo
+     * @param  string  $merchantCorporationInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setMerchantCorporationInfo($merchantCorporationInfo)
     {
         $this->merchantCorporationInfo = $merchantCorporationInfo;
+
         return $this;
     }
+
     /**
      * Gets merchantContactInfo
-     *
      * @return string
      */
     public function getMerchantContactInfo()
@@ -149,18 +157,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets merchantContactInfo
-     *
-     * @param string $merchantContactInfo
+     * @param  string  $merchantContactInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setMerchantContactInfo($merchantContactInfo)
     {
         $this->merchantContactInfo = $merchantContactInfo;
+
         return $this;
     }
+
     /**
      * Gets industryCategoryInfo
-     *
      * @return string
      */
     public function getIndustryCategoryInfo()
@@ -170,18 +178,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets industryCategoryInfo
-     *
-     * @param string $industryCategoryInfo
+     * @param  string  $industryCategoryInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setIndustryCategoryInfo($industryCategoryInfo)
     {
         $this->industryCategoryInfo = $industryCategoryInfo;
+
         return $this;
     }
+
     /**
      * Gets businessAddressInfo
-     *
      * @return string
      */
     public function getBusinessAddressInfo()
@@ -191,18 +199,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets businessAddressInfo
-     *
-     * @param string $businessAddressInfo
+     * @param  string  $businessAddressInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setBusinessAddressInfo($businessAddressInfo)
     {
         $this->businessAddressInfo = $businessAddressInfo;
+
         return $this;
     }
+
     /**
      * Gets settlementAccountInfo
-     *
      * @return string
      */
     public function getSettlementAccountInfo()
@@ -212,18 +220,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets settlementAccountInfo
-     *
-     * @param string $settlementAccountInfo
+     * @param  string  $settlementAccountInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setSettlementAccountInfo($settlementAccountInfo)
     {
         $this->settlementAccountInfo = $settlementAccountInfo;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -233,18 +241,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return RegisterContributeMerchantRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets productInfo
-     *
      * @return string
      */
     public function getProductInfo()
@@ -254,18 +262,18 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets productInfo
-     *
-     * @param string $productInfo
+     * @param  string  $productInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setProductInfo($productInfo)
     {
         $this->productInfo = $productInfo;
+
         return $this;
     }
+
     /**
      * Gets productQualificationInfo
-     *
      * @return string
      */
     public function getProductQualificationInfo()
@@ -275,13 +283,13 @@ class RegisterContributeMerchantRequest extends BaseRequest
 
     /**
      * Sets productQualificationInfo
-     *
-     * @param string $productQualificationInfo
+     * @param  string  $productQualificationInfo
      * @return RegisterContributeMerchantRequest
      */
     public function setProductQualificationInfo($productQualificationInfo)
     {
         $this->productQualificationInfo = $productQualificationInfo;
+
         return $this;
     }
 
@@ -289,6 +297,5 @@ class RegisterContributeMerchantRequest extends BaseRequest
     {
         return 'registerContributeMerchant';
     }
-
 
 }

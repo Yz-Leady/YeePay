@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class QueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $divideRequestId;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class QueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class QueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return QueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class QueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return QueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets divideRequestId
-     *
      * @return string
      */
     public function getDivideRequestId()
@@ -83,18 +85,18 @@ class QueryRequest extends BaseRequest
 
     /**
      * Sets divideRequestId
-     *
-     * @param string $divideRequestId
+     * @param  string  $divideRequestId
      * @return QueryRequest
      */
     public function setDivideRequestId($divideRequestId)
     {
         $this->divideRequestId = $divideRequestId;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -104,18 +106,18 @@ class QueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return QueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -125,13 +127,13 @@ class QueryRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return QueryRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class QueryRequest extends BaseRequest
     {
         return 'query';
     }
-
 
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class MerchantDisposeUnfreezeResponseUnMarshaller extends BaseResponseUnMarshall
     {
         return new MerchantDisposeUnfreezeResponse();
     }
+
 }
 
 MerchantDisposeUnfreezeResponseUnMarshaller::__init();

@@ -1,12 +1,11 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 class AuthorityReqRegistryImpl implements AuthorizationReqRegistry
 {
-    private $authorizationReqs = array();
+
+    private $authorizationReqs = [];
 
     /**
      * @param $operationId string
@@ -16,6 +15,7 @@ class AuthorityReqRegistryImpl implements AuthorizationReqRegistry
     public function register($operationId, $securityReq)
     {
         $this->authorizationReqs[$operationId] = $securityReq;
+
         return $this;
     }
 
@@ -23,4 +23,5 @@ class AuthorityReqRegistryImpl implements AuthorizationReqRegistry
     {
         return $this->authorizationReqs[$operationId];
     }
+
 }

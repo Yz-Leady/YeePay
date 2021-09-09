@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class ReceiptDownloadResponse extends BaseResponse
 {
+
     /**
      * @var ReceiptDownloadReceiptResponseDTOResult
      */
@@ -18,7 +18,7 @@ class ReceiptDownloadResponse extends BaseResponse
     }
 
     /**
-     * @param ReceiptDownloadReceiptResponseDTOResult $result
+     * @param  ReceiptDownloadReceiptResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class ReceiptDownloadResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

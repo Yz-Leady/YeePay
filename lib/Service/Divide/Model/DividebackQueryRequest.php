@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class DividebackQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return DividebackQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return DividebackQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -83,18 +85,18 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return DividebackQueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -104,18 +106,18 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return DividebackQueryRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets divideBackRequestId
-     *
      * @return string
      */
     public function getDivideBackRequestId()
@@ -125,13 +127,13 @@ class DividebackQueryRequest extends BaseRequest
 
     /**
      * Sets divideBackRequestId
-     *
-     * @param string $divideBackRequestId
+     * @param  string  $divideBackRequestId
      * @return DividebackQueryRequest
      */
     public function setDivideBackRequestId($divideBackRequestId)
     {
         $this->divideBackRequestId = $divideBackRequestId;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class DividebackQueryRequest extends BaseRequest
     {
         return 'dividebackQuery';
     }
-
 
 }

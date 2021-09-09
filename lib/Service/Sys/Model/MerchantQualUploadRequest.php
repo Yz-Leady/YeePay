@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class MerchantQualUploadRequest extends BaseRequest
 {
+
     /**
      * @var Resource
      */
@@ -15,7 +14,6 @@ class MerchantQualUploadRequest extends BaseRequest
 
     /**
      * Gets merQual
-     *
      * @return Resource
      */
     public function getMerQual()
@@ -25,13 +23,13 @@ class MerchantQualUploadRequest extends BaseRequest
 
     /**
      * Sets merQual
-     *
-     * @param Resource $merQual
+     * @param  Resource  $merQual
      * @return MerchantQualUploadRequest
      */
     public function setMerQual($merQual)
     {
         $this->merQual = $merQual;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class MerchantQualUploadRequest extends BaseRequest
     {
         return 'merchantQualUpload';
     }
-
 
 }

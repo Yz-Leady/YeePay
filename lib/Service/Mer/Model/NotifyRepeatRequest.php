@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class NotifyRepeatRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $applicationNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class NotifyRepeatRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -33,18 +33,18 @@ class NotifyRepeatRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return NotifyRepeatRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets applicationNo
-     *
      * @return string
      */
     public function getApplicationNo()
@@ -54,18 +54,18 @@ class NotifyRepeatRequest extends BaseRequest
 
     /**
      * Sets applicationNo
-     *
-     * @param string $applicationNo
+     * @param  string  $applicationNo
      * @return NotifyRepeatRequest
      */
     public function setApplicationNo($applicationNo)
     {
         $this->applicationNo = $applicationNo;
+
         return $this;
     }
+
     /**
      * Gets type
-     *
      * @return string
      */
     public function getType()
@@ -75,13 +75,13 @@ class NotifyRepeatRequest extends BaseRequest
 
     /**
      * Sets type
-     *
-     * @param string $type
+     * @param  string  $type
      * @return NotifyRepeatRequest
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class NotifyRepeatRequest extends BaseRequest
     {
         return 'notifyRepeat';
     }
-
 
 }

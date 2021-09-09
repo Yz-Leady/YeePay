@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class Oauth2ReportKeyResponse extends BaseResponse
 {
+
     /**
      * @var Oauth2ReportKeyHandshakeResponseResult
      */
@@ -18,7 +18,7 @@ class Oauth2ReportKeyResponse extends BaseResponse
     }
 
     /**
-     * @param Oauth2ReportKeyHandshakeResponseResult $result
+     * @param  Oauth2ReportKeyHandshakeResponseResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class Oauth2ReportKeyResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

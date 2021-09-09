@@ -1,69 +1,82 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class PayOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var float
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $feeChargeSide;
+
     /**
      * @var string
      */
     private $receiveType;
+
     /**
      * @var string
      */
     private $receiverAccountNo;
+
     /**
      * @var string
      */
     private $receiverAccountName;
+
     /**
      * @var string
      */
     private $receiverBankCode;
+
     /**
      * @var string
      */
     private $bankAccountType;
+
     /**
      * @var string
      */
     private $branchBankCode;
+
     /**
      * @var string
      */
     private $comments;
+
     /**
      * @var string
      */
     private $terminalType;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
@@ -71,7 +84,6 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -81,18 +93,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return PayOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -102,18 +114,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return PayOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -123,18 +135,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return PayOrderRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return float
      */
     public function getOrderAmount()
@@ -144,18 +156,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param float $orderAmount
+     * @param  float  $orderAmount
      * @return PayOrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets feeChargeSide
-     *
      * @return string
      */
     public function getFeeChargeSide()
@@ -165,18 +177,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets feeChargeSide
-     *
-     * @param string $feeChargeSide
+     * @param  string  $feeChargeSide
      * @return PayOrderRequest
      */
     public function setFeeChargeSide($feeChargeSide)
     {
         $this->feeChargeSide = $feeChargeSide;
+
         return $this;
     }
+
     /**
      * Gets receiveType
-     *
      * @return string
      */
     public function getReceiveType()
@@ -186,18 +198,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets receiveType
-     *
-     * @param string $receiveType
+     * @param  string  $receiveType
      * @return PayOrderRequest
      */
     public function setReceiveType($receiveType)
     {
         $this->receiveType = $receiveType;
+
         return $this;
     }
+
     /**
      * Gets receiverAccountNo
-     *
      * @return string
      */
     public function getReceiverAccountNo()
@@ -207,18 +219,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets receiverAccountNo
-     *
-     * @param string $receiverAccountNo
+     * @param  string  $receiverAccountNo
      * @return PayOrderRequest
      */
     public function setReceiverAccountNo($receiverAccountNo)
     {
         $this->receiverAccountNo = $receiverAccountNo;
+
         return $this;
     }
+
     /**
      * Gets receiverAccountName
-     *
      * @return string
      */
     public function getReceiverAccountName()
@@ -228,18 +240,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets receiverAccountName
-     *
-     * @param string $receiverAccountName
+     * @param  string  $receiverAccountName
      * @return PayOrderRequest
      */
     public function setReceiverAccountName($receiverAccountName)
     {
         $this->receiverAccountName = $receiverAccountName;
+
         return $this;
     }
+
     /**
      * Gets receiverBankCode
-     *
      * @return string
      */
     public function getReceiverBankCode()
@@ -249,18 +261,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets receiverBankCode
-     *
-     * @param string $receiverBankCode
+     * @param  string  $receiverBankCode
      * @return PayOrderRequest
      */
     public function setReceiverBankCode($receiverBankCode)
     {
         $this->receiverBankCode = $receiverBankCode;
+
         return $this;
     }
+
     /**
      * Gets bankAccountType
-     *
      * @return string
      */
     public function getBankAccountType()
@@ -270,18 +282,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets bankAccountType
-     *
-     * @param string $bankAccountType
+     * @param  string  $bankAccountType
      * @return PayOrderRequest
      */
     public function setBankAccountType($bankAccountType)
     {
         $this->bankAccountType = $bankAccountType;
+
         return $this;
     }
+
     /**
      * Gets branchBankCode
-     *
      * @return string
      */
     public function getBranchBankCode()
@@ -291,18 +303,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets branchBankCode
-     *
-     * @param string $branchBankCode
+     * @param  string  $branchBankCode
      * @return PayOrderRequest
      */
     public function setBranchBankCode($branchBankCode)
     {
         $this->branchBankCode = $branchBankCode;
+
         return $this;
     }
+
     /**
      * Gets comments
-     *
      * @return string
      */
     public function getComments()
@@ -312,18 +324,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets comments
-     *
-     * @param string $comments
+     * @param  string  $comments
      * @return PayOrderRequest
      */
     public function setComments($comments)
     {
         $this->comments = $comments;
+
         return $this;
     }
+
     /**
      * Gets terminalType
-     *
      * @return string
      */
     public function getTerminalType()
@@ -333,18 +345,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets terminalType
-     *
-     * @param string $terminalType
+     * @param  string  $terminalType
      * @return PayOrderRequest
      */
     public function setTerminalType($terminalType)
     {
         $this->terminalType = $terminalType;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -354,18 +366,18 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return PayOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets remark
-     *
      * @return string
      */
     public function getRemark()
@@ -375,13 +387,13 @@ class PayOrderRequest extends BaseRequest
 
     /**
      * Sets remark
-     *
-     * @param string $remark
+     * @param  string  $remark
      * @return PayOrderRequest
      */
     public function setRemark($remark)
     {
         $this->remark = $remark;
+
         return $this;
     }
 
@@ -389,6 +401,5 @@ class PayOrderRequest extends BaseRequest
     {
         return 'payOrder';
     }
-
 
 }

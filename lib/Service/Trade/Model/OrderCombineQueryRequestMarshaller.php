@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class OrderCombineQueryRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var OrderCombineQueryRequestMarshaller
      */
@@ -51,9 +49,8 @@ class OrderCombineQueryRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param OrderCombineQueryRequest $request
+     * @param  OrderCombineQueryRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -73,5 +70,7 @@ class OrderCombineQueryRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 OrderCombineQueryRequestMarshaller::__init();

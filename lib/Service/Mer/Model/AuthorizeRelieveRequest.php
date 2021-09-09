@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class AuthorizeRelieveRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $authorizeMerchantNo;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class AuthorizeRelieveRequest extends BaseRequest
 
     /**
      * Gets authorizeMerchantNo
-     *
      * @return string
      */
     public function getAuthorizeMerchantNo()
@@ -29,18 +28,18 @@ class AuthorizeRelieveRequest extends BaseRequest
 
     /**
      * Sets authorizeMerchantNo
-     *
-     * @param string $authorizeMerchantNo
+     * @param  string  $authorizeMerchantNo
      * @return AuthorizeRelieveRequest
      */
     public function setAuthorizeMerchantNo($authorizeMerchantNo)
     {
         $this->authorizeMerchantNo = $authorizeMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets bizType
-     *
      * @return string
      */
     public function getBizType()
@@ -50,13 +49,13 @@ class AuthorizeRelieveRequest extends BaseRequest
 
     /**
      * Sets bizType
-     *
-     * @param string $bizType
+     * @param  string  $bizType
      * @return AuthorizeRelieveRequest
      */
     public function setBizType($bizType)
     {
         $this->bizType = $bizType;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class AuthorizeRelieveRequest extends BaseRequest
     {
         return 'authorizeRelieve';
     }
-
 
 }

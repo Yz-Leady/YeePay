@@ -1,105 +1,127 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TradeOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $orderAmount;
+
     /**
      * @var int
      */
     private $timeoutExpress;
+
     /**
      * @var string
      */
     private $timeoutExpressType;
+
     /**
      * @var string
      */
     private $requestDate;
+
     /**
      * @var string
      */
     private $redirectUrl;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $assureType;
+
     /**
      * @var string
      */
     private $assurePeriod;
+
     /**
      * @var string
      */
     private $goodsParamExt;
+
     /**
      * @var string
      */
     private $paymentParamExt;
+
     /**
      * @var string
      */
     private $industryParamExt;
+
     /**
      * @var string
      */
     private $riskParamExt;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
     private $hmac;
+
     /**
      * @var string
      */
     private $divideDetail;
+
     /**
      * @var string
      */
     private $csUrl;
+
     /**
      * @var string
      */
     private $divideNotifyUrl;
+
     /**
      * @var string
      */
     private $timeoutNotifyUrl;
+
     /**
      * @var string
      */
     private $siSubsidyMerchantAmout;
+
     /**
      * @var string
      */
@@ -107,7 +129,6 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -117,18 +138,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TradeOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -138,18 +159,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return TradeOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -159,18 +180,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return TradeOrderRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return string
      */
     public function getOrderAmount()
@@ -180,18 +201,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param string $orderAmount
+     * @param  string  $orderAmount
      * @return TradeOrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets timeoutExpress
-     *
      * @return int
      */
     public function getTimeoutExpress()
@@ -201,18 +222,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets timeoutExpress
-     *
-     * @param int $timeoutExpress
+     * @param  int  $timeoutExpress
      * @return TradeOrderRequest
      */
     public function setTimeoutExpress($timeoutExpress)
     {
         $this->timeoutExpress = $timeoutExpress;
+
         return $this;
     }
+
     /**
      * Gets timeoutExpressType
-     *
      * @return string
      */
     public function getTimeoutExpressType()
@@ -222,18 +243,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets timeoutExpressType
-     *
-     * @param string $timeoutExpressType
+     * @param  string  $timeoutExpressType
      * @return TradeOrderRequest
      */
     public function setTimeoutExpressType($timeoutExpressType)
     {
         $this->timeoutExpressType = $timeoutExpressType;
+
         return $this;
     }
+
     /**
      * Gets requestDate
-     *
      * @return string
      */
     public function getRequestDate()
@@ -243,18 +264,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets requestDate
-     *
-     * @param string $requestDate
+     * @param  string  $requestDate
      * @return TradeOrderRequest
      */
     public function setRequestDate($requestDate)
     {
         $this->requestDate = $requestDate;
+
         return $this;
     }
+
     /**
      * Gets redirectUrl
-     *
      * @return string
      */
     public function getRedirectUrl()
@@ -264,18 +285,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets redirectUrl
-     *
-     * @param string $redirectUrl
+     * @param  string  $redirectUrl
      * @return TradeOrderRequest
      */
     public function setRedirectUrl($redirectUrl)
     {
         $this->redirectUrl = $redirectUrl;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -285,18 +306,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return TradeOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets assureType
-     *
      * @return string
      */
     public function getAssureType()
@@ -306,18 +327,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets assureType
-     *
-     * @param string $assureType
+     * @param  string  $assureType
      * @return TradeOrderRequest
      */
     public function setAssureType($assureType)
     {
         $this->assureType = $assureType;
+
         return $this;
     }
+
     /**
      * Gets assurePeriod
-     *
      * @return string
      */
     public function getAssurePeriod()
@@ -327,18 +348,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets assurePeriod
-     *
-     * @param string $assurePeriod
+     * @param  string  $assurePeriod
      * @return TradeOrderRequest
      */
     public function setAssurePeriod($assurePeriod)
     {
         $this->assurePeriod = $assurePeriod;
+
         return $this;
     }
+
     /**
      * Gets goodsParamExt
-     *
      * @return string
      */
     public function getGoodsParamExt()
@@ -348,18 +369,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets goodsParamExt
-     *
-     * @param string $goodsParamExt
+     * @param  string  $goodsParamExt
      * @return TradeOrderRequest
      */
     public function setGoodsParamExt($goodsParamExt)
     {
         $this->goodsParamExt = $goodsParamExt;
+
         return $this;
     }
+
     /**
      * Gets paymentParamExt
-     *
      * @return string
      */
     public function getPaymentParamExt()
@@ -369,18 +390,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets paymentParamExt
-     *
-     * @param string $paymentParamExt
+     * @param  string  $paymentParamExt
      * @return TradeOrderRequest
      */
     public function setPaymentParamExt($paymentParamExt)
     {
         $this->paymentParamExt = $paymentParamExt;
+
         return $this;
     }
+
     /**
      * Gets industryParamExt
-     *
      * @return string
      */
     public function getIndustryParamExt()
@@ -390,18 +411,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets industryParamExt
-     *
-     * @param string $industryParamExt
+     * @param  string  $industryParamExt
      * @return TradeOrderRequest
      */
     public function setIndustryParamExt($industryParamExt)
     {
         $this->industryParamExt = $industryParamExt;
+
         return $this;
     }
+
     /**
      * Gets riskParamExt
-     *
      * @return string
      */
     public function getRiskParamExt()
@@ -411,18 +432,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets riskParamExt
-     *
-     * @param string $riskParamExt
+     * @param  string  $riskParamExt
      * @return TradeOrderRequest
      */
     public function setRiskParamExt($riskParamExt)
     {
         $this->riskParamExt = $riskParamExt;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -432,18 +453,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return TradeOrderRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -453,18 +474,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return TradeOrderRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets hmac
-     *
      * @return string
      */
     public function getHmac()
@@ -474,18 +495,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets hmac
-     *
-     * @param string $hmac
+     * @param  string  $hmac
      * @return TradeOrderRequest
      */
     public function setHmac($hmac)
     {
         $this->hmac = $hmac;
+
         return $this;
     }
+
     /**
      * Gets divideDetail
-     *
      * @return string
      */
     public function getDivideDetail()
@@ -495,18 +516,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets divideDetail
-     *
-     * @param string $divideDetail
+     * @param  string  $divideDetail
      * @return TradeOrderRequest
      */
     public function setDivideDetail($divideDetail)
     {
         $this->divideDetail = $divideDetail;
+
         return $this;
     }
+
     /**
      * Gets csUrl
-     *
      * @return string
      */
     public function getCsUrl()
@@ -516,18 +537,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets csUrl
-     *
-     * @param string $csUrl
+     * @param  string  $csUrl
      * @return TradeOrderRequest
      */
     public function setCsUrl($csUrl)
     {
         $this->csUrl = $csUrl;
+
         return $this;
     }
+
     /**
      * Gets divideNotifyUrl
-     *
      * @return string
      */
     public function getDivideNotifyUrl()
@@ -537,18 +558,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets divideNotifyUrl
-     *
-     * @param string $divideNotifyUrl
+     * @param  string  $divideNotifyUrl
      * @return TradeOrderRequest
      */
     public function setDivideNotifyUrl($divideNotifyUrl)
     {
         $this->divideNotifyUrl = $divideNotifyUrl;
+
         return $this;
     }
+
     /**
      * Gets timeoutNotifyUrl
-     *
      * @return string
      */
     public function getTimeoutNotifyUrl()
@@ -558,18 +579,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets timeoutNotifyUrl
-     *
-     * @param string $timeoutNotifyUrl
+     * @param  string  $timeoutNotifyUrl
      * @return TradeOrderRequest
      */
     public function setTimeoutNotifyUrl($timeoutNotifyUrl)
     {
         $this->timeoutNotifyUrl = $timeoutNotifyUrl;
+
         return $this;
     }
+
     /**
      * Gets siSubsidyMerchantAmout
-     *
      * @return string
      */
     public function getSiSubsidyMerchantAmout()
@@ -579,18 +600,18 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets siSubsidyMerchantAmout
-     *
-     * @param string $siSubsidyMerchantAmout
+     * @param  string  $siSubsidyMerchantAmout
      * @return TradeOrderRequest
      */
     public function setSiSubsidyMerchantAmout($siSubsidyMerchantAmout)
     {
         $this->siSubsidyMerchantAmout = $siSubsidyMerchantAmout;
+
         return $this;
     }
+
     /**
      * Gets queryParamsExt
-     *
      * @return string
      */
     public function getQueryParamsExt()
@@ -600,13 +621,13 @@ class TradeOrderRequest extends BaseRequest
 
     /**
      * Sets queryParamsExt
-     *
-     * @param string $queryParamsExt
+     * @param  string  $queryParamsExt
      * @return TradeOrderRequest
      */
     public function setQueryParamsExt($queryParamsExt)
     {
         $this->queryParamsExt = $queryParamsExt;
+
         return $this;
     }
 
@@ -614,6 +635,5 @@ class TradeOrderRequest extends BaseRequest
     {
         return 'tradeOrder';
     }
-
 
 }

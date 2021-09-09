@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ViolationWechatChannelRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $beginTime;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class ViolationWechatChannelRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class ViolationWechatChannelRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return ViolationWechatChannelRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets beginTime
-     *
      * @return string
      */
     public function getBeginTime()
@@ -54,18 +54,18 @@ class ViolationWechatChannelRequest extends BaseRequest
 
     /**
      * Sets beginTime
-     *
-     * @param string $beginTime
+     * @param  string  $beginTime
      * @return ViolationWechatChannelRequest
      */
     public function setBeginTime($beginTime)
     {
         $this->beginTime = $beginTime;
+
         return $this;
     }
+
     /**
      * Gets endTime
-     *
      * @return string
      */
     public function getEndTime()
@@ -75,13 +75,13 @@ class ViolationWechatChannelRequest extends BaseRequest
 
     /**
      * Sets endTime
-     *
-     * @param string $endTime
+     * @param  string  $endTime
      * @return ViolationWechatChannelRequest
      */
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class ViolationWechatChannelRequest extends BaseRequest
     {
         return 'violationWechatChannel';
     }
-
 
 }

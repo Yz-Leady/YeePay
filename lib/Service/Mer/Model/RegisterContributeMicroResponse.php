@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class RegisterContributeMicroResponse extends BaseResponse
 {
+
     /**
      * @var RegisterContributeMicroContributeMicroMerchantNetInRespDtoResult
      */
@@ -18,7 +18,7 @@ class RegisterContributeMicroResponse extends BaseResponse
     }
 
     /**
-     * @param RegisterContributeMicroContributeMicroMerchantNetInRespDtoResult $result
+     * @param  RegisterContributeMicroContributeMicroMerchantNetInRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class RegisterContributeMicroResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

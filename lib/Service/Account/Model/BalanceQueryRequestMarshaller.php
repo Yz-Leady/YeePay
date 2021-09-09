@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BalanceQueryRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BalanceQueryRequestMarshaller
      */
@@ -51,9 +49,8 @@ class BalanceQueryRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BalanceQueryRequest $request
+     * @param  BalanceQueryRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -73,5 +70,7 @@ class BalanceQueryRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 BalanceQueryRequestMarshaller::__init();

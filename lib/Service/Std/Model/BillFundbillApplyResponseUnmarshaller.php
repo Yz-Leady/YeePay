@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class BillFundbillApplyResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new BillFundbillApplyResponse();
     }
+
 }
 
 BillFundbillApplyResponseUnMarshaller::__init();

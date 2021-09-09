@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class OAuth2TokenGenerateTokenRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var OAuth2TokenGenerateTokenRequestMarshaller
      */
@@ -51,9 +50,8 @@ class OAuth2TokenGenerateTokenRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param OAuth2TokenGenerateTokenRequest $request
+     * @param  OAuth2TokenGenerateTokenRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,12 +67,15 @@ class OAuth2TokenGenerateTokenRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getUserId() != null){
-            $internalRequest->addParameter('userId', ObjectSerializer::sanitizeForSerialization($request->getUserId(), 'string'));
+        if ($request->getUserId() != null) {
+            $internalRequest->addParameter('userId',
+                ObjectSerializer::sanitizeForSerialization($request->getUserId(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 OAuth2TokenGenerateTokenRequestMarshaller::__init();

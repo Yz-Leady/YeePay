@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class TransferB2bOrderRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var TransferB2bOrderRequestMarshaller
      */
@@ -51,9 +50,8 @@ class TransferB2bOrderRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param TransferB2bOrderRequest $request
+     * @param  TransferB2bOrderRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,33 +67,43 @@ class TransferB2bOrderRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getFromMerchantNo() != null){
-            $internalRequest->addParameter('fromMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getFromMerchantNo(), 'string'));
+        if ($request->getFromMerchantNo() != null) {
+            $internalRequest->addParameter('fromMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getFromMerchantNo(), 'string'));
         }
-        if($request->getToMerchantNo() != null){
-            $internalRequest->addParameter('toMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getToMerchantNo(), 'string'));
+        if ($request->getToMerchantNo() != null) {
+            $internalRequest->addParameter('toMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getToMerchantNo(), 'string'));
         }
-        if($request->getOrderAmount() != null){
-            $internalRequest->addParameter('orderAmount', ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'string'));
+        if ($request->getOrderAmount() != null) {
+            $internalRequest->addParameter('orderAmount',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'string'));
         }
-        if($request->getUsage() != null){
-            $internalRequest->addParameter('usage', ObjectSerializer::sanitizeForSerialization($request->getUsage(), 'string'));
+        if ($request->getUsage() != null) {
+            $internalRequest->addParameter('usage',
+                ObjectSerializer::sanitizeForSerialization($request->getUsage(), 'string'));
         }
-        if($request->getFeeChargeSide() != null){
-            $internalRequest->addParameter('feeChargeSide', ObjectSerializer::sanitizeForSerialization($request->getFeeChargeSide(), 'string'));
+        if ($request->getFeeChargeSide() != null) {
+            $internalRequest->addParameter('feeChargeSide',
+                ObjectSerializer::sanitizeForSerialization($request->getFeeChargeSide(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 TransferB2bOrderRequestMarshaller::__init();

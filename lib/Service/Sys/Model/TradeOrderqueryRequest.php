@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TradeOrderqueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TradeOrderqueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return TradeOrderqueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -83,18 +85,18 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return TradeOrderqueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -104,18 +106,18 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return TradeOrderqueryRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets hmac
-     *
      * @return string
      */
     public function getHmac()
@@ -125,13 +127,13 @@ class TradeOrderqueryRequest extends BaseRequest
 
     /**
      * Sets hmac
-     *
-     * @param string $hmac
+     * @param  string  $hmac
      * @return TradeOrderqueryRequest
      */
     public function setHmac($hmac)
     {
         $this->hmac = $hmac;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class TradeOrderqueryRequest extends BaseRequest
     {
         return 'tradeOrderquery';
     }
-
 
 }

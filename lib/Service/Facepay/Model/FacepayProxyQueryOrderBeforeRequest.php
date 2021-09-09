@@ -1,22 +1,20 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyQueryOrderBeforeRequest extends BaseRequest
 {
+
     /**
-     * @var 
+     * @var
      */
     private $body;
 
     /**
      * Gets body
-     *
-     * @return 
+     * @return
      */
     public function getBody()
     {
@@ -25,13 +23,13 @@ class FacepayProxyQueryOrderBeforeRequest extends BaseRequest
 
     /**
      * Sets body
-     *
      * @param  $body
      * @return FacepayProxyQueryOrderBeforeRequest
      */
     public function setBody($body)
     {
         $this->body = $body;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class FacepayProxyQueryOrderBeforeRequest extends BaseRequest
     {
         return 'facepayProxyQueryOrderBefore';
     }
-
 
 }

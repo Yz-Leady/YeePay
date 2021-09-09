@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class DivideRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
     private $divideRequestId;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class DivideRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -45,18 +48,18 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return DivideRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -66,18 +69,18 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return DivideRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -87,18 +90,18 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return DivideRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -108,18 +111,18 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return DivideRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets divideRequestId
-     *
      * @return string
      */
     public function getDivideRequestId()
@@ -129,18 +132,18 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets divideRequestId
-     *
-     * @param string $divideRequestId
+     * @param  string  $divideRequestId
      * @return DivideRequest
      */
     public function setDivideRequestId($divideRequestId)
     {
         $this->divideRequestId = $divideRequestId;
+
         return $this;
     }
+
     /**
      * Gets divideDetail
-     *
      * @return string
      */
     public function getDivideDetail()
@@ -150,13 +153,13 @@ class DivideRequest extends BaseRequest
 
     /**
      * Sets divideDetail
-     *
-     * @param string $divideDetail
+     * @param  string  $divideDetail
      * @return DivideRequest
      */
     public function setDivideDetail($divideDetail)
     {
         $this->divideDetail = $divideDetail;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class DivideRequest extends BaseRequest
     {
         return 'divide';
     }
-
 
 }

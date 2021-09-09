@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class TransferB2bQueryResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new TransferB2bQueryResponse();
     }
+
 }
 
 TransferB2bQueryResponseUnMarshaller::__init();

@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class SettleCardModifyRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $bankCardNo;
+
     /**
      * @var string
      */
     private $bankCardType;
+
     /**
      * @var string
      */
     private $bankCode;
+
     /**
      * @var string
      */
     private $brancgCode;
+
     /**
      * @var bool
      */
@@ -39,7 +44,6 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -49,18 +53,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return SettleCardModifyRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -70,18 +74,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return SettleCardModifyRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets bankCardNo
-     *
      * @return string
      */
     public function getBankCardNo()
@@ -91,18 +95,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets bankCardNo
-     *
-     * @param string $bankCardNo
+     * @param  string  $bankCardNo
      * @return SettleCardModifyRequest
      */
     public function setBankCardNo($bankCardNo)
     {
         $this->bankCardNo = $bankCardNo;
+
         return $this;
     }
+
     /**
      * Gets bankCardType
-     *
      * @return string
      */
     public function getBankCardType()
@@ -112,18 +116,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets bankCardType
-     *
-     * @param string $bankCardType
+     * @param  string  $bankCardType
      * @return SettleCardModifyRequest
      */
     public function setBankCardType($bankCardType)
     {
         $this->bankCardType = $bankCardType;
+
         return $this;
     }
+
     /**
      * Gets bankCode
-     *
      * @return string
      */
     public function getBankCode()
@@ -133,18 +137,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets bankCode
-     *
-     * @param string $bankCode
+     * @param  string  $bankCode
      * @return SettleCardModifyRequest
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
+
     /**
      * Gets brancgCode
-     *
      * @return string
      */
     public function getBrancgCode()
@@ -154,18 +158,18 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets brancgCode
-     *
-     * @param string $brancgCode
+     * @param  string  $brancgCode
      * @return SettleCardModifyRequest
      */
     public function setBrancgCode($brancgCode)
     {
         $this->brancgCode = $brancgCode;
+
         return $this;
     }
+
     /**
      * Gets defaultSettleCard
-     *
      * @return bool
      */
     public function getDefaultSettleCard()
@@ -175,13 +179,13 @@ class SettleCardModifyRequest extends BaseRequest
 
     /**
      * Sets defaultSettleCard
-     *
-     * @param bool $defaultSettleCard
+     * @param  bool  $defaultSettleCard
      * @return SettleCardModifyRequest
      */
     public function setDefaultSettleCard($defaultSettleCard)
     {
         $this->defaultSettleCard = $defaultSettleCard;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class SettleCardModifyRequest extends BaseRequest
     {
         return 'settleCardModify';
     }
-
 
 }

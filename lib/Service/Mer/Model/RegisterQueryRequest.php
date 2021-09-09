@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RegisterQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -15,7 +14,6 @@ class RegisterQueryRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -25,13 +23,13 @@ class RegisterQueryRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return RegisterQueryRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class RegisterQueryRequest extends BaseRequest
     {
         return 'registerQuery';
     }
-
 
 }

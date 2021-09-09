@@ -1,18 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth\Credential;
-
 
 use Yeepay\Yop\Sdk\Auth\YopCredentialProvider;
 use Yeepay\Yop\Sdk\Auth\YopRsaCredentials;
 use Yeepay\Yop\Sdk\Config\AppSdkConfig;
 use Yeepay\Yop\Sdk\Config\AppSdkConfigProvider;
-use Yeepay\Yop\Sdk\Config\support\ConfigUtils;
+use Yeepay\Yop\Sdk\Config\Support\ConfigUtils;
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class DefaultCredentialProvider implements YopCredentialProvider
 {
+
     /**
      * @var array
      */
@@ -30,15 +29,15 @@ class DefaultCredentialProvider implements YopCredentialProvider
 
     /**
      * DefaultCredentialProvider constructor.
-     * @param AppSdkConfigProvider $appSdkConfigProvider
+     * @param  AppSdkConfigProvider  $appSdkConfigProvider
      * @throws YopClientException
      */
     public function __construct(AppSdkConfigProvider $appSdkConfigProvider)
     {
-        $this->credentials = array();
+        $this->credentials = [];
         foreach ($appSdkConfigProvider->getAllConfig() as $appKey => $appKeySdkConfig) {
             /* @var $appKeySdkConfig AppSdkConfig */
-            $appKeyCredentials = array();
+            $appKeyCredentials = [];
             if (!empty($appKeySdkConfig->getIsvPrivateKeys())) {
                 foreach ($appKeySdkConfig->getIsvPrivateKeys() as $credentialType => $isvPrivateKey) {
                     /* @var $isvPrivateKey string|resource */
@@ -46,9 +45,11 @@ class DefaultCredentialProvider implements YopCredentialProvider
                         $appKeyCredentials[$credentialType] = new YopRsaCredentials($appKey,
                             ConfigUtils::getPrivateKey($isvPrivateKey),
                             $appKeySdkConfig->getEncryptKey());
-                    } else if (is_resource($isvPrivateKey)) {
-                        $appKeyCredentials[$credentialType] = new YopRsaCredentials($appKey, $isvPrivateKey,
-                            $appKeySdkConfig->getEncryptKey());
+                    } else {
+                        if (is_resource($isvPrivateKey)) {
+                            $appKeyCredentials[$credentialType] = new YopRsaCredentials($appKey, $isvPrivateKey,
+                                $appKeySdkConfig->getEncryptKey());
+                        }
                     }
                 }
             }
@@ -57,9 +58,8 @@ class DefaultCredentialProvider implements YopCredentialProvider
             }
         }
         $this->defaultAppCredentials = $this->credentials[$appSdkConfigProvider->getDefaultConfig()->getAppKey()];
-        $this->publicKeys = $appSdkConfigProvider->getDefaultConfig()->getYopPublicKeys();
+        $this->publicKeys            = $appSdkConfigProvider->getDefaultConfig()->getYopPublicKeys();
     }
-
 
     /**
      * @param $appKey string
@@ -90,4 +90,5 @@ class DefaultCredentialProvider implements YopCredentialProvider
     {
         return $this->publicKeys[$credentialType];
     }
+
 }

@@ -1,41 +1,47 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class AutoWithdrawRuleSetRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $bindId;
+
     /**
      * @var string
      */
     private $bankAccountNo;
+
     /**
      * @var string
      */
     private $receiveType;
+
     /**
      * @var string
      */
     private $triggerTime;
+
     /**
      * @var float
      */
     private $remainAmount;
+
     /**
      * @var string
      */
@@ -43,7 +49,6 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -53,18 +58,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return AutoWithdrawRuleSetRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -74,18 +79,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return AutoWithdrawRuleSetRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets bindId
-     *
      * @return string
      */
     public function getBindId()
@@ -95,18 +100,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets bindId
-     *
-     * @param string $bindId
+     * @param  string  $bindId
      * @return AutoWithdrawRuleSetRequest
      */
     public function setBindId($bindId)
     {
         $this->bindId = $bindId;
+
         return $this;
     }
+
     /**
      * Gets bankAccountNo
-     *
      * @return string
      */
     public function getBankAccountNo()
@@ -116,18 +121,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets bankAccountNo
-     *
-     * @param string $bankAccountNo
+     * @param  string  $bankAccountNo
      * @return AutoWithdrawRuleSetRequest
      */
     public function setBankAccountNo($bankAccountNo)
     {
         $this->bankAccountNo = $bankAccountNo;
+
         return $this;
     }
+
     /**
      * Gets receiveType
-     *
      * @return string
      */
     public function getReceiveType()
@@ -137,18 +142,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets receiveType
-     *
-     * @param string $receiveType
+     * @param  string  $receiveType
      * @return AutoWithdrawRuleSetRequest
      */
     public function setReceiveType($receiveType)
     {
         $this->receiveType = $receiveType;
+
         return $this;
     }
+
     /**
      * Gets triggerTime
-     *
      * @return string
      */
     public function getTriggerTime()
@@ -158,18 +163,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets triggerTime
-     *
-     * @param string $triggerTime
+     * @param  string  $triggerTime
      * @return AutoWithdrawRuleSetRequest
      */
     public function setTriggerTime($triggerTime)
     {
         $this->triggerTime = $triggerTime;
+
         return $this;
     }
+
     /**
      * Gets remainAmount
-     *
      * @return float
      */
     public function getRemainAmount()
@@ -179,18 +184,18 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets remainAmount
-     *
-     * @param float $remainAmount
+     * @param  float  $remainAmount
      * @return AutoWithdrawRuleSetRequest
      */
     public function setRemainAmount($remainAmount)
     {
         $this->remainAmount = $remainAmount;
+
         return $this;
     }
+
     /**
      * Gets remark
-     *
      * @return string
      */
     public function getRemark()
@@ -200,13 +205,13 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
 
     /**
      * Sets remark
-     *
-     * @param string $remark
+     * @param  string  $remark
      * @return AutoWithdrawRuleSetRequest
      */
     public function setRemark($remark)
     {
         $this->remark = $remark;
+
         return $this;
     }
 
@@ -214,6 +219,5 @@ class AutoWithdrawRuleSetRequest extends BaseRequest
     {
         return 'autoWithdrawRuleSet';
     }
-
 
 }

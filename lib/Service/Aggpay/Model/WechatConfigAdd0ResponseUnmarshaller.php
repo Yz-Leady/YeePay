@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class WechatConfigAdd0ResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new WechatConfigAdd0Response();
     }
+
 }
 
 WechatConfigAdd0ResponseUnMarshaller::__init();

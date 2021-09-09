@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model;
-
 
 abstract class BaseRequest
 {
+
     /**
      * @var RequestConfig
      */
@@ -20,12 +19,13 @@ abstract class BaseRequest
     }
 
     /**
-     * @param RequestConfig $requestConfig
+     * @param  RequestConfig  $requestConfig
      * @return BaseRequest
      */
     public function setRequestConfig($requestConfig)
     {
         $this->requestConfig = $requestConfig;
+
         return $this;
     }
 
@@ -36,4 +36,5 @@ abstract class BaseRequest
     {
         return '';
     }
+
 }

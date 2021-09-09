@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class OrderCombineQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class OrderCombineQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -29,18 +28,18 @@ class OrderCombineQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return OrderCombineQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -50,13 +49,13 @@ class OrderCombineQueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return OrderCombineQueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class OrderCombineQueryRequest extends BaseRequest
     {
         return 'orderCombineQuery';
     }
-
 
 }

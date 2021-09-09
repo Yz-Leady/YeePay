@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class AutoWithdrawRuleCancelRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class AutoWithdrawRuleCancelRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class AutoWithdrawRuleCancelRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return AutoWithdrawRuleCancelRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -54,18 +54,18 @@ class AutoWithdrawRuleCancelRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return AutoWithdrawRuleCancelRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets ruleId
-     *
      * @return string
      */
     public function getRuleId()
@@ -75,13 +75,13 @@ class AutoWithdrawRuleCancelRequest extends BaseRequest
 
     /**
      * Sets ruleId
-     *
-     * @param string $ruleId
+     * @param  string  $ruleId
      * @return AutoWithdrawRuleCancelRequest
      */
     public function setRuleId($ruleId)
     {
         $this->ruleId = $ruleId;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class AutoWithdrawRuleCancelRequest extends BaseRequest
     {
         return 'autoWithdrawRuleCancel';
     }
-
 
 }

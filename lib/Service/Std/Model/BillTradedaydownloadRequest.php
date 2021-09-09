@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BillTradedaydownloadRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $dayString;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class BillTradedaydownloadRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -33,18 +33,18 @@ class BillTradedaydownloadRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BillTradedaydownloadRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets dayString
-     *
      * @return string
      */
     public function getDayString()
@@ -54,18 +54,18 @@ class BillTradedaydownloadRequest extends BaseRequest
 
     /**
      * Sets dayString
-     *
-     * @param string $dayString
+     * @param  string  $dayString
      * @return BillTradedaydownloadRequest
      */
     public function setDayString($dayString)
     {
         $this->dayString = $dayString;
+
         return $this;
     }
+
     /**
      * Gets dataType
-     *
      * @return string
      */
     public function getDataType()
@@ -75,13 +75,13 @@ class BillTradedaydownloadRequest extends BaseRequest
 
     /**
      * Sets dataType
-     *
-     * @param string $dataType
+     * @param  string  $dataType
      * @return BillTradedaydownloadRequest
      */
     public function setDataType($dataType)
     {
         $this->dataType = $dataType;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class BillTradedaydownloadRequest extends BaseRequest
     {
         return 'billTradedaydownload';
     }
-
 
 }

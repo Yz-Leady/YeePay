@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $bindBizNo;
+
     /**
      * @var string
      */
     private $smsCode;
+
     /**
      * @var string
      */
     private $bizNo;
+
     /**
      * @var string
      */
     private $bizToken;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -39,7 +44,6 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Gets bindBizNo
-     *
      * @return string
      */
     public function getBindBizNo()
@@ -49,18 +53,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets bindBizNo
-     *
-     * @param string $bindBizNo
+     * @param  string  $bindBizNo
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setBindBizNo($bindBizNo)
     {
         $this->bindBizNo = $bindBizNo;
+
         return $this;
     }
+
     /**
      * Gets smsCode
-     *
      * @return string
      */
     public function getSmsCode()
@@ -70,18 +74,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets smsCode
-     *
-     * @param string $smsCode
+     * @param  string  $smsCode
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setSmsCode($smsCode)
     {
         $this->smsCode = $smsCode;
+
         return $this;
     }
+
     /**
      * Gets bizNo
-     *
      * @return string
      */
     public function getBizNo()
@@ -91,18 +95,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets bizNo
-     *
-     * @param string $bizNo
+     * @param  string  $bizNo
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setBizNo($bizNo)
     {
         $this->bizNo = $bizNo;
+
         return $this;
     }
+
     /**
      * Gets bizToken
-     *
      * @return string
      */
     public function getBizToken()
@@ -112,18 +116,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets bizToken
-     *
-     * @param string $bizToken
+     * @param  string  $bizToken
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setBizToken($bizToken)
     {
         $this->bizToken = $bizToken;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -133,18 +137,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -154,18 +158,18 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -175,13 +179,13 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyConfirmFirstCardSmscodeRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class FacepayProxyConfirmFirstCardSmscodeRequest extends BaseRequest
     {
         return 'facepayProxyConfirmFirstCardSmscode';
     }
-
 
 }

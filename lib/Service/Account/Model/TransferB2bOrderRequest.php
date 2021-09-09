@@ -1,41 +1,47 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TransferB2bOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $fromMerchantNo;
+
     /**
      * @var string
      */
     private $toMerchantNo;
+
     /**
      * @var string
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $usage;
+
     /**
      * @var string
      */
     private $feeChargeSide;
+
     /**
      * @var string
      */
@@ -43,7 +49,6 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -53,18 +58,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TransferB2bOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -74,18 +79,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return TransferB2bOrderRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets fromMerchantNo
-     *
      * @return string
      */
     public function getFromMerchantNo()
@@ -95,18 +100,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets fromMerchantNo
-     *
-     * @param string $fromMerchantNo
+     * @param  string  $fromMerchantNo
      * @return TransferB2bOrderRequest
      */
     public function setFromMerchantNo($fromMerchantNo)
     {
         $this->fromMerchantNo = $fromMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets toMerchantNo
-     *
      * @return string
      */
     public function getToMerchantNo()
@@ -116,18 +121,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets toMerchantNo
-     *
-     * @param string $toMerchantNo
+     * @param  string  $toMerchantNo
      * @return TransferB2bOrderRequest
      */
     public function setToMerchantNo($toMerchantNo)
     {
         $this->toMerchantNo = $toMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return string
      */
     public function getOrderAmount()
@@ -137,18 +142,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param string $orderAmount
+     * @param  string  $orderAmount
      * @return TransferB2bOrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets usage
-     *
      * @return string
      */
     public function getUsage()
@@ -158,18 +163,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets usage
-     *
-     * @param string $usage
+     * @param  string  $usage
      * @return TransferB2bOrderRequest
      */
     public function setUsage($usage)
     {
         $this->usage = $usage;
+
         return $this;
     }
+
     /**
      * Gets feeChargeSide
-     *
      * @return string
      */
     public function getFeeChargeSide()
@@ -179,18 +184,18 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets feeChargeSide
-     *
-     * @param string $feeChargeSide
+     * @param  string  $feeChargeSide
      * @return TransferB2bOrderRequest
      */
     public function setFeeChargeSide($feeChargeSide)
     {
         $this->feeChargeSide = $feeChargeSide;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -200,13 +205,13 @@ class TransferB2bOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return TransferB2bOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
 
@@ -214,6 +219,5 @@ class TransferB2bOrderRequest extends BaseRequest
     {
         return 'transferB2bOrder';
     }
-
 
 }

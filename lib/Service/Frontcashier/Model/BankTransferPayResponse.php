@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BankTransferPayResponse extends BaseResponse
 {
+
     /**
      * @var BankTransferPayAPIOfflineTransferResponseDTOResult
      */
@@ -18,7 +18,7 @@ class BankTransferPayResponse extends BaseResponse
     }
 
     /**
-     * @param BankTransferPayAPIOfflineTransferResponseDTOResult $result
+     * @param  BankTransferPayAPIOfflineTransferResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BankTransferPayResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

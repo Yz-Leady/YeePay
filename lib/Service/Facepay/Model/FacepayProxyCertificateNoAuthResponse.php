@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class FacepayProxyCertificateNoAuthResponse extends BaseResponse
 {
+
     /**
      * @var FacepayProxyCertificateNoAuthFaceLogonResponseResult
      */
@@ -18,7 +18,7 @@ class FacepayProxyCertificateNoAuthResponse extends BaseResponse
     }
 
     /**
-     * @param FacepayProxyCertificateNoAuthFaceLogonResponseResult $result
+     * @param  FacepayProxyCertificateNoAuthFaceLogonResponseResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class FacepayProxyCertificateNoAuthResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

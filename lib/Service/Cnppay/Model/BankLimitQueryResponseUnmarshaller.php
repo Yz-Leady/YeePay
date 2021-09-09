@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cnppay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class BankLimitQueryResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new BankLimitQueryResponse();
     }
+
 }
 
 BankLimitQueryResponseUnMarshaller::__init();

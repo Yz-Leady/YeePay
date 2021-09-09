@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ReceiptGetRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $orderNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class ReceiptGetRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class ReceiptGetRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return ReceiptGetRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderNo
-     *
      * @return string
      */
     public function getOrderNo()
@@ -54,18 +54,18 @@ class ReceiptGetRequest extends BaseRequest
 
     /**
      * Sets orderNo
-     *
-     * @param string $orderNo
+     * @param  string  $orderNo
      * @return ReceiptGetRequest
      */
     public function setOrderNo($orderNo)
     {
         $this->orderNo = $orderNo;
+
         return $this;
     }
+
     /**
      * Gets tradeType
-     *
      * @return string
      */
     public function getTradeType()
@@ -75,13 +75,13 @@ class ReceiptGetRequest extends BaseRequest
 
     /**
      * Sets tradeType
-     *
-     * @param string $tradeType
+     * @param  string  $tradeType
      * @return ReceiptGetRequest
      */
     public function setTradeType($tradeType)
     {
         $this->tradeType = $tradeType;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class ReceiptGetRequest extends BaseRequest
     {
         return 'receiptGet';
     }
-
 
 }

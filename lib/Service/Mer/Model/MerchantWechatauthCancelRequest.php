@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class MerchantWechatauthCancelRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $applymentId;
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $subMerchantNo;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class MerchantWechatauthCancelRequest extends BaseRequest
 
     /**
      * Gets applymentId
-     *
      * @return string
      */
     public function getApplymentId()
@@ -37,18 +38,18 @@ class MerchantWechatauthCancelRequest extends BaseRequest
 
     /**
      * Sets applymentId
-     *
-     * @param string $applymentId
+     * @param  string  $applymentId
      * @return MerchantWechatauthCancelRequest
      */
     public function setApplymentId($applymentId)
     {
         $this->applymentId = $applymentId;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -58,18 +59,18 @@ class MerchantWechatauthCancelRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return MerchantWechatauthCancelRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets subMerchantNo
-     *
      * @return string
      */
     public function getSubMerchantNo()
@@ -79,18 +80,18 @@ class MerchantWechatauthCancelRequest extends BaseRequest
 
     /**
      * Sets subMerchantNo
-     *
-     * @param string $subMerchantNo
+     * @param  string  $subMerchantNo
      * @return MerchantWechatauthCancelRequest
      */
     public function setSubMerchantNo($subMerchantNo)
     {
         $this->subMerchantNo = $subMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets reportFee
-     *
      * @return string
      */
     public function getReportFee()
@@ -100,13 +101,13 @@ class MerchantWechatauthCancelRequest extends BaseRequest
 
     /**
      * Sets reportFee
-     *
-     * @param string $reportFee
+     * @param  string  $reportFee
      * @return MerchantWechatauthCancelRequest
      */
     public function setReportFee($reportFee)
     {
         $this->reportFee = $reportFee;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class MerchantWechatauthCancelRequest extends BaseRequest
     {
         return 'merchantWechatauthCancel';
     }
-
 
 }

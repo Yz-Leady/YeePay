@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Divide\Model as Model;
 
 class DivideClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class DivideClient
 
     /**
      * DivideClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class DivideClient
     }
 
     /**
-     * @param Model\ApplyRequest $request
+     * @param  Model\ApplyRequest  $request
      * @return Model\ApplyResponse
      * @throws YopClientException
      */
@@ -38,10 +37,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\ApplyRequestMarshaller::getInstance(),
             Model\ApplyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BackRequest $request
+     * @param  Model\BackRequest  $request
      * @return Model\BackResponse
      * @throws YopClientException
      */
@@ -52,10 +53,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\BackRequestMarshaller::getInstance(),
             Model\BackResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BackQueryRequest $request
+     * @param  Model\BackQueryRequest  $request
      * @return Model\BackQueryResponse
      * @throws YopClientException
      */
@@ -81,10 +84,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\BackQueryRequestMarshaller::getInstance(),
             Model\BackQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\CompleteRequest $request
+     * @param  Model\CompleteRequest  $request
      * @return Model\CompleteResponse
      * @throws YopClientException
      */
@@ -95,10 +100,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\CompleteRequestMarshaller::getInstance(),
             Model\CompleteResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\DivideRequest $request
+     * @param  Model\DivideRequest  $request
      * @return Model\DivideResponse
      * @throws YopClientException
      */
@@ -109,10 +116,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\DivideRequestMarshaller::getInstance(),
             Model\DivideResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\DividebackRequest $request
+     * @param  Model\DividebackRequest  $request
      * @return Model\DividebackResponse
      * @throws YopClientException
      */
@@ -123,10 +132,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\DividebackRequestMarshaller::getInstance(),
             Model\DividebackResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\DividebackQueryRequest $request
+     * @param  Model\DividebackQueryRequest  $request
      * @return Model\DividebackQueryResponse
      * @throws YopClientException
      */
@@ -150,12 +161,15 @@ class DivideClient
         if ($request->getDivideBackRequestId() == null) {
             throw new YopClientException("request.divideBackRequestId is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\DividebackQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\DividebackQueryRequestMarshaller::getInstance(),
             Model\DividebackQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\QueryRequest $request
+     * @param  Model\QueryRequest  $request
      * @return Model\QueryResponse
      * @throws YopClientException
      */
@@ -181,10 +195,12 @@ class DivideClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\QueryRequestMarshaller::getInstance(),
             Model\QueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\ReceiptDownloadRequest $request
+     * @param  Model\ReceiptDownloadRequest  $request
      * @return Model\ReceiptDownloadResponse
      * @throws YopClientException
      */
@@ -208,8 +224,11 @@ class DivideClient
         if ($request->getLedgerNo() == null) {
             throw new YopClientException("request.ledgerNo is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\ReceiptDownloadRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\ReceiptDownloadRequestMarshaller::getInstance(),
             Model\ReceiptDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

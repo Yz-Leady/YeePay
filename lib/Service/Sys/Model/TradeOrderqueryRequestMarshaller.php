@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class TradeOrderqueryRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var TradeOrderqueryRequestMarshaller
      */
@@ -51,9 +50,8 @@ class TradeOrderqueryRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param TradeOrderqueryRequest $request
+     * @param  TradeOrderqueryRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,24 +67,31 @@ class TradeOrderqueryRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getOrderId() != null){
-            $internalRequest->addParameter('orderId', ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
+        if ($request->getOrderId() != null) {
+            $internalRequest->addParameter('orderId',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
         }
-        if($request->getUniqueOrderNo() != null){
-            $internalRequest->addParameter('uniqueOrderNo', ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
+        if ($request->getUniqueOrderNo() != null) {
+            $internalRequest->addParameter('uniqueOrderNo',
+                ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
         }
-        if($request->getHmac() != null){
-            $internalRequest->addParameter('hmac', ObjectSerializer::sanitizeForSerialization($request->getHmac(), 'string'));
+        if ($request->getHmac() != null) {
+            $internalRequest->addParameter('hmac',
+                ObjectSerializer::sanitizeForSerialization($request->getHmac(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 TradeOrderqueryRequestMarshaller::__init();

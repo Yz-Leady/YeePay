@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class AuthStateQueryResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new AuthStateQueryResponse();
     }
+
 }
 
 AuthStateQueryResponseUnMarshaller::__init();

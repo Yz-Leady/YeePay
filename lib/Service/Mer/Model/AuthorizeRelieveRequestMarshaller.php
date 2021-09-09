@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class AuthorizeRelieveRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var AuthorizeRelieveRequestMarshaller
      */
@@ -51,9 +50,8 @@ class AuthorizeRelieveRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param AuthorizeRelieveRequest $request
+     * @param  AuthorizeRelieveRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,15 +67,19 @@ class AuthorizeRelieveRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getAuthorizeMerchantNo() != null){
-            $internalRequest->addParameter('authorizeMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getAuthorizeMerchantNo(), 'string'));
+        if ($request->getAuthorizeMerchantNo() != null) {
+            $internalRequest->addParameter('authorizeMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getAuthorizeMerchantNo(), 'string'));
         }
-        if($request->getBizType() != null){
-            $internalRequest->addParameter('bizType', ObjectSerializer::sanitizeForSerialization($request->getBizType(), 'string'));
+        if ($request->getBizType() != null) {
+            $internalRequest->addParameter('bizType',
+                ObjectSerializer::sanitizeForSerialization($request->getBizType(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 AuthorizeRelieveRequestMarshaller::__init();

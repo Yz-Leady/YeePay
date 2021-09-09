@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class SupplierQueryProgressResponse extends BaseResponse
 {
+
     /**
      * @var SupplierQueryProgressApplySupplierProgressRespDTOResult
      */
@@ -18,7 +18,7 @@ class SupplierQueryProgressResponse extends BaseResponse
     }
 
     /**
-     * @param SupplierQueryProgressApplySupplierProgressRespDTOResult $result
+     * @param  SupplierQueryProgressApplySupplierProgressRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class SupplierQueryProgressResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

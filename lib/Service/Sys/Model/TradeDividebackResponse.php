@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class TradeDividebackResponse extends BaseResponse
 {
+
     /**
      * @var TradeDividebackYopDivideBackResDTOResult
      */
@@ -18,7 +18,7 @@ class TradeDividebackResponse extends BaseResponse
     }
 
     /**
-     * @param TradeDividebackYopDivideBackResDTOResult $result
+     * @param  TradeDividebackYopDivideBackResDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class TradeDividebackResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Config;
-
 
 class ProxyConfig
 {
+
     /**
      * @var string
      */
@@ -46,22 +45,28 @@ class ProxyConfig
      * @param $host
      * @param $port
      * @param $scheme
-     * @param null $username
-     * @param null $password
-     * @param null $domain
-     * @param null $workstation
+     * @param  null  $username
+     * @param  null  $password
+     * @param  null  $domain
+     * @param  null  $workstation
      */
-    public function __construct($host, $port, $scheme, $username = null, $password = null, $domain = null, $workstation = null)
-    {
-        $this->host = $host;
-        $this->port = $port;
-        $this->scheme = $scheme;
-        $this->username = $username;
-        $this->password = $password;
-        $this->domain = $domain;
+    public function __construct(
+        $host,
+        $port,
+        $scheme,
+        $username = null,
+        $password = null,
+        $domain = null,
+        $workstation = null
+    ) {
+        $this->host        = $host;
+        $this->port        = $port;
+        $this->scheme      = $scheme;
+        $this->username    = $username;
+        $this->password    = $password;
+        $this->domain      = $domain;
         $this->workstation = $workstation;
     }
-
 
     /**
      * @return string
@@ -72,12 +77,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $host
+     * @param  string  $host
      * @return ProxyConfig
      */
     public function setHost($host)
     {
         $this->host = $host;
+
         return $this;
     }
 
@@ -90,12 +96,13 @@ class ProxyConfig
     }
 
     /**
-     * @param int $port
+     * @param  int  $port
      * @return ProxyConfig
      */
     public function setPort($port)
     {
         $this->port = $port;
+
         return $this;
     }
 
@@ -108,12 +115,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $scheme
+     * @param  string  $scheme
      * @return ProxyConfig
      */
     public function setScheme($scheme)
     {
         $this->scheme = $scheme;
+
         return $this;
     }
 
@@ -126,12 +134,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $username
+     * @param  string  $username
      * @return ProxyConfig
      */
     public function setUsername($username)
     {
         $this->username = $username;
+
         return $this;
     }
 
@@ -144,12 +153,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $password
+     * @param  string  $password
      * @return ProxyConfig
      */
     public function setPassword($password)
     {
         $this->password = $password;
+
         return $this;
     }
 
@@ -162,12 +172,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $domain
+     * @param  string  $domain
      * @return ProxyConfig
      */
     public function setDomain($domain)
     {
         $this->domain = $domain;
+
         return $this;
     }
 
@@ -180,12 +191,13 @@ class ProxyConfig
     }
 
     /**
-     * @param string $workstation
+     * @param  string  $workstation
      * @return ProxyConfig
      */
     public function setWorkstation($workstation)
     {
         $this->workstation = $workstation;
+
         return $this;
     }
 

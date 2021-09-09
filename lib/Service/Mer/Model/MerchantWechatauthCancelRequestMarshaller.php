@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class MerchantWechatauthCancelRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var MerchantWechatauthCancelRequestMarshaller
      */
@@ -51,9 +50,8 @@ class MerchantWechatauthCancelRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param MerchantWechatauthCancelRequest $request
+     * @param  MerchantWechatauthCancelRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class MerchantWechatauthCancelRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getApplymentId() != null){
-            $internalRequest->addParameter('applymentId', ObjectSerializer::sanitizeForSerialization($request->getApplymentId(), 'string'));
+        if ($request->getApplymentId() != null) {
+            $internalRequest->addParameter('applymentId',
+                ObjectSerializer::sanitizeForSerialization($request->getApplymentId(), 'string'));
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getSubMerchantNo() != null){
-            $internalRequest->addParameter('subMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getSubMerchantNo(), 'string'));
+        if ($request->getSubMerchantNo() != null) {
+            $internalRequest->addParameter('subMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getSubMerchantNo(), 'string'));
         }
-        if($request->getReportFee() != null){
-            $internalRequest->addParameter('reportFee', ObjectSerializer::sanitizeForSerialization($request->getReportFee(), 'string'));
+        if ($request->getReportFee() != null) {
+            $internalRequest->addParameter('reportFee',
+                ObjectSerializer::sanitizeForSerialization($request->getReportFee(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 MerchantWechatauthCancelRequestMarshaller::__init();

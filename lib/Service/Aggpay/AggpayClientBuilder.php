@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class AggpayClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,13 +23,20 @@ class AggpayClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('pay', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('prePay', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('violationWechatChannel', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('wechatConfigAdd', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('wechatConfigAdd_0', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('wechatConfigQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('wechatConfigQuery_0', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('pay',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('prePay',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('violationWechatChannel',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('wechatConfigAdd',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('wechatConfigAdd_0',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('wechatConfigQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('wechatConfigQuery_0',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -40,7 +46,7 @@ class AggpayClientBuilder
 
     /**
      * AggpayClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -67,8 +73,10 @@ class AggpayClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new AggpayClientBuilder($clientParams);
     }
 
 }
+
 AggpayClientBuilder::__init();

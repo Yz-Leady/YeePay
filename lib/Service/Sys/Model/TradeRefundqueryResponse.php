@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class TradeRefundqueryResponse extends BaseResponse
 {
+
     /**
      * @var TradeRefundqueryQueryRefundResponseDTOResult
      */
@@ -18,7 +18,7 @@ class TradeRefundqueryResponse extends BaseResponse
     }
 
     /**
-     * @param TradeRefundqueryQueryRefundResponseDTOResult $result
+     * @param  TradeRefundqueryQueryRefundResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class TradeRefundqueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindcardQueryorderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $merchantFlowId;
+
     /**
      * @var string
      */
     private $nopOrderId;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class BindcardQueryorderRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -37,18 +38,18 @@ class BindcardQueryorderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BindcardQueryorderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantFlowId
-     *
      * @return string
      */
     public function getMerchantFlowId()
@@ -58,18 +59,18 @@ class BindcardQueryorderRequest extends BaseRequest
 
     /**
      * Sets merchantFlowId
-     *
-     * @param string $merchantFlowId
+     * @param  string  $merchantFlowId
      * @return BindcardQueryorderRequest
      */
     public function setMerchantFlowId($merchantFlowId)
     {
         $this->merchantFlowId = $merchantFlowId;
+
         return $this;
     }
+
     /**
      * Gets nopOrderId
-     *
      * @return string
      */
     public function getNopOrderId()
@@ -79,18 +80,18 @@ class BindcardQueryorderRequest extends BaseRequest
 
     /**
      * Sets nopOrderId
-     *
-     * @param string $nopOrderId
+     * @param  string  $nopOrderId
      * @return BindcardQueryorderRequest
      */
     public function setNopOrderId($nopOrderId)
     {
         $this->nopOrderId = $nopOrderId;
+
         return $this;
     }
+
     /**
      * Gets phone
-     *
      * @return string
      */
     public function getPhone()
@@ -100,13 +101,13 @@ class BindcardQueryorderRequest extends BaseRequest
 
     /**
      * Sets phone
-     *
-     * @param string $phone
+     * @param  string  $phone
      * @return BindcardQueryorderRequest
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class BindcardQueryorderRequest extends BaseRequest
     {
         return 'bindcardQueryorder';
     }
-
 
 }

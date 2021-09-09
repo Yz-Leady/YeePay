@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client;
-
 
 use GuzzleHttp\Psr7\Uri;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -11,6 +9,7 @@ use Yeepay\Yop\Sdk\Http\ClientConfiguration;
 
 class ClientParams
 {
+
     /**
      * @var Uri
      */
@@ -55,12 +54,13 @@ class ClientParams
     }
 
     /**
-     * @param Uri $endPoint
+     * @param  Uri  $endPoint
      * @return ClientParams
      */
     public function setEndPoint($endPoint)
     {
         $this->endPoint = $endPoint;
+
         return $this;
     }
 
@@ -73,12 +73,13 @@ class ClientParams
     }
 
     /**
-     * @param Uri $yosEndPoint
+     * @param  Uri  $yosEndPoint
      * @return ClientParams
      */
     public function setYosEndPoint($yosEndPoint)
     {
         $this->yosEndPoint = $yosEndPoint;
+
         return $this;
     }
 
@@ -91,12 +92,13 @@ class ClientParams
     }
 
     /**
-     * @param Uri $sandboxEndPoint
+     * @param  Uri  $sandboxEndPoint
      * @return ClientParams
      */
     public function setSandboxEndPoint($sandboxEndPoint)
     {
         $this->sandboxEndPoint = $sandboxEndPoint;
+
         return $this;
     }
 
@@ -109,12 +111,13 @@ class ClientParams
     }
 
     /**
-     * @param ClientConfiguration $clientConfiguration
+     * @param  ClientConfiguration  $clientConfiguration
      * @return ClientParams
      */
     public function setClientConfiguration($clientConfiguration)
     {
         $this->clientConfiguration = $clientConfiguration;
+
         return $this;
     }
 
@@ -127,12 +130,13 @@ class ClientParams
     }
 
     /**
-     * @param AuthorizationReqRegistry $authorizationReqRegistry
+     * @param  AuthorizationReqRegistry  $authorizationReqRegistry
      * @return ClientParams
      */
     public function setAuthorizationReqRegistry($authorizationReqRegistry)
     {
         $this->authorizationReqRegistry = $authorizationReqRegistry;
+
         return $this;
     }
 
@@ -145,12 +149,13 @@ class ClientParams
     }
 
     /**
-     * @param YopCredentialProvider $credentialsProvider
+     * @param  YopCredentialProvider  $credentialsProvider
      * @return ClientParams
      */
     public function setCredentialsProvider($credentialsProvider)
     {
         $this->credentialsProvider = $credentialsProvider;
+
         return $this;
     }
 
@@ -163,14 +168,14 @@ class ClientParams
     }
 
     /**
-     * @param array $modes
+     * @param  array  $modes
      * @return ClientParams
      */
     public function setModes($modes)
     {
         $this->modes = $modes;
+
         return $this;
     }
-
 
 }

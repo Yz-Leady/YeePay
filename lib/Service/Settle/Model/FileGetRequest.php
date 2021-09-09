@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FileGetRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $settleRequestNo;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class FileGetRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -37,18 +38,18 @@ class FileGetRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return FileGetRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -58,18 +59,18 @@ class FileGetRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return FileGetRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets settleRequestNo
-     *
      * @return string
      */
     public function getSettleRequestNo()
@@ -79,18 +80,18 @@ class FileGetRequest extends BaseRequest
 
     /**
      * Sets settleRequestNo
-     *
-     * @param string $settleRequestNo
+     * @param  string  $settleRequestNo
      * @return FileGetRequest
      */
     public function setSettleRequestNo($settleRequestNo)
     {
         $this->settleRequestNo = $settleRequestNo;
+
         return $this;
     }
+
     /**
      * Gets settleDate
-     *
      * @return string
      */
     public function getSettleDate()
@@ -100,13 +101,13 @@ class FileGetRequest extends BaseRequest
 
     /**
      * Sets settleDate
-     *
-     * @param string $settleDate
+     * @param  string  $settleDate
      * @return FileGetRequest
      */
     public function setSettleDate($settleDate)
     {
         $this->settleDate = $settleDate;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class FileGetRequest extends BaseRequest
     {
         return 'fileGet';
     }
-
 
 }

@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class EnterpriseAutoPaymentQueryRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var EnterpriseAutoPaymentQueryRequestMarshaller
      */
@@ -51,9 +49,8 @@ class EnterpriseAutoPaymentQueryRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param EnterpriseAutoPaymentQueryRequest $request
+     * @param  EnterpriseAutoPaymentQueryRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -73,5 +70,7 @@ class EnterpriseAutoPaymentQueryRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 EnterpriseAutoPaymentQueryRequestMarshaller::__init();

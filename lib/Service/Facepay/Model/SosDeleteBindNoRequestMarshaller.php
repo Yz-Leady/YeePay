@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class SosDeleteBindNoRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var SosDeleteBindNoRequestMarshaller
      */
@@ -51,9 +50,8 @@ class SosDeleteBindNoRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param SosDeleteBindNoRequest $request
+     * @param  SosDeleteBindNoRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,15 +67,19 @@ class SosDeleteBindNoRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getString0() != null){
-            $internalRequest->addParameter('string0', ObjectSerializer::sanitizeForSerialization($request->getString0(), 'string'));
+        if ($request->getString0() != null) {
+            $internalRequest->addParameter('string0',
+                ObjectSerializer::sanitizeForSerialization($request->getString0(), 'string'));
         }
-        if($request->getString1() != null){
-            $internalRequest->addParameter('string1', ObjectSerializer::sanitizeForSerialization($request->getString1(), 'string'));
+        if ($request->getString1() != null) {
+            $internalRequest->addParameter('string1',
+                ObjectSerializer::sanitizeForSerialization($request->getString1(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 SosDeleteBindNoRequestMarshaller::__init();

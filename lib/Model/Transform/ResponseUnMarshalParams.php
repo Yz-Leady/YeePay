@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model\Transform;
-
 
 use Yeepay\Yop\Sdk\Auth\Encryptor;
 use Yeepay\Yop\Sdk\Auth\Signer;
@@ -10,6 +8,7 @@ use Yeepay\Yop\Sdk\Auth\SignOptions;
 
 class ResponseUnMarshalParams
 {
+
     /**
      * @var resource
      */
@@ -44,12 +43,13 @@ class ResponseUnMarshalParams
     }
 
     /**
-     * @param resource $publicKey
+     * @param  resource  $publicKey
      * @return ResponseUnMarshalParams
      */
     public function setPublicKey($publicKey)
     {
         $this->publicKey = $publicKey;
+
         return $this;
     }
 
@@ -62,12 +62,13 @@ class ResponseUnMarshalParams
     }
 
     /**
-     * @param Signer $signer
+     * @param  Signer  $signer
      * @return ResponseUnMarshalParams
      */
     public function setSigner($signer)
     {
         $this->signer = $signer;
+
         return $this;
     }
 
@@ -80,12 +81,13 @@ class ResponseUnMarshalParams
     }
 
     /**
-     * @param SignOptions $signOptions
+     * @param  SignOptions  $signOptions
      * @return ResponseUnMarshalParams
      */
     public function setSignOptions($signOptions)
     {
         $this->signOptions = $signOptions;
+
         return $this;
     }
 
@@ -98,12 +100,13 @@ class ResponseUnMarshalParams
     }
 
     /**
-     * @param bool $needDecrypt
+     * @param  bool  $needDecrypt
      * @return ResponseUnMarshalParams
      */
     public function setNeedDecrypt($needDecrypt)
     {
         $this->needDecrypt = $needDecrypt;
+
         return $this;
     }
 
@@ -116,12 +119,13 @@ class ResponseUnMarshalParams
     }
 
     /**
-     * @param Encryptor $encryptor
+     * @param  Encryptor  $encryptor
      * @return ResponseUnMarshalParams
      */
     public function setEncryptor($encryptor)
     {
         $this->encryptor = $encryptor;
+
         return $this;
     }
 

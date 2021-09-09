@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyBindSendSmsRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $bindBizNo;
+
     /**
      * @var string
      */
     private $bizNo;
+
     /**
      * @var string
      */
     private $bizToken;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Gets bindBizNo
-     *
      * @return string
      */
     public function getBindBizNo()
@@ -45,18 +48,18 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets bindBizNo
-     *
-     * @param string $bindBizNo
+     * @param  string  $bindBizNo
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setBindBizNo($bindBizNo)
     {
         $this->bindBizNo = $bindBizNo;
+
         return $this;
     }
+
     /**
      * Gets bizNo
-     *
      * @return string
      */
     public function getBizNo()
@@ -66,18 +69,18 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets bizNo
-     *
-     * @param string $bizNo
+     * @param  string  $bizNo
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setBizNo($bizNo)
     {
         $this->bizNo = $bizNo;
+
         return $this;
     }
+
     /**
      * Gets bizToken
-     *
      * @return string
      */
     public function getBizToken()
@@ -87,18 +90,18 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets bizToken
-     *
-     * @param string $bizToken
+     * @param  string  $bizToken
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setBizToken($bizToken)
     {
         $this->bizToken = $bizToken;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -108,18 +111,18 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -129,18 +132,18 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -150,13 +153,13 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyBindSendSmsRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class FacepayProxyBindSendSmsRequest extends BaseRequest
     {
         return 'facepayProxyBindSendSms';
     }
-
 
 }

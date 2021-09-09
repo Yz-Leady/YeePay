@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class MerchantDisposeQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class MerchantDisposeQueryRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -29,18 +28,18 @@ class MerchantDisposeQueryRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return MerchantDisposeQueryRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets applicationNo
-     *
      * @return string
      */
     public function getApplicationNo()
@@ -50,13 +49,13 @@ class MerchantDisposeQueryRequest extends BaseRequest
 
     /**
      * Sets applicationNo
-     *
-     * @param string $applicationNo
+     * @param  string  $applicationNo
      * @return MerchantDisposeQueryRequest
      */
     public function setApplicationNo($applicationNo)
     {
         $this->applicationNo = $applicationNo;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class MerchantDisposeQueryRequest extends BaseRequest
     {
         return 'merchantDisposeQuery';
     }
-
 
 }

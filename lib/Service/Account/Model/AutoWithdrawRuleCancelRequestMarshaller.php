@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class AutoWithdrawRuleCancelRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var AutoWithdrawRuleCancelRequestMarshaller
      */
@@ -51,9 +50,8 @@ class AutoWithdrawRuleCancelRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param AutoWithdrawRuleCancelRequest $request
+     * @param  AutoWithdrawRuleCancelRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,18 +67,23 @@ class AutoWithdrawRuleCancelRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getRuleId() != null){
-            $internalRequest->addParameter('ruleId', ObjectSerializer::sanitizeForSerialization($request->getRuleId(), 'string'));
+        if ($request->getRuleId() != null) {
+            $internalRequest->addParameter('ruleId',
+                ObjectSerializer::sanitizeForSerialization($request->getRuleId(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 AutoWithdrawRuleCancelRequestMarshaller::__init();

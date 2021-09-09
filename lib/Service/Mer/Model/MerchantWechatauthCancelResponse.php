@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class MerchantWechatauthCancelResponse extends BaseResponse
 {
+
     /**
      * @var MerchantWechatauthCancelApplymentCancelRespDtoResult
      */
@@ -18,7 +18,7 @@ class MerchantWechatauthCancelResponse extends BaseResponse
     }
 
     /**
-     * @param MerchantWechatauthCancelApplymentCancelRespDtoResult $result
+     * @param  MerchantWechatauthCancelApplymentCancelRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class MerchantWechatauthCancelResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

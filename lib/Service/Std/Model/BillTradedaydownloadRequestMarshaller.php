@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BillTradedaydownloadRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BillTradedaydownloadRequestMarshaller
      */
@@ -51,9 +50,8 @@ class BillTradedaydownloadRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BillTradedaydownloadRequest $request
+     * @param  BillTradedaydownloadRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -70,18 +68,23 @@ class BillTradedaydownloadRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getDayString() != null){
-            $internalRequest->addParameter('dayString', ObjectSerializer::sanitizeForSerialization($request->getDayString(), 'string'));
+        if ($request->getDayString() != null) {
+            $internalRequest->addParameter('dayString',
+                ObjectSerializer::sanitizeForSerialization($request->getDayString(), 'string'));
         }
-        if($request->getDataType() != null){
-            $internalRequest->addParameter('dataType', ObjectSerializer::sanitizeForSerialization($request->getDataType(), 'string'));
+        if ($request->getDataType() != null) {
+            $internalRequest->addParameter('dataType',
+                ObjectSerializer::sanitizeForSerialization($request->getDataType(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BillTradedaydownloadRequestMarshaller::__init();

@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class Oauth2ReportKeyRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $keyType;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class Oauth2ReportKeyRequest extends BaseRequest
 
     /**
      * Gets keyType
-     *
      * @return string
      */
     public function getKeyType()
@@ -29,18 +28,18 @@ class Oauth2ReportKeyRequest extends BaseRequest
 
     /**
      * Sets keyType
-     *
-     * @param string $keyType
+     * @param  string  $keyType
      * @return Oauth2ReportKeyRequest
      */
     public function setKeyType($keyType)
     {
         $this->keyType = $keyType;
+
         return $this;
     }
+
     /**
      * Gets key
-     *
      * @return string
      */
     public function getKey()
@@ -50,13 +49,13 @@ class Oauth2ReportKeyRequest extends BaseRequest
 
     /**
      * Sets key
-     *
-     * @param string $key
+     * @param  string  $key
      * @return Oauth2ReportKeyRequest
      */
     public function setKey($key)
     {
         $this->key = $key;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class Oauth2ReportKeyRequest extends BaseRequest
     {
         return 'oauth2ReportKey';
     }
-
 
 }

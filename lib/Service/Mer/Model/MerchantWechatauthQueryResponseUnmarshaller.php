@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class MerchantWechatauthQueryResponseUnMarshaller extends BaseResponseUnMarshall
     {
         return new MerchantWechatauthQueryResponse();
     }
+
 }
 
 MerchantWechatauthQueryResponseUnMarshaller::__init();

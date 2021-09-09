@@ -1,41 +1,47 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindpayRequestRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
     private $bindId;
+
     /**
      * @var string
      */
     private $userNo;
+
     /**
      * @var string
      */
     private $userType;
+
     /**
      * @var string
      */
     private $userIp;
+
     /**
      * @var string
      */
     private $version;
+
     /**
      * @var string
      */
     private $extParamMap;
+
     /**
      * @var string
      */
@@ -43,7 +49,6 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -53,18 +58,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return BindpayRequestRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets bindId
-     *
      * @return string
      */
     public function getBindId()
@@ -74,18 +79,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets bindId
-     *
-     * @param string $bindId
+     * @param  string  $bindId
      * @return BindpayRequestRequest
      */
     public function setBindId($bindId)
     {
         $this->bindId = $bindId;
+
         return $this;
     }
+
     /**
      * Gets userNo
-     *
      * @return string
      */
     public function getUserNo()
@@ -95,18 +100,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets userNo
-     *
-     * @param string $userNo
+     * @param  string  $userNo
      * @return BindpayRequestRequest
      */
     public function setUserNo($userNo)
     {
         $this->userNo = $userNo;
+
         return $this;
     }
+
     /**
      * Gets userType
-     *
      * @return string
      */
     public function getUserType()
@@ -116,18 +121,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets userType
-     *
-     * @param string $userType
+     * @param  string  $userType
      * @return BindpayRequestRequest
      */
     public function setUserType($userType)
     {
         $this->userType = $userType;
+
         return $this;
     }
+
     /**
      * Gets userIp
-     *
      * @return string
      */
     public function getUserIp()
@@ -137,18 +142,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets userIp
-     *
-     * @param string $userIp
+     * @param  string  $userIp
      * @return BindpayRequestRequest
      */
     public function setUserIp($userIp)
     {
         $this->userIp = $userIp;
+
         return $this;
     }
+
     /**
      * Gets version
-     *
      * @return string
      */
     public function getVersion()
@@ -158,18 +163,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets version
-     *
-     * @param string $version
+     * @param  string  $version
      * @return BindpayRequestRequest
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
+
     /**
      * Gets extParamMap
-     *
      * @return string
      */
     public function getExtParamMap()
@@ -179,18 +184,18 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets extParamMap
-     *
-     * @param string $extParamMap
+     * @param  string  $extParamMap
      * @return BindpayRequestRequest
      */
     public function setExtParamMap($extParamMap)
     {
         $this->extParamMap = $extParamMap;
+
         return $this;
     }
+
     /**
      * Gets payMerchantNo
-     *
      * @return string
      */
     public function getPayMerchantNo()
@@ -200,13 +205,13 @@ class BindpayRequestRequest extends BaseRequest
 
     /**
      * Sets payMerchantNo
-     *
-     * @param string $payMerchantNo
+     * @param  string  $payMerchantNo
      * @return BindpayRequestRequest
      */
     public function setPayMerchantNo($payMerchantNo)
     {
         $this->payMerchantNo = $payMerchantNo;
+
         return $this;
     }
 
@@ -214,6 +219,5 @@ class BindpayRequestRequest extends BaseRequest
     {
         return 'bindpayRequest';
     }
-
 
 }

@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class TransferB2bQueryRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var TransferB2bQueryRequestMarshaller
      */
@@ -51,9 +49,8 @@ class TransferB2bQueryRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param TransferB2bQueryRequest $request
+     * @param  TransferB2bQueryRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -73,5 +70,7 @@ class TransferB2bQueryRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 TransferB2bQueryRequestMarshaller::__init();

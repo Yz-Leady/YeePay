@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Security\Aes;
-
 
 class AesEncryptor
 {
+
     private static $AES_METHOD = 'aes-256-cbc';
 
     private static $AES_IV;
@@ -26,7 +25,8 @@ class AesEncryptor
 
     public static function decodeBase64AndDecrypt($base64EncodedData, $key)
     {
-        return openssl_decrypt(base64_decode($base64EncodedData), self::$AES_METHOD, $key, OPENSSL_RAW_DATA, self::$AES_IV);
+        return openssl_decrypt(base64_decode($base64EncodedData), self::$AES_METHOD, $key, OPENSSL_RAW_DATA,
+            self::$AES_IV);
     }
 
 }

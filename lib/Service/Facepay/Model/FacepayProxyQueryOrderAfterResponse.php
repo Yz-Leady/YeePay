@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class FacepayProxyQueryOrderAfterResponse extends BaseResponse
 {
+
     /**
      * @var FacepayProxyQueryOrderAfterOrderAfterResponseResult
      */
@@ -18,7 +18,7 @@ class FacepayProxyQueryOrderAfterResponse extends BaseResponse
     }
 
     /**
-     * @param FacepayProxyQueryOrderAfterOrderAfterResponseResult $result
+     * @param  FacepayProxyQueryOrderAfterOrderAfterResponseResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class FacepayProxyQueryOrderAfterResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

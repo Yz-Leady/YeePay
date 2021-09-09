@@ -1,49 +1,57 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RechargeBankOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var float
      */
     private $amount;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
     private $bankCode;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $usage;
+
     /**
      * @var string
      */
     private $remark;
+
     /**
      * @var string
      */
@@ -51,7 +59,6 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -61,18 +68,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return RechargeBankOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -82,18 +89,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return RechargeBankOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -103,18 +110,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return RechargeBankOrderRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets amount
-     *
      * @return float
      */
     public function getAmount()
@@ -124,18 +131,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets amount
-     *
-     * @param float $amount
+     * @param  float  $amount
      * @return RechargeBankOrderRequest
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -145,18 +152,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return RechargeBankOrderRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets bankCode
-     *
      * @return string
      */
     public function getBankCode()
@@ -166,18 +173,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets bankCode
-     *
-     * @param string $bankCode
+     * @param  string  $bankCode
      * @return RechargeBankOrderRequest
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -187,18 +194,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return RechargeBankOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets usage
-     *
      * @return string
      */
     public function getUsage()
@@ -208,18 +215,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets usage
-     *
-     * @param string $usage
+     * @param  string  $usage
      * @return RechargeBankOrderRequest
      */
     public function setUsage($usage)
     {
         $this->usage = $usage;
+
         return $this;
     }
+
     /**
      * Gets remark
-     *
      * @return string
      */
     public function getRemark()
@@ -229,18 +236,18 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets remark
-     *
-     * @param string $remark
+     * @param  string  $remark
      * @return RechargeBankOrderRequest
      */
     public function setRemark($remark)
     {
         $this->remark = $remark;
+
         return $this;
     }
+
     /**
      * Gets clientIp
-     *
      * @return string
      */
     public function getClientIp()
@@ -250,13 +257,13 @@ class RechargeBankOrderRequest extends BaseRequest
 
     /**
      * Sets clientIp
-     *
-     * @param string $clientIp
+     * @param  string  $clientIp
      * @return RechargeBankOrderRequest
      */
     public function setClientIp($clientIp)
     {
         $this->clientIp = $clientIp;
+
         return $this;
     }
 
@@ -264,6 +271,5 @@ class RechargeBankOrderRequest extends BaseRequest
     {
         return 'rechargeBankOrder';
     }
-
 
 }

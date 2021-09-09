@@ -1,27 +1,26 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Internal;
-
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\StreamInterface;
 
 interface Request
 {
+
     /**
      * @return array
      */
     public function getHeaders();
 
     /**
-     * @param array $headers
+     * @param  array  $headers
      */
     public function setHeaders(array $headers);
 
     /**
-     * @param string $name
-     * @param string $value
+     * @param  string  $name
+     * @param  string  $value
      */
     public function addHeader($name, $value);
 
@@ -31,7 +30,7 @@ interface Request
     public function getResourcePath();
 
     /**
-     * @param string $path
+     * @param  string  $path
      */
     public function setResourcePath($path);
 
@@ -41,19 +40,19 @@ interface Request
     public function getParameters();
 
     /**
-     * @param array $parameters
+     * @param  array  $parameters
      */
     public function setParameters($parameters);
 
     /**
-     * @param string $name
-     * @param array $values
+     * @param  string  $name
+     * @param  array  $values
      */
     public function addParameters($name, array $values);
 
     /**
-     * @param string $name
-     * @param string $value
+     * @param  string  $name
+     * @param  string  $value
      */
     public function addParameter($name, $value);
 
@@ -63,8 +62,8 @@ interface Request
     public function getMultipartFiles();
 
     /**
-     * @param string $name
-     * @param string|resource $file
+     * @param  string  $name
+     * @param  string|resource  $file
      */
     public function addMultiPartFile($name, $file);
 
@@ -74,7 +73,7 @@ interface Request
     public function getEndpoint();
 
     /**
-     * @param Uri $endpoint
+     * @param  Uri  $endpoint
      */
     public function setEndpoint(Uri $endpoint);
 
@@ -84,7 +83,7 @@ interface Request
     public function getHttpMethod();
 
     /**
-     * @param string $httpMethod
+     * @param  string  $httpMethod
      */
     public function setHttpMethod($httpMethod);
 
@@ -99,7 +98,7 @@ interface Request
     public function getContent();
 
     /**
-     * @param StreamInterface $content
+     * @param  StreamInterface  $content
      */
     public function setContent($content);
 
@@ -114,7 +113,7 @@ interface Request
     public function getYosFlag();
 
     /**
-     * @param bool $flag
+     * @param  bool  $flag
      */
     public function setYosFlag($flag);
 

@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class NotifyRepeatResponse extends BaseResponse
 {
+
     /**
      * @var NotifyRepeatMerchantNetInRepeatNotifyRespDtoResult
      */
@@ -18,7 +18,7 @@ class NotifyRepeatResponse extends BaseResponse
     }
 
     /**
-     * @param NotifyRepeatMerchantNetInRepeatNotifyRespDtoResult $result
+     * @param  NotifyRepeatMerchantNetInRepeatNotifyRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class NotifyRepeatResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class GetcardbinResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new GetcardbinResponse();
     }
+
 }
 
 GetcardbinResponseUnMarshaller::__init();

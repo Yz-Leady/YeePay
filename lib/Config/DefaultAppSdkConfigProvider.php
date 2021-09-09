@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Config;
-
 
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class DefaultAppSdkConfigProvider implements AppSdkConfigProvider
 {
+
     /**
      * @var array
      */
@@ -26,14 +25,14 @@ class DefaultAppSdkConfigProvider implements AppSdkConfigProvider
     public function __construct($config)
     {
         if ($config instanceof AppSdkConfig) {
-            $this->default = $config;
-            $this->configContainer = array($config->getAppKey() => $config);
+            $this->default         = $config;
+            $this->configContainer = [$config->getAppKey() => $config];
         } else {
             if (empty($config)) {
                 throw new YopClientException("config is empty.");
             }
-            $this->configContainer = array();
-            $this->default = $config[0];
+            $this->configContainer = [];
+            $this->default         = $config[0];
             foreach ($config as $item) {
                 $this->configContainer[$item->getAppKey()] = $item;
                 if ($item->isDefault()) {
@@ -42,7 +41,6 @@ class DefaultAppSdkConfigProvider implements AppSdkConfigProvider
             }
         }
     }
-
 
     /**
      * @param $appKey string
@@ -68,4 +66,5 @@ class DefaultAppSdkConfigProvider implements AppSdkConfigProvider
     {
         return $this->configContainer;
     }
+
 }

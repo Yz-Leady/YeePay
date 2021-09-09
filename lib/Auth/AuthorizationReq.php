@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 class AuthorizationReq
 {
+
     /**
      * @var string
      */
@@ -33,18 +32,18 @@ class AuthorizationReq
 
     /**
      * AuthorizationReq constructor.
-     * @param string $signerType
-     * @param string $credentialType
-     * @param string $signatureAlg
-     * @param string $digestAlg
-     * @param string $protocolPrefix
+     * @param  string  $signerType
+     * @param  string  $credentialType
+     * @param  string  $signatureAlg
+     * @param  string  $digestAlg
+     * @param  string  $protocolPrefix
      */
     public function __construct($signerType, $credentialType, $signatureAlg, $digestAlg, $protocolPrefix)
     {
-        $this->signerType = $signerType;
+        $this->signerType     = $signerType;
         $this->credentialType = $credentialType;
-        $this->signatureAlg = $signatureAlg;
-        $this->digestAlg = $digestAlg;
+        $this->signatureAlg   = $signatureAlg;
+        $this->digestAlg      = $digestAlg;
         $this->protocolPrefix = $protocolPrefix;
     }
 
@@ -57,12 +56,13 @@ class AuthorizationReq
     }
 
     /**
-     * @param string $signerType
+     * @param  string  $signerType
      * @return AuthorizationReq
      */
     public function setSignerType($signerType)
     {
         $this->signerType = $signerType;
+
         return $this;
     }
 
@@ -75,12 +75,13 @@ class AuthorizationReq
     }
 
     /**
-     * @param string $credentialType
+     * @param  string  $credentialType
      * @return AuthorizationReq
      */
     public function setCredentialType($credentialType)
     {
         $this->credentialType = $credentialType;
+
         return $this;
     }
 
@@ -93,12 +94,13 @@ class AuthorizationReq
     }
 
     /**
-     * @param string $signatureAlg
+     * @param  string  $signatureAlg
      * @return AuthorizationReq
      */
     public function setSignatureAlg($signatureAlg)
     {
         $this->signatureAlg = $signatureAlg;
+
         return $this;
     }
 
@@ -111,12 +113,13 @@ class AuthorizationReq
     }
 
     /**
-     * @param string $digestAlg
+     * @param  string  $digestAlg
      * @return AuthorizationReq
      */
     public function setDigestAlg($digestAlg)
     {
         $this->digestAlg = $digestAlg;
+
         return $this;
     }
 
@@ -129,12 +132,13 @@ class AuthorizationReq
     }
 
     /**
-     * @param string $protocolPrefix
+     * @param  string  $protocolPrefix
      * @return AuthorizationReq
      */
     public function setProtocolPrefix($protocolPrefix)
     {
         $this->protocolPrefix = $protocolPrefix;
+
         return $this;
     }
 

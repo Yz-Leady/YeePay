@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BindpayRequestRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BindpayRequestRequestMarshaller
      */
@@ -51,9 +50,8 @@ class BindpayRequestRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BindpayRequestRequest $request
+     * @param  BindpayRequestRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,33 +67,43 @@ class BindpayRequestRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getToken() != null){
-            $internalRequest->addParameter('token', ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
+        if ($request->getToken() != null) {
+            $internalRequest->addParameter('token',
+                ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
         }
-        if($request->getBindId() != null){
-            $internalRequest->addParameter('bindId', ObjectSerializer::sanitizeForSerialization($request->getBindId(), 'string'));
+        if ($request->getBindId() != null) {
+            $internalRequest->addParameter('bindId',
+                ObjectSerializer::sanitizeForSerialization($request->getBindId(), 'string'));
         }
-        if($request->getUserNo() != null){
-            $internalRequest->addParameter('userNo', ObjectSerializer::sanitizeForSerialization($request->getUserNo(), 'string'));
+        if ($request->getUserNo() != null) {
+            $internalRequest->addParameter('userNo',
+                ObjectSerializer::sanitizeForSerialization($request->getUserNo(), 'string'));
         }
-        if($request->getUserType() != null){
-            $internalRequest->addParameter('userType', ObjectSerializer::sanitizeForSerialization($request->getUserType(), 'string'));
+        if ($request->getUserType() != null) {
+            $internalRequest->addParameter('userType',
+                ObjectSerializer::sanitizeForSerialization($request->getUserType(), 'string'));
         }
-        if($request->getUserIp() != null){
-            $internalRequest->addParameter('userIp', ObjectSerializer::sanitizeForSerialization($request->getUserIp(), 'string'));
+        if ($request->getUserIp() != null) {
+            $internalRequest->addParameter('userIp',
+                ObjectSerializer::sanitizeForSerialization($request->getUserIp(), 'string'));
         }
-        if($request->getVersion() != null){
-            $internalRequest->addParameter('version', ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
+        if ($request->getVersion() != null) {
+            $internalRequest->addParameter('version',
+                ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
         }
-        if($request->getExtParamMap() != null){
-            $internalRequest->addParameter('extParamMap', ObjectSerializer::sanitizeForSerialization($request->getExtParamMap(), 'string'));
+        if ($request->getExtParamMap() != null) {
+            $internalRequest->addParameter('extParamMap',
+                ObjectSerializer::sanitizeForSerialization($request->getExtParamMap(), 'string'));
         }
-        if($request->getPayMerchantNo() != null){
-            $internalRequest->addParameter('payMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getPayMerchantNo(), 'string'));
+        if ($request->getPayMerchantNo() != null) {
+            $internalRequest->addParameter('payMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getPayMerchantNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BindpayRequestRequestMarshaller::__init();

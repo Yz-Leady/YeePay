@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class SettleCardAddRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $bankCardNo;
+
     /**
      * @var string
      */
     private $bankCardType;
+
     /**
      * @var string
      */
     private $bankCode;
+
     /**
      * @var bool
      */
@@ -35,7 +39,6 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -45,18 +48,18 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return SettleCardAddRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -66,18 +69,18 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return SettleCardAddRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets bankCardNo
-     *
      * @return string
      */
     public function getBankCardNo()
@@ -87,18 +90,18 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets bankCardNo
-     *
-     * @param string $bankCardNo
+     * @param  string  $bankCardNo
      * @return SettleCardAddRequest
      */
     public function setBankCardNo($bankCardNo)
     {
         $this->bankCardNo = $bankCardNo;
+
         return $this;
     }
+
     /**
      * Gets bankCardType
-     *
      * @return string
      */
     public function getBankCardType()
@@ -108,18 +111,18 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets bankCardType
-     *
-     * @param string $bankCardType
+     * @param  string  $bankCardType
      * @return SettleCardAddRequest
      */
     public function setBankCardType($bankCardType)
     {
         $this->bankCardType = $bankCardType;
+
         return $this;
     }
+
     /**
      * Gets bankCode
-     *
      * @return string
      */
     public function getBankCode()
@@ -129,18 +132,18 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets bankCode
-     *
-     * @param string $bankCode
+     * @param  string  $bankCode
      * @return SettleCardAddRequest
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
+
     /**
      * Gets defaultSettleCard
-     *
      * @return bool
      */
     public function getDefaultSettleCard()
@@ -150,13 +153,13 @@ class SettleCardAddRequest extends BaseRequest
 
     /**
      * Sets defaultSettleCard
-     *
-     * @param bool $defaultSettleCard
+     * @param  bool  $defaultSettleCard
      * @return SettleCardAddRequest
      */
     public function setDefaultSettleCard($defaultSettleCard)
     {
         $this->defaultSettleCard = $defaultSettleCard;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class SettleCardAddRequest extends BaseRequest
     {
         return 'settleCardAdd';
     }
-
 
 }

@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model;
-
 
 abstract class BaseResponse
 {
+
     /**
      * @var YopResponseMetadata
      */
@@ -38,7 +37,7 @@ abstract class BaseResponse
     abstract function getResultClass();
 
     /**
-     * @param mixed $result
+     * @param  mixed  $result
      */
     abstract function setResult($result);
 

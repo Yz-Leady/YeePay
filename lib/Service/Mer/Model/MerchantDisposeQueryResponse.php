@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class MerchantDisposeQueryResponse extends BaseResponse
 {
+
     /**
      * @var MerchantDisposeQueryMerchantQueryDisposeNotifyRespDtoResult
      */
@@ -18,7 +18,7 @@ class MerchantDisposeQueryResponse extends BaseResponse
     }
 
     /**
-     * @param MerchantDisposeQueryMerchantQueryDisposeNotifyRespDtoResult $result
+     * @param  MerchantDisposeQueryMerchantQueryDisposeNotifyRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class MerchantDisposeQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

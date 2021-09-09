@@ -1,61 +1,72 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TradeRefundRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $refundRequestId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
     private $refundAmount;
+
     /**
      * @var string
      */
     private $accountDivided;
+
     /**
      * @var string
      */
     private $description;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $hmac;
+
     /**
      * @var string
      */
     private $merchantSideMarketingRefundDetails;
+
     /**
      * @var string
      */
@@ -63,7 +74,6 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -73,18 +83,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TradeRefundRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -94,18 +104,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return TradeRefundRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -115,18 +125,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return TradeRefundRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets refundRequestId
-     *
      * @return string
      */
     public function getRefundRequestId()
@@ -136,18 +146,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets refundRequestId
-     *
-     * @param string $refundRequestId
+     * @param  string  $refundRequestId
      * @return TradeRefundRequest
      */
     public function setRefundRequestId($refundRequestId)
     {
         $this->refundRequestId = $refundRequestId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -157,18 +167,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return TradeRefundRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets refundAmount
-     *
      * @return string
      */
     public function getRefundAmount()
@@ -178,18 +188,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets refundAmount
-     *
-     * @param string $refundAmount
+     * @param  string  $refundAmount
      * @return TradeRefundRequest
      */
     public function setRefundAmount($refundAmount)
     {
         $this->refundAmount = $refundAmount;
+
         return $this;
     }
+
     /**
      * Gets accountDivided
-     *
      * @return string
      */
     public function getAccountDivided()
@@ -199,18 +209,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets accountDivided
-     *
-     * @param string $accountDivided
+     * @param  string  $accountDivided
      * @return TradeRefundRequest
      */
     public function setAccountDivided($accountDivided)
     {
         $this->accountDivided = $accountDivided;
+
         return $this;
     }
+
     /**
      * Gets description
-     *
      * @return string
      */
     public function getDescription()
@@ -220,18 +230,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets description
-     *
-     * @param string $description
+     * @param  string  $description
      * @return TradeRefundRequest
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -241,18 +251,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return TradeRefundRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -262,18 +272,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return TradeRefundRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets hmac
-     *
      * @return string
      */
     public function getHmac()
@@ -283,18 +293,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets hmac
-     *
-     * @param string $hmac
+     * @param  string  $hmac
      * @return TradeRefundRequest
      */
     public function setHmac($hmac)
     {
         $this->hmac = $hmac;
+
         return $this;
     }
+
     /**
      * Gets merchantSideMarketingRefundDetails
-     *
      * @return string
      */
     public function getMerchantSideMarketingRefundDetails()
@@ -304,18 +314,18 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets merchantSideMarketingRefundDetails
-     *
-     * @param string $merchantSideMarketingRefundDetails
+     * @param  string  $merchantSideMarketingRefundDetails
      * @return TradeRefundRequest
      */
     public function setMerchantSideMarketingRefundDetails($merchantSideMarketingRefundDetails)
     {
         $this->merchantSideMarketingRefundDetails = $merchantSideMarketingRefundDetails;
+
         return $this;
     }
+
     /**
      * Gets refundAccountType
-     *
      * @return string
      */
     public function getRefundAccountType()
@@ -325,13 +335,13 @@ class TradeRefundRequest extends BaseRequest
 
     /**
      * Sets refundAccountType
-     *
-     * @param string $refundAccountType
+     * @param  string  $refundAccountType
      * @return TradeRefundRequest
      */
     public function setRefundAccountType($refundAccountType)
     {
         $this->refundAccountType = $refundAccountType;
+
         return $this;
     }
 
@@ -339,6 +349,5 @@ class TradeRefundRequest extends BaseRequest
     {
         return 'tradeRefund';
     }
-
 
 }

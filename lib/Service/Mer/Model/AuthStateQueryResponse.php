@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class AuthStateQueryResponse extends BaseResponse
 {
+
     /**
      * @var AuthStateQueryIdentityAuthStateResDtoResult
      */
@@ -18,7 +18,7 @@ class AuthStateQueryResponse extends BaseResponse
     }
 
     /**
-     * @param AuthStateQueryIdentityAuthStateResDtoResult $result
+     * @param  AuthStateQueryIdentityAuthStateResDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class AuthStateQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

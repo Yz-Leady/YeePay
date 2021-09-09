@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class MerchantDisposeUnfreezeRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var MerchantDisposeUnfreezeRequestMarshaller
      */
@@ -51,9 +50,8 @@ class MerchantDisposeUnfreezeRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param MerchantDisposeUnfreezeRequest $request
+     * @param  MerchantDisposeUnfreezeRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,18 +67,23 @@ class MerchantDisposeUnfreezeRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 MerchantDisposeUnfreezeRequestMarshaller::__init();

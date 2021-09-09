@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class SupplierQueryProgressRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -15,7 +14,6 @@ class SupplierQueryProgressRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -25,13 +23,13 @@ class SupplierQueryProgressRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return SupplierQueryProgressRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class SupplierQueryProgressRequest extends BaseRequest
     {
         return 'supplierQueryProgress';
     }
-
 
 }

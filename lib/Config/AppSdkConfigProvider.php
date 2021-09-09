@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Config;
-
 
 interface AppSdkConfigProvider
 {
+
     /**
      * @param $appKey string
      * @return AppSdkConfig

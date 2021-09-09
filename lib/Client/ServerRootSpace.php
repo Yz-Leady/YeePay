@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client;
-
 
 use GuzzleHttp\Psr7\Uri;
 
 class ServerRootSpace
 {
+
     private static $defaultServerRoot;
 
     private static $defaultYosServerRoot;
@@ -16,8 +15,8 @@ class ServerRootSpace
 
     public static function __init()
     {
-        self::$defaultServerRoot = new Uri('https://openapi.yeepay.com/yop-center');
-        self::$defaultYosServerRoot = new Uri('https://yos.yeepay.com/yop-center');
+        self::$defaultServerRoot        = new Uri('https://openapi.yeepay.com/yop-center');
+        self::$defaultYosServerRoot     = new Uri('https://yos.yeepay.com/yop-center');
         self::$defaultSandboxServerRoot = new Uri('https://sandbox.yeepay.com/yop-center');
     }
 
@@ -38,14 +37,14 @@ class ServerRootSpace
 
     /**
      * ServerRootSpace constructor.
-     * @param Uri|null $serverRoot
-     * @param Uri|null $yosServerRoot
-     * @param Uri|null $sandboxServerRoot
+     * @param  Uri|null  $serverRoot
+     * @param  Uri|null  $yosServerRoot
+     * @param  Uri|null  $sandboxServerRoot
      */
     public function __construct(Uri $serverRoot = null, Uri $yosServerRoot = null, Uri $sandboxServerRoot = null)
     {
-        $this->serverRoot = isset($serverRoot) ? $serverRoot : self::$defaultServerRoot;
-        $this->yosServerRoot = isset($yosServerRoot) ? $yosServerRoot : self::$defaultYosServerRoot;
+        $this->serverRoot        = isset($serverRoot) ? $serverRoot : self::$defaultServerRoot;
+        $this->yosServerRoot     = isset($yosServerRoot) ? $yosServerRoot : self::$defaultYosServerRoot;
         $this->sandboxServerRoot = isset($sandboxServerRoot) ? $sandboxServerRoot : self::$defaultSandboxServerRoot;
     }
 
@@ -72,7 +71,6 @@ class ServerRootSpace
     {
         return $this->sandboxServerRoot;
     }
-
 
 }
 

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -14,6 +12,7 @@ use Yeepay\Yop\Sdk\Service\Std\Model as Model;
 
 class StdClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -21,7 +20,7 @@ class StdClient
 
     /**
      * StdClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -29,7 +28,7 @@ class StdClient
     }
 
     /**
-     * @param Model\BillDividedaydownloadRequest $request
+     * @param  Model\BillDividedaydownloadRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
@@ -38,12 +37,15 @@ class StdClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BillDividedaydownloadRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BillDividedaydownloadRequestMarshaller::getInstance(),
             YosDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BillFundbillApplyRequest $request
+     * @param  Model\BillFundbillApplyRequest  $request
      * @return Model\BillFundbillApplyResponse
      * @throws YopClientException
      */
@@ -52,12 +54,15 @@ class StdClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BillFundbillApplyRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BillFundbillApplyRequestMarshaller::getInstance(),
             Model\BillFundbillApplyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BillFundbillDownloadRequest $request
+     * @param  Model\BillFundbillDownloadRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
@@ -72,12 +77,15 @@ class StdClient
         if ($request->getFileId() == null) {
             throw new YopClientException("request.fileId is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BillFundbillDownloadRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BillFundbillDownloadRequestMarshaller::getInstance(),
             YosDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BillTradedaydownloadRequest $request
+     * @param  Model\BillTradedaydownloadRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
@@ -86,8 +94,11 @@ class StdClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BillTradedaydownloadRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BillTradedaydownloadRequestMarshaller::getInstance(),
             YosDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

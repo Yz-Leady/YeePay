@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class FacepayProxyBindSendSmsRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var FacepayProxyBindSendSmsRequestMarshaller
      */
@@ -51,9 +50,8 @@ class FacepayProxyBindSendSmsRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param FacepayProxyBindSendSmsRequest $request
+     * @param  FacepayProxyBindSendSmsRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,27 +67,35 @@ class FacepayProxyBindSendSmsRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getBindBizNo() != null){
-            $internalRequest->addParameter('bindBizNo', ObjectSerializer::sanitizeForSerialization($request->getBindBizNo(), 'string'));
+        if ($request->getBindBizNo() != null) {
+            $internalRequest->addParameter('bindBizNo',
+                ObjectSerializer::sanitizeForSerialization($request->getBindBizNo(), 'string'));
         }
-        if($request->getBizNo() != null){
-            $internalRequest->addParameter('bizNo', ObjectSerializer::sanitizeForSerialization($request->getBizNo(), 'string'));
+        if ($request->getBizNo() != null) {
+            $internalRequest->addParameter('bizNo',
+                ObjectSerializer::sanitizeForSerialization($request->getBizNo(), 'string'));
         }
-        if($request->getBizToken() != null){
-            $internalRequest->addParameter('bizToken', ObjectSerializer::sanitizeForSerialization($request->getBizToken(), 'string'));
+        if ($request->getBizToken() != null) {
+            $internalRequest->addParameter('bizToken',
+                ObjectSerializer::sanitizeForSerialization($request->getBizToken(), 'string'));
         }
-        if($request->getBizSystem() != null){
-            $internalRequest->addParameter('bizSystem', ObjectSerializer::sanitizeForSerialization($request->getBizSystem(), 'string'));
+        if ($request->getBizSystem() != null) {
+            $internalRequest->addParameter('bizSystem',
+                ObjectSerializer::sanitizeForSerialization($request->getBizSystem(), 'string'));
         }
-        if($request->getMtToken() != null){
-            $internalRequest->addParameter('mtToken', ObjectSerializer::sanitizeForSerialization($request->getMtToken(), 'string'));
+        if ($request->getMtToken() != null) {
+            $internalRequest->addParameter('mtToken',
+                ObjectSerializer::sanitizeForSerialization($request->getMtToken(), 'string'));
         }
-        if($request->getMemberNo() != null){
-            $internalRequest->addParameter('memberNo', ObjectSerializer::sanitizeForSerialization($request->getMemberNo(), 'string'));
+        if ($request->getMemberNo() != null) {
+            $internalRequest->addParameter('memberNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMemberNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 FacepayProxyBindSendSmsRequestMarshaller::__init();

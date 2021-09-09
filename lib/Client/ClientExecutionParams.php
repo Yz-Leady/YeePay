@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
@@ -10,6 +8,7 @@ use Yeepay\Yop\Sdk\Model\Transform\ResponseUnMarshaller;
 
 class ClientExecutionParams
 {
+
     /**
      * @var BaseRequest
      */
@@ -28,13 +27,16 @@ class ClientExecutionParams
     /**
      * ClientExecutionParams constructor.
      * @param $request BaseRequest
-     * @param RequestMarshaller $requestMarshaller
-     * @param ResponseUnMarshaller $responseUnMarshaller
+     * @param  RequestMarshaller  $requestMarshaller
+     * @param  ResponseUnMarshaller  $responseUnMarshaller
      */
-    public function __construct($request, RequestMarshaller $requestMarshaller, ResponseUnMarshaller $responseUnMarshaller)
-    {
-        $this->request = $request;
-        $this->requestMarshaller = $requestMarshaller;
+    public function __construct(
+        $request,
+        RequestMarshaller $requestMarshaller,
+        ResponseUnMarshaller $responseUnMarshaller
+    ) {
+        $this->request              = $request;
+        $this->requestMarshaller    = $requestMarshaller;
         $this->responseUnMarshaller = $responseUnMarshaller;
     }
 
@@ -47,12 +49,13 @@ class ClientExecutionParams
     }
 
     /**
-     * @param BaseRequest $request
+     * @param  BaseRequest  $request
      * @return ClientExecutionParams
      */
     public function setRequest(BaseRequest $request)
     {
         $this->request = $request;
+
         return $this;
     }
 
@@ -65,12 +68,13 @@ class ClientExecutionParams
     }
 
     /**
-     * @param RequestMarshaller $requestMarshaller
+     * @param  RequestMarshaller  $requestMarshaller
      * @return ClientExecutionParams
      */
     public function setRequestMarshaller(RequestMarshaller $requestMarshaller)
     {
         $this->requestMarshaller = $requestMarshaller;
+
         return $this;
     }
 
@@ -83,14 +87,14 @@ class ClientExecutionParams
     }
 
     /**
-     * @param ResponseUnMarshaller $responseUnMarshaller
+     * @param  ResponseUnMarshaller  $responseUnMarshaller
      * @return ClientExecutionParams
      */
     public function setResponseUnMarshaller(ResponseUnMarshaller $responseUnMarshaller)
     {
         $this->responseUnMarshaller = $responseUnMarshaller;
+
         return $this;
     }
-
 
 }

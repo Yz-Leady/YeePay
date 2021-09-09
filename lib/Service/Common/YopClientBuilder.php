@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common;
-
 
 use Yeepay\Yop\Sdk\Client\ClientParams;
 use Yeepay\Yop\Sdk\Client\Support\ClientParamsSupport;
@@ -14,8 +12,8 @@ use Yeepay\Yop\Sdk\Service\Common\Authority\MockAuthorityReqRegistry;
 
 class YopClientBuilder
 {
-    private static $authorizationReqRegistry;
 
+    private static $authorizationReqRegistry;
 
     public static function __init()
     {
@@ -29,7 +27,7 @@ class YopClientBuilder
 
     /**
      * YopClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -56,6 +54,7 @@ class YopClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new YopClientBuilder($clientParams);
     }
 

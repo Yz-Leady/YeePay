@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cashier;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Cashier\Model as Model;
 
 class CashierClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class CashierClient
 
     /**
      * CashierClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class CashierClient
     }
 
     /**
-     * @param Model\PayLinkOrderRequest $request
+     * @param  Model\PayLinkOrderRequest  $request
      * @return Model\PayLinkOrderResponse
      * @throws YopClientException
      */
@@ -38,6 +37,8 @@ class CashierClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\PayLinkOrderRequestMarshaller::getInstance(),
             Model\PayLinkOrderResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

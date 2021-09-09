@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class AuthorizeSignResponse extends BaseResponse
 {
+
     /**
      * @var AuthorizeSignMGAuthorizeRespDTOResult
      */
@@ -18,7 +18,7 @@ class AuthorizeSignResponse extends BaseResponse
     }
 
     /**
-     * @param AuthorizeSignMGAuthorizeRespDTOResult $result
+     * @param  AuthorizeSignMGAuthorizeRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class AuthorizeSignResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

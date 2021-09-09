@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class ReceiptDownloadRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var ReceiptDownloadRequestMarshaller
      */
@@ -51,9 +49,8 @@ class ReceiptDownloadRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param ReceiptDownloadRequest $request
+     * @param  ReceiptDownloadRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -73,5 +70,7 @@ class ReceiptDownloadRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 ReceiptDownloadRequestMarshaller::__init();

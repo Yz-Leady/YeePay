@@ -1,45 +1,52 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var float
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
     private $goodsName;
+
     /**
      * @var string
      */
     private $expiredTime;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
@@ -47,7 +54,6 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -57,18 +63,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -78,18 +84,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return float
      */
     public function getOrderAmount()
@@ -99,18 +105,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param float $orderAmount
+     * @param  float  $orderAmount
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -120,18 +126,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets goodsName
-     *
      * @return string
      */
     public function getGoodsName()
@@ -141,18 +147,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets goodsName
-     *
-     * @param string $goodsName
+     * @param  string  $goodsName
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setGoodsName($goodsName)
     {
         $this->goodsName = $goodsName;
+
         return $this;
     }
+
     /**
      * Gets expiredTime
-     *
      * @return string
      */
     public function getExpiredTime()
@@ -162,18 +168,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets expiredTime
-     *
-     * @param string $expiredTime
+     * @param  string  $expiredTime
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setExpiredTime($expiredTime)
     {
         $this->expiredTime = $expiredTime;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -183,18 +189,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -204,18 +210,18 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets payerNotifyUrl
-     *
      * @return string
      */
     public function getPayerNotifyUrl()
@@ -225,13 +231,13 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
 
     /**
      * Sets payerNotifyUrl
-     *
-     * @param string $payerNotifyUrl
+     * @param  string  $payerNotifyUrl
      * @return EnterpriseAutoPaymentOrderRequest
      */
     public function setPayerNotifyUrl($payerNotifyUrl)
     {
         $this->payerNotifyUrl = $payerNotifyUrl;
+
         return $this;
     }
 
@@ -239,6 +245,5 @@ class EnterpriseAutoPaymentOrderRequest extends BaseRequest
     {
         return 'enterpriseAutoPaymentOrder';
     }
-
 
 }

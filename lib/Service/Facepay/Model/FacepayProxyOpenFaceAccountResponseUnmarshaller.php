@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class FacepayProxyOpenFaceAccountResponseUnMarshaller extends BaseResponseUnMars
     {
         return new FacepayProxyOpenFaceAccountResponse();
     }
+
 }
 
 FacepayProxyOpenFaceAccountResponseUnMarshaller::__init();

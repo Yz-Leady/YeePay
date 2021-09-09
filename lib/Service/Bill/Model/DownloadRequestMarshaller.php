@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Bill\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class DownloadRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var DownloadRequestMarshaller
      */
@@ -51,9 +49,8 @@ class DownloadRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param DownloadRequest $request
+     * @param  DownloadRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -74,5 +71,7 @@ class DownloadRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 DownloadRequestMarshaller::__init();

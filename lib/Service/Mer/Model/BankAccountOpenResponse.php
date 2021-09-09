@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BankAccountOpenResponse extends BaseResponse
 {
+
     /**
      * @var BankAccountOpenOpenAccountRespDtoResult
      */
@@ -18,7 +18,7 @@ class BankAccountOpenResponse extends BaseResponse
     }
 
     /**
-     * @param BankAccountOpenOpenAccountRespDtoResult $result
+     * @param  BankAccountOpenOpenAccountRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BankAccountOpenResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

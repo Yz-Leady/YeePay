@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class MerchantWechatauthQueryResponse extends BaseResponse
 {
+
     /**
      * @var MerchantWechatauthQueryQueryCertificateResultRespDtoResult
      */
@@ -18,7 +18,7 @@ class MerchantWechatauthQueryResponse extends BaseResponse
     }
 
     /**
-     * @param MerchantWechatauthQueryQueryCertificateResultRespDtoResult $result
+     * @param  MerchantWechatauthQueryQueryCertificateResultRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class MerchantWechatauthQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

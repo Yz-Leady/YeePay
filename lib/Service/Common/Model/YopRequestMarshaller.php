@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common\Model;
-
 
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 use Yeepay\Yop\Sdk\Http\ContentType;
@@ -15,13 +13,13 @@ class YopRequestMarshaller implements RequestMarshaller
 {
 
     /**
-     * @param YopRequest $request
+     * @param  YopRequest  $request
      * @return Request
      * @throws YopClientException
      */
     public function marshal($request)
     {
-        $parts = explode('/', $request->getApiUri());
+        $parts  = explode('/', $request->getApiUri());
         $result = new DefaultRequest($parts[3]);
         $result->setResourcePath($request->getApiUri());
         $result->setHttpMethod($request->getMethod());
@@ -37,11 +35,13 @@ class YopRequestMarshaller implements RequestMarshaller
             if (!empty($request->getParameters())) {
                 $result->setParameters($this->marshalParameters($request->getParameters()));
             }
+
             return $result;
         }
         if (!empty($request->getParameters())) {
             $result->setParameters($this->marshalParameters($request->getParameters()));
             $result->addHeader(Headers::CONTENT_TYPE, ContentType::APPLICATION_FORM_URLENCODED);
+
             return $result;
         }
         if (!empty($request->getContent())) {
@@ -51,25 +51,28 @@ class YopRequestMarshaller implements RequestMarshaller
                 $result->addHeader(Headers::CONTENT_TYPE, ContentType::APPLICATION_OCTET_STREAM);
             }
             $result->setContent(\GuzzleHttp\Psr7\stream_for($request->getContent()));
+
             return $result;
         }
         throw new YopClientException("empty request");
     }
 
     /**
-     * @param array $parameters
+     * @param  array  $parameters
      * @return array
      */
     private function marshalParameters(array $parameters)
     {
-        $targetParameters = array();
+        $targetParameters = [];
         foreach ($parameters as $key => $values) {
-            $targetValues = array();
+            $targetValues = [];
             foreach ($values as $value) {
                 $targetValues[] = strval($value);
             }
             $targetParameters[$key] = $targetValues;
         }
+
         return $targetParameters;
     }
+
 }

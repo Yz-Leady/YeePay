@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BindcardQueryorderResponse extends BaseResponse
 {
+
     /**
      * @var BindcardQueryorderOpenQueryOrderResponseDTOResult
      */
@@ -18,7 +18,7 @@ class BindcardQueryorderResponse extends BaseResponse
     }
 
     /**
-     * @param BindcardQueryorderOpenQueryOrderResponseDTOResult $result
+     * @param  BindcardQueryorderOpenQueryOrderResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BindcardQueryorderResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

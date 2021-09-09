@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cashier\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class PayLinkOrderResponse extends BaseResponse
 {
+
     /**
      * @var PayLinkOrderAggregationPayLinkResponseDTOResult
      */
@@ -18,7 +18,7 @@ class PayLinkOrderResponse extends BaseResponse
     }
 
     /**
-     * @param PayLinkOrderAggregationPayLinkResponseDTOResult $result
+     * @param  PayLinkOrderAggregationPayLinkResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class PayLinkOrderResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

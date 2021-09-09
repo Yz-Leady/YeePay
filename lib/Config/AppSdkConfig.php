@@ -1,14 +1,13 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Config;
 
-
-use Yeepay\Yop\Sdk\Config\support\ConfigUtils;
+use Yeepay\Yop\Sdk\Config\Support\ConfigUtils;
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class AppSdkConfig
 {
+
     /**
      * @var string
      */
@@ -91,7 +90,7 @@ class AppSdkConfig
 
     /**
      * AppSdkConfig constructor.
-     * @param array $data
+     * @param  array  $data
      * @throws YopClientException
      */
     public function __construct(array $data = [])
@@ -112,10 +111,10 @@ class AppSdkConfig
             $this->aesSecretKey = $data['aesSecretKey'];
         }
         if (isset($data['yop_public_key'])) {
-            $publicKeys = array();
+            $publicKeys = [];
             for ($i = 0; $i < count($data['yop_public_key']); $i++) {
-                $publicKeyConfig = $data['yop_public_key'][$i];
-                $certs = ConfigUtils::loadPublicKey($publicKeyConfig);
+                $publicKeyConfig       = $data['yop_public_key'][$i];
+                $certs                 = ConfigUtils::loadPublicKey($publicKeyConfig);
                 $publicKeys[$certs[0]] = $certs[1];
                 if ($i == 0) {
                     $this->defaultPublicKey = $certs[1];
@@ -124,10 +123,10 @@ class AppSdkConfig
             $this->yopPublicKeys = $publicKeys;
         }
         if (isset($data['isv_private_key'])) {
-            $privateKeys = array();
+            $privateKeys = [];
             for ($i = 0; $i < count($data['isv_private_key']); $i++) {
-                $privateKeyConfig = $data['isv_private_key'][$i];
-                $certs = ConfigUtils::loadPrivateKey($privateKeyConfig);
+                $privateKeyConfig       = $data['isv_private_key'][$i];
+                $certs                  = ConfigUtils::loadPrivateKey($privateKeyConfig);
                 $privateKeys[$certs[0]] = $certs[1];
                 if ($i == 0) {
                     $this->defaultIsvPrivateKey = $certs[1];
@@ -146,7 +145,8 @@ class AppSdkConfig
         }
         if (isset($data['proxy'])) {
             $proxyConfig = $data['proxy'];
-            $this->proxy = new ProxyConfig($proxyConfig['host'], $proxyConfig['port'], $proxyConfig['scheme'], $proxyConfig['username'],
+            $this->proxy = new ProxyConfig($proxyConfig['host'], $proxyConfig['port'], $proxyConfig['scheme'],
+                $proxyConfig['username'],
                 $proxyConfig['password'], $proxyConfig['domain'], $proxyConfig['workstation']);
         }
         if (isset($data['region'])) {
@@ -169,12 +169,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $appKey
+     * @param  string  $appKey
      * @return AppSdkConfig
      */
     public function setAppKey($appKey)
     {
         $this->appKey = $appKey;
+
         return $this;
     }
 
@@ -187,12 +188,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $serverRoot
+     * @param  string  $serverRoot
      * @return AppSdkConfig
      */
     public function setServerRoot($serverRoot)
     {
         $this->serverRoot = $serverRoot;
+
         return $this;
     }
 
@@ -205,12 +207,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $yosServerRoot
+     * @param  string  $yosServerRoot
      * @return AppSdkConfig
      */
     public function setYosServerRoot($yosServerRoot)
     {
         $this->yosServerRoot = $yosServerRoot;
+
         return $this;
     }
 
@@ -223,12 +226,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $sandboxServerRoot
+     * @param  string  $sandboxServerRoot
      * @return AppSdkConfig
      */
     public function setSandboxServerRoot($sandboxServerRoot)
     {
         $this->sandboxServerRoot = $sandboxServerRoot;
+
         return $this;
     }
 
@@ -241,12 +245,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $aesSecretKey
+     * @param  string  $aesSecretKey
      * @return AppSdkConfig
      */
     public function setAesSecretKey($aesSecretKey)
     {
         $this->aesSecretKey = $aesSecretKey;
+
         return $this;
     }
 
@@ -259,12 +264,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param resource|string $defaultPublicKey
+     * @param  resource|string  $defaultPublicKey
      * @return AppSdkConfig
      */
     public function setDefaultPublicKey($defaultPublicKey)
     {
         $this->defaultPublicKey = $defaultPublicKey;
+
         return $this;
     }
 
@@ -277,12 +283,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param resource|string $defaultIsvPrivateKey
+     * @param  resource|string  $defaultIsvPrivateKey
      * @return AppSdkConfig
      */
     public function setDefaultIsvPrivateKey($defaultIsvPrivateKey)
     {
         $this->defaultIsvPrivateKey = $defaultIsvPrivateKey;
+
         return $this;
     }
 
@@ -295,12 +302,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param array $httpClientConfig
+     * @param  array  $httpClientConfig
      * @return AppSdkConfig
      */
     public function setHttpClientConfig($httpClientConfig)
     {
         $this->httpClientConfig = $httpClientConfig;
+
         return $this;
     }
 
@@ -313,12 +321,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $encryptKey
+     * @param  string  $encryptKey
      * @return AppSdkConfig
      */
     public function setEncryptKey($encryptKey)
     {
         $this->encryptKey = $encryptKey;
+
         return $this;
     }
 
@@ -331,12 +340,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param array $yopPublicKeys
+     * @param  array  $yopPublicKeys
      * @return AppSdkConfig
      */
     public function setYopPublicKeys($yopPublicKeys)
     {
         $this->yopPublicKeys = $yopPublicKeys;
+
         return $this;
     }
 
@@ -349,12 +359,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param array $isvPrivateKeys
+     * @param  array  $isvPrivateKeys
      * @return AppSdkConfig
      */
     public function setIsvPrivateKeys($isvPrivateKeys)
     {
         $this->isvPrivateKeys = $isvPrivateKeys;
+
         return $this;
     }
 
@@ -367,12 +378,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param ProxyConfig $proxy
+     * @param  ProxyConfig  $proxy
      * @return AppSdkConfig
      */
     public function setProxy($proxy)
     {
         $this->proxy = $proxy;
+
         return $this;
     }
 
@@ -385,12 +397,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $region
+     * @param  string  $region
      * @return AppSdkConfig
      */
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 
@@ -403,12 +416,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param string $mode
+     * @param  string  $mode
      * @return AppSdkConfig
      */
     public function setMode($mode)
     {
         $this->mode = $mode;
+
         return $this;
     }
 
@@ -421,12 +435,13 @@ class AppSdkConfig
     }
 
     /**
-     * @param bool $trustAllCerts
+     * @param  bool  $trustAllCerts
      * @return AppSdkConfig
      */
     public function setTrustAllCerts($trustAllCerts)
     {
         $this->trustAllCerts = $trustAllCerts;
+
         return $this;
     }
 
@@ -439,14 +454,14 @@ class AppSdkConfig
     }
 
     /**
-     * @param bool $default
+     * @param  bool  $default
      * @return AppSdkConfig
      */
     public function setDefault($default)
     {
         $this->default = $default;
+
         return $this;
     }
-
 
 }

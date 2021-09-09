@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class RegisterContributeMerchantRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var RegisterContributeMerchantRequestMarshaller
      */
@@ -51,9 +50,8 @@ class RegisterContributeMerchantRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param RegisterContributeMerchantRequest $request
+     * @param  RegisterContributeMerchantRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,42 +67,55 @@ class RegisterContributeMerchantRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getBusinessRole() != null){
-            $internalRequest->addParameter('businessRole', ObjectSerializer::sanitizeForSerialization($request->getBusinessRole(), 'string'));
+        if ($request->getBusinessRole() != null) {
+            $internalRequest->addParameter('businessRole',
+                ObjectSerializer::sanitizeForSerialization($request->getBusinessRole(), 'string'));
         }
-        if($request->getMerchantSubjectInfo() != null){
-            $internalRequest->addParameter('merchantSubjectInfo', ObjectSerializer::sanitizeForSerialization($request->getMerchantSubjectInfo(), 'string'));
+        if ($request->getMerchantSubjectInfo() != null) {
+            $internalRequest->addParameter('merchantSubjectInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantSubjectInfo(), 'string'));
         }
-        if($request->getMerchantCorporationInfo() != null){
-            $internalRequest->addParameter('merchantCorporationInfo', ObjectSerializer::sanitizeForSerialization($request->getMerchantCorporationInfo(), 'string'));
+        if ($request->getMerchantCorporationInfo() != null) {
+            $internalRequest->addParameter('merchantCorporationInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantCorporationInfo(), 'string'));
         }
-        if($request->getMerchantContactInfo() != null){
-            $internalRequest->addParameter('merchantContactInfo', ObjectSerializer::sanitizeForSerialization($request->getMerchantContactInfo(), 'string'));
+        if ($request->getMerchantContactInfo() != null) {
+            $internalRequest->addParameter('merchantContactInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantContactInfo(), 'string'));
         }
-        if($request->getIndustryCategoryInfo() != null){
-            $internalRequest->addParameter('industryCategoryInfo', ObjectSerializer::sanitizeForSerialization($request->getIndustryCategoryInfo(), 'string'));
+        if ($request->getIndustryCategoryInfo() != null) {
+            $internalRequest->addParameter('industryCategoryInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getIndustryCategoryInfo(), 'string'));
         }
-        if($request->getBusinessAddressInfo() != null){
-            $internalRequest->addParameter('businessAddressInfo', ObjectSerializer::sanitizeForSerialization($request->getBusinessAddressInfo(), 'string'));
+        if ($request->getBusinessAddressInfo() != null) {
+            $internalRequest->addParameter('businessAddressInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getBusinessAddressInfo(), 'string'));
         }
-        if($request->getSettlementAccountInfo() != null){
-            $internalRequest->addParameter('settlementAccountInfo', ObjectSerializer::sanitizeForSerialization($request->getSettlementAccountInfo(), 'string'));
+        if ($request->getSettlementAccountInfo() != null) {
+            $internalRequest->addParameter('settlementAccountInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getSettlementAccountInfo(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
-        if($request->getProductInfo() != null){
-            $internalRequest->addParameter('productInfo', ObjectSerializer::sanitizeForSerialization($request->getProductInfo(), 'string'));
+        if ($request->getProductInfo() != null) {
+            $internalRequest->addParameter('productInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getProductInfo(), 'string'));
         }
-        if($request->getProductQualificationInfo() != null){
-            $internalRequest->addParameter('productQualificationInfo', ObjectSerializer::sanitizeForSerialization($request->getProductQualificationInfo(), 'string'));
+        if ($request->getProductQualificationInfo() != null) {
+            $internalRequest->addParameter('productQualificationInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getProductQualificationInfo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 RegisterContributeMerchantRequestMarshaller::__init();

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BindcardQueryorderRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BindcardQueryorderRequestMarshaller
      */
@@ -51,9 +50,8 @@ class BindcardQueryorderRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BindcardQueryorderRequest $request
+     * @param  BindcardQueryorderRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class BindcardQueryorderRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getMerchantFlowId() != null){
-            $internalRequest->addParameter('merchantFlowId', ObjectSerializer::sanitizeForSerialization($request->getMerchantFlowId(), 'string'));
+        if ($request->getMerchantFlowId() != null) {
+            $internalRequest->addParameter('merchantFlowId',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantFlowId(), 'string'));
         }
-        if($request->getNopOrderId() != null){
-            $internalRequest->addParameter('nopOrderId', ObjectSerializer::sanitizeForSerialization($request->getNopOrderId(), 'string'));
+        if ($request->getNopOrderId() != null) {
+            $internalRequest->addParameter('nopOrderId',
+                ObjectSerializer::sanitizeForSerialization($request->getNopOrderId(), 'string'));
         }
-        if($request->getPhone() != null){
-            $internalRequest->addParameter('phone', ObjectSerializer::sanitizeForSerialization($request->getPhone(), 'string'));
+        if ($request->getPhone() != null) {
+            $internalRequest->addParameter('phone',
+                ObjectSerializer::sanitizeForSerialization($request->getPhone(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BindcardQueryorderRequestMarshaller::__init();

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class PayOrderRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var PayOrderRequestMarshaller
      */
@@ -51,9 +50,8 @@ class PayOrderRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param PayOrderRequest $request
+     * @param  PayOrderRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,54 +67,71 @@ class PayOrderRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getOrderAmount() != null){
-            $internalRequest->addParameter('orderAmount', ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'float'));
+        if ($request->getOrderAmount() != null) {
+            $internalRequest->addParameter('orderAmount',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'float'));
         }
-        if($request->getFeeChargeSide() != null){
-            $internalRequest->addParameter('feeChargeSide', ObjectSerializer::sanitizeForSerialization($request->getFeeChargeSide(), 'string'));
+        if ($request->getFeeChargeSide() != null) {
+            $internalRequest->addParameter('feeChargeSide',
+                ObjectSerializer::sanitizeForSerialization($request->getFeeChargeSide(), 'string'));
         }
-        if($request->getReceiveType() != null){
-            $internalRequest->addParameter('receiveType', ObjectSerializer::sanitizeForSerialization($request->getReceiveType(), 'string'));
+        if ($request->getReceiveType() != null) {
+            $internalRequest->addParameter('receiveType',
+                ObjectSerializer::sanitizeForSerialization($request->getReceiveType(), 'string'));
         }
-        if($request->getReceiverAccountNo() != null){
-            $internalRequest->addParameter('receiverAccountNo', ObjectSerializer::sanitizeForSerialization($request->getReceiverAccountNo(), 'string'));
+        if ($request->getReceiverAccountNo() != null) {
+            $internalRequest->addParameter('receiverAccountNo',
+                ObjectSerializer::sanitizeForSerialization($request->getReceiverAccountNo(), 'string'));
         }
-        if($request->getReceiverAccountName() != null){
-            $internalRequest->addParameter('receiverAccountName', ObjectSerializer::sanitizeForSerialization($request->getReceiverAccountName(), 'string'));
+        if ($request->getReceiverAccountName() != null) {
+            $internalRequest->addParameter('receiverAccountName',
+                ObjectSerializer::sanitizeForSerialization($request->getReceiverAccountName(), 'string'));
         }
-        if($request->getReceiverBankCode() != null){
-            $internalRequest->addParameter('receiverBankCode', ObjectSerializer::sanitizeForSerialization($request->getReceiverBankCode(), 'string'));
+        if ($request->getReceiverBankCode() != null) {
+            $internalRequest->addParameter('receiverBankCode',
+                ObjectSerializer::sanitizeForSerialization($request->getReceiverBankCode(), 'string'));
         }
-        if($request->getBankAccountType() != null){
-            $internalRequest->addParameter('bankAccountType', ObjectSerializer::sanitizeForSerialization($request->getBankAccountType(), 'string'));
+        if ($request->getBankAccountType() != null) {
+            $internalRequest->addParameter('bankAccountType',
+                ObjectSerializer::sanitizeForSerialization($request->getBankAccountType(), 'string'));
         }
-        if($request->getBranchBankCode() != null){
-            $internalRequest->addParameter('branchBankCode', ObjectSerializer::sanitizeForSerialization($request->getBranchBankCode(), 'string'));
+        if ($request->getBranchBankCode() != null) {
+            $internalRequest->addParameter('branchBankCode',
+                ObjectSerializer::sanitizeForSerialization($request->getBranchBankCode(), 'string'));
         }
-        if($request->getComments() != null){
-            $internalRequest->addParameter('comments', ObjectSerializer::sanitizeForSerialization($request->getComments(), 'string'));
+        if ($request->getComments() != null) {
+            $internalRequest->addParameter('comments',
+                ObjectSerializer::sanitizeForSerialization($request->getComments(), 'string'));
         }
-        if($request->getTerminalType() != null){
-            $internalRequest->addParameter('terminalType', ObjectSerializer::sanitizeForSerialization($request->getTerminalType(), 'string'));
+        if ($request->getTerminalType() != null) {
+            $internalRequest->addParameter('terminalType',
+                ObjectSerializer::sanitizeForSerialization($request->getTerminalType(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
-        if($request->getRemark() != null){
-            $internalRequest->addParameter('remark', ObjectSerializer::sanitizeForSerialization($request->getRemark(), 'string'));
+        if ($request->getRemark() != null) {
+            $internalRequest->addParameter('remark',
+                ObjectSerializer::sanitizeForSerialization($request->getRemark(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 PayOrderRequestMarshaller::__init();

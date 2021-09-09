@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class FacepayProxyBindConfirmSmsResponseUnMarshaller extends BaseResponseUnMarsh
     {
         return new FacepayProxyBindConfirmSmsResponse();
     }
+
 }
 
 FacepayProxyBindConfirmSmsResponseUnMarshaller::__init();

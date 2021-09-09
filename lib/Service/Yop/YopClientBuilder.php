@@ -1,12 +1,9 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
-use Yeepay\Yop\Sdk\Auth\AuthorizationReqSupport;
 use Yeepay\Yop\Sdk\Client\ClientParams;
 use Yeepay\Yop\Sdk\Client\Support\ClientParamsSupport;
 use Yeepay\Yop\Sdk\Config\AppSdkConfig;
@@ -16,6 +13,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class YopClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -33,7 +31,7 @@ class YopClientBuilder
 
     /**
      * YopClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -60,8 +58,10 @@ class YopClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new YopClientBuilder($clientParams);
     }
 
 }
+
 YopClientBuilder::__init();

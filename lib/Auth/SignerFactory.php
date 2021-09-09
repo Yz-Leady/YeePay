@@ -1,14 +1,13 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 use Yeepay\Yop\Sdk\Auth\Signer\RsaSigner;
 
 class SignerFactory
 {
-    private static $signers = array();
+
+    private static $signers = [];
 
     public static function init()
     {
@@ -23,6 +22,7 @@ class SignerFactory
     {
         return self::$signers[$signerType];
     }
+
 }
 
 SignerFactory::init();

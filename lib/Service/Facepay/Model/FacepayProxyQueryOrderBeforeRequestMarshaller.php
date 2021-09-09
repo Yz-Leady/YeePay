@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class FacepayProxyQueryOrderBeforeRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var FacepayProxyQueryOrderBeforeRequestMarshaller
      */
@@ -51,9 +49,8 @@ class FacepayProxyQueryOrderBeforeRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/json';
 
-
     /**
-     * @param FacepayProxyQueryOrderBeforeRequest $request
+     * @param  FacepayProxyQueryOrderBeforeRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -76,5 +73,7 @@ class FacepayProxyQueryOrderBeforeRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 FacepayProxyQueryOrderBeforeRequestMarshaller::__init();

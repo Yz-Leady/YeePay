@@ -1,15 +1,14 @@
 <?php
 
-
-namespace Yeepay\Yop\Sdk\Config\support;
-
+namespace Yeepay\Yop\Sdk\Config\Support;
 
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class ConfigUtils
 {
+
     /**
-     * @param array $config
+     * @param  array  $config
      * @return array
      * @throws YopClientException
      */
@@ -17,14 +16,14 @@ class ConfigUtils
     {
         $certType = $config['cert_type'];
         if ($config['store_type'] == 'string') {
-            return array($certType, self::getPublicKey($config['value']));
+            return [$certType, self::getPublicKey($config['value'])];
         } else {
-            throw new YopClientException('unsupported publicKey storeType:' . $config['store_type']);
+            throw new YopClientException('unsupported publicKey storeType:'.$config['store_type']);
         }
     }
 
     /**
-     * @param array $config
+     * @param  array  $config
      * @return array
      * @throws YopClientException
      */
@@ -32,14 +31,17 @@ class ConfigUtils
     {
         $certType = $config['cert_type'];
         if ($config['store_type'] == 'string') {
-            return array($certType, self::getPrivateKey($config['value']));
-        } else if ($config['store_type'] == 'file_12') {
-            $certs = array();
-            $pkcs12 = file_get_contents($config['value']);
-            openssl_pkcs12_read($pkcs12, $certs, $config['password']);
-            return array($certType, $certs['pkey']);
+            return [$certType, self::getPrivateKey($config['value'])];
         } else {
-            throw new YopClientException('unsupported publicKey storeType:' . $config['store_type']);
+            if ($config['store_type'] == 'file_12') {
+                $certs  = [];
+                $pkcs12 = file_get_contents($config['value']);
+                openssl_pkcs12_read($pkcs12, $certs, $config['password']);
+
+                return [$certType, $certs['pkey']];
+            } else {
+                throw new YopClientException('unsupported publicKey storeType:'.$config['store_type']);
+            }
         }
     }
 
@@ -50,13 +52,14 @@ class ConfigUtils
      */
     public static function getPublicKey($publicKey)
     {
-        $publicKey = "-----BEGIN PUBLIC KEY-----\n" .
-            wordwrap($publicKey, 64, "\n", true) .
-            "\n-----END PUBLIC KEY-----";
-        $result = openssl_pkey_get_public($publicKey);
+        $publicKey = "-----BEGIN PUBLIC KEY-----\n".
+                     wordwrap($publicKey, 64, "\n", true).
+                     "\n-----END PUBLIC KEY-----";
+        $result    = openssl_pkey_get_public($publicKey);
         if (empty($result)) {
             throw new YopClientException("illegal publicKey");
         }
+
         return $result;
 
     }
@@ -68,16 +71,16 @@ class ConfigUtils
      */
     public static function getPrivateKey($privateKey)
     {
-        $privateKey = "-----BEGIN RSA PRIVATE KEY-----\n" .
-            wordwrap($privateKey, 64, "\n", true) .
-            "\n-----END RSA PRIVATE KEY-----";
-        $result = openssl_pkey_get_private($privateKey);
+        $privateKey = "-----BEGIN RSA PRIVATE KEY-----\n".
+                      wordwrap($privateKey, 64, "\n", true).
+                      "\n-----END RSA PRIVATE KEY-----";
+        $result     = openssl_pkey_get_private($privateKey);
         if (empty($result)) {
             throw new YopClientException("illegal privateKey");
         }
+
         return $result;
 
     }
-
 
 }

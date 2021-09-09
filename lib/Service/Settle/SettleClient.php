@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -14,6 +12,7 @@ use Yeepay\Yop\Sdk\Service\Settle\Model as Model;
 
 class SettleClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -21,7 +20,7 @@ class SettleClient
 
     /**
      * SettleClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -29,7 +28,7 @@ class SettleClient
     }
 
     /**
-     * @param Model\BalanceQueryRequest $request
+     * @param  Model\BalanceQueryRequest  $request
      * @return Model\BalanceQueryResponse
      * @throws YopClientException
      */
@@ -49,10 +48,12 @@ class SettleClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\BalanceQueryRequestMarshaller::getInstance(),
             Model\BalanceQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FileGetRequest $request
+     * @param  Model\FileGetRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
@@ -69,10 +70,12 @@ class SettleClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\FileGetRequestMarshaller::getInstance(),
             YosDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RecordsQueryRequest $request
+     * @param  Model\RecordsQueryRequest  $request
      * @return Model\RecordsQueryResponse
      * @throws YopClientException
      */
@@ -89,10 +92,12 @@ class SettleClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RecordsQueryRequestMarshaller::getInstance(),
             Model\RecordsQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\SelfSettleApplyRequest $request
+     * @param  Model\SelfSettleApplyRequest  $request
      * @return Model\SelfSettleApplyResponse
      * @throws YopClientException
      */
@@ -101,12 +106,15 @@ class SettleClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\SelfSettleApplyRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\SelfSettleApplyRequestMarshaller::getInstance(),
             Model\SelfSettleApplyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\SettleCardAddRequest $request
+     * @param  Model\SettleCardAddRequest  $request
      * @return Model\SettleCardAddResponse
      * @throws YopClientException
      */
@@ -115,12 +123,15 @@ class SettleClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\SettleCardAddRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\SettleCardAddRequestMarshaller::getInstance(),
             Model\SettleCardAddResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\SettleCardModifyRequest $request
+     * @param  Model\SettleCardModifyRequest  $request
      * @return Model\SettleCardModifyResponse
      * @throws YopClientException
      */
@@ -129,8 +140,11 @@ class SettleClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\SettleCardModifyRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\SettleCardModifyRequestMarshaller::getInstance(),
             Model\SettleCardModifyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

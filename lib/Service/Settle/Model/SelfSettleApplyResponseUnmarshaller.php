@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class SelfSettleApplyResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new SelfSettleApplyResponse();
     }
+
 }
 
 SelfSettleApplyResponseUnMarshaller::__init();

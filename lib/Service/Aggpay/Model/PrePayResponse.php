@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class PrePayResponse extends BaseResponse
 {
+
     /**
      * @var PrePayOrderResponseDTOResult
      */
@@ -18,7 +18,7 @@ class PrePayResponse extends BaseResponse
     }
 
     /**
-     * @param PrePayOrderResponseDTOResult $result
+     * @param  PrePayOrderResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class PrePayResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

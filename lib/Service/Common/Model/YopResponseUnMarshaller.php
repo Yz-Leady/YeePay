@@ -1,14 +1,13 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseResponse;
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
 class YopResponseUnMarshaller extends BaseResponseUnMarshaller
 {
+
     /**
      * @return BaseResponse
      */
@@ -16,4 +15,5 @@ class YopResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new YopResponse();
     }
+
 }

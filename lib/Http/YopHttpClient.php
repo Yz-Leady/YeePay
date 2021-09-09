@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Http;
-
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -18,6 +16,7 @@ use Yeepay\Yop\Sdk\Utils\Http\HttpUtils;
 
 class YopHttpClient
 {
+
     /**
      * @var ClientConfiguration
      */
@@ -35,16 +34,17 @@ class YopHttpClient
 
     /**
      * YopHttpClient constructor.
-     * @param ClientConfiguration $clientConfiguration
+     * @param  ClientConfiguration  $clientConfiguration
      */
     public function __construct(ClientConfiguration $clientConfiguration)
     {
 
-        $this->logger = LogFactory::getLogger(get_class($this));
+        $this->logger              = LogFactory::getLogger(get_class($this));
         $this->clientConfiguration = $clientConfiguration;
-        $guzzleClientConfig = array(RequestOptions::CONNECT_TIMEOUT => $clientConfiguration->getConnectionTimeoutInMillis() / 1000,
+        $guzzleClientConfig        = [
+            RequestOptions::CONNECT_TIMEOUT => $clientConfiguration->getConnectionTimeoutInMillis() / 1000,
             RequestOptions::TIMEOUT, $clientConfiguration->getSocketTimeoutInMillis() / 1000,
-        );
+        ];
         if (!empty($clientConfiguration->getProxyUrl())) {
             $guzzleClientConfig[RequestOptions::PROXY] = $clientConfiguration->getProxyUrl();
         }
@@ -52,8 +52,8 @@ class YopHttpClient
     }
 
     /**
-     * @param Request $request
-     * @param ExecutionContext $executionContext
+     * @param  Request  $request
+     * @param  ExecutionContext  $executionContext
      * @return YopHttpResponse
      * @throws YopClientException
      */
@@ -65,71 +65,79 @@ class YopHttpClient
         if ($executionContext->isNeedEncrypt()) {
             $executionContext->getEncryptor()->encrypt($request);
         }
-        $executionContext->getSigner()->sign($request, $executionContext->getCredentials(), $executionContext->getSignOptions());
+        $executionContext->getSigner()
+                         ->sign($request, $executionContext->getCredentials(), $executionContext->getSignOptions());
         try {
             $guzzleResponse = $this->sendRequest($request);
         } catch (ServerException $e) {
             $guzzleResponse = $e->getResponse();
         } catch (\Throwable $e) {
-            throw new YopClientException("execute request failed:" . $e->getMessage());
+            throw new YopClientException("execute request failed:".$e->getMessage());
         }
+
         return new YopHttpResponse($guzzleResponse);
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
      * @return mixed|ResponseInterface
      * @throws GuzzleException
      * @throws YopClientException
      */
     private function sendRequest(Request $request)
     {
-        $uri = $request->getEndpoint() . HttpUtils::urlEncodeExceptSlash($request->getResourcePath());
+        $uri = $request->getEndpoint().HttpUtils::urlEncodeExceptSlash($request->getResourcePath());
         if (!empty($request->getMultipartFiles())) {
             if ($request->getHttpMethod() == HttpMethod::POST) {
-                $body = array();
+                $body = [];
                 if (!empty($request->getParameters())) {
                     foreach ($request->getParameters() as $k => $v) {
                         if (!empty($v)) {
                             foreach ($v as $value) {
-                                $body[] = array('name' => $k, 'contents' => $value);
+                                $body[] = ['name' => $k, 'contents' => $value];
                             }
                         }
                     }
                 }
                 foreach ($request->getMultipartFiles() as $k => $v) {
-                    $part = array('name' => $k);
+                    $part = ['name' => $k];
                     if (!empty($v)) {
                         foreach ($v as $value) {
                             /** @var MultiPartFile $value */
                             $part['contents'] = $value->getContent();
                             $part['filename'] = $value->getFileName();
-                            $body[] = $part;
+                            $body[]           = $part;
                         }
                     }
                 }
+
                 return $this->guzzleClient->request($request->getHttpMethod(), $uri,
-                    array(RequestOptions::MULTIPART => $body,
-                        RequestOptions::HEADERS => $request->getHeaders()));
+                    [
+                        RequestOptions::MULTIPART => $body,
+                        RequestOptions::HEADERS   => $request->getHeaders(),
+                    ]);
             } else {
                 throw new YopClientException("contentType:multipart/form-data only support post request.");
             }
         }
         $requestIsPostOrPut = $request->getHttpMethod() == HttpMethod::POST || $request->getHttpMethod() == HttpMethod::PUT;
-        $requestHasPayload = !empty($request->getContent());
-        $putParamsInUri = !$requestIsPostOrPut || $requestHasPayload;
+        $requestHasPayload  = !empty($request->getContent());
+        $putParamsInUri     = !$requestIsPostOrPut || $requestHasPayload;
         if ($putParamsInUri) {
             $encodedParameters = \GuzzleHttp\Psr7\build_query(HttpUtils::encodedParameters($request->getParameters()));
             if (!empty($encodedParameters)) {
-                $uri = $uri . '?' . $encodedParameters;
+                $uri = $uri.'?'.$encodedParameters;
             }
         }
-        $requestOptions = array(RequestOptions::HEADERS => $request->getHeaders());
+        $requestOptions = [RequestOptions::HEADERS => $request->getHeaders()];
         if ($requestHasPayload) {
             $requestOptions[RequestOptions::BODY] = $request->getContent();
-        } else if ($requestIsPostOrPut) {
-            $requestOptions[RequestOptions::BODY] = \GuzzleHttp\Psr7\build_query(HttpUtils::encodedParameters($request->getParameters()));
+        } else {
+            if ($requestIsPostOrPut) {
+                $requestOptions[RequestOptions::BODY] = \GuzzleHttp\Psr7\build_query(HttpUtils::encodedParameters($request->getParameters()));
+            }
         }
+
         return $this->guzzleClient->request($request->getHttpMethod(), $uri, $requestOptions);
     }
 

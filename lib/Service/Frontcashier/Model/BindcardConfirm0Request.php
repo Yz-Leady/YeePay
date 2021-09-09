@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindcardConfirm0Request extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantFlowId;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class BindcardConfirm0Request extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class BindcardConfirm0Request extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BindcardConfirm0Request
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantFlowId
-     *
      * @return string
      */
     public function getMerchantFlowId()
@@ -54,18 +54,18 @@ class BindcardConfirm0Request extends BaseRequest
 
     /**
      * Sets merchantFlowId
-     *
-     * @param string $merchantFlowId
+     * @param  string  $merchantFlowId
      * @return BindcardConfirm0Request
      */
     public function setMerchantFlowId($merchantFlowId)
     {
         $this->merchantFlowId = $merchantFlowId;
+
         return $this;
     }
+
     /**
      * Gets smsCode
-     *
      * @return string
      */
     public function getSmsCode()
@@ -75,13 +75,13 @@ class BindcardConfirm0Request extends BaseRequest
 
     /**
      * Sets smsCode
-     *
-     * @param string $smsCode
+     * @param  string  $smsCode
      * @return BindcardConfirm0Request
      */
     public function setSmsCode($smsCode)
     {
         $this->smsCode = $smsCode;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class BindcardConfirm0Request extends BaseRequest
     {
         return 'bindcardConfirm_0';
     }
-
 
 }

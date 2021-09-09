@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model;
-
 
 class YosDownloadResponseMetadata extends YopResponseMetadata
 {
+
     /**
      * @var float
      */
@@ -30,12 +29,13 @@ class YosDownloadResponseMetadata extends YopResponseMetadata
     }
 
     /**
-     * @param float $instanceLength
+     * @param  float  $instanceLength
      * @return YosDownloadResponseMetadata
      */
     public function setInstanceLength($instanceLength)
     {
         $this->instanceLength = $instanceLength;
+
         return $this;
     }
 
@@ -48,12 +48,13 @@ class YosDownloadResponseMetadata extends YopResponseMetadata
     }
 
     /**
-     * @param string $cacheControl
+     * @param  string  $cacheControl
      * @return YosDownloadResponseMetadata
      */
     public function setCacheControl($cacheControl)
     {
         $this->cacheControl = $cacheControl;
+
         return $this;
     }
 
@@ -66,12 +67,13 @@ class YosDownloadResponseMetadata extends YopResponseMetadata
     }
 
     /**
-     * @param float $appendOffset
+     * @param  float  $appendOffset
      * @return YosDownloadResponseMetadata
      */
     public function setAppendOffset($appendOffset)
     {
         $this->appendOffset = $appendOffset;
+
         return $this;
     }
 

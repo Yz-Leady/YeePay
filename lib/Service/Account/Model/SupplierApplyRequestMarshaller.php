@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class SupplierApplyRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var SupplierApplyRequestMarshaller
      */
@@ -51,9 +49,8 @@ class SupplierApplyRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/json';
 
-
     /**
-     * @param SupplierApplyRequest $request
+     * @param  SupplierApplyRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -76,5 +73,7 @@ class SupplierApplyRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 SupplierApplyRequestMarshaller::__init();

@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class PayCancelRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $orderNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class PayCancelRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class PayCancelRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return PayCancelRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderNo
-     *
      * @return string
      */
     public function getOrderNo()
@@ -54,18 +54,18 @@ class PayCancelRequest extends BaseRequest
 
     /**
      * Sets orderNo
-     *
-     * @param string $orderNo
+     * @param  string  $orderNo
      * @return PayCancelRequest
      */
     public function setOrderNo($orderNo)
     {
         $this->orderNo = $orderNo;
+
         return $this;
     }
+
     /**
      * Gets cancelReason
-     *
      * @return string
      */
     public function getCancelReason()
@@ -75,13 +75,13 @@ class PayCancelRequest extends BaseRequest
 
     /**
      * Sets cancelReason
-     *
-     * @param string $cancelReason
+     * @param  string  $cancelReason
      * @return PayCancelRequest
      */
     public function setCancelReason($cancelReason)
     {
         $this->cancelReason = $cancelReason;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class PayCancelRequest extends BaseRequest
     {
         return 'payCancel';
     }
-
 
 }

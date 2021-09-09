@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class WechatConfigAddRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var WechatConfigAddRequestMarshaller
      */
@@ -51,9 +49,8 @@ class WechatConfigAddRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/json';
 
-
     /**
-     * @param WechatConfigAddRequest $request
+     * @param  WechatConfigAddRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -76,5 +73,7 @@ class WechatConfigAddRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 WechatConfigAddRequestMarshaller::__init();

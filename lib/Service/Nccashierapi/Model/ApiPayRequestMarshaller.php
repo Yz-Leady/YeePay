@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Nccashierapi\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class ApiPayRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var ApiPayRequestMarshaller
      */
@@ -51,9 +50,8 @@ class ApiPayRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param ApiPayRequest $request
+     * @param  ApiPayRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,48 +67,63 @@ class ApiPayRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getPayTool() != null){
-            $internalRequest->addParameter('payTool', ObjectSerializer::sanitizeForSerialization($request->getPayTool(), 'string'));
+        if ($request->getPayTool() != null) {
+            $internalRequest->addParameter('payTool',
+                ObjectSerializer::sanitizeForSerialization($request->getPayTool(), 'string'));
         }
-        if($request->getPayType() != null){
-            $internalRequest->addParameter('payType', ObjectSerializer::sanitizeForSerialization($request->getPayType(), 'string'));
+        if ($request->getPayType() != null) {
+            $internalRequest->addParameter('payType',
+                ObjectSerializer::sanitizeForSerialization($request->getPayType(), 'string'));
         }
-        if($request->getToken() != null){
-            $internalRequest->addParameter('token', ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
+        if ($request->getToken() != null) {
+            $internalRequest->addParameter('token',
+                ObjectSerializer::sanitizeForSerialization($request->getToken(), 'string'));
         }
-        if($request->getAppId() != null){
-            $internalRequest->addParameter('appId', ObjectSerializer::sanitizeForSerialization($request->getAppId(), 'string'));
+        if ($request->getAppId() != null) {
+            $internalRequest->addParameter('appId',
+                ObjectSerializer::sanitizeForSerialization($request->getAppId(), 'string'));
         }
-        if($request->getOpenId() != null){
-            $internalRequest->addParameter('openId', ObjectSerializer::sanitizeForSerialization($request->getOpenId(), 'string'));
+        if ($request->getOpenId() != null) {
+            $internalRequest->addParameter('openId',
+                ObjectSerializer::sanitizeForSerialization($request->getOpenId(), 'string'));
         }
-        if($request->getVersion() != null){
-            $internalRequest->addParameter('version', ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
+        if ($request->getVersion() != null) {
+            $internalRequest->addParameter('version',
+                ObjectSerializer::sanitizeForSerialization($request->getVersion(), 'string'));
         }
-        if($request->getPayEmpowerNo() != null){
-            $internalRequest->addParameter('payEmpowerNo', ObjectSerializer::sanitizeForSerialization($request->getPayEmpowerNo(), 'string'));
+        if ($request->getPayEmpowerNo() != null) {
+            $internalRequest->addParameter('payEmpowerNo',
+                ObjectSerializer::sanitizeForSerialization($request->getPayEmpowerNo(), 'string'));
         }
-        if($request->getMerchantTerminalId() != null){
-            $internalRequest->addParameter('merchantTerminalId', ObjectSerializer::sanitizeForSerialization($request->getMerchantTerminalId(), 'string'));
+        if ($request->getMerchantTerminalId() != null) {
+            $internalRequest->addParameter('merchantTerminalId',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantTerminalId(), 'string'));
         }
-        if($request->getMerchantStoreNo() != null){
-            $internalRequest->addParameter('merchantStoreNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantStoreNo(), 'string'));
+        if ($request->getMerchantStoreNo() != null) {
+            $internalRequest->addParameter('merchantStoreNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantStoreNo(), 'string'));
         }
-        if($request->getUserIp() != null){
-            $internalRequest->addParameter('userIp', ObjectSerializer::sanitizeForSerialization($request->getUserIp(), 'string'));
+        if ($request->getUserIp() != null) {
+            $internalRequest->addParameter('userIp',
+                ObjectSerializer::sanitizeForSerialization($request->getUserIp(), 'string'));
         }
-        if($request->getExtParamMap() != null){
-            $internalRequest->addParameter('extParamMap', ObjectSerializer::sanitizeForSerialization($request->getExtParamMap(), 'string'));
+        if ($request->getExtParamMap() != null) {
+            $internalRequest->addParameter('extParamMap',
+                ObjectSerializer::sanitizeForSerialization($request->getExtParamMap(), 'string'));
         }
-        if($request->getUserNo() != null){
-            $internalRequest->addParameter('userNo', ObjectSerializer::sanitizeForSerialization($request->getUserNo(), 'string'));
+        if ($request->getUserNo() != null) {
+            $internalRequest->addParameter('userNo',
+                ObjectSerializer::sanitizeForSerialization($request->getUserNo(), 'string'));
         }
-        if($request->getUserType() != null){
-            $internalRequest->addParameter('userType', ObjectSerializer::sanitizeForSerialization($request->getUserType(), 'string'));
+        if ($request->getUserType() != null) {
+            $internalRequest->addParameter('userType',
+                ObjectSerializer::sanitizeForSerialization($request->getUserType(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 ApiPayRequestMarshaller::__init();

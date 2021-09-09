@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class AccountinfosQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -15,7 +14,6 @@ class AccountinfosQueryRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -25,13 +23,13 @@ class AccountinfosQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return AccountinfosQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class AccountinfosQueryRequest extends BaseRequest
     {
         return 'accountinfosQuery';
     }
-
 
 }

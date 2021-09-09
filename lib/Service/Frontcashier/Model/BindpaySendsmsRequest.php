@@ -1,53 +1,62 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindpaySendsmsRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
     private $version;
+
     /**
      * @var string
      */
     private $cardno;
+
     /**
      * @var string
      */
     private $owner;
+
     /**
      * @var string
      */
     private $idno;
+
     /**
      * @var string
      */
     private $phoneNo;
+
     /**
      * @var string
      */
     private $ypMobile;
+
     /**
      * @var string
      */
     private $avlidDate;
+
     /**
      * @var string
      */
     private $cvv2;
+
     /**
      * @var string
      */
     private $idCardType;
+
     /**
      * @var string
      */
@@ -55,7 +64,6 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -65,18 +73,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return BindpaySendsmsRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets version
-     *
      * @return string
      */
     public function getVersion()
@@ -86,18 +94,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets version
-     *
-     * @param string $version
+     * @param  string  $version
      * @return BindpaySendsmsRequest
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
+
     /**
      * Gets cardno
-     *
      * @return string
      */
     public function getCardno()
@@ -107,18 +115,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets cardno
-     *
-     * @param string $cardno
+     * @param  string  $cardno
      * @return BindpaySendsmsRequest
      */
     public function setCardno($cardno)
     {
         $this->cardno = $cardno;
+
         return $this;
     }
+
     /**
      * Gets owner
-     *
      * @return string
      */
     public function getOwner()
@@ -128,18 +136,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets owner
-     *
-     * @param string $owner
+     * @param  string  $owner
      * @return BindpaySendsmsRequest
      */
     public function setOwner($owner)
     {
         $this->owner = $owner;
+
         return $this;
     }
+
     /**
      * Gets idno
-     *
      * @return string
      */
     public function getIdno()
@@ -149,18 +157,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets idno
-     *
-     * @param string $idno
+     * @param  string  $idno
      * @return BindpaySendsmsRequest
      */
     public function setIdno($idno)
     {
         $this->idno = $idno;
+
         return $this;
     }
+
     /**
      * Gets phoneNo
-     *
      * @return string
      */
     public function getPhoneNo()
@@ -170,18 +178,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets phoneNo
-     *
-     * @param string $phoneNo
+     * @param  string  $phoneNo
      * @return BindpaySendsmsRequest
      */
     public function setPhoneNo($phoneNo)
     {
         $this->phoneNo = $phoneNo;
+
         return $this;
     }
+
     /**
      * Gets ypMobile
-     *
      * @return string
      */
     public function getYpMobile()
@@ -191,18 +199,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets ypMobile
-     *
-     * @param string $ypMobile
+     * @param  string  $ypMobile
      * @return BindpaySendsmsRequest
      */
     public function setYpMobile($ypMobile)
     {
         $this->ypMobile = $ypMobile;
+
         return $this;
     }
+
     /**
      * Gets avlidDate
-     *
      * @return string
      */
     public function getAvlidDate()
@@ -212,18 +220,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets avlidDate
-     *
-     * @param string $avlidDate
+     * @param  string  $avlidDate
      * @return BindpaySendsmsRequest
      */
     public function setAvlidDate($avlidDate)
     {
         $this->avlidDate = $avlidDate;
+
         return $this;
     }
+
     /**
      * Gets cvv2
-     *
      * @return string
      */
     public function getCvv2()
@@ -233,18 +241,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets cvv2
-     *
-     * @param string $cvv2
+     * @param  string  $cvv2
      * @return BindpaySendsmsRequest
      */
     public function setCvv2($cvv2)
     {
         $this->cvv2 = $cvv2;
+
         return $this;
     }
+
     /**
      * Gets idCardType
-     *
      * @return string
      */
     public function getIdCardType()
@@ -254,18 +262,18 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets idCardType
-     *
-     * @param string $idCardType
+     * @param  string  $idCardType
      * @return BindpaySendsmsRequest
      */
     public function setIdCardType($idCardType)
     {
         $this->idCardType = $idCardType;
+
         return $this;
     }
+
     /**
      * Gets bankPWD
-     *
      * @return string
      */
     public function getBankPWD()
@@ -275,13 +283,13 @@ class BindpaySendsmsRequest extends BaseRequest
 
     /**
      * Sets bankPWD
-     *
-     * @param string $bankPWD
+     * @param  string  $bankPWD
      * @return BindpaySendsmsRequest
      */
     public function setBankPWD($bankPWD)
     {
         $this->bankPWD = $bankPWD;
+
         return $this;
     }
 
@@ -289,6 +297,5 @@ class BindpaySendsmsRequest extends BaseRequest
     {
         return 'bindpaySendsms';
     }
-
 
 }

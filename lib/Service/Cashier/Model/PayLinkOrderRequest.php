@@ -1,49 +1,57 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class PayLinkOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $goodsName;
+
     /**
      * @var float
      */
     private $amount;
+
     /**
      * @var string
      */
     private $expiredTime;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $scene;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
@@ -51,7 +59,6 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -61,18 +68,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return PayLinkOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -82,18 +89,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return PayLinkOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -103,18 +110,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return PayLinkOrderRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets goodsName
-     *
      * @return string
      */
     public function getGoodsName()
@@ -124,18 +131,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets goodsName
-     *
-     * @param string $goodsName
+     * @param  string  $goodsName
      * @return PayLinkOrderRequest
      */
     public function setGoodsName($goodsName)
     {
         $this->goodsName = $goodsName;
+
         return $this;
     }
+
     /**
      * Gets amount
-     *
      * @return float
      */
     public function getAmount()
@@ -145,18 +152,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets amount
-     *
-     * @param float $amount
+     * @param  float  $amount
      * @return PayLinkOrderRequest
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
+
     /**
      * Gets expiredTime
-     *
      * @return string
      */
     public function getExpiredTime()
@@ -166,18 +173,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets expiredTime
-     *
-     * @param string $expiredTime
+     * @param  string  $expiredTime
      * @return PayLinkOrderRequest
      */
     public function setExpiredTime($expiredTime)
     {
         $this->expiredTime = $expiredTime;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -187,18 +194,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return PayLinkOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets scene
-     *
      * @return string
      */
     public function getScene()
@@ -208,18 +215,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets scene
-     *
-     * @param string $scene
+     * @param  string  $scene
      * @return PayLinkOrderRequest
      */
     public function setScene($scene)
     {
         $this->scene = $scene;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -229,18 +236,18 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return PayLinkOrderRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets appId
-     *
      * @return string
      */
     public function getAppId()
@@ -250,13 +257,13 @@ class PayLinkOrderRequest extends BaseRequest
 
     /**
      * Sets appId
-     *
-     * @param string $appId
+     * @param  string  $appId
      * @return PayLinkOrderRequest
      */
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -264,6 +271,5 @@ class PayLinkOrderRequest extends BaseRequest
     {
         return 'payLinkOrder';
     }
-
 
 }

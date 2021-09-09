@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class YjzfBindpayrequestRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $bindId;
+
     /**
      * @var string
      */
     private $userNo;
+
     /**
      * @var string
      */
     private $userType;
+
     /**
      * @var string
      */
     private $userIp;
+
     /**
      * @var string
      */
     private $paymentExt;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
@@ -39,7 +44,6 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Gets bindId
-     *
      * @return string
      */
     public function getBindId()
@@ -49,18 +53,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets bindId
-     *
-     * @param string $bindId
+     * @param  string  $bindId
      * @return YjzfBindpayrequestRequest
      */
     public function setBindId($bindId)
     {
         $this->bindId = $bindId;
+
         return $this;
     }
+
     /**
      * Gets userNo
-     *
      * @return string
      */
     public function getUserNo()
@@ -70,18 +74,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets userNo
-     *
-     * @param string $userNo
+     * @param  string  $userNo
      * @return YjzfBindpayrequestRequest
      */
     public function setUserNo($userNo)
     {
         $this->userNo = $userNo;
+
         return $this;
     }
+
     /**
      * Gets userType
-     *
      * @return string
      */
     public function getUserType()
@@ -91,18 +95,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets userType
-     *
-     * @param string $userType
+     * @param  string  $userType
      * @return YjzfBindpayrequestRequest
      */
     public function setUserType($userType)
     {
         $this->userType = $userType;
+
         return $this;
     }
+
     /**
      * Gets userIp
-     *
      * @return string
      */
     public function getUserIp()
@@ -112,18 +116,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets userIp
-     *
-     * @param string $userIp
+     * @param  string  $userIp
      * @return YjzfBindpayrequestRequest
      */
     public function setUserIp($userIp)
     {
         $this->userIp = $userIp;
+
         return $this;
     }
+
     /**
      * Gets paymentExt
-     *
      * @return string
      */
     public function getPaymentExt()
@@ -133,18 +137,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets paymentExt
-     *
-     * @param string $paymentExt
+     * @param  string  $paymentExt
      * @return YjzfBindpayrequestRequest
      */
     public function setPaymentExt($paymentExt)
     {
         $this->paymentExt = $paymentExt;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -154,18 +158,18 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return YjzfBindpayrequestRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets version
-     *
      * @return string
      */
     public function getVersion()
@@ -175,13 +179,13 @@ class YjzfBindpayrequestRequest extends BaseRequest
 
     /**
      * Sets version
-     *
-     * @param string $version
+     * @param  string  $version
      * @return YjzfBindpayrequestRequest
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class YjzfBindpayrequestRequest extends BaseRequest
     {
         return 'yjzfBindpayrequest';
     }
-
 
 }

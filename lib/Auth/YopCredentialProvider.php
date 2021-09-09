@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 interface YopCredentialProvider
 {
+
     /**
      * @param $appKey string
      * @param $credentialType string
@@ -24,4 +23,5 @@ interface YopCredentialProvider
      * @return resource
      */
     public function getYopPublicKey($credentialType);
+
 }

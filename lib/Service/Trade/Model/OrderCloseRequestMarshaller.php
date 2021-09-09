@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class OrderCloseRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var OrderCloseRequestMarshaller
      */
@@ -51,9 +50,8 @@ class OrderCloseRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param OrderCloseRequest $request
+     * @param  OrderCloseRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class OrderCloseRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getOrderId() != null){
-            $internalRequest->addParameter('orderId', ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
+        if ($request->getOrderId() != null) {
+            $internalRequest->addParameter('orderId',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
         }
-        if($request->getUniqueOrderNo() != null){
-            $internalRequest->addParameter('uniqueOrderNo', ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
+        if ($request->getUniqueOrderNo() != null) {
+            $internalRequest->addParameter('uniqueOrderNo',
+                ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 OrderCloseRequestMarshaller::__init();

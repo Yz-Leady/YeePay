@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Http;
-
 
 use Yeepay\Yop\Sdk\Auth\Encryptor;
 use Yeepay\Yop\Sdk\Auth\Signer;
@@ -11,6 +9,7 @@ use Yeepay\Yop\Sdk\Auth\YopRsaCredentials;
 
 class ExecutionContext
 {
+
     /**
      * @var Signer
      */
@@ -45,12 +44,13 @@ class ExecutionContext
     }
 
     /**
-     * @param Signer $signer
+     * @param  Signer  $signer
      * @return ExecutionContext
      */
     public function setSigner($signer)
     {
         $this->signer = $signer;
+
         return $this;
     }
 
@@ -63,12 +63,13 @@ class ExecutionContext
     }
 
     /**
-     * @param SignOptions $signOptions
+     * @param  SignOptions  $signOptions
      * @return ExecutionContext
      */
     public function setSignOptions($signOptions)
     {
         $this->signOptions = $signOptions;
+
         return $this;
     }
 
@@ -81,12 +82,13 @@ class ExecutionContext
     }
 
     /**
-     * @param bool $needEncrypt
+     * @param  bool  $needEncrypt
      * @return ExecutionContext
      */
     public function setNeedEncrypt($needEncrypt)
     {
         $this->needEncrypt = $needEncrypt;
+
         return $this;
     }
 
@@ -99,12 +101,13 @@ class ExecutionContext
     }
 
     /**
-     * @param Encryptor $encryptor
+     * @param  Encryptor  $encryptor
      * @return ExecutionContext
      */
     public function setEncryptor($encryptor)
     {
         $this->encryptor = $encryptor;
+
         return $this;
     }
 
@@ -117,12 +120,13 @@ class ExecutionContext
     }
 
     /**
-     * @param YopRsaCredentials $credentials
+     * @param  YopRsaCredentials  $credentials
      * @return ExecutionContext
      */
     public function setCredentials($credentials)
     {
         $this->credentials = $credentials;
+
         return $this;
     }
 

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cashier;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class CashierClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,7 +23,8 @@ class CashierClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('payLinkOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('payLinkOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -34,7 +34,7 @@ class CashierClientBuilder
 
     /**
      * CashierClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -61,8 +61,10 @@ class CashierClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new CashierClientBuilder($clientParams);
     }
 
 }
+
 CashierClientBuilder::__init();

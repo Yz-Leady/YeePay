@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class YjzfSendsmsResponse extends BaseResponse
 {
+
     /**
      * @var YjzfSendsmsAPIBasicResponseDTOResult
      */
@@ -18,7 +18,7 @@ class YjzfSendsmsResponse extends BaseResponse
     }
 
     /**
-     * @param YjzfSendsmsAPIBasicResponseDTOResult $result
+     * @param  YjzfSendsmsAPIBasicResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class YjzfSendsmsResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

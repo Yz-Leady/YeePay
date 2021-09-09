@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class MerchantQualUploadResponse extends BaseResponse
 {
+
     /**
      * @var MerchantQualUploadMerFileUploadRespDtoResult
      */
@@ -18,7 +18,7 @@ class MerchantQualUploadResponse extends BaseResponse
     }
 
     /**
-     * @param MerchantQualUploadMerFileUploadRespDtoResult $result
+     * @param  MerchantQualUploadMerFileUploadRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class MerchantQualUploadResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

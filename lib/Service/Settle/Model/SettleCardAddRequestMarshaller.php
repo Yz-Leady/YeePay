@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class SettleCardAddRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var SettleCardAddRequestMarshaller
      */
@@ -51,9 +50,8 @@ class SettleCardAddRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param SettleCardAddRequest $request
+     * @param  SettleCardAddRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,27 +67,35 @@ class SettleCardAddRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getBankCardNo() != null){
-            $internalRequest->addParameter('bankCardNo', ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
+        if ($request->getBankCardNo() != null) {
+            $internalRequest->addParameter('bankCardNo',
+                ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
         }
-        if($request->getBankCardType() != null){
-            $internalRequest->addParameter('bankCardType', ObjectSerializer::sanitizeForSerialization($request->getBankCardType(), 'string'));
+        if ($request->getBankCardType() != null) {
+            $internalRequest->addParameter('bankCardType',
+                ObjectSerializer::sanitizeForSerialization($request->getBankCardType(), 'string'));
         }
-        if($request->getBankCode() != null){
-            $internalRequest->addParameter('bankCode', ObjectSerializer::sanitizeForSerialization($request->getBankCode(), 'string'));
+        if ($request->getBankCode() != null) {
+            $internalRequest->addParameter('bankCode',
+                ObjectSerializer::sanitizeForSerialization($request->getBankCode(), 'string'));
         }
-        if($request->getDefaultSettleCard() != null){
-            $internalRequest->addParameter('defaultSettleCard', ObjectSerializer::sanitizeForSerialization($request->getDefaultSettleCard(), 'bool'));
+        if ($request->getDefaultSettleCard() != null) {
+            $internalRequest->addParameter('defaultSettleCard',
+                ObjectSerializer::sanitizeForSerialization($request->getDefaultSettleCard(), 'bool'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 SettleCardAddRequestMarshaller::__init();

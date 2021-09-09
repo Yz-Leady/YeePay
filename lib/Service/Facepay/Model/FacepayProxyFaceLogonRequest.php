@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyFaceLogonRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $orderToken;
+
     /**
      * @var string
      */
     private $faceImage;
+
     /**
      * @var string
      */
     private $collectType;
+
     /**
      * @var string
      */
     private $collectDevice;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -39,7 +44,6 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Gets orderToken
-     *
      * @return string
      */
     public function getOrderToken()
@@ -49,18 +53,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets orderToken
-     *
-     * @param string $orderToken
+     * @param  string  $orderToken
      * @return FacepayProxyFaceLogonRequest
      */
     public function setOrderToken($orderToken)
     {
         $this->orderToken = $orderToken;
+
         return $this;
     }
+
     /**
      * Gets faceImage
-     *
      * @return string
      */
     public function getFaceImage()
@@ -70,18 +74,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets faceImage
-     *
-     * @param string $faceImage
+     * @param  string  $faceImage
      * @return FacepayProxyFaceLogonRequest
      */
     public function setFaceImage($faceImage)
     {
         $this->faceImage = $faceImage;
+
         return $this;
     }
+
     /**
      * Gets collectType
-     *
      * @return string
      */
     public function getCollectType()
@@ -91,18 +95,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets collectType
-     *
-     * @param string $collectType
+     * @param  string  $collectType
      * @return FacepayProxyFaceLogonRequest
      */
     public function setCollectType($collectType)
     {
         $this->collectType = $collectType;
+
         return $this;
     }
+
     /**
      * Gets collectDevice
-     *
      * @return string
      */
     public function getCollectDevice()
@@ -112,18 +116,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets collectDevice
-     *
-     * @param string $collectDevice
+     * @param  string  $collectDevice
      * @return FacepayProxyFaceLogonRequest
      */
     public function setCollectDevice($collectDevice)
     {
         $this->collectDevice = $collectDevice;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -133,18 +137,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyFaceLogonRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -154,18 +158,18 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyFaceLogonRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -175,13 +179,13 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyFaceLogonRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class FacepayProxyFaceLogonRequest extends BaseRequest
     {
         return 'facepayProxyFaceLogon';
     }
-
 
 }

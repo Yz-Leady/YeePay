@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class FacepayProxyConfirmVerifySmscodeRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var FacepayProxyConfirmVerifySmscodeRequestMarshaller
      */
@@ -51,9 +50,8 @@ class FacepayProxyConfirmVerifySmscodeRequestMarshaller implements RequestMarsha
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param FacepayProxyConfirmVerifySmscodeRequest $request
+     * @param  FacepayProxyConfirmVerifySmscodeRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class FacepayProxyConfirmVerifySmscodeRequestMarshaller implements RequestMarsha
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getSmsCode() != null){
-            $internalRequest->addParameter('smsCode', ObjectSerializer::sanitizeForSerialization($request->getSmsCode(), 'string'));
+        if ($request->getSmsCode() != null) {
+            $internalRequest->addParameter('smsCode',
+                ObjectSerializer::sanitizeForSerialization($request->getSmsCode(), 'string'));
         }
-        if($request->getBizSystem() != null){
-            $internalRequest->addParameter('bizSystem', ObjectSerializer::sanitizeForSerialization($request->getBizSystem(), 'string'));
+        if ($request->getBizSystem() != null) {
+            $internalRequest->addParameter('bizSystem',
+                ObjectSerializer::sanitizeForSerialization($request->getBizSystem(), 'string'));
         }
-        if($request->getMtToken() != null){
-            $internalRequest->addParameter('mtToken', ObjectSerializer::sanitizeForSerialization($request->getMtToken(), 'string'));
+        if ($request->getMtToken() != null) {
+            $internalRequest->addParameter('mtToken',
+                ObjectSerializer::sanitizeForSerialization($request->getMtToken(), 'string'));
         }
-        if($request->getMemberNo() != null){
-            $internalRequest->addParameter('memberNo', ObjectSerializer::sanitizeForSerialization($request->getMemberNo(), 'string'));
+        if ($request->getMemberNo() != null) {
+            $internalRequest->addParameter('memberNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMemberNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 FacepayProxyConfirmVerifySmscodeRequestMarshaller::__init();

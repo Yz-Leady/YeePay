@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class RecordsQueryResponse extends BaseResponse
 {
+
     /**
      * @var RecordsQuerySettleRecordQueryResponseDtoResult
      */
@@ -18,7 +18,7 @@ class RecordsQueryResponse extends BaseResponse
     }
 
     /**
-     * @param RecordsQuerySettleRecordQueryResponseDtoResult $result
+     * @param  RecordsQuerySettleRecordQueryResponseDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class RecordsQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

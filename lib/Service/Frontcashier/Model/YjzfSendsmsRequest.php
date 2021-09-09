@@ -1,49 +1,57 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class YjzfSendsmsRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $recordId;
+
     /**
      * @var string
      */
     private $owner;
+
     /**
      * @var string
      */
     private $idNo;
+
     /**
      * @var string
      */
     private $phoneNo;
+
     /**
      * @var string
      */
     private $cvv;
+
     /**
      * @var string
      */
     private $avlidDate;
+
     /**
      * @var string
      */
     private $bankPWD;
+
     /**
      * @var string
      */
     private $paymentExt;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
@@ -51,7 +59,6 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Gets recordId
-     *
      * @return string
      */
     public function getRecordId()
@@ -61,18 +68,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets recordId
-     *
-     * @param string $recordId
+     * @param  string  $recordId
      * @return YjzfSendsmsRequest
      */
     public function setRecordId($recordId)
     {
         $this->recordId = $recordId;
+
         return $this;
     }
+
     /**
      * Gets owner
-     *
      * @return string
      */
     public function getOwner()
@@ -82,18 +89,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets owner
-     *
-     * @param string $owner
+     * @param  string  $owner
      * @return YjzfSendsmsRequest
      */
     public function setOwner($owner)
     {
         $this->owner = $owner;
+
         return $this;
     }
+
     /**
      * Gets idNo
-     *
      * @return string
      */
     public function getIdNo()
@@ -103,18 +110,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets idNo
-     *
-     * @param string $idNo
+     * @param  string  $idNo
      * @return YjzfSendsmsRequest
      */
     public function setIdNo($idNo)
     {
         $this->idNo = $idNo;
+
         return $this;
     }
+
     /**
      * Gets phoneNo
-     *
      * @return string
      */
     public function getPhoneNo()
@@ -124,18 +131,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets phoneNo
-     *
-     * @param string $phoneNo
+     * @param  string  $phoneNo
      * @return YjzfSendsmsRequest
      */
     public function setPhoneNo($phoneNo)
     {
         $this->phoneNo = $phoneNo;
+
         return $this;
     }
+
     /**
      * Gets cvv
-     *
      * @return string
      */
     public function getCvv()
@@ -145,18 +152,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets cvv
-     *
-     * @param string $cvv
+     * @param  string  $cvv
      * @return YjzfSendsmsRequest
      */
     public function setCvv($cvv)
     {
         $this->cvv = $cvv;
+
         return $this;
     }
+
     /**
      * Gets avlidDate
-     *
      * @return string
      */
     public function getAvlidDate()
@@ -166,18 +173,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets avlidDate
-     *
-     * @param string $avlidDate
+     * @param  string  $avlidDate
      * @return YjzfSendsmsRequest
      */
     public function setAvlidDate($avlidDate)
     {
         $this->avlidDate = $avlidDate;
+
         return $this;
     }
+
     /**
      * Gets bankPWD
-     *
      * @return string
      */
     public function getBankPWD()
@@ -187,18 +194,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets bankPWD
-     *
-     * @param string $bankPWD
+     * @param  string  $bankPWD
      * @return YjzfSendsmsRequest
      */
     public function setBankPWD($bankPWD)
     {
         $this->bankPWD = $bankPWD;
+
         return $this;
     }
+
     /**
      * Gets paymentExt
-     *
      * @return string
      */
     public function getPaymentExt()
@@ -208,18 +215,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets paymentExt
-     *
-     * @param string $paymentExt
+     * @param  string  $paymentExt
      * @return YjzfSendsmsRequest
      */
     public function setPaymentExt($paymentExt)
     {
         $this->paymentExt = $paymentExt;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -229,18 +236,18 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return YjzfSendsmsRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets version
-     *
      * @return string
      */
     public function getVersion()
@@ -250,13 +257,13 @@ class YjzfSendsmsRequest extends BaseRequest
 
     /**
      * Sets version
-     *
-     * @param string $version
+     * @param  string  $version
      * @return YjzfSendsmsRequest
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -264,6 +271,5 @@ class YjzfSendsmsRequest extends BaseRequest
     {
         return 'yjzfSendsms';
     }
-
 
 }

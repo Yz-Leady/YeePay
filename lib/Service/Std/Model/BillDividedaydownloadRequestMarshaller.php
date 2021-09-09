@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BillDividedaydownloadRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BillDividedaydownloadRequestMarshaller
      */
@@ -51,9 +49,8 @@ class BillDividedaydownloadRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BillDividedaydownloadRequest $request
+     * @param  BillDividedaydownloadRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -74,5 +71,7 @@ class BillDividedaydownloadRequestMarshaller implements RequestMarshaller
 
         return $internalRequest;
     }
+
 }
+
 BillDividedaydownloadRequestMarshaller::__init();

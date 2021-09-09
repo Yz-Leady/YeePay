@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class SosDeleteBindNoRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $string0;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class SosDeleteBindNoRequest extends BaseRequest
 
     /**
      * Gets string0
-     *
      * @return string
      */
     public function getString0()
@@ -29,18 +28,18 @@ class SosDeleteBindNoRequest extends BaseRequest
 
     /**
      * Sets string0
-     *
-     * @param string $string0
+     * @param  string  $string0
      * @return SosDeleteBindNoRequest
      */
     public function setString0($string0)
     {
         $this->string0 = $string0;
+
         return $this;
     }
+
     /**
      * Gets string1
-     *
      * @return string
      */
     public function getString1()
@@ -50,13 +49,13 @@ class SosDeleteBindNoRequest extends BaseRequest
 
     /**
      * Sets string1
-     *
-     * @param string $string1
+     * @param  string  $string1
      * @return SosDeleteBindNoRequest
      */
     public function setString1($string1)
     {
         $this->string1 = $string1;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class SosDeleteBindNoRequest extends BaseRequest
     {
         return 'sosDeleteBindNo';
     }
-
 
 }

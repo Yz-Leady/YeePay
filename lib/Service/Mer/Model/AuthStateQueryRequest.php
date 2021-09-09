@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class AuthStateQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $reportMerchantNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class AuthStateQueryRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -33,18 +33,18 @@ class AuthStateQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return AuthStateQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets reportMerchantNo
-     *
      * @return string
      */
     public function getReportMerchantNo()
@@ -54,18 +54,18 @@ class AuthStateQueryRequest extends BaseRequest
 
     /**
      * Sets reportMerchantNo
-     *
-     * @param string $reportMerchantNo
+     * @param  string  $reportMerchantNo
      * @return AuthStateQueryRequest
      */
     public function setReportMerchantNo($reportMerchantNo)
     {
         $this->reportMerchantNo = $reportMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets feeType
-     *
      * @return string
      */
     public function getFeeType()
@@ -75,13 +75,13 @@ class AuthStateQueryRequest extends BaseRequest
 
     /**
      * Sets feeType
-     *
-     * @param string $feeType
+     * @param  string  $feeType
      * @return AuthStateQueryRequest
      */
     public function setFeeType($feeType)
     {
         $this->feeType = $feeType;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class AuthStateQueryRequest extends BaseRequest
     {
         return 'authStateQuery';
     }
-
 
 }

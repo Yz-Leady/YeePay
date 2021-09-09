@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $orderToken;
+
     /**
      * @var string
      */
     private $faceRequestNo;
+
     /**
      * @var string
      */
     private $certificateNoLastN;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Gets orderToken
-     *
      * @return string
      */
     public function getOrderToken()
@@ -45,18 +48,18 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets orderToken
-     *
-     * @param string $orderToken
+     * @param  string  $orderToken
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setOrderToken($orderToken)
     {
         $this->orderToken = $orderToken;
+
         return $this;
     }
+
     /**
      * Gets faceRequestNo
-     *
      * @return string
      */
     public function getFaceRequestNo()
@@ -66,18 +69,18 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets faceRequestNo
-     *
-     * @param string $faceRequestNo
+     * @param  string  $faceRequestNo
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setFaceRequestNo($faceRequestNo)
     {
         $this->faceRequestNo = $faceRequestNo;
+
         return $this;
     }
+
     /**
      * Gets certificateNoLastN
-     *
      * @return string
      */
     public function getCertificateNoLastN()
@@ -87,18 +90,18 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets certificateNoLastN
-     *
-     * @param string $certificateNoLastN
+     * @param  string  $certificateNoLastN
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setCertificateNoLastN($certificateNoLastN)
     {
         $this->certificateNoLastN = $certificateNoLastN;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -108,18 +111,18 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -129,18 +132,18 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -150,13 +153,13 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyCertificateNoAuthRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class FacepayProxyCertificateNoAuthRequest extends BaseRequest
     {
         return 'facepayProxyCertificateNoAuth';
     }
-
 
 }

@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BalanceBankAccountListRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class BalanceBankAccountListRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class BalanceBankAccountListRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BalanceBankAccountListRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -54,18 +54,18 @@ class BalanceBankAccountListRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BalanceBankAccountListRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets bankCode
-     *
      * @return string
      */
     public function getBankCode()
@@ -75,13 +75,13 @@ class BalanceBankAccountListRequest extends BaseRequest
 
     /**
      * Sets bankCode
-     *
-     * @param string $bankCode
+     * @param  string  $bankCode
      * @return BalanceBankAccountListRequest
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class BalanceBankAccountListRequest extends BaseRequest
     {
         return 'balanceBankAccountList';
     }
-
 
 }

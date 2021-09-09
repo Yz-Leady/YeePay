@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class WechatConfigAdd0RequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var WechatConfigAdd0RequestMarshaller
      */
@@ -51,9 +50,8 @@ class WechatConfigAdd0RequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param WechatConfigAdd0Request $request
+     * @param  WechatConfigAdd0Request  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class WechatConfigAdd0RequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getTradeAuthDirList() != null){
-            $internalRequest->addParameter('tradeAuthDirList', ObjectSerializer::sanitizeForSerialization($request->getTradeAuthDirList(), 'string'));
+        if ($request->getTradeAuthDirList() != null) {
+            $internalRequest->addParameter('tradeAuthDirList',
+                ObjectSerializer::sanitizeForSerialization($request->getTradeAuthDirList(), 'string'));
         }
-        if($request->getAppIdList() != null){
-            $internalRequest->addParameter('appIdList', ObjectSerializer::sanitizeForSerialization($request->getAppIdList(), 'string'));
+        if ($request->getAppIdList() != null) {
+            $internalRequest->addParameter('appIdList',
+                ObjectSerializer::sanitizeForSerialization($request->getAppIdList(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 WechatConfigAdd0RequestMarshaller::__init();

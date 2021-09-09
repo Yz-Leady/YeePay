@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 class YopRsaCredentials
 {
+
     /**
      * @var string
      */
@@ -23,13 +22,13 @@ class YopRsaCredentials
 
     /**
      * YopRsaCredentials constructor.
-     * @param string $appKey
-     * @param resource $privateKey
-     * @param string $encryptKey
+     * @param  string  $appKey
+     * @param  resource  $privateKey
+     * @param  string  $encryptKey
      */
     public function __construct($appKey, $privateKey, $encryptKey)
     {
-        $this->appKey = $appKey;
+        $this->appKey     = $appKey;
         $this->privateKey = $privateKey;
         $this->encryptKey = $encryptKey;
     }
@@ -43,12 +42,13 @@ class YopRsaCredentials
     }
 
     /**
-     * @param string $appKey
+     * @param  string  $appKey
      * @return YopRsaCredentials
      */
     public function setAppKey($appKey)
     {
         $this->appKey = $appKey;
+
         return $this;
     }
 
@@ -61,12 +61,13 @@ class YopRsaCredentials
     }
 
     /**
-     * @param resource $privateKey
+     * @param  resource  $privateKey
      * @return YopRsaCredentials
      */
     public function setPrivateKey($privateKey)
     {
         $this->privateKey = $privateKey;
+
         return $this;
     }
 
@@ -79,17 +80,14 @@ class YopRsaCredentials
     }
 
     /**
-     * @param string $encryptKey
+     * @param  string  $encryptKey
      * @return YopRsaCredentials
      */
     public function setEncryptKey($encryptKey)
     {
         $this->encryptKey = $encryptKey;
+
         return $this;
     }
-
-
-
-
 
 }

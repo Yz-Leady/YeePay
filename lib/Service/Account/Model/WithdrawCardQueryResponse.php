@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class WithdrawCardQueryResponse extends BaseResponse
 {
+
     /**
      * @var WithdrawCardQueryBindCardQueryRespDTOResult
      */
@@ -18,7 +18,7 @@ class WithdrawCardQueryResponse extends BaseResponse
     }
 
     /**
-     * @param WithdrawCardQueryBindCardQueryRespDTOResult $result
+     * @param  WithdrawCardQueryBindCardQueryRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class WithdrawCardQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

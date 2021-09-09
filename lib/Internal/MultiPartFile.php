@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Internal;
-
 
 use Psr\Http\Message\StreamInterface;
 use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
@@ -22,17 +20,17 @@ class MultiPartFile
 
     /**
      * MultiPartFile constructor.
-     * @param string|resource $file
+     * @param  string|resource  $file
      */
     public function __construct($file)
     {
         if (is_string($file)) {
             $this->fileName = ObjectSerializer::sanitizeFilename($file);
-            $this->content = \GuzzleHttp\Psr7\stream_for($file);
+            $this->content  = \GuzzleHttp\Psr7\stream_for($file);
         } else {
-            $meta_data = stream_get_meta_data($file);
+            $meta_data      = stream_get_meta_data($file);
             $this->fileName = ObjectSerializer::sanitizeFilename($meta_data['uri']);
-            $this->content = \GuzzleHttp\Psr7\stream_for($file);
+            $this->content  = \GuzzleHttp\Psr7\stream_for($file);
         }
     }
 
@@ -45,12 +43,13 @@ class MultiPartFile
     }
 
     /**
-     * @param string $fileName
+     * @param  string  $fileName
      * @return MultiPartFile
      */
     public function setFileName($fileName)
     {
         $this->fileName = $fileName;
+
         return $this;
     }
 
@@ -63,12 +62,13 @@ class MultiPartFile
     }
 
     /**
-     * @param StreamInterface $content
+     * @param  StreamInterface  $content
      * @return MultiPartFile
      */
     public function setContent($content)
     {
         $this->content = $content;
+
         return $this;
     }
 

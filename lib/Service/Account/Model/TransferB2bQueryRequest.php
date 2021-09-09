@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TransferB2bQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class TransferB2bQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class TransferB2bQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TransferB2bQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -54,18 +54,18 @@ class TransferB2bQueryRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return TransferB2bQueryRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets orderNo
-     *
      * @return string
      */
     public function getOrderNo()
@@ -75,13 +75,13 @@ class TransferB2bQueryRequest extends BaseRequest
 
     /**
      * Sets orderNo
-     *
-     * @param string $orderNo
+     * @param  string  $orderNo
      * @return TransferB2bQueryRequest
      */
     public function setOrderNo($orderNo)
     {
         $this->orderNo = $orderNo;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class TransferB2bQueryRequest extends BaseRequest
     {
         return 'transferB2bQuery';
     }
-
 
 }

@@ -1,22 +1,20 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class WechatConfigAddRequest extends BaseRequest
 {
+
     /**
-     * @var 
+     * @var
      */
     private $body;
 
     /**
      * Gets body
-     *
-     * @return 
+     * @return
      */
     public function getBody()
     {
@@ -25,13 +23,13 @@ class WechatConfigAddRequest extends BaseRequest
 
     /**
      * Sets body
-     *
      * @param  $body
      * @return WechatConfigAddRequest
      */
     public function setBody($body)
     {
         $this->body = $body;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class WechatConfigAddRequest extends BaseRequest
     {
         return 'wechatConfigAdd';
     }
-
 
 }

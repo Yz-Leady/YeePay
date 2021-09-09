@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BillFundbillApplyResponse extends BaseResponse
 {
+
     /**
      * @var BillFundbillApplyManualGenerationResponseDTOResult
      */
@@ -18,7 +18,7 @@ class BillFundbillApplyResponse extends BaseResponse
     }
 
     /**
-     * @param BillFundbillApplyManualGenerationResponseDTOResult $result
+     * @param  BillFundbillApplyManualGenerationResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BillFundbillApplyResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

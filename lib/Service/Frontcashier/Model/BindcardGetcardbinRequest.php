@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindcardGetcardbinRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $bankCardNo;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class BindcardGetcardbinRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -37,18 +38,18 @@ class BindcardGetcardbinRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BindcardGetcardbinRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -58,18 +59,18 @@ class BindcardGetcardbinRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BindcardGetcardbinRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets bankCardNo
-     *
      * @return string
      */
     public function getBankCardNo()
@@ -79,18 +80,18 @@ class BindcardGetcardbinRequest extends BaseRequest
 
     /**
      * Sets bankCardNo
-     *
-     * @param string $bankCardNo
+     * @param  string  $bankCardNo
      * @return BindcardGetcardbinRequest
      */
     public function setBankCardNo($bankCardNo)
     {
         $this->bankCardNo = $bankCardNo;
+
         return $this;
     }
+
     /**
      * Gets cardType
-     *
      * @return string
      */
     public function getCardType()
@@ -100,13 +101,13 @@ class BindcardGetcardbinRequest extends BaseRequest
 
     /**
      * Sets cardType
-     *
-     * @param string $cardType
+     * @param  string  $cardType
      * @return BindcardGetcardbinRequest
      */
     public function setCardType($cardType)
     {
         $this->cardType = $cardType;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class BindcardGetcardbinRequest extends BaseRequest
     {
         return 'bindcardGetcardbin';
     }
-
 
 }

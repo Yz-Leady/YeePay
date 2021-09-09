@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class WithdrawCardModifyRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $accountNo;
+
     /**
      * @var int
      */
     private $bindId;
+
     /**
      * @var string
      */
     private $bankCardOperateType;
+
     /**
      * @var string
      */
     private $bankCode;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -45,18 +48,18 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return WithdrawCardModifyRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets accountNo
-     *
      * @return string
      */
     public function getAccountNo()
@@ -66,18 +69,18 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets accountNo
-     *
-     * @param string $accountNo
+     * @param  string  $accountNo
      * @return WithdrawCardModifyRequest
      */
     public function setAccountNo($accountNo)
     {
         $this->accountNo = $accountNo;
+
         return $this;
     }
+
     /**
      * Gets bindId
-     *
      * @return int
      */
     public function getBindId()
@@ -87,18 +90,18 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets bindId
-     *
-     * @param int $bindId
+     * @param  int  $bindId
      * @return WithdrawCardModifyRequest
      */
     public function setBindId($bindId)
     {
         $this->bindId = $bindId;
+
         return $this;
     }
+
     /**
      * Gets bankCardOperateType
-     *
      * @return string
      */
     public function getBankCardOperateType()
@@ -108,18 +111,18 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets bankCardOperateType
-     *
-     * @param string $bankCardOperateType
+     * @param  string  $bankCardOperateType
      * @return WithdrawCardModifyRequest
      */
     public function setBankCardOperateType($bankCardOperateType)
     {
         $this->bankCardOperateType = $bankCardOperateType;
+
         return $this;
     }
+
     /**
      * Gets bankCode
-     *
      * @return string
      */
     public function getBankCode()
@@ -129,18 +132,18 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets bankCode
-     *
-     * @param string $bankCode
+     * @param  string  $bankCode
      * @return WithdrawCardModifyRequest
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
+
     /**
      * Gets branchCode
-     *
      * @return string
      */
     public function getBranchCode()
@@ -150,13 +153,13 @@ class WithdrawCardModifyRequest extends BaseRequest
 
     /**
      * Sets branchCode
-     *
-     * @param string $branchCode
+     * @param  string  $branchCode
      * @return WithdrawCardModifyRequest
      */
     public function setBranchCode($branchCode)
     {
         $this->branchCode = $branchCode;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class WithdrawCardModifyRequest extends BaseRequest
     {
         return 'withdrawCardModify';
     }
-
 
 }

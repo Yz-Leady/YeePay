@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class ProductFeeModifyResponse extends BaseResponse
 {
+
     /**
      * @var ProductFeeModifyModifyProductFeeRespDtoResult
      */
@@ -18,7 +18,7 @@ class ProductFeeModifyResponse extends BaseResponse
     }
 
     /**
-     * @param ProductFeeModifyModifyProductFeeRespDtoResult $result
+     * @param  ProductFeeModifyModifyProductFeeRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class ProductFeeModifyResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

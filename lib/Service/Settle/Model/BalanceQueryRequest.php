@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BalanceQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $operatePeriod;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class BalanceQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -37,18 +38,18 @@ class BalanceQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BalanceQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -58,18 +59,18 @@ class BalanceQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BalanceQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets operatePeriod
-     *
      * @return string
      */
     public function getOperatePeriod()
@@ -79,18 +80,18 @@ class BalanceQueryRequest extends BaseRequest
 
     /**
      * Sets operatePeriod
-     *
-     * @param string $operatePeriod
+     * @param  string  $operatePeriod
      * @return BalanceQueryRequest
      */
     public function setOperatePeriod($operatePeriod)
     {
         $this->operatePeriod = $operatePeriod;
+
         return $this;
     }
+
     /**
      * Gets endTime
-     *
      * @return string
      */
     public function getEndTime()
@@ -100,13 +101,13 @@ class BalanceQueryRequest extends BaseRequest
 
     /**
      * Sets endTime
-     *
-     * @param string $endTime
+     * @param  string  $endTime
      * @return BalanceQueryRequest
      */
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class BalanceQueryRequest extends BaseRequest
     {
         return 'balanceQuery';
     }
-
 
 }

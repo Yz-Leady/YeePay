@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -17,6 +15,7 @@ use Yeepay\Yop\Sdk\Service\Common\Model\YopResponseUnMarshaller;
 
 class YopClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -24,7 +23,7 @@ class YopClient
 
     /**
      * YopClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -32,24 +31,28 @@ class YopClient
     }
 
     /**
-     * @param YopRequest $request
+     * @param  YopRequest  $request
      * @return YopResponse
      * @throws YopClientException
      */
     public function sendRequest(YopRequest $request)
     {
-        $clientExecutionParams = new ClientExecutionParams($request, new YopRequestMarshaller(), new YopResponseUnMarshaller());
+        $clientExecutionParams = new ClientExecutionParams($request, new YopRequestMarshaller(),
+            new YopResponseUnMarshaller());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
 
     /**
-     * @param YopRequest $request
+     * @param  YopRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
     public function sendDownloadRequest(YopRequest $request)
     {
-        $clientExecutionParams = new ClientExecutionParams($request, new YopRequestMarshaller(), new YosDownloadResponseUnMarshaller());
+        $clientExecutionParams = new ClientExecutionParams($request, new YopRequestMarshaller(),
+            new YosDownloadResponseUnMarshaller());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
 

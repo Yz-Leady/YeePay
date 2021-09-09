@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class WechatConfigAdd0Request extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $tradeAuthDirList;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class WechatConfigAdd0Request extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -37,18 +38,18 @@ class WechatConfigAdd0Request extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return WechatConfigAdd0Request
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -58,18 +59,18 @@ class WechatConfigAdd0Request extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return WechatConfigAdd0Request
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets tradeAuthDirList
-     *
      * @return string
      */
     public function getTradeAuthDirList()
@@ -79,18 +80,18 @@ class WechatConfigAdd0Request extends BaseRequest
 
     /**
      * Sets tradeAuthDirList
-     *
-     * @param string $tradeAuthDirList
+     * @param  string  $tradeAuthDirList
      * @return WechatConfigAdd0Request
      */
     public function setTradeAuthDirList($tradeAuthDirList)
     {
         $this->tradeAuthDirList = $tradeAuthDirList;
+
         return $this;
     }
+
     /**
      * Gets appIdList
-     *
      * @return string
      */
     public function getAppIdList()
@@ -100,13 +101,13 @@ class WechatConfigAdd0Request extends BaseRequest
 
     /**
      * Sets appIdList
-     *
-     * @param string $appIdList
+     * @param  string  $appIdList
      * @return WechatConfigAdd0Request
      */
     public function setAppIdList($appIdList)
     {
         $this->appIdList = $appIdList;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class WechatConfigAdd0Request extends BaseRequest
     {
         return 'wechatConfigAdd_0';
     }
-
 
 }

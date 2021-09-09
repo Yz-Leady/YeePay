@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class ReceiptGetResponse extends BaseResponse
 {
+
     /**
      * @var ReceiptGetReceiptRespDTOResult
      */
@@ -18,7 +18,7 @@ class ReceiptGetResponse extends BaseResponse
     }
 
     /**
-     * @param ReceiptGetReceiptRespDTOResult $result
+     * @param  ReceiptGetReceiptRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class ReceiptGetResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth\Cipher;
-
 
 use Yeepay\Yop\Sdk\Auth\Encryptor;
 use Yeepay\Yop\Sdk\Http\ContentType;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Security\Aes\AesEncryptor;
 
 class DefaultEncryptor implements Encryptor
 {
+
     /**
      * @var string
      */
@@ -28,10 +27,9 @@ class DefaultEncryptor implements Encryptor
      */
     public function __construct($base64EncodedKey)
     {
-        $this->key = base64_decode($base64EncodedKey);
+        $this->key       = base64_decode($base64EncodedKey);
         $this->keyLength = strlen($this->key);
     }
-
 
     /**
      * @param $request
@@ -42,11 +40,11 @@ class DefaultEncryptor implements Encryptor
         if ($request->getContentType() == ContentType::APPLICATION_OCTET_STREAM) {
             return;
         }
-        $request->addHeader(Headers::YOP_ENCRYPT_TYPE, "aes" . $this->keyLength);
+        $request->addHeader(Headers::YOP_ENCRYPT_TYPE, "aes".$this->keyLength);
         if (!empty($request->getParameters()) > 0) {
-            $encryptedParameters = array();
+            $encryptedParameters = [];
             foreach ($request->getParameters() as $paramName => $paramValues) {
-                $encryptedParamValues = array();
+                $encryptedParamValues = [];
                 foreach ($paramValues as $paramValue) {
                     $encryptedParamValues[] = AesEncryptor::encryptAndEncodeBase64($paramValue, $this->key);
                 }
@@ -57,8 +55,10 @@ class DefaultEncryptor implements Encryptor
         if (empty($request->getContent())) {
             if (is_string($request->getContent())) {
                 $request->setContent(AesEncryptor::decodeBase64AndDecrypt($request->getContent(), $this->key));
-            } else if (is_resource($request->getContent())) {
-                //todo 忽略对resource的签名
+            } else {
+                if (is_resource($request->getContent())) {
+                    //todo 忽略对resource的签名
+                }
             }
         }
     }
@@ -71,4 +71,5 @@ class DefaultEncryptor implements Encryptor
     {
         return AesEncryptor::decodeBase64AndDecrypt($content, $this->key);
     }
+
 }

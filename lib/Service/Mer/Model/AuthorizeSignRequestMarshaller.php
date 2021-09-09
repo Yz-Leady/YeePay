@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class AuthorizeSignRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var AuthorizeSignRequestMarshaller
      */
@@ -51,9 +50,8 @@ class AuthorizeSignRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param AuthorizeSignRequest $request
+     * @param  AuthorizeSignRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class AuthorizeSignRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getAuthorizeMerchantNo() != null){
-            $internalRequest->addParameter('authorizeMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getAuthorizeMerchantNo(), 'string'));
+        if ($request->getAuthorizeMerchantNo() != null) {
+            $internalRequest->addParameter('authorizeMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getAuthorizeMerchantNo(), 'string'));
         }
-        if($request->getBizType() != null){
-            $internalRequest->addParameter('bizType', ObjectSerializer::sanitizeForSerialization($request->getBizType(), 'string'));
+        if ($request->getBizType() != null) {
+            $internalRequest->addParameter('bizType',
+                ObjectSerializer::sanitizeForSerialization($request->getBizType(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 AuthorizeSignRequestMarshaller::__init();

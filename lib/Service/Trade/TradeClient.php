@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Trade\Model as Model;
 
 class TradeClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class TradeClient
 
     /**
      * TradeClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class TradeClient
     }
 
     /**
-     * @param Model\OrderRequest $request
+     * @param  Model\OrderRequest  $request
      * @return Model\OrderResponse
      * @throws YopClientException
      */
@@ -38,10 +37,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\OrderRequestMarshaller::getInstance(),
             Model\OrderResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\OrderCloseRequest $request
+     * @param  Model\OrderCloseRequest  $request
      * @return Model\OrderCloseResponse
      * @throws YopClientException
      */
@@ -52,10 +53,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\OrderCloseRequestMarshaller::getInstance(),
             Model\OrderCloseResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\OrderCombineQueryRequest $request
+     * @param  Model\OrderCombineQueryRequest  $request
      * @return Model\OrderCombineQueryResponse
      * @throws YopClientException
      */
@@ -70,12 +73,15 @@ class TradeClient
         if ($request->getOrderId() == null) {
             throw new YopClientException("request.orderId is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\OrderCombineQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\OrderCombineQueryRequestMarshaller::getInstance(),
             Model\OrderCombineQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\OrderQueryRequest $request
+     * @param  Model\OrderQueryRequest  $request
      * @return Model\OrderQueryResponse
      * @throws YopClientException
      */
@@ -95,10 +101,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\OrderQueryRequestMarshaller::getInstance(),
             Model\OrderQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\ReceiptDownloadRequest $request
+     * @param  Model\ReceiptDownloadRequest  $request
      * @return Model\ReceiptDownloadResponse
      * @throws YopClientException
      */
@@ -116,12 +124,15 @@ class TradeClient
         if ($request->getOrderId() == null) {
             throw new YopClientException("request.orderId is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\ReceiptDownloadRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\ReceiptDownloadRequestMarshaller::getInstance(),
             Model\ReceiptDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RefundRequest $request
+     * @param  Model\RefundRequest  $request
      * @return Model\RefundResponse
      * @throws YopClientException
      */
@@ -132,10 +143,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RefundRequestMarshaller::getInstance(),
             Model\RefundResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RefundEndRequest $request
+     * @param  Model\RefundEndRequest  $request
      * @return Model\RefundEndResponse
      * @throws YopClientException
      */
@@ -146,10 +159,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RefundEndRequestMarshaller::getInstance(),
             Model\RefundEndResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RefundFastRequest $request
+     * @param  Model\RefundFastRequest  $request
      * @return Model\RefundFastResponse
      * @throws YopClientException
      */
@@ -160,10 +175,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RefundFastRequestMarshaller::getInstance(),
             Model\RefundFastResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RefundQueryRequest $request
+     * @param  Model\RefundQueryRequest  $request
      * @return Model\RefundQueryResponse
      * @throws YopClientException
      */
@@ -186,10 +203,12 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RefundQueryRequestMarshaller::getInstance(),
             Model\RefundQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RefundSupplyRequest $request
+     * @param  Model\RefundSupplyRequest  $request
      * @return Model\RefundSupplyResponse
      * @throws YopClientException
      */
@@ -200,6 +219,8 @@ class TradeClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\RefundSupplyRequestMarshaller::getInstance(),
             Model\RefundSupplyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

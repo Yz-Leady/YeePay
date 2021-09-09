@@ -1,22 +1,20 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class SupplierApplyRequest extends BaseRequest
 {
+
     /**
-     * @var 
+     * @var
      */
     private $body;
 
     /**
      * Gets body
-     *
-     * @return 
+     * @return
      */
     public function getBody()
     {
@@ -25,13 +23,13 @@ class SupplierApplyRequest extends BaseRequest
 
     /**
      * Sets body
-     *
      * @param  $body
      * @return SupplierApplyRequest
      */
     public function setBody($body)
     {
         $this->body = $body;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class SupplierApplyRequest extends BaseRequest
     {
         return 'supplierApply';
     }
-
 
 }

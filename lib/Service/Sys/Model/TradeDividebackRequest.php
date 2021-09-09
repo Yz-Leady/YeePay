@@ -1,45 +1,52 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TradeDividebackRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
     private $divideRequestId;
+
     /**
      * @var string
      */
     private $divideBackRequestId;
+
     /**
      * @var string
      */
     private $divideBackDetail;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -47,7 +54,6 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -57,18 +63,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return TradeDividebackRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -78,18 +84,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return TradeDividebackRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets divideRequestId
-     *
      * @return string
      */
     public function getDivideRequestId()
@@ -99,18 +105,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets divideRequestId
-     *
-     * @param string $divideRequestId
+     * @param  string  $divideRequestId
      * @return TradeDividebackRequest
      */
     public function setDivideRequestId($divideRequestId)
     {
         $this->divideRequestId = $divideRequestId;
+
         return $this;
     }
+
     /**
      * Gets divideBackRequestId
-     *
      * @return string
      */
     public function getDivideBackRequestId()
@@ -120,18 +126,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets divideBackRequestId
-     *
-     * @param string $divideBackRequestId
+     * @param  string  $divideBackRequestId
      * @return TradeDividebackRequest
      */
     public function setDivideBackRequestId($divideBackRequestId)
     {
         $this->divideBackRequestId = $divideBackRequestId;
+
         return $this;
     }
+
     /**
      * Gets divideBackDetail
-     *
      * @return string
      */
     public function getDivideBackDetail()
@@ -141,18 +147,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets divideBackDetail
-     *
-     * @param string $divideBackDetail
+     * @param  string  $divideBackDetail
      * @return TradeDividebackRequest
      */
     public function setDivideBackDetail($divideBackDetail)
     {
         $this->divideBackDetail = $divideBackDetail;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -162,18 +168,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return TradeDividebackRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -183,18 +189,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TradeDividebackRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -204,18 +210,18 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return TradeDividebackRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets hmac
-     *
      * @return string
      */
     public function getHmac()
@@ -225,13 +231,13 @@ class TradeDividebackRequest extends BaseRequest
 
     /**
      * Sets hmac
-     *
-     * @param string $hmac
+     * @param  string  $hmac
      * @return TradeDividebackRequest
      */
     public function setHmac($hmac)
     {
         $this->hmac = $hmac;
+
         return $this;
     }
 
@@ -239,6 +245,5 @@ class TradeDividebackRequest extends BaseRequest
     {
         return 'tradeDivideback';
     }
-
 
 }

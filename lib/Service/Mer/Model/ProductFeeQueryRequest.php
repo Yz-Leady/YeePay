@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ProductFeeQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class ProductFeeQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class ProductFeeQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return ProductFeeQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -54,18 +54,18 @@ class ProductFeeQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return ProductFeeQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets productCode
-     *
      * @return string
      */
     public function getProductCode()
@@ -75,13 +75,13 @@ class ProductFeeQueryRequest extends BaseRequest
 
     /**
      * Sets productCode
-     *
-     * @param string $productCode
+     * @param  string  $productCode
      * @return ProductFeeQueryRequest
      */
     public function setProductCode($productCode)
     {
         $this->productCode = $productCode;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class ProductFeeQueryRequest extends BaseRequest
     {
         return 'productFeeQuery';
     }
-
 
 }

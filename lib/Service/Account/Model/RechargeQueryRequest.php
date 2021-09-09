@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RechargeQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderNo;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class RechargeQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -37,18 +38,18 @@ class RechargeQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return RechargeQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -58,18 +59,18 @@ class RechargeQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return RechargeQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderNo
-     *
      * @return string
      */
     public function getOrderNo()
@@ -79,18 +80,18 @@ class RechargeQueryRequest extends BaseRequest
 
     /**
      * Sets orderNo
-     *
-     * @param string $orderNo
+     * @param  string  $orderNo
      * @return RechargeQueryRequest
      */
     public function setOrderNo($orderNo)
     {
         $this->orderNo = $orderNo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -100,13 +101,13 @@ class RechargeQueryRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return RechargeQueryRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class RechargeQueryRequest extends BaseRequest
     {
         return 'rechargeQuery';
     }
-
 
 }

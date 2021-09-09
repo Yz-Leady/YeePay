@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class StdClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,10 +23,14 @@ class StdClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('billDividedaydownload', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('billFundbillApply', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('billFundbillDownload', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('billTradedaydownload', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('billDividedaydownload',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('billFundbillApply',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('billFundbillDownload',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('billTradedaydownload',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -37,7 +40,7 @@ class StdClientBuilder
 
     /**
      * StdClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -64,8 +67,10 @@ class StdClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new StdClientBuilder($clientParams);
     }
 
 }
+
 StdClientBuilder::__init();

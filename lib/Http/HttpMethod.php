@@ -19,9 +19,11 @@ namespace Yeepay\Yop\Sdk\Http;
 
 class HttpMethod
 {
-    const GET = 'GET';
-    const PUT = 'PUT';
-    const POST = 'POST';
+
+    const GET    = 'GET';
+    const PUT    = 'PUT';
+    const POST   = 'POST';
     const DELETE = 'DELETE';
-    const HEAD = 'HEAD';
+    const HEAD   = 'HEAD';
+
 }

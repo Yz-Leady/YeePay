@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common\Authority;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorizationReq;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -19,4 +17,5 @@ class MockAuthorityReqRegistry implements AuthorizationReqRegistry
     {
         return AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256');
     }
+
 }

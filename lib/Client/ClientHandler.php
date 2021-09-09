@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
 use Yeepay\Yop\Sdk\Auth\Cipher\DefaultEncryptor;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Model\Transform\ResponseUnMarshalParams;
 
 class ClientHandler
 {
+
     /**
      * @var YopCredentialProvider
      */
@@ -38,22 +37,21 @@ class ClientHandler
 
     /**
      * ClientHandler constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
-        $this->credentialsProvider = $clientParams->getCredentialsProvider();
+        $this->credentialsProvider      = $clientParams->getCredentialsProvider();
         $this->authorizationReqRegistry = $clientParams->getAuthorizationReqRegistry();
-        $this->yopHttpClient = new YopHttpClient($clientParams->getClientConfiguration());
-        $this->gatewayRouter = new GateWayRouter(new ServerRootSpace($clientParams->getEndPoint(),
+        $this->yopHttpClient            = new YopHttpClient($clientParams->getClientConfiguration());
+        $this->gatewayRouter            = new GateWayRouter(new ServerRootSpace($clientParams->getEndPoint(),
             $clientParams->getYosEndPoint(),
             $clientParams->getSandboxEndPoint()),
             $clientParams->getModes());
     }
 
-
     /**
-     * @param ClientExecutionParams $executionParams
+     * @param  ClientExecutionParams  $executionParams
      * @return mixed
      * @throws YopClientException
      */
@@ -61,39 +59,41 @@ class ClientHandler
     {
 
         $executionContext = $this->getExecutionContext($executionParams);
-        $request = $executionParams->getRequestMarshaller()->marshal($executionParams->getRequest());
+        $request          = $executionParams->getRequestMarshaller()->marshal($executionParams->getRequest());
 
         /** @var ExecutionContext $httpExecutionContext */
         $httpExecutionContext = $executionContext[0];
-        $request->setEndpoint($this->gatewayRouter->route($httpExecutionContext->getCredentials()->getAppKey(), $request));
+        $request->setEndpoint($this->gatewayRouter->route($httpExecutionContext->getCredentials()->getAppKey(),
+            $request));
         $yopHttpResponse = $this->yopHttpClient->execute($request, $httpExecutionContext);
         /** @var ResponseUnMarshalParams $ResponseUnMarshalParams */
         $ResponseUnMarshalParams = $executionContext[1];
+
         return $executionParams->getResponseUnMarshaller()->unmarshal($yopHttpResponse, $ResponseUnMarshalParams);
     }
 
     /**
-     * @param ClientExecutionParams $executionParams
+     * @param  ClientExecutionParams  $executionParams
      * @return array
      * @throws YopClientException
      */
     private function getExecutionContext(ClientExecutionParams $executionParams)
     {
-        $httpExecutionContext = new ExecutionContext();
+        $httpExecutionContext    = new ExecutionContext();
         $ResponseUnMarshalParams = new ResponseUnMarshalParams();
 
-        $request = $executionParams->getRequest();
+        $request          = $executionParams->getRequest();
         $authorizationReq = $this->authorizationReqRegistry->getAuthorizationReq($request::getOperationId());
         if (isset($authorizationReq)) {
-            $signer = SignerFactory::getSigner($authorizationReq->getSignerType());
+            $signer      = SignerFactory::getSigner($authorizationReq->getSignerType());
             $signOptions = new SignOptions($authorizationReq->getDigestAlg(), $authorizationReq->getProtocolPrefix());
             $httpExecutionContext->setSigner($signer)->setSignOptions($signOptions);
             $ResponseUnMarshalParams->setSigner($signer)->setSignOptions($signOptions)
-                ->setPublicKey($this->credentialsProvider->getYopPublicKey($authorizationReq->getCredentialType()));
+                                    ->setPublicKey($this->credentialsProvider->getYopPublicKey($authorizationReq->getCredentialType()));
 
-            $credentials = null;
+            $credentials   = null;
             $requestConfig = $request->getRequestConfig();
-            $needEncrypt = false;
+            $needEncrypt   = false;
             if (isset($requestConfig)) {
                 if (!empty($requestConfig->getCredentials())) {
                     $credentials = $requestConfig->getCredentials();
@@ -103,8 +103,8 @@ class ClientHandler
                         $credentials = $this->credentialsProvider->getCredential($customAppKey,
                             $authorizationReq->getCredentialType());
                         if (!isset($credentials)) {
-                            throw new YopClientException('no credentials specified, appKey:' . $customAppKey
-                                . ', credentialType:' . $authorizationReq->getCredentialType());
+                            throw new YopClientException('no credentials specified, appKey:'.$customAppKey
+                                                         .', credentialType:'.$authorizationReq->getCredentialType());
                         }
                     }
                 }
@@ -115,7 +115,7 @@ class ClientHandler
             }
             if (!isset($credentials)) {
                 throw new YopClientException('no credentials specified for defaultAppKey, credentialType:'
-                    . $authorizationReq->getCredentialType());
+                                             .$authorizationReq->getCredentialType());
             }
             $httpExecutionContext->setCredentials($credentials);
             if ($needEncrypt) {
@@ -123,9 +123,10 @@ class ClientHandler
                 $httpExecutionContext->setNeedEncrypt(true)->setEncryptor($encryptor);
                 $ResponseUnMarshalParams->setNeedDecrypt(true)->setEncryptor($encryptor);
             }
-            return array($httpExecutionContext, $ResponseUnMarshalParams);
+
+            return [$httpExecutionContext, $ResponseUnMarshalParams];
         } else {
-            throw new YopClientException("no securityReq assigned, api:" . $request::getOperationId());
+            throw new YopClientException("no securityReq assigned, api:".$request::getOperationId());
         }
     }
 

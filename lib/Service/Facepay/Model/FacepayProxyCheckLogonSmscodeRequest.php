@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $orderToken;
+
     /**
      * @var string
      */
     private $faceRequestNo;
+
     /**
      * @var string
      */
     private $smsCode;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Gets orderToken
-     *
      * @return string
      */
     public function getOrderToken()
@@ -45,18 +48,18 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets orderToken
-     *
-     * @param string $orderToken
+     * @param  string  $orderToken
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setOrderToken($orderToken)
     {
         $this->orderToken = $orderToken;
+
         return $this;
     }
+
     /**
      * Gets faceRequestNo
-     *
      * @return string
      */
     public function getFaceRequestNo()
@@ -66,18 +69,18 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets faceRequestNo
-     *
-     * @param string $faceRequestNo
+     * @param  string  $faceRequestNo
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setFaceRequestNo($faceRequestNo)
     {
         $this->faceRequestNo = $faceRequestNo;
+
         return $this;
     }
+
     /**
      * Gets smsCode
-     *
      * @return string
      */
     public function getSmsCode()
@@ -87,18 +90,18 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets smsCode
-     *
-     * @param string $smsCode
+     * @param  string  $smsCode
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setSmsCode($smsCode)
     {
         $this->smsCode = $smsCode;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -108,18 +111,18 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -129,18 +132,18 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -150,13 +153,13 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyCheckLogonSmscodeRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class FacepayProxyCheckLogonSmscodeRequest extends BaseRequest
     {
         return 'facepayProxyCheckLogonSmscode';
     }
-
 
 }

@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class SettleCardAddResponse extends BaseResponse
 {
+
     /**
      * @var SettleCardAddMerchantSettleCardResponseDTOResult
      */
@@ -18,7 +18,7 @@ class SettleCardAddResponse extends BaseResponse
     }
 
     /**
-     * @param SettleCardAddMerchantSettleCardResponseDTOResult $result
+     * @param  SettleCardAddMerchantSettleCardResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class SettleCardAddResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,21 +1,22 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class WechatConfigQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -23,7 +24,6 @@ class WechatConfigQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -33,18 +33,18 @@ class WechatConfigQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return WechatConfigQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -54,18 +54,18 @@ class WechatConfigQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return WechatConfigQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets appIdType
-     *
      * @return string
      */
     public function getAppIdType()
@@ -75,13 +75,13 @@ class WechatConfigQueryRequest extends BaseRequest
 
     /**
      * Sets appIdType
-     *
-     * @param string $appIdType
+     * @param  string  $appIdType
      * @return WechatConfigQueryRequest
      */
     public function setAppIdType($appIdType)
     {
         $this->appIdType = $appIdType;
+
         return $this;
     }
 
@@ -89,6 +89,5 @@ class WechatConfigQueryRequest extends BaseRequest
     {
         return 'wechatConfigQuery';
     }
-
 
 }

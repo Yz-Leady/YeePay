@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RecordsQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $settleRequestNo;
+
     /**
      * @var string
      */
     private $settleRequestBeginTime;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return RecordsQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return RecordsQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets settleRequestNo
-     *
      * @return string
      */
     public function getSettleRequestNo()
@@ -83,18 +85,18 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Sets settleRequestNo
-     *
-     * @param string $settleRequestNo
+     * @param  string  $settleRequestNo
      * @return RecordsQueryRequest
      */
     public function setSettleRequestNo($settleRequestNo)
     {
         $this->settleRequestNo = $settleRequestNo;
+
         return $this;
     }
+
     /**
      * Gets settleRequestBeginTime
-     *
      * @return string
      */
     public function getSettleRequestBeginTime()
@@ -104,18 +106,18 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Sets settleRequestBeginTime
-     *
-     * @param string $settleRequestBeginTime
+     * @param  string  $settleRequestBeginTime
      * @return RecordsQueryRequest
      */
     public function setSettleRequestBeginTime($settleRequestBeginTime)
     {
         $this->settleRequestBeginTime = $settleRequestBeginTime;
+
         return $this;
     }
+
     /**
      * Gets settleRequestEndTime
-     *
      * @return string
      */
     public function getSettleRequestEndTime()
@@ -125,13 +127,13 @@ class RecordsQueryRequest extends BaseRequest
 
     /**
      * Sets settleRequestEndTime
-     *
-     * @param string $settleRequestEndTime
+     * @param  string  $settleRequestEndTime
      * @return RecordsQueryRequest
      */
     public function setSettleRequestEndTime($settleRequestEndTime)
     {
         $this->settleRequestEndTime = $settleRequestEndTime;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class RecordsQueryRequest extends BaseRequest
     {
         return 'recordsQuery';
     }
-
 
 }

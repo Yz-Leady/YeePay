@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ProductFeeModifyRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -41,18 +43,18 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return ProductFeeModifyRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -62,18 +64,18 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return ProductFeeModifyRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -83,18 +85,18 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return ProductFeeModifyRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -104,18 +106,18 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return ProductFeeModifyRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets productInfo
-     *
      * @return string
      */
     public function getProductInfo()
@@ -125,13 +127,13 @@ class ProductFeeModifyRequest extends BaseRequest
 
     /**
      * Sets productInfo
-     *
-     * @param string $productInfo
+     * @param  string  $productInfo
      * @return ProductFeeModifyRequest
      */
     public function setProductInfo($productInfo)
     {
         $this->productInfo = $productInfo;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class ProductFeeModifyRequest extends BaseRequest
     {
         return 'productFeeModify';
     }
-
 
 }

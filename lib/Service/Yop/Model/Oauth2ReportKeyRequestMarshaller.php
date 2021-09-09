@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class Oauth2ReportKeyRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var Oauth2ReportKeyRequestMarshaller
      */
@@ -51,9 +50,8 @@ class Oauth2ReportKeyRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param Oauth2ReportKeyRequest $request
+     * @param  Oauth2ReportKeyRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,15 +67,19 @@ class Oauth2ReportKeyRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getKeyType() != null){
-            $internalRequest->addParameter('keyType', ObjectSerializer::sanitizeForSerialization($request->getKeyType(), 'string'));
+        if ($request->getKeyType() != null) {
+            $internalRequest->addParameter('keyType',
+                ObjectSerializer::sanitizeForSerialization($request->getKeyType(), 'string'));
         }
-        if($request->getKey() != null){
-            $internalRequest->addParameter('key', ObjectSerializer::sanitizeForSerialization($request->getKey(), 'string'));
+        if ($request->getKey() != null) {
+            $internalRequest->addParameter('key',
+                ObjectSerializer::sanitizeForSerialization($request->getKey(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 Oauth2ReportKeyRequestMarshaller::__init();

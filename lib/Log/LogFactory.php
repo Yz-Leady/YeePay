@@ -4,12 +4,12 @@ namespace Yeepay\Yop\Sdk\Log;
 
 use Psr\Log\LoggerInterface;
 
-
 /**
  * The global LogFactory for the SDK.
  */
 class LogFactory
 {
+
     /**
      * @var LogFactoryInterface the LogFactory instance
      */
@@ -21,22 +21,22 @@ class LogFactory
 
     public static function __init()
     {
-        LogFactory::$instance = new NullLogFactory();
-        LogFactory::$logLevelMapping = array(
+        LogFactory::$instance        = new NullLogFactory();
+        LogFactory::$logLevelMapping = [
             'emergency' => 0,
-            'alert' => 1,
-            'critical' => 2,
-            'error' => 3,
-            'warning' => 4,
-            'notice' => 5,
-            'info' => 6,
-            'debug' => 7
-        );
-        LogFactory::$logLevel = 6;
+            'alert'     => 1,
+            'critical'  => 2,
+            'error'     => 3,
+            'warning'   => 4,
+            'notice'    => 5,
+            'info'      => 6,
+            'debug'     => 7,
+        ];
+        LogFactory::$logLevel        = 6;
     }
 
     /**
-     * @param LogFactoryInterface $logFactory the logFactory interface.
+     * @param  LogFactoryInterface  $logFactory  the logFactory interface.
      * @throws \InvalidArgumentException if $logFactory is null.
      */
     public static function setInstance(LogFactoryInterface $logFactory)
@@ -49,9 +49,8 @@ class LogFactory
         LogFactory::$instance = $logFactory;
     }
 
-
     /**
-     * @param string $logLevel the log level. The value can be 'emergency',
+     * @param  string  $logLevel  the log level. The value can be 'emergency',
      *     'alert', 'critical', 'error', 'warning', 'notice', 'info', or
      *     'debug'.
      * @throws \InvalidArgumentException if no such a log level is defined.
@@ -83,6 +82,7 @@ class LogFactory
     {
         return LogFactory::$instance->getLogger($name);
     }
+
 }
 
 LogFactory::__init();

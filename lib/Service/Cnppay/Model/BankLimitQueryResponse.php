@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cnppay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BankLimitQueryResponse extends BaseResponse
 {
+
     /**
      * @var BankLimitQueryBankLimitResponseDTOResult
      */
@@ -18,7 +18,7 @@ class BankLimitQueryResponse extends BaseResponse
     }
 
     /**
-     * @param BankLimitQueryBankLimitResponseDTOResult $result
+     * @param  BankLimitQueryBankLimitResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BankLimitQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

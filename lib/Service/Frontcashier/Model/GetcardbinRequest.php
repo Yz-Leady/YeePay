@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class GetcardbinRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -15,7 +14,6 @@ class GetcardbinRequest extends BaseRequest
 
     /**
      * Gets bankCardNo
-     *
      * @return string
      */
     public function getBankCardNo()
@@ -25,13 +23,13 @@ class GetcardbinRequest extends BaseRequest
 
     /**
      * Sets bankCardNo
-     *
-     * @param string $bankCardNo
+     * @param  string  $bankCardNo
      * @return GetcardbinRequest
      */
     public function setBankCardNo($bankCardNo)
     {
         $this->bankCardNo = $bankCardNo;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class GetcardbinRequest extends BaseRequest
     {
         return 'getcardbin';
     }
-
 
 }

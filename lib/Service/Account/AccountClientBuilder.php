@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class AccountClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,35 +23,64 @@ class AccountClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('accountinfosQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('autoWithdrawRuleCancel', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('autoWithdrawRuleQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('autoWithdrawRuleSet', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('balanceBankAccountList', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('balanceQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('enterpriseAccountPayOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('enterpriseAutoPaymentOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('enterpriseAutoPaymentQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('enterpriseWithholdingOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('payCancel', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('payOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('payQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('receiptGet', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('rechargeBankOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('rechargeOnlinebankOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('rechargeOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('rechargeQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('supplierApply', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('supplierPayOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('supplierQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('supplierQueryProgress', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('transferB2bOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('transferB2bQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('withdrawCardBind', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('withdrawCardModify', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('withdrawCardQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('withdrawOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('withdrawQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('accountinfosQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('autoWithdrawRuleCancel',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('autoWithdrawRuleQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('autoWithdrawRuleSet',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('balanceBankAccountList',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('balanceQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('enterpriseAccountPayOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('enterpriseAutoPaymentOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('enterpriseAutoPaymentQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('enterpriseWithholdingOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('payCancel',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('payOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('payQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('receiptGet',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('rechargeBankOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('rechargeOnlinebankOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('rechargeOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('rechargeQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('supplierApply',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('supplierPayOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('supplierQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('supplierQueryProgress',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('transferB2bOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('transferB2bQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('withdrawCardBind',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('withdrawCardModify',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('withdrawCardQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('withdrawOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('withdrawQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -62,7 +90,7 @@ class AccountClientBuilder
 
     /**
      * AccountClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -89,8 +117,10 @@ class AccountClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new AccountClientBuilder($clientParams);
     }
 
 }
+
 AccountClientBuilder::__init();

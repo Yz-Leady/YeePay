@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class TransferB2bQueryResponse extends BaseResponse
 {
+
     /**
      * @var TransferB2bQueryMgTransferOrderQueryRespDTOResult
      */
@@ -18,7 +18,7 @@ class TransferB2bQueryResponse extends BaseResponse
     }
 
     /**
-     * @param TransferB2bQueryMgTransferOrderQueryRespDTOResult $result
+     * @param  TransferB2bQueryMgTransferOrderQueryRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class TransferB2bQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

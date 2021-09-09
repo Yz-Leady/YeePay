@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 use Yeepay\Yop\Sdk\Internal\Request;
 
 interface Encryptor
 {
+
     /**
      * @param $request
      * @return mixed
@@ -19,4 +18,5 @@ interface Encryptor
      * @return mixed
      */
     public function decrypt($content);
+
 }

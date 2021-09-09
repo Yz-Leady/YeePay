@@ -21,9 +21,11 @@ use Psr\Log\LoggerInterface;
 
 interface LogFactoryInterface
 {
+
     /**
      * @param $name string
      * @return LoggerInterface
      */
     public function getLogger($name);
+
 }

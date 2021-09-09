@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client\Support;
-
 
 use GuzzleHttp\Psr7\Uri;
 use Yeepay\Yop\Sdk\Auth\Credential\DefaultCredentialProvider;
@@ -14,8 +12,9 @@ use Yeepay\Yop\Sdk\Http\ClientConfiguration;
 
 class ClientParamsSupport
 {
+
     /**
-     * @param AppSdkConfigProvider $appSdkConfigProvider
+     * @param  AppSdkConfigProvider  $appSdkConfigProvider
      * @return ClientParams
      * @throws YopClientException
      */
@@ -41,7 +40,10 @@ class ClientParamsSupport
         }
         if (!empty($defaultAppSdkConfig->getProxy())) {
             $proxyConfig = $defaultAppSdkConfig->getProxy();
-            $parts = array('scheme' => $proxyConfig->getScheme(), 'host' => $proxyConfig->getHost(), 'port' => $proxyConfig->getPort());
+            $parts       = [
+                'scheme' => $proxyConfig->getScheme(), 'host' => $proxyConfig->getHost(),
+                'port'   => $proxyConfig->getPort(),
+            ];
             if (!empty($proxyConfig->getUsername()) && !empty($proxyConfig->getPort())) {
                 $parts['user'] = $proxyConfig->getUsername();
                 $parts['pass'] = $proxyConfig->getPassword();
@@ -50,7 +52,7 @@ class ClientParamsSupport
             $clientConfigurations->setProxyUrl($proxyURI->__toString());
         }
         $clientParams->setClientConfiguration($clientConfigurations);
-        $modes = array();
+        $modes = [];
         foreach ($appSdkConfigProvider->getAllConfig() as $appKey => $appKeySdkConfig) {
             /* @var $appKeySdkConfig AppSdkConfig */
             if (!empty($appKeySdkConfig->getMode())) {
@@ -58,6 +60,8 @@ class ClientParamsSupport
             }
         }
         $clientParams->setModes($modes);
+
         return $clientParams;
     }
+
 }

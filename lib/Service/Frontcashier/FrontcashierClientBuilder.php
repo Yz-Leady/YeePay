@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class FrontcashierClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,22 +23,38 @@ class FrontcashierClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('bankTransferPay', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bankTransferQuery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardConfirm', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardConfirm_0', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardGetcardbin', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardQueryorder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardRequest', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindcardRequest_0', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindpayConfirm', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindpayRequest', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('bindpaySendsms', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('getcardbin', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('yjzfBindpayrequest', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('yjzfFirstpayrequest', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('yjzfPaymentconfirm', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('yjzfSendsms', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bankTransferPay',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bankTransferQuery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardConfirm',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardConfirm_0',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardGetcardbin',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardQueryorder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardRequest',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindcardRequest_0',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindpayConfirm',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindpayRequest',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('bindpaySendsms',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('getcardbin',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('yjzfBindpayrequest',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('yjzfFirstpayrequest',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('yjzfPaymentconfirm',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('yjzfSendsms',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -49,7 +64,7 @@ class FrontcashierClientBuilder
 
     /**
      * FrontcashierClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -76,8 +91,10 @@ class FrontcashierClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new FrontcashierClientBuilder($clientParams);
     }
 
 }
+
 FrontcashierClientBuilder::__init();

@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class WechatConfigQueryResponse extends BaseResponse
 {
+
     /**
      * @var WechatConfigQueryWechatConfigResponseDTOResult
      */
@@ -18,7 +18,7 @@ class WechatConfigQueryResponse extends BaseResponse
     }
 
     /**
-     * @param WechatConfigQueryWechatConfigResponseDTOResult $result
+     * @param  WechatConfigQueryWechatConfigResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class WechatConfigQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

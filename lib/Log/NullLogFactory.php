@@ -24,14 +24,15 @@ use Psr\Log\NullLogger;
  */
 class NullLogFactory implements LogFactoryInterface
 {
+
     /**
      * Always returns a NullLogger.
-     *
-     * @param string $name the name of logger
+     * @param  string  $name  the name of logger
      * @return Psr\Log\NullLogger a NullLogger
      */
     public function getLogger($name)
     {
         return new NullLogger();
     }
+
 }

@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model;
-
 
 class YopErrorResponse
 {
+
     /**
      * @var string
      */
@@ -40,12 +39,13 @@ class YopErrorResponse
     }
 
     /**
-     * @param string $requestId
+     * @param  string  $requestId
      * @return YopErrorResponse
      */
     public function setRequestId($requestId)
     {
         $this->requestId = $requestId;
+
         return $this;
     }
 
@@ -58,12 +58,13 @@ class YopErrorResponse
     }
 
     /**
-     * @param string $code
+     * @param  string  $code
      * @return YopErrorResponse
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -76,12 +77,13 @@ class YopErrorResponse
     }
 
     /**
-     * @param string $message
+     * @param  string  $message
      * @return YopErrorResponse
      */
     public function setMessage($message)
     {
         $this->message = $message;
+
         return $this;
     }
 
@@ -94,12 +96,13 @@ class YopErrorResponse
     }
 
     /**
-     * @param string $subCode
+     * @param  string  $subCode
      * @return YopErrorResponse
      */
     public function setSubCode($subCode)
     {
         $this->subCode = $subCode;
+
         return $this;
     }
 
@@ -112,16 +115,14 @@ class YopErrorResponse
     }
 
     /**
-     * @param string $subMessage
+     * @param  string  $subMessage
      * @return YopErrorResponse
      */
     public function setSubMessage($subMessage)
     {
         $this->subMessage = $subMessage;
+
         return $this;
     }
-
-
-
 
 }

@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class RegisterQueryResponse extends BaseResponse
 {
+
     /**
      * @var RegisterQueryNetInProgressQueryRespDtoResult
      */
@@ -18,7 +18,7 @@ class RegisterQueryResponse extends BaseResponse
     }
 
     /**
-     * @param RegisterQueryNetInProgressQueryRespDtoResult $result
+     * @param  RegisterQueryNetInProgressQueryRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class RegisterQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

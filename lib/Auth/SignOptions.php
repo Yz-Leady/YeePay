@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth;
-
 
 class SignOptions
 {
+
     const DEFAULT_EXPIRATION_IN_SECONDS = 1800;
 
     /**
@@ -25,13 +24,13 @@ class SignOptions
 
     /**
      * SignOptions constructor.
-     * @param string $digestAlg
-     * @param string $protocolPrefix
-     * @param int $expirationInSeconds
+     * @param  string  $digestAlg
+     * @param  string  $protocolPrefix
+     * @param  int  $expirationInSeconds
      */
     public function __construct($digestAlg, $protocolPrefix, $expirationInSeconds = null)
     {
-        $this->digestAlg = $digestAlg;
+        $this->digestAlg      = $digestAlg;
         $this->protocolPrefix = $protocolPrefix;
         if (isset($expirationInSeconds)) {
             $this->expirationInSeconds = $expirationInSeconds;
@@ -47,12 +46,13 @@ class SignOptions
     }
 
     /**
-     * @param string $digestAlg
+     * @param  string  $digestAlg
      * @return SignOptions
      */
     public function setDigestAlg($digestAlg)
     {
         $this->digestAlg = $digestAlg;
+
         return $this;
     }
 
@@ -65,12 +65,13 @@ class SignOptions
     }
 
     /**
-     * @param string $protocolPrefix
+     * @param  string  $protocolPrefix
      * @return SignOptions
      */
     public function setProtocolPrefix($protocolPrefix)
     {
         $this->protocolPrefix = $protocolPrefix;
+
         return $this;
     }
 
@@ -83,12 +84,13 @@ class SignOptions
     }
 
     /**
-     * @param int $expirationInSeconds
+     * @param  int  $expirationInSeconds
      * @return SignOptions
      */
     public function setExpirationInSeconds($expirationInSeconds)
     {
         $this->expirationInSeconds = $expirationInSeconds;
+
         return $this;
     }
 

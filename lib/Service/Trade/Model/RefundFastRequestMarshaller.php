@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class RefundFastRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var RefundFastRequestMarshaller
      */
@@ -51,9 +50,8 @@ class RefundFastRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param RefundFastRequest $request
+     * @param  RefundFastRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,39 +67,51 @@ class RefundFastRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getOrderId() != null){
-            $internalRequest->addParameter('orderId', ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
+        if ($request->getOrderId() != null) {
+            $internalRequest->addParameter('orderId',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
         }
-        if($request->getRefundRequestId() != null){
-            $internalRequest->addParameter('refundRequestId', ObjectSerializer::sanitizeForSerialization($request->getRefundRequestId(), 'string'));
+        if ($request->getRefundRequestId() != null) {
+            $internalRequest->addParameter('refundRequestId',
+                ObjectSerializer::sanitizeForSerialization($request->getRefundRequestId(), 'string'));
         }
-        if($request->getRefundAmount() != null){
-            $internalRequest->addParameter('refundAmount', ObjectSerializer::sanitizeForSerialization($request->getRefundAmount(), 'string'));
+        if ($request->getRefundAmount() != null) {
+            $internalRequest->addParameter('refundAmount',
+                ObjectSerializer::sanitizeForSerialization($request->getRefundAmount(), 'string'));
         }
-        if($request->getDescription() != null){
-            $internalRequest->addParameter('description', ObjectSerializer::sanitizeForSerialization($request->getDescription(), 'string'));
+        if ($request->getDescription() != null) {
+            $internalRequest->addParameter('description',
+                ObjectSerializer::sanitizeForSerialization($request->getDescription(), 'string'));
         }
-        if($request->getRefundAccountType() != null){
-            $internalRequest->addParameter('refundAccountType', ObjectSerializer::sanitizeForSerialization($request->getRefundAccountType(), 'string'));
+        if ($request->getRefundAccountType() != null) {
+            $internalRequest->addParameter('refundAccountType',
+                ObjectSerializer::sanitizeForSerialization($request->getRefundAccountType(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string', 'url'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string', 'url'));
         }
-        if($request->getMemo() != null){
-            $internalRequest->addParameter('memo', ObjectSerializer::sanitizeForSerialization($request->getMemo(), 'string'));
+        if ($request->getMemo() != null) {
+            $internalRequest->addParameter('memo',
+                ObjectSerializer::sanitizeForSerialization($request->getMemo(), 'string'));
         }
-        if($request->getCardInfo() != null){
-            $internalRequest->addParameter('cardInfo', ObjectSerializer::sanitizeForSerialization($request->getCardInfo(), 'string'));
+        if ($request->getCardInfo() != null) {
+            $internalRequest->addParameter('cardInfo',
+                ObjectSerializer::sanitizeForSerialization($request->getCardInfo(), 'string'));
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 RefundFastRequestMarshaller::__init();

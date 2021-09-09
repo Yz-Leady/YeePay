@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindcardConfirmRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $merchantFlowId;
+
     /**
      * @var bool
      */
     private $empower;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BindcardConfirmRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BindcardConfirmRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantFlowId
-     *
      * @return string
      */
     public function getMerchantFlowId()
@@ -83,18 +85,18 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Sets merchantFlowId
-     *
-     * @param string $merchantFlowId
+     * @param  string  $merchantFlowId
      * @return BindcardConfirmRequest
      */
     public function setMerchantFlowId($merchantFlowId)
     {
         $this->merchantFlowId = $merchantFlowId;
+
         return $this;
     }
+
     /**
      * Gets empower
-     *
      * @return bool
      */
     public function getEmpower()
@@ -104,18 +106,18 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Sets empower
-     *
-     * @param bool $empower
+     * @param  bool  $empower
      * @return BindcardConfirmRequest
      */
     public function setEmpower($empower)
     {
         $this->empower = $empower;
+
         return $this;
     }
+
     /**
      * Gets smsCode
-     *
      * @return string
      */
     public function getSmsCode()
@@ -125,13 +127,13 @@ class BindcardConfirmRequest extends BaseRequest
 
     /**
      * Sets smsCode
-     *
-     * @param string $smsCode
+     * @param  string  $smsCode
      * @return BindcardConfirmRequest
      */
     public function setSmsCode($smsCode)
     {
         $this->smsCode = $smsCode;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class BindcardConfirmRequest extends BaseRequest
     {
         return 'bindcardConfirm';
     }
-
 
 }

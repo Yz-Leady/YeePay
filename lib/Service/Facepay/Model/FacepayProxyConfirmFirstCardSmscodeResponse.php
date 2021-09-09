@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class FacepayProxyConfirmFirstCardSmscodeResponse extends BaseResponse
 {
+
     /**
      * @var FacepayProxyConfirmFirstCardSmscodeBaseResponseResult
      */
@@ -18,7 +18,7 @@ class FacepayProxyConfirmFirstCardSmscodeResponse extends BaseResponse
     }
 
     /**
-     * @param FacepayProxyConfirmFirstCardSmscodeBaseResponseResult $result
+     * @param  FacepayProxyConfirmFirstCardSmscodeBaseResponseResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class FacepayProxyConfirmFirstCardSmscodeResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

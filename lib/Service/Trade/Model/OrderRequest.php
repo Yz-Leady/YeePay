@@ -1,61 +1,72 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class OrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $goodsName;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
     private $subOrderDetail;
+
     /**
      * @var string
      */
     private $expiredTime;
+
     /**
      * @var string
      */
     private $redirectUrl;
+
     /**
      * @var string
      */
     private $csUrl;
+
     /**
      * @var string
      */
@@ -63,7 +74,6 @@ class OrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -73,18 +83,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return OrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -94,18 +104,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return OrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -115,18 +125,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return OrderRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return string
      */
     public function getOrderAmount()
@@ -136,18 +146,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param string $orderAmount
+     * @param  string  $orderAmount
      * @return OrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets goodsName
-     *
      * @return string
      */
     public function getGoodsName()
@@ -157,18 +167,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets goodsName
-     *
-     * @param string $goodsName
+     * @param  string  $goodsName
      * @return OrderRequest
      */
     public function setGoodsName($goodsName)
     {
         $this->goodsName = $goodsName;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -178,18 +188,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return OrderRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -199,18 +209,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return OrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -220,18 +230,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return OrderRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets subOrderDetail
-     *
      * @return string
      */
     public function getSubOrderDetail()
@@ -241,18 +251,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets subOrderDetail
-     *
-     * @param string $subOrderDetail
+     * @param  string  $subOrderDetail
      * @return OrderRequest
      */
     public function setSubOrderDetail($subOrderDetail)
     {
         $this->subOrderDetail = $subOrderDetail;
+
         return $this;
     }
+
     /**
      * Gets expiredTime
-     *
      * @return string
      */
     public function getExpiredTime()
@@ -262,18 +272,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets expiredTime
-     *
-     * @param string $expiredTime
+     * @param  string  $expiredTime
      * @return OrderRequest
      */
     public function setExpiredTime($expiredTime)
     {
         $this->expiredTime = $expiredTime;
+
         return $this;
     }
+
     /**
      * Gets redirectUrl
-     *
      * @return string
      */
     public function getRedirectUrl()
@@ -283,18 +293,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets redirectUrl
-     *
-     * @param string $redirectUrl
+     * @param  string  $redirectUrl
      * @return OrderRequest
      */
     public function setRedirectUrl($redirectUrl)
     {
         $this->redirectUrl = $redirectUrl;
+
         return $this;
     }
+
     /**
      * Gets csUrl
-     *
      * @return string
      */
     public function getCsUrl()
@@ -304,18 +314,18 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets csUrl
-     *
-     * @param string $csUrl
+     * @param  string  $csUrl
      * @return OrderRequest
      */
     public function setCsUrl($csUrl)
     {
         $this->csUrl = $csUrl;
+
         return $this;
     }
+
     /**
      * Gets businessInfo
-     *
      * @return string
      */
     public function getBusinessInfo()
@@ -325,13 +335,13 @@ class OrderRequest extends BaseRequest
 
     /**
      * Sets businessInfo
-     *
-     * @param string $businessInfo
+     * @param  string  $businessInfo
      * @return OrderRequest
      */
     public function setBusinessInfo($businessInfo)
     {
         $this->businessInfo = $businessInfo;
+
         return $this;
     }
 
@@ -339,6 +349,5 @@ class OrderRequest extends BaseRequest
     {
         return 'order';
     }
-
 
 }

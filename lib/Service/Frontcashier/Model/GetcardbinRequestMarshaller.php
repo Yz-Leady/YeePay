@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class GetcardbinRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var GetcardbinRequestMarshaller
      */
@@ -51,9 +50,8 @@ class GetcardbinRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param GetcardbinRequest $request
+     * @param  GetcardbinRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,12 +67,15 @@ class GetcardbinRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getBankCardNo() != null){
-            $internalRequest->addParameter('bankCardNo', ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
+        if ($request->getBankCardNo() != null) {
+            $internalRequest->addParameter('bankCardNo',
+                ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 GetcardbinRequestMarshaller::__init();

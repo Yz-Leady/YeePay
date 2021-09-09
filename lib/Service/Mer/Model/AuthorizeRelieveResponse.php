@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class AuthorizeRelieveResponse extends BaseResponse
 {
+
     /**
      * @var AuthorizeRelieveMGRelieveAuthorizeRespDTOResult
      */
@@ -18,7 +18,7 @@ class AuthorizeRelieveResponse extends BaseResponse
     }
 
     /**
-     * @param AuthorizeRelieveMGRelieveAuthorizeRespDTOResult $result
+     * @param  AuthorizeRelieveMGRelieveAuthorizeRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class AuthorizeRelieveResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

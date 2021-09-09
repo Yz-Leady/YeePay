@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ProductIncrementSettleOpenRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $requestNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $productInfo;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
 
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -37,18 +38,18 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return ProductIncrementSettleOpenRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -58,18 +59,18 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return ProductIncrementSettleOpenRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets productInfo
-     *
      * @return string
      */
     public function getProductInfo()
@@ -79,18 +80,18 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
 
     /**
      * Sets productInfo
-     *
-     * @param string $productInfo
+     * @param  string  $productInfo
      * @return ProductIncrementSettleOpenRequest
      */
     public function setProductInfo($productInfo)
     {
         $this->productInfo = $productInfo;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -100,13 +101,13 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return ProductIncrementSettleOpenRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class ProductIncrementSettleOpenRequest extends BaseRequest
     {
         return 'productIncrementSettleOpen';
     }
-
 
 }

@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Exception;
-
 
 class YopServiceException extends YopClientException
 {
+
     const ERROR_TYPE_CLIENT = 'Client';
 
     const ERROR_TYPE_SERVICE = 'Service';
@@ -50,12 +49,12 @@ class YopServiceException extends YopClientException
     /**
      * YopServiceException constructor.
      * @param $errorMessage
-     * @param string $errorCode
+     * @param  string  $errorCode
      */
     public function __construct($errorMessage, $errorCode = '')
     {
         parent::__construct($errorMessage);
-        $this->errorCode = $errorCode;
+        $this->errorCode    = $errorCode;
         $this->errorMessage = $errorMessage;
     }
 
@@ -68,12 +67,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $requestId
+     * @param  string  $requestId
      * @return YopServiceException
      */
     public function setRequestId($requestId)
     {
         $this->requestId = $requestId;
+
         return $this;
     }
 
@@ -86,12 +86,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $errorCode
+     * @param  string  $errorCode
      * @return YopServiceException
      */
     public function setErrorCode($errorCode)
     {
         $this->errorCode = $errorCode;
+
         return $this;
     }
 
@@ -104,12 +105,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $subErrorCode
+     * @param  string  $subErrorCode
      * @return YopServiceException
      */
     public function setSubErrorCode($subErrorCode)
     {
         $this->subErrorCode = $subErrorCode;
+
         return $this;
     }
 
@@ -122,12 +124,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $errorType
+     * @param  string  $errorType
      * @return YopServiceException
      */
     public function setErrorType($errorType)
     {
         $this->errorType = $errorType;
+
         return $this;
     }
 
@@ -140,12 +143,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $errorMessage
+     * @param  string  $errorMessage
      * @return YopServiceException
      */
     public function setErrorMessage($errorMessage)
     {
         $this->errorMessage = $errorMessage;
+
         return $this;
     }
 
@@ -158,12 +162,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param string $subErrorMessage
+     * @param  string  $subErrorMessage
      * @return YopServiceException
      */
     public function setSubErrorMessage($subErrorMessage)
     {
         $this->subErrorMessage = $subErrorMessage;
+
         return $this;
     }
 
@@ -176,12 +181,13 @@ class YopServiceException extends YopClientException
     }
 
     /**
-     * @param int $statusCode
+     * @param  int  $statusCode
      * @return YopServiceException
      */
     public function setStatusCode($statusCode)
     {
         $this->statusCode = $statusCode;
+
         return $this;
     }
 

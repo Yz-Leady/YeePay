@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class QueryResponse extends BaseResponse
 {
+
     /**
      * @var QueryYopQueryOrderDivideResDTOResult
      */
@@ -18,7 +18,7 @@ class QueryResponse extends BaseResponse
     }
 
     /**
-     * @param QueryYopQueryOrderDivideResDTOResult $result
+     * @param  QueryYopQueryOrderDivideResDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class QueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Frontcashier\Model as Model;
 
 class FrontcashierClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class FrontcashierClient
 
     /**
      * FrontcashierClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class FrontcashierClient
     }
 
     /**
-     * @param Model\BankTransferPayRequest $request
+     * @param  Model\BankTransferPayRequest  $request
      * @return Model\BankTransferPayResponse
      * @throws YopClientException
      */
@@ -36,12 +35,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BankTransferPayRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BankTransferPayRequestMarshaller::getInstance(),
             Model\BankTransferPayResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BankTransferQueryRequest $request
+     * @param  Model\BankTransferQueryRequest  $request
      * @return Model\BankTransferQueryResponse
      * @throws YopClientException
      */
@@ -59,12 +61,15 @@ class FrontcashierClient
         if ($request->getOrderId() == null) {
             throw new YopClientException("request.orderId is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BankTransferQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BankTransferQueryRequestMarshaller::getInstance(),
             Model\BankTransferQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardConfirmRequest $request
+     * @param  Model\BindcardConfirmRequest  $request
      * @return Model\BindcardConfirmResponse
      * @throws YopClientException
      */
@@ -73,12 +78,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardConfirmRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardConfirmRequestMarshaller::getInstance(),
             Model\BindcardConfirmResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardConfirm0Request $request
+     * @param  Model\BindcardConfirm0Request  $request
      * @return Model\BindcardConfirm0Response
      * @throws YopClientException
      */
@@ -87,12 +95,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardConfirm0RequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardConfirm0RequestMarshaller::getInstance(),
             Model\BindcardConfirm0ResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardGetcardbinRequest $request
+     * @param  Model\BindcardGetcardbinRequest  $request
      * @return Model\BindcardGetcardbinResponse
      * @throws YopClientException
      */
@@ -101,12 +112,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardGetcardbinRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardGetcardbinRequestMarshaller::getInstance(),
             Model\BindcardGetcardbinResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardQueryorderRequest $request
+     * @param  Model\BindcardQueryorderRequest  $request
      * @return Model\BindcardQueryorderResponse
      * @throws YopClientException
      */
@@ -115,12 +129,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardQueryorderRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardQueryorderRequestMarshaller::getInstance(),
             Model\BindcardQueryorderResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardRequestRequest $request
+     * @param  Model\BindcardRequestRequest  $request
      * @return Model\BindcardRequestResponse
      * @throws YopClientException
      */
@@ -129,12 +146,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardRequestRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardRequestRequestMarshaller::getInstance(),
             Model\BindcardRequestResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindcardRequest0Request $request
+     * @param  Model\BindcardRequest0Request  $request
      * @return Model\BindcardRequest0Response
      * @throws YopClientException
      */
@@ -143,12 +163,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindcardRequest0RequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardRequest0RequestMarshaller::getInstance(),
             Model\BindcardRequest0ResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindpayConfirmRequest $request
+     * @param  Model\BindpayConfirmRequest  $request
      * @return Model\BindpayConfirmResponse
      * @throws YopClientException
      */
@@ -157,12 +180,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindpayConfirmRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindpayConfirmRequestMarshaller::getInstance(),
             Model\BindpayConfirmResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindpayRequestRequest $request
+     * @param  Model\BindpayRequestRequest  $request
      * @return Model\BindpayRequestResponse
      * @throws YopClientException
      */
@@ -171,12 +197,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindpayRequestRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindpayRequestRequestMarshaller::getInstance(),
             Model\BindpayRequestResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BindpaySendsmsRequest $request
+     * @param  Model\BindpaySendsmsRequest  $request
      * @return Model\BindpaySendsmsResponse
      * @throws YopClientException
      */
@@ -185,12 +214,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BindpaySendsmsRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindpaySendsmsRequestMarshaller::getInstance(),
             Model\BindpaySendsmsResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\GetcardbinRequest $request
+     * @param  Model\GetcardbinRequest  $request
      * @return Model\GetcardbinResponse
      * @throws YopClientException
      */
@@ -201,10 +233,12 @@ class FrontcashierClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\GetcardbinRequestMarshaller::getInstance(),
             Model\GetcardbinResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\YjzfBindpayrequestRequest $request
+     * @param  Model\YjzfBindpayrequestRequest  $request
      * @return Model\YjzfBindpayrequestResponse
      * @throws YopClientException
      */
@@ -213,12 +247,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\YjzfBindpayrequestRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\YjzfBindpayrequestRequestMarshaller::getInstance(),
             Model\YjzfBindpayrequestResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\YjzfFirstpayrequestRequest $request
+     * @param  Model\YjzfFirstpayrequestRequest  $request
      * @return Model\YjzfFirstpayrequestResponse
      * @throws YopClientException
      */
@@ -227,12 +264,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\YjzfFirstpayrequestRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\YjzfFirstpayrequestRequestMarshaller::getInstance(),
             Model\YjzfFirstpayrequestResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\YjzfPaymentconfirmRequest $request
+     * @param  Model\YjzfPaymentconfirmRequest  $request
      * @return Model\YjzfPaymentconfirmResponse
      * @throws YopClientException
      */
@@ -241,12 +281,15 @@ class FrontcashierClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\YjzfPaymentconfirmRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\YjzfPaymentconfirmRequestMarshaller::getInstance(),
             Model\YjzfPaymentconfirmResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\YjzfSendsmsRequest $request
+     * @param  Model\YjzfSendsmsRequest  $request
      * @return Model\YjzfSendsmsResponse
      * @throws YopClientException
      */
@@ -257,6 +300,8 @@ class FrontcashierClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\YjzfSendsmsRequestMarshaller::getInstance(),
             Model\YjzfSendsmsResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

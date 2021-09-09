@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class Oauth2ReportKeyResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new Oauth2ReportKeyResponse();
     }
+
 }
 
 Oauth2ReportKeyResponseUnMarshaller::__init();

@@ -1,18 +1,16 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
-use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class MerchantQualUploadRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var MerchantQualUploadRequestMarshaller
      */
@@ -51,9 +49,8 @@ class MerchantQualUploadRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'multipart/form-data';
 
-
     /**
-     * @param MerchantQualUploadRequest $request
+     * @param  MerchantQualUploadRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -70,11 +67,13 @@ class MerchantQualUploadRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getMerQual() != null){
+        if ($request->getMerQual() != null) {
             $internalRequest->addMultiPartFile('merQual', $request->getMerQual());
         }
 
         return $internalRequest;
     }
+
 }
+
 MerchantQualUploadRequestMarshaller::__init();

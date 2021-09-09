@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Bill\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class DownloadRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $bizType;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class DownloadRequest extends BaseRequest
 
     /**
      * Gets bizType
-     *
      * @return string
      */
     public function getBizType()
@@ -29,18 +28,18 @@ class DownloadRequest extends BaseRequest
 
     /**
      * Sets bizType
-     *
-     * @param string $bizType
+     * @param  string  $bizType
      * @return DownloadRequest
      */
     public function setBizType($bizType)
     {
         $this->bizType = $bizType;
+
         return $this;
     }
+
     /**
      * Gets billDate
-     *
      * @return string
      */
     public function getBillDate()
@@ -50,13 +49,13 @@ class DownloadRequest extends BaseRequest
 
     /**
      * Sets billDate
-     *
-     * @param string $billDate
+     * @param  string  $billDate
      * @return DownloadRequest
      */
     public function setBillDate($billDate)
     {
         $this->billDate = $billDate;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class DownloadRequest extends BaseRequest
     {
         return 'download';
     }
-
 
 }

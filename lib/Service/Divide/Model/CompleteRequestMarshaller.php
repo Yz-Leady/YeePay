@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class CompleteRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var CompleteRequestMarshaller
      */
@@ -51,9 +50,8 @@ class CompleteRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param CompleteRequest $request
+     * @param  CompleteRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,27 +67,35 @@ class CompleteRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getOrderId() != null){
-            $internalRequest->addParameter('orderId', ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
+        if ($request->getOrderId() != null) {
+            $internalRequest->addParameter('orderId',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
         }
-        if($request->getUniqueOrderNo() != null){
-            $internalRequest->addParameter('uniqueOrderNo', ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
+        if ($request->getUniqueOrderNo() != null) {
+            $internalRequest->addParameter('uniqueOrderNo',
+                ObjectSerializer::sanitizeForSerialization($request->getUniqueOrderNo(), 'string'));
         }
-        if($request->getDivideRequestId() != null){
-            $internalRequest->addParameter('divideRequestId', ObjectSerializer::sanitizeForSerialization($request->getDivideRequestId(), 'string'));
+        if ($request->getDivideRequestId() != null) {
+            $internalRequest->addParameter('divideRequestId',
+                ObjectSerializer::sanitizeForSerialization($request->getDivideRequestId(), 'string'));
         }
-        if($request->getDivideDetailDesc() != null){
-            $internalRequest->addParameter('divideDetailDesc', ObjectSerializer::sanitizeForSerialization($request->getDivideDetailDesc(), 'string'));
+        if ($request->getDivideDetailDesc() != null) {
+            $internalRequest->addParameter('divideDetailDesc',
+                ObjectSerializer::sanitizeForSerialization($request->getDivideDetailDesc(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 CompleteRequestMarshaller::__init();

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class OAuth2TokenGenerateTokenResponseUnMarshaller extends BaseResponseUnMarshal
     {
         return new OAuth2TokenGenerateTokenResponse();
     }
+
 }
 
 OAuth2TokenGenerateTokenResponseUnMarshaller::__init();

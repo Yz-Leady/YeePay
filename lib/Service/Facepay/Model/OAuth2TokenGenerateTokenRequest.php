@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class OAuth2TokenGenerateTokenRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -15,7 +14,6 @@ class OAuth2TokenGenerateTokenRequest extends BaseRequest
 
     /**
      * Gets userId
-     *
      * @return string
      */
     public function getUserId()
@@ -25,13 +23,13 @@ class OAuth2TokenGenerateTokenRequest extends BaseRequest
 
     /**
      * Sets userId
-     *
-     * @param string $userId
+     * @param  string  $userId
      * @return OAuth2TokenGenerateTokenRequest
      */
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
 
@@ -39,6 +37,5 @@ class OAuth2TokenGenerateTokenRequest extends BaseRequest
     {
         return 'oAuth2TokenGenerateToken';
     }
-
 
 }

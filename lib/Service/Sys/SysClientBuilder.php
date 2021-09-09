@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys;
-
 
 use Yeepay\Yop\Sdk\Auth\AuthorityReqRegistryImpl;
 use Yeepay\Yop\Sdk\Auth\AuthorizationReqRegistry;
@@ -16,6 +14,7 @@ use Yeepay\Yop\Sdk\Exception\YopClientException;
 
 class SysClientBuilder
 {
+
     /**
      * @var AuthorizationReqRegistry
      */
@@ -24,12 +23,18 @@ class SysClientBuilder
     public static function __init()
     {
         self::$authorizationReqRegistry = new AuthorityReqRegistryImpl();
-        self::$authorizationReqRegistry->register('merchantQualUpload', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('tradeDivideback', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('tradeOrder', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('tradeOrderquery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('tradeRefund', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
-        self::$authorizationReqRegistry->register('tradeRefundquery', AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('merchantQualUpload',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeDivideback',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeOrderquery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeRefund',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeRefundquery',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
     }
 
     /**
@@ -39,7 +44,7 @@ class SysClientBuilder
 
     /**
      * SysClientBuilder constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     public function __construct(ClientParams $clientParams)
     {
@@ -66,8 +71,10 @@ class SysClientBuilder
         }
         $clientParams = ClientParamsSupport::generateClientParams($appSdkConfigProvider);
         $clientParams->setAuthorizationReqRegistry(self::$authorizationReqRegistry);
+
         return new SysClientBuilder($clientParams);
     }
 
 }
+
 SysClientBuilder::__init();

@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class YopRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
@@ -21,12 +20,12 @@ class YopRequest extends BaseRequest
     /**
      * @var array
      */
-    private $parameters = array();
+    private $parameters = [];
 
     /**
      * @var array
      */
-    private $multipartFiles = array();
+    private $multipartFiles = [];
 
     /**
      * @var string | resource
@@ -35,8 +34,8 @@ class YopRequest extends BaseRequest
 
     /**
      * YopRequest constructor.
-     * @param string $apiUri
-     * @param string $method
+     * @param  string  $apiUri
+     * @param  string  $method
      */
     public function __construct($apiUri, $method)
     {
@@ -69,39 +68,42 @@ class YopRequest extends BaseRequest
     }
 
     /**
-     * @param array $parameters
+     * @param  array  $parameters
      * @return YopRequest
      */
     public function setParameters($parameters)
     {
         $this->parameters = $parameters;
+
         return $this;
     }
 
     /**
-     * @param string $name
-     * @param array $values
+     * @param  string  $name
+     * @param  array  $values
      * @return YopRequest
      */
     public function addParameters($name, array $values)
     {
         $this->parameters[$name] = $values;
+
         return $this;
     }
 
     /**
-     * @param string $name
-     * @param mixed $value
+     * @param  string  $name
+     * @param  mixed  $value
      * @return YopRequest
      */
     public function addParameter($name, $value)
     {
         if (isset($this->parameters[$name])) {
-            $values = $this->parameters[$name];
+            $values   = $this->parameters[$name];
             $values[] = $value;
         } else {
-            $this->parameters[$name] = array($value);
+            $this->parameters[$name] = [$value];
         }
+
         return $this;
     }
 
@@ -114,18 +116,19 @@ class YopRequest extends BaseRequest
     }
 
     /**
-     * @param string $name
-     * @param string|resource $file
+     * @param  string  $name
+     * @param  string|resource  $file
      * @return YopRequest
      */
     public function addMultiPartFile($name, $file)
     {
         if (isset($this->multipartFiles[$name])) {
-            $values = $this->multipartFiles[$name];
+            $values   = $this->multipartFiles[$name];
             $values[] = $file;
         } else {
-            $this->multipartFiles[$name] = array($file);
+            $this->multipartFiles[$name] = [$file];
         }
+
         return $this;
     }
 
@@ -138,12 +141,13 @@ class YopRequest extends BaseRequest
     }
 
     /**
-     * @param resource|string $content
+     * @param  resource|string  $content
      * @return YopRequest
      */
     public function setContent($content)
     {
         $this->content = $content;
+
         return $this;
     }
 

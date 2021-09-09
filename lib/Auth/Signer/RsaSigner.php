@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Auth\Signer;
-
 
 use DateTime;
 use Yeepay\Yop\Sdk\Auth\Signer;
@@ -20,18 +18,19 @@ use Yeepay\Yop\Sdk\Utils\Http\HttpUtils;
 class RsaSigner implements Signer
 {
 
-    private static $yopAuthVersion = 'yop-auth-v3';
+    private static $yopAuthVersion           = 'yop-auth-v3';
 
     private static $defaultHeadersToSign;
-    private static $headerJoiner = "\n";
+
+    private static $headerJoiner             = "\n";
 
     private static $signedHeaderStringJoiner = ';';
 
-    private $logger;
+    private        $logger;
 
     public static function __init()
     {
-        self::$defaultHeadersToSign = array(
+        self::$defaultHeadersToSign = [
             strtolower(Headers::CONTENT_LENGTH),
             strtolower(Headers::CONTENT_TYPE),
             strtolower(Headers::CONTENT_DISPOSITION),
@@ -40,10 +39,10 @@ class RsaSigner implements Signer
             strtolower(Headers::YOP_DATE),
             strtolower(Headers::YOP_APPKEY),
             strtolower(Headers::YOP_CONTENT_SHA256),
-            strtolower(Headers::YOP_HASH_CRC64ECMA));
+            strtolower(Headers::YOP_HASH_CRC64ECMA),
+        ];
 
     }
-
 
     public function sign(Request $request, YopRsaCredentials $credentials = null, SignOptions $options = null)
     {
@@ -60,19 +59,20 @@ class RsaSigner implements Signer
             $request->addHeader(Headers::YOP_CONTENT_SHA256, $contentSha256);
         }
         $canonicalQueryString = $this->getCanonicalQueryString($request);
-        $headersToSign = $this->getHeadersToSign($request->getHeaders(), self::$defaultHeadersToSign);
-        $canonicalHeader = $this->getCanonicalHeaders($headersToSign);
-        $signedHeaders = strtolower(trim(implode(self::$signedHeaderStringJoiner, array_keys($headersToSign))));
+        $headersToSign        = $this->getHeadersToSign($request->getHeaders(), self::$defaultHeadersToSign);
+        $canonicalHeader      = $this->getCanonicalHeaders($headersToSign);
+        $signedHeaders        = strtolower(trim(implode(self::$signedHeaderStringJoiner, array_keys($headersToSign))));
 
-        $authString = self::$yopAuthVersion . '/' . $accessKeyId . '/' . DateUtils::formatAlternateIso8601Date($timestamp) . '/'
-            . $options->getExpirationInSeconds();
+        $authString = self::$yopAuthVersion.'/'.$accessKeyId.'/'.DateUtils::formatAlternateIso8601Date($timestamp).'/'
+                      .$options->getExpirationInSeconds();
 
-        $canonicalURI = $this->getCanonicalURIPath($request->getResourcePath());
-        $canonicalRequest = $authString . self::$headerJoiner . $request->getHttpMethod() . self::$headerJoiner . $canonicalURI
-            . self::$headerJoiner . $canonicalQueryString . self::$headerJoiner . $canonicalHeader;
+        $canonicalURI     = $this->getCanonicalURIPath($request->getResourcePath());
+        $canonicalRequest = $authString.self::$headerJoiner.$request->getHttpMethod().self::$headerJoiner.$canonicalURI
+                            .self::$headerJoiner.$canonicalQueryString.self::$headerJoiner.$canonicalHeader;
 
-        $signature = $this->computeSignature($canonicalRequest, $credentials->getPrivateKey(), $options->getDigestAlg());
-        $authorizationHeader = $options->getProtocolPrefix() . ' ' . $authString . '/' . $signedHeaders . '/' . $signature;
+        $signature           = $this->computeSignature($canonicalRequest, $credentials->getPrivateKey(),
+            $options->getDigestAlg());
+        $authorizationHeader = $options->getProtocolPrefix().' '.$authString.'/'.$signedHeaders.'/'.$signature;
         $request->addHeader(Headers::AUTHORIZATION, $authorizationHeader);
     }
 
@@ -81,8 +81,10 @@ class RsaSigner implements Signer
         $content = null;
         if (HttpUtils::usePayloadForQueryParameters($request)) {
             $content = HttpUtils::getCanonicalQueryString($request->getParameters(), true);
-        } else if (is_string($request->getContent())) {
-            $content = $request->getContent();
+        } else {
+            if (is_string($request->getContent())) {
+                $content = $request->getContent();
+            }
         }
         if (isset($content)) {
             return hash('sha256', $content);
@@ -96,6 +98,7 @@ class RsaSigner implements Signer
         if (HttpUtils::usePayloadForQueryParameters($request)) {
             return '';
         }
+
         return HttpUtils::getCanonicalQueryString($request->getParameters(), true);
     }
 
@@ -111,7 +114,7 @@ class RsaSigner implements Signer
             if ($path[0] == '/') {
                 return HttpUtils::urlEncodeExceptSlash($path);
             } else {
-                return '/' . HttpUtils::urlEncodeExceptSlash($path);
+                return '/'.HttpUtils::urlEncodeExceptSlash($path);
             }
         }
     }
@@ -126,7 +129,7 @@ class RsaSigner implements Signer
             return '';
         }
 
-        $headerStrings = array();
+        $headerStrings = [];
         foreach ($headers as $k => $v) {
             if ($k === null) {
                 continue;
@@ -135,8 +138,8 @@ class RsaSigner implements Signer
                 $v = '';
             }
             $headerStrings[] = rawurlencode(
-                    strtolower(trim($k))
-                ) . ':' . rawurlencode(trim($v));
+                                   strtolower(trim($k))
+                               ).':'.rawurlencode(trim($v));
         }
         sort($headerStrings);
 
@@ -150,16 +153,16 @@ class RsaSigner implements Signer
      */
     private function getHeadersToSign($headers, $headersToSign)
     {
-        $ret = array();
+        $ret = [];
         if ($headersToSign !== null) {
-            $tmp = array();
+            $tmp = [];
             foreach ($headersToSign as $header) {
                 $tmp[] = strtolower(trim($header));
             }
             $headersToSign = $tmp;
         }
         foreach ($headers as $k => $v) {
-            if (trim((string)$v) !== '') {
+            if (trim((string) $v) !== '') {
                 if ($headersToSign !== null) {
                     $k = strtolower(trim($k));
                     if (in_array($k, $headersToSign) && $k != trim(Headers::AUTHORIZATION)) {
@@ -168,6 +171,7 @@ class RsaSigner implements Signer
                 }
             }
         }
+
         return $ret;
     }
 
@@ -175,7 +179,7 @@ class RsaSigner implements Signer
     {
         $signature = null;
         if (openssl_sign($canonicalRequest, $signature, $privateKey, $digestAlg)) {
-            return Encodes::base64url_encode($signature) . '$' . $digestAlg;
+            return Encodes::base64url_encode($signature).'$'.$digestAlg;
         }
         throw new YopClientException('compute signature failed.');
     }
@@ -183,13 +187,12 @@ class RsaSigner implements Signer
     public function checkSignature(YopHttpResponse $httpResponse, $signature, $publicKey, SignOptions $options)
     {
         $content = $httpResponse->readContent();
-        $content = str_replace(array(" ", "\n", "\t"), "", $content);
+        $content = str_replace([" ", "\n", "\t"], "", $content);
         if (openssl_verify($content, base64_decode($signature), $publicKey, $options->getDigestAlg()) == 1) {
             return;
         }
         throw new VerifySignFailedException("response sign verify failure");
     }
-
 
 }
 

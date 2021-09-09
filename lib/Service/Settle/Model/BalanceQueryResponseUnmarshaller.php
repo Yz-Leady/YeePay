@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class BalanceQueryResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new BalanceQueryResponse();
     }
+
 }
 
 BalanceQueryResponseUnMarshaller::__init();

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Internal;
-
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\StreamInterface;
@@ -10,6 +8,7 @@ use Yeepay\Yop\Sdk\Http\Headers;
 
 class DefaultRequest implements Request
 {
+
     /**
      * @var string
      */
@@ -18,17 +17,17 @@ class DefaultRequest implements Request
     /**
      * @var array
      */
-    private $parameters = array();
+    private $parameters = [];
 
     /**
      * @var array
      */
-    private $multipartFiles = array();
+    private $multipartFiles = [];
 
     /**
      * @var array
      */
-    private $headers = array();
+    private $headers = [];
 
     /**
      * @var Uri
@@ -57,13 +56,12 @@ class DefaultRequest implements Request
 
     /**
      * DefaultRequest constructor.
-     * @param string $serviceName
+     * @param  string  $serviceName
      */
     public function __construct($serviceName)
     {
         $this->serviceName = $serviceName;
     }
-
 
     /**
      * @return array
@@ -74,7 +72,7 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param array $headers
+     * @param  array  $headers
      */
     public function setHeaders(array $headers)
     {
@@ -82,8 +80,8 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $name
-     * @param string $value
+     * @param  string  $name
+     * @param  string  $value
      */
     public function addHeader($name, $value)
     {
@@ -99,7 +97,7 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $path
+     * @param  string  $path
      */
     public function setResourcePath($path)
     {
@@ -115,7 +113,7 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param array $parameters
+     * @param  array  $parameters
      */
     public function setParameters($parameters)
     {
@@ -123,8 +121,8 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $name
-     * @param array $values
+     * @param  string  $name
+     * @param  array  $values
      */
     public function addParameters($name, array $values)
     {
@@ -132,16 +130,16 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $name
-     * @param string $value
+     * @param  string  $name
+     * @param  string  $value
      */
     public function addParameter($name, $value)
     {
         if (isset($this->parameters[$name])) {
-            $values = $this->parameters[$name];
+            $values   = $this->parameters[$name];
             $values[] = $value;
         } else {
-            $this->parameters[$name] = array($value);
+            $this->parameters[$name] = [$value];
         }
     }
 
@@ -154,16 +152,16 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $name
-     * @param string|resource $file
+     * @param  string  $name
+     * @param  string|resource  $file
      */
     public function addMultiPartFile($name, $file)
     {
         if (isset($this->multipartFiles[$name])) {
-            $values = $this->multipartFiles[$name];
+            $values   = $this->multipartFiles[$name];
             $values[] = new MultiPartFile($file);
         } else {
-            $this->multipartFiles[$name] = array(new MultiPartFile($file));
+            $this->multipartFiles[$name] = [new MultiPartFile($file)];
         }
     }
 
@@ -176,7 +174,7 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param Uri $endpoint
+     * @param  Uri  $endpoint
      */
     public function setEndpoint(Uri $endpoint)
     {
@@ -192,7 +190,7 @@ class DefaultRequest implements Request
     }
 
     /**
-     * @param string $httpMethod
+     * @param  string  $httpMethod
      */
     public function setHttpMethod($httpMethod)
     {

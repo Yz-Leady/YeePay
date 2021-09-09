@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class FacepayProxyCertificateNoAuthResponseUnMarshaller extends BaseResponseUnMa
     {
         return new FacepayProxyCertificateNoAuthResponse();
     }
+
 }
 
 FacepayProxyCertificateNoAuthResponseUnMarshaller::__init();

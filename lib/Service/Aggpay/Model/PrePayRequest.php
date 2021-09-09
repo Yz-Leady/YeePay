@@ -1,109 +1,132 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Aggpay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class PrePayRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var float
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $expiredTime;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $redirectUrl;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
     private $goodsName;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
     private $payWay;
+
     /**
      * @var string
      */
     private $channel;
+
     /**
      * @var string
      */
     private $scene;
+
     /**
      * @var string
      */
     private $appId;
+
     /**
      * @var string
      */
     private $userId;
+
     /**
      * @var string
      */
     private $userIp;
+
     /**
      * @var string
      */
     private $channelSpecifiedInfo;
+
     /**
      * @var string
      */
     private $channelPromotionInfo;
+
     /**
      * @var string
      */
     private $identityInfo;
+
     /**
      * @var string
      */
     private $limitCredit;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
     private $csUrl;
+
     /**
      * @var string
      */
     private $accountLinkInfo;
+
     /**
      * @var string
      */
@@ -111,7 +134,6 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -121,18 +143,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return PrePayRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -142,18 +164,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return PrePayRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -163,18 +185,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return PrePayRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return float
      */
     public function getOrderAmount()
@@ -184,18 +206,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param float $orderAmount
+     * @param  float  $orderAmount
      * @return PrePayRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets expiredTime
-     *
      * @return string
      */
     public function getExpiredTime()
@@ -205,18 +227,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets expiredTime
-     *
-     * @param string $expiredTime
+     * @param  string  $expiredTime
      * @return PrePayRequest
      */
     public function setExpiredTime($expiredTime)
     {
         $this->expiredTime = $expiredTime;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -226,18 +248,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return PrePayRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets redirectUrl
-     *
      * @return string
      */
     public function getRedirectUrl()
@@ -247,18 +269,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets redirectUrl
-     *
-     * @param string $redirectUrl
+     * @param  string  $redirectUrl
      * @return PrePayRequest
      */
     public function setRedirectUrl($redirectUrl)
     {
         $this->redirectUrl = $redirectUrl;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -268,18 +290,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return PrePayRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets goodsName
-     *
      * @return string
      */
     public function getGoodsName()
@@ -289,18 +311,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets goodsName
-     *
-     * @param string $goodsName
+     * @param  string  $goodsName
      * @return PrePayRequest
      */
     public function setGoodsName($goodsName)
     {
         $this->goodsName = $goodsName;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -310,18 +332,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return PrePayRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets payWay
-     *
      * @return string
      */
     public function getPayWay()
@@ -331,18 +353,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets payWay
-     *
-     * @param string $payWay
+     * @param  string  $payWay
      * @return PrePayRequest
      */
     public function setPayWay($payWay)
     {
         $this->payWay = $payWay;
+
         return $this;
     }
+
     /**
      * Gets channel
-     *
      * @return string
      */
     public function getChannel()
@@ -352,18 +374,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets channel
-     *
-     * @param string $channel
+     * @param  string  $channel
      * @return PrePayRequest
      */
     public function setChannel($channel)
     {
         $this->channel = $channel;
+
         return $this;
     }
+
     /**
      * Gets scene
-     *
      * @return string
      */
     public function getScene()
@@ -373,18 +395,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets scene
-     *
-     * @param string $scene
+     * @param  string  $scene
      * @return PrePayRequest
      */
     public function setScene($scene)
     {
         $this->scene = $scene;
+
         return $this;
     }
+
     /**
      * Gets appId
-     *
      * @return string
      */
     public function getAppId()
@@ -394,18 +416,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets appId
-     *
-     * @param string $appId
+     * @param  string  $appId
      * @return PrePayRequest
      */
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
+
     /**
      * Gets userId
-     *
      * @return string
      */
     public function getUserId()
@@ -415,18 +437,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets userId
-     *
-     * @param string $userId
+     * @param  string  $userId
      * @return PrePayRequest
      */
     public function setUserId($userId)
     {
         $this->userId = $userId;
+
         return $this;
     }
+
     /**
      * Gets userIp
-     *
      * @return string
      */
     public function getUserIp()
@@ -436,18 +458,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets userIp
-     *
-     * @param string $userIp
+     * @param  string  $userIp
      * @return PrePayRequest
      */
     public function setUserIp($userIp)
     {
         $this->userIp = $userIp;
+
         return $this;
     }
+
     /**
      * Gets channelSpecifiedInfo
-     *
      * @return string
      */
     public function getChannelSpecifiedInfo()
@@ -457,18 +479,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets channelSpecifiedInfo
-     *
-     * @param string $channelSpecifiedInfo
+     * @param  string  $channelSpecifiedInfo
      * @return PrePayRequest
      */
     public function setChannelSpecifiedInfo($channelSpecifiedInfo)
     {
         $this->channelSpecifiedInfo = $channelSpecifiedInfo;
+
         return $this;
     }
+
     /**
      * Gets channelPromotionInfo
-     *
      * @return string
      */
     public function getChannelPromotionInfo()
@@ -478,18 +500,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets channelPromotionInfo
-     *
-     * @param string $channelPromotionInfo
+     * @param  string  $channelPromotionInfo
      * @return PrePayRequest
      */
     public function setChannelPromotionInfo($channelPromotionInfo)
     {
         $this->channelPromotionInfo = $channelPromotionInfo;
+
         return $this;
     }
+
     /**
      * Gets identityInfo
-     *
      * @return string
      */
     public function getIdentityInfo()
@@ -499,18 +521,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets identityInfo
-     *
-     * @param string $identityInfo
+     * @param  string  $identityInfo
      * @return PrePayRequest
      */
     public function setIdentityInfo($identityInfo)
     {
         $this->identityInfo = $identityInfo;
+
         return $this;
     }
+
     /**
      * Gets limitCredit
-     *
      * @return string
      */
     public function getLimitCredit()
@@ -520,18 +542,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets limitCredit
-     *
-     * @param string $limitCredit
+     * @param  string  $limitCredit
      * @return PrePayRequest
      */
     public function setLimitCredit($limitCredit)
     {
         $this->limitCredit = $limitCredit;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -541,18 +563,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return PrePayRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -562,18 +584,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return PrePayRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets csUrl
-     *
      * @return string
      */
     public function getCsUrl()
@@ -583,18 +605,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets csUrl
-     *
-     * @param string $csUrl
+     * @param  string  $csUrl
      * @return PrePayRequest
      */
     public function setCsUrl($csUrl)
     {
         $this->csUrl = $csUrl;
+
         return $this;
     }
+
     /**
      * Gets accountLinkInfo
-     *
      * @return string
      */
     public function getAccountLinkInfo()
@@ -604,18 +626,18 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets accountLinkInfo
-     *
-     * @param string $accountLinkInfo
+     * @param  string  $accountLinkInfo
      * @return PrePayRequest
      */
     public function setAccountLinkInfo($accountLinkInfo)
     {
         $this->accountLinkInfo = $accountLinkInfo;
+
         return $this;
     }
+
     /**
      * Gets ypPromotionInfo
-     *
      * @return string
      */
     public function getYpPromotionInfo()
@@ -625,13 +647,13 @@ class PrePayRequest extends BaseRequest
 
     /**
      * Sets ypPromotionInfo
-     *
-     * @param string $ypPromotionInfo
+     * @param  string  $ypPromotionInfo
      * @return PrePayRequest
      */
     public function setYpPromotionInfo($ypPromotionInfo)
     {
         $this->ypPromotionInfo = $ypPromotionInfo;
+
         return $this;
     }
 
@@ -639,6 +661,5 @@ class PrePayRequest extends BaseRequest
     {
         return 'prePay';
     }
-
 
 }

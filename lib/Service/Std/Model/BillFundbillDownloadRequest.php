@@ -1,17 +1,17 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BillFundbillDownloadRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
@@ -19,7 +19,6 @@ class BillFundbillDownloadRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -29,18 +28,18 @@ class BillFundbillDownloadRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BillFundbillDownloadRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets fileId
-     *
      * @return string
      */
     public function getFileId()
@@ -50,13 +49,13 @@ class BillFundbillDownloadRequest extends BaseRequest
 
     /**
      * Sets fileId
-     *
-     * @param string $fileId
+     * @param  string  $fileId
      * @return BillFundbillDownloadRequest
      */
     public function setFileId($fileId)
     {
         $this->fileId = $fileId;
+
         return $this;
     }
 
@@ -64,6 +63,5 @@ class BillFundbillDownloadRequest extends BaseRequest
     {
         return 'billFundbillDownload';
     }
-
 
 }

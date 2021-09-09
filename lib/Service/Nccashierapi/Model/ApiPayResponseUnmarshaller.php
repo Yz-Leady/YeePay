@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Nccashierapi\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class ApiPayResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new ApiPayResponse();
     }
+
 }
 
 ApiPayResponseUnMarshaller::__init();

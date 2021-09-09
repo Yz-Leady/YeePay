@@ -17,15 +17,14 @@
 
 namespace Yeepay\Yop\Sdk\Log;
 
-use Monolog\Handler\HandlerInterface;
 use Monolog\Logger;
-
 
 /**
  * A LogFactory for Monolog.
  */
 class MonoLogFactory implements LogFactoryInterface
 {
+
     /**
      * @var array
      */
@@ -33,8 +32,7 @@ class MonoLogFactory implements LogFactoryInterface
 
     /**
      * Constructs a new MonoLogFactory instance.
-     *
-     * @param array $handlers log handlers
+     * @param  array  $handlers  log handlers
      */
     public function __construct(array $handlers = null)
     {
@@ -43,8 +41,7 @@ class MonoLogFactory implements LogFactoryInterface
 
     /**
      * Returns \Monolog\Logger.
-     *
-     * @param string $name the name of logger
+     * @param  string  $name  the name of logger
      * @return \Monolog\Logger a monolog logger instance
      */
     public function getLogger($name)
@@ -55,6 +52,8 @@ class MonoLogFactory implements LogFactoryInterface
                 $logger->pushHandler($handler);
             }
         }
+
         return $logger;
     }
+
 }

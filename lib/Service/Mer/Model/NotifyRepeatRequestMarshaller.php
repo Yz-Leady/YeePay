@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class NotifyRepeatRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var NotifyRepeatRequestMarshaller
      */
@@ -51,9 +50,8 @@ class NotifyRepeatRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param NotifyRepeatRequest $request
+     * @param  NotifyRepeatRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,18 +67,23 @@ class NotifyRepeatRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getRequestNo() != null){
-            $internalRequest->addParameter('requestNo', ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
         }
-        if($request->getApplicationNo() != null){
-            $internalRequest->addParameter('applicationNo', ObjectSerializer::sanitizeForSerialization($request->getApplicationNo(), 'string'));
+        if ($request->getApplicationNo() != null) {
+            $internalRequest->addParameter('applicationNo',
+                ObjectSerializer::sanitizeForSerialization($request->getApplicationNo(), 'string'));
         }
-        if($request->getType() != null){
-            $internalRequest->addParameter('type', ObjectSerializer::sanitizeForSerialization($request->getType(), 'string'));
+        if ($request->getType() != null) {
+            $internalRequest->addParameter('type',
+                ObjectSerializer::sanitizeForSerialization($request->getType(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 NotifyRepeatRequestMarshaller::__init();

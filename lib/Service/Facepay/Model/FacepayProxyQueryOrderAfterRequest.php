@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $orderToken;
+
     /**
      * @var string
      */
     private $bizNo;
+
     /**
      * @var string
      */
     private $bizToken;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Gets orderToken
-     *
      * @return string
      */
     public function getOrderToken()
@@ -45,18 +48,18 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets orderToken
-     *
-     * @param string $orderToken
+     * @param  string  $orderToken
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setOrderToken($orderToken)
     {
         $this->orderToken = $orderToken;
+
         return $this;
     }
+
     /**
      * Gets bizNo
-     *
      * @return string
      */
     public function getBizNo()
@@ -66,18 +69,18 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets bizNo
-     *
-     * @param string $bizNo
+     * @param  string  $bizNo
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setBizNo($bizNo)
     {
         $this->bizNo = $bizNo;
+
         return $this;
     }
+
     /**
      * Gets bizToken
-     *
      * @return string
      */
     public function getBizToken()
@@ -87,18 +90,18 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets bizToken
-     *
-     * @param string $bizToken
+     * @param  string  $bizToken
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setBizToken($bizToken)
     {
         $this->bizToken = $bizToken;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -108,18 +111,18 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -129,18 +132,18 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -150,13 +153,13 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyQueryOrderAfterRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class FacepayProxyQueryOrderAfterRequest extends BaseRequest
     {
         return 'facepayProxyQueryOrderAfter';
     }
-
 
 }

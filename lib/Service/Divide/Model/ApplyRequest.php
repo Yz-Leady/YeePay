@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class ApplyRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
     private $divideRequestId;
+
     /**
      * @var string
      */
     private $divideDetail;
+
     /**
      * @var string
      */
@@ -39,7 +44,6 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -49,18 +53,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return ApplyRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -70,18 +74,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return ApplyRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -91,18 +95,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return ApplyRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -112,18 +116,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return ApplyRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets divideRequestId
-     *
      * @return string
      */
     public function getDivideRequestId()
@@ -133,18 +137,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets divideRequestId
-     *
-     * @param string $divideRequestId
+     * @param  string  $divideRequestId
      * @return ApplyRequest
      */
     public function setDivideRequestId($divideRequestId)
     {
         $this->divideRequestId = $divideRequestId;
+
         return $this;
     }
+
     /**
      * Gets divideDetail
-     *
      * @return string
      */
     public function getDivideDetail()
@@ -154,18 +158,18 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets divideDetail
-     *
-     * @param string $divideDetail
+     * @param  string  $divideDetail
      * @return ApplyRequest
      */
     public function setDivideDetail($divideDetail)
     {
         $this->divideDetail = $divideDetail;
+
         return $this;
     }
+
     /**
      * Gets accountLinkInfo
-     *
      * @return string
      */
     public function getAccountLinkInfo()
@@ -175,13 +179,13 @@ class ApplyRequest extends BaseRequest
 
     /**
      * Sets accountLinkInfo
-     *
-     * @param string $accountLinkInfo
+     * @param  string  $accountLinkInfo
      * @return ApplyRequest
      */
     public function setAccountLinkInfo($accountLinkInfo)
     {
         $this->accountLinkInfo = $accountLinkInfo;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class ApplyRequest extends BaseRequest
     {
         return 'apply';
     }
-
 
 }

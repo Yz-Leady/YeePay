@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model\Transform;
-
 
 use Yeepay\Yop\Sdk\Exception\YopClientException;
 use Yeepay\Yop\Sdk\Http\ContentType;
@@ -22,8 +20,12 @@ class YosDownloadResponseUnMarshaller extends BaseResponseUnMarshaller
         return new YosDownloadResponse();
     }
 
-    protected function handleContent(YopHttpResponse $yopHttpResponse, $contentType, BaseResponse $response, ResponseUnMarshalParams $params)
-    {
+    protected function handleContent(
+        YopHttpResponse $yopHttpResponse,
+        $contentType,
+        BaseResponse $response,
+        ResponseUnMarshalParams $params
+    ) {
         $statusCode = $yopHttpResponse->getStatusCode();
         if ($statusCode / 100 == HttpStatus::SC_OK / 100 && $statusCode != HttpStatus::SC_NO_CONTENT) {
             $response->setResult($yopHttpResponse->getContent());
@@ -34,9 +36,8 @@ class YosDownloadResponseUnMarshaller extends BaseResponseUnMarshaller
             }
             $this->handleErrorResponse($content, $response->getMetadata(), $yopHttpResponse);
         } else {
-            throw new YopClientException("Unexpected http statusCode:" . $statusCode);
+            throw new YopClientException("Unexpected http statusCode:".$statusCode);
         }
     }
-
 
 }

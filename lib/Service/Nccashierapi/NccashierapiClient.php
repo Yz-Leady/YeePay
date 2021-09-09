@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Nccashierapi;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Nccashierapi\Model as Model;
 
 class NccashierapiClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class NccashierapiClient
 
     /**
      * NccashierapiClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class NccashierapiClient
     }
 
     /**
-     * @param Model\ApiPayRequest $request
+     * @param  Model\ApiPayRequest  $request
      * @return Model\ApiPayResponse
      * @throws YopClientException
      */
@@ -38,6 +37,8 @@ class NccashierapiClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\ApiPayRequestMarshaller::getInstance(),
             Model\ApiPayResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class OrderCloseResponse extends BaseResponse
 {
+
     /**
      * @var OrderCloseResponseOrderCloseDTOResult
      */
@@ -18,7 +18,7 @@ class OrderCloseResponse extends BaseResponse
     }
 
     /**
-     * @param OrderCloseResponseOrderCloseDTOResult $result
+     * @param  OrderCloseResponseOrderCloseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class OrderCloseResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

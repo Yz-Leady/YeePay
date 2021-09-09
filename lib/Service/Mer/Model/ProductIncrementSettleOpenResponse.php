@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class ProductIncrementSettleOpenResponse extends BaseResponse
 {
+
     /**
      * @var ProductIncrementSettleOpenAddIncrementSettleProductRespDtoResult
      */
@@ -18,7 +18,7 @@ class ProductIncrementSettleOpenResponse extends BaseResponse
     }
 
     /**
-     * @param ProductIncrementSettleOpenAddIncrementSettleProductRespDtoResult $result
+     * @param  ProductIncrementSettleOpenAddIncrementSettleProductRespDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class ProductIncrementSettleOpenResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Yop;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Yop\Model as Model;
 
 class YopClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class YopClient
 
     /**
      * YopClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class YopClient
     }
 
     /**
-     * @param Model\Oauth2ReportKeyRequest $request
+     * @param  Model\Oauth2ReportKeyRequest  $request
      * @return Model\Oauth2ReportKeyResponse
      * @throws YopClientException
      */
@@ -36,8 +35,11 @@ class YopClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\Oauth2ReportKeyRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\Oauth2ReportKeyRequestMarshaller::getInstance(),
             Model\Oauth2ReportKeyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

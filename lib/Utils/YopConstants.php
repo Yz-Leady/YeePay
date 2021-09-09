@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Utils;
-
 
 class YopConstants
 {
+
     const LANG = 'php';
 
     const VERSION = "3.2.24";
@@ -19,4 +18,5 @@ class YopConstants
     const DEFAULT_SANDBOX_SERVER_ROOT = "https://sandbox.yeepay.com/yop-center";
 
     const DEFAULT_SANDBOX_VIA = "sandbox";
+
 }

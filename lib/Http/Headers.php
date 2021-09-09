@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Http;
-
 
 class Headers
 {
+
     /*
      *  Standard HTTP Headers
      */
@@ -44,7 +43,6 @@ class Headers
     const TRANSFER_ENCODING = "Transfer-Encoding";
 
     const USER_AGENT = "User-Agent";
-
 
     /*
      * YOP Common HTTP Headers
@@ -98,4 +96,5 @@ class Headers
     const YOP_NEXT_APPEND_OFFSET = "x-yop-next-append-offset";
 
     const YOP_OBJECT_TYPE = "x-yop-object-type";
+
 }

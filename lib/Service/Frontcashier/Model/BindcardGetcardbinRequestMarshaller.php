@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BindcardGetcardbinRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BindcardGetcardbinRequestMarshaller
      */
@@ -51,9 +50,8 @@ class BindcardGetcardbinRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BindcardGetcardbinRequest $request
+     * @param  BindcardGetcardbinRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,21 +67,27 @@ class BindcardGetcardbinRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getBankCardNo() != null){
-            $internalRequest->addParameter('bankCardNo', ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
+        if ($request->getBankCardNo() != null) {
+            $internalRequest->addParameter('bankCardNo',
+                ObjectSerializer::sanitizeForSerialization($request->getBankCardNo(), 'string'));
         }
-        if($request->getCardType() != null){
-            $internalRequest->addParameter('cardType', ObjectSerializer::sanitizeForSerialization($request->getCardType(), 'string'));
+        if ($request->getCardType() != null) {
+            $internalRequest->addParameter('cardType',
+                ObjectSerializer::sanitizeForSerialization($request->getCardType(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BindcardGetcardbinRequestMarshaller::__init();

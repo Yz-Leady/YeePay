@@ -1,14 +1,13 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Http;
-
 
 use Yeepay\Yop\Sdk\Utils\Http\Region;
 use Yeepay\Yop\Sdk\Utils\YopConstants;
 
 class ClientConfiguration
 {
+
     const DEFAULT_CONNECTION_TIMEOUT_IN_MILLIS = 50000;
 
     const DEFAULT_SOCKET_TIMEOUT_IN_MILLIS = 50000;
@@ -19,25 +18,30 @@ class ClientConfiguration
 
     /**
      * ClientConfiguration constructor.
-     * @param int $connectionTimeoutInMillis
-     * @param int $socketTimeoutInMillis
-     * @param null $userAgent
-     * @param null $proxyUrl
+     * @param  int  $connectionTimeoutInMillis
+     * @param  int  $socketTimeoutInMillis
+     * @param  null  $userAgent
+     * @param  null  $proxyUrl
      */
-    public function __construct($connectionTimeoutInMillis = self::DEFAULT_CONNECTION_TIMEOUT_IN_MILLIS, $socketTimeoutInMillis = self::DEFAULT_SOCKET_TIMEOUT_IN_MILLIS, $userAgent = null, $region = null, $proxyUrl = null)
-    {
+    public function __construct(
+        $connectionTimeoutInMillis = self::DEFAULT_CONNECTION_TIMEOUT_IN_MILLIS,
+        $socketTimeoutInMillis = self::DEFAULT_SOCKET_TIMEOUT_IN_MILLIS,
+        $userAgent = null,
+        $region = null,
+        $proxyUrl = null
+    ) {
         $this->connectionTimeoutInMillis = $connectionTimeoutInMillis;
-        $this->socketTimeoutInMillis = $socketTimeoutInMillis;
+        $this->socketTimeoutInMillis     = $socketTimeoutInMillis;
 
         $this->userAgent = isset($userAgent) ? $userAgent : self::$defaultUserAgent;
-        $this->region = isset($region) ? $region : self::$defaultRegion;
+        $this->region    = isset($region) ? $region : self::$defaultRegion;
 
         $this->proxyUrl = $proxyUrl;
     }
 
     public static function __init()
     {
-        self::$defaultUserAgent = YopConstants::LANG . '/' . YopConstants::VERSION . '/' . php_uname('s') . '/' . php_uname('r') . '/m/m/' . phpversion();
+        self::$defaultUserAgent = YopConstants::LANG.'/'.YopConstants::VERSION.'/'.php_uname('s').'/'.php_uname('r').'/m/m/'.phpversion();
     }
 
     /**
@@ -74,7 +78,7 @@ class ClientConfiguration
     }
 
     /**
-     * @param mixed $defaultUserAgent
+     * @param  mixed  $defaultUserAgent
      */
     public static function setDefaultUserAgent($defaultUserAgent)
     {
@@ -90,7 +94,7 @@ class ClientConfiguration
     }
 
     /**
-     * @param string $defaultRegion
+     * @param  string  $defaultRegion
      */
     public static function setDefaultRegion($defaultRegion)
     {
@@ -106,12 +110,13 @@ class ClientConfiguration
     }
 
     /**
-     * @param mixed $userAgent
+     * @param  mixed  $userAgent
      * @return ClientConfiguration
      */
     public function setUserAgent($userAgent)
     {
         $this->userAgent = $userAgent;
+
         return $this;
     }
 
@@ -124,12 +129,13 @@ class ClientConfiguration
     }
 
     /**
-     * @param string $proxyUrl
+     * @param  string  $proxyUrl
      * @return ClientConfiguration
      */
     public function setProxyUrl($proxyUrl)
     {
         $this->proxyUrl = $proxyUrl;
+
         return $this;
     }
 
@@ -142,12 +148,13 @@ class ClientConfiguration
     }
 
     /**
-     * @param float $connectionTimeoutInMillis
+     * @param  float  $connectionTimeoutInMillis
      * @return ClientConfiguration
      */
     public function setConnectionTimeoutInMillis($connectionTimeoutInMillis)
     {
         $this->connectionTimeoutInMillis = $connectionTimeoutInMillis;
+
         return $this;
     }
 
@@ -160,12 +167,13 @@ class ClientConfiguration
     }
 
     /**
-     * @param float $socketTimeoutInMillis
+     * @param  float  $socketTimeoutInMillis
      * @return ClientConfiguration
      */
     public function setSocketTimeoutInMillis($socketTimeoutInMillis)
     {
         $this->socketTimeoutInMillis = $socketTimeoutInMillis;
+
         return $this;
     }
 
@@ -178,12 +186,13 @@ class ClientConfiguration
     }
 
     /**
-     * @param string $region
+     * @param  string  $region
      * @return ClientConfiguration
      */
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 

@@ -1,25 +1,27 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $orderDate;
+
     /**
      * @var string
      */
@@ -27,7 +29,6 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -37,18 +38,18 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return EnterpriseAutoPaymentQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -58,18 +59,18 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return EnterpriseAutoPaymentQueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderDate
-     *
      * @return string
      */
     public function getOrderDate()
@@ -79,18 +80,18 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 
     /**
      * Sets orderDate
-     *
-     * @param string $orderDate
+     * @param  string  $orderDate
      * @return EnterpriseAutoPaymentQueryRequest
      */
     public function setOrderDate($orderDate)
     {
         $this->orderDate = $orderDate;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -100,13 +101,13 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return EnterpriseAutoPaymentQueryRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
 
@@ -114,6 +115,5 @@ class EnterpriseAutoPaymentQueryRequest extends BaseRequest
     {
         return 'enterpriseAutoPaymentQuery';
     }
-
 
 }

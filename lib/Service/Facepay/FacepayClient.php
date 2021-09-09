@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Facepay\Model as Model;
 
 class FacepayClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class FacepayClient
 
     /**
      * FacepayClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class FacepayClient
     }
 
     /**
-     * @param Model\FacepayProxyBindConfirmSmsRequest $request
+     * @param  Model\FacepayProxyBindConfirmSmsRequest  $request
      * @return Model\FacepayProxyBindConfirmSmsResponse
      * @throws YopClientException
      */
@@ -36,12 +35,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyBindConfirmSmsRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyBindConfirmSmsRequestMarshaller::getInstance(),
             Model\FacepayProxyBindConfirmSmsResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyBindFirstCardRequest $request
+     * @param  Model\FacepayProxyBindFirstCardRequest  $request
      * @return Model\FacepayProxyBindFirstCardResponse
      * @throws YopClientException
      */
@@ -50,12 +52,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyBindFirstCardRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyBindFirstCardRequestMarshaller::getInstance(),
             Model\FacepayProxyBindFirstCardResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyBindSendSmsRequest $request
+     * @param  Model\FacepayProxyBindSendSmsRequest  $request
      * @return Model\FacepayProxyBindSendSmsResponse
      * @throws YopClientException
      */
@@ -64,12 +69,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyBindSendSmsRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyBindSendSmsRequestMarshaller::getInstance(),
             Model\FacepayProxyBindSendSmsResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyCertificateNoAuthRequest $request
+     * @param  Model\FacepayProxyCertificateNoAuthRequest  $request
      * @return Model\FacepayProxyCertificateNoAuthResponse
      * @throws YopClientException
      */
@@ -78,12 +86,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyCertificateNoAuthRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyCertificateNoAuthRequestMarshaller::getInstance(),
             Model\FacepayProxyCertificateNoAuthResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyCheckLogonSmscodeRequest $request
+     * @param  Model\FacepayProxyCheckLogonSmscodeRequest  $request
      * @return Model\FacepayProxyCheckLogonSmscodeResponse
      * @throws YopClientException
      */
@@ -92,12 +103,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyCheckLogonSmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyCheckLogonSmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxyCheckLogonSmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyConfirmFirstCardSmscodeRequest $request
+     * @param  Model\FacepayProxyConfirmFirstCardSmscodeRequest  $request
      * @return Model\FacepayProxyConfirmFirstCardSmscodeResponse
      * @throws YopClientException
      */
@@ -106,12 +120,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyConfirmFirstCardSmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyConfirmFirstCardSmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxyConfirmFirstCardSmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyConfirmVerifySmscodeRequest $request
+     * @param  Model\FacepayProxyConfirmVerifySmscodeRequest  $request
      * @return Model\FacepayProxyConfirmVerifySmscodeResponse
      * @throws YopClientException
      */
@@ -120,12 +137,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyConfirmVerifySmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyConfirmVerifySmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxyConfirmVerifySmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyCreateBindCardRequest $request
+     * @param  Model\FacepayProxyCreateBindCardRequest  $request
      * @return Model\FacepayProxyCreateBindCardResponse
      * @throws YopClientException
      */
@@ -134,12 +154,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyCreateBindCardRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyCreateBindCardRequestMarshaller::getInstance(),
             Model\FacepayProxyCreateBindCardResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyCreateOrderRequest $request
+     * @param  Model\FacepayProxyCreateOrderRequest  $request
      * @return Model\FacepayProxyCreateOrderResponse
      * @throws YopClientException
      */
@@ -148,12 +171,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyCreateOrderRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyCreateOrderRequestMarshaller::getInstance(),
             Model\FacepayProxyCreateOrderResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyFaceLogonRequest $request
+     * @param  Model\FacepayProxyFaceLogonRequest  $request
      * @return Model\FacepayProxyFaceLogonResponse
      * @throws YopClientException
      */
@@ -162,12 +188,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyFaceLogonRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyFaceLogonRequestMarshaller::getInstance(),
             Model\FacepayProxyFaceLogonResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyOpenFaceAccountRequest $request
+     * @param  Model\FacepayProxyOpenFaceAccountRequest  $request
      * @return Model\FacepayProxyOpenFaceAccountResponse
      * @throws YopClientException
      */
@@ -176,12 +205,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyOpenFaceAccountRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyOpenFaceAccountRequestMarshaller::getInstance(),
             Model\FacepayProxyOpenFaceAccountResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyPaySendSmsRequest $request
+     * @param  Model\FacepayProxyPaySendSmsRequest  $request
      * @return Model\FacepayProxyPaySendSmsResponse
      * @throws YopClientException
      */
@@ -190,12 +222,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyPaySendSmsRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyPaySendSmsRequestMarshaller::getInstance(),
             Model\FacepayProxyPaySendSmsResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyQueryBindCardInfoRequest $request
+     * @param  Model\FacepayProxyQueryBindCardInfoRequest  $request
      * @return Model\FacepayProxyQueryBindCardInfoResponse
      * @throws YopClientException
      */
@@ -204,12 +239,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyQueryBindCardInfoRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyQueryBindCardInfoRequestMarshaller::getInstance(),
             Model\FacepayProxyQueryBindCardInfoResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyQueryOrderAfterRequest $request
+     * @param  Model\FacepayProxyQueryOrderAfterRequest  $request
      * @return Model\FacepayProxyQueryOrderAfterResponse
      * @throws YopClientException
      */
@@ -218,12 +256,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyQueryOrderAfterRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyQueryOrderAfterRequestMarshaller::getInstance(),
             Model\FacepayProxyQueryOrderAfterResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyQueryOrderBeforeRequest $request
+     * @param  Model\FacepayProxyQueryOrderBeforeRequest  $request
      * @return Model\FacepayProxyQueryOrderBeforeResponse
      * @throws YopClientException
      */
@@ -235,12 +276,15 @@ class FacepayClient
         if ($request->getBody() == null) {
             throw new YopClientException("request.body is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyQueryOrderBeforeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyQueryOrderBeforeRequestMarshaller::getInstance(),
             Model\FacepayProxyQueryOrderBeforeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxySendFirstCardSmscodeRequest $request
+     * @param  Model\FacepayProxySendFirstCardSmscodeRequest  $request
      * @return Model\FacepayProxySendFirstCardSmscodeResponse
      * @throws YopClientException
      */
@@ -249,12 +293,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxySendFirstCardSmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxySendFirstCardSmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxySendFirstCardSmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxySendLogonSmscodeRequest $request
+     * @param  Model\FacepayProxySendLogonSmscodeRequest  $request
      * @return Model\FacepayProxySendLogonSmscodeResponse
      * @throws YopClientException
      */
@@ -263,12 +310,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxySendLogonSmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxySendLogonSmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxySendLogonSmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxySendVerifySmscodeRequest $request
+     * @param  Model\FacepayProxySendVerifySmscodeRequest  $request
      * @return Model\FacepayProxySendVerifySmscodeResponse
      * @throws YopClientException
      */
@@ -277,12 +327,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxySendVerifySmscodeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxySendVerifySmscodeRequestMarshaller::getInstance(),
             Model\FacepayProxySendVerifySmscodeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\FacepayProxyVerifyUserInfoRequest $request
+     * @param  Model\FacepayProxyVerifyUserInfoRequest  $request
      * @return Model\FacepayProxyVerifyUserInfoResponse
      * @throws YopClientException
      */
@@ -291,12 +344,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\FacepayProxyVerifyUserInfoRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\FacepayProxyVerifyUserInfoRequestMarshaller::getInstance(),
             Model\FacepayProxyVerifyUserInfoResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\OAuth2TokenGenerateTokenRequest $request
+     * @param  Model\OAuth2TokenGenerateTokenRequest  $request
      * @return Model\OAuth2TokenGenerateTokenResponse
      * @throws YopClientException
      */
@@ -305,12 +361,15 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\OAuth2TokenGenerateTokenRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\OAuth2TokenGenerateTokenRequestMarshaller::getInstance(),
             Model\OAuth2TokenGenerateTokenResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\SosDeleteBindNoRequest $request
+     * @param  Model\SosDeleteBindNoRequest  $request
      * @return Model\SosDeleteBindNoResponse
      * @throws YopClientException
      */
@@ -319,8 +378,11 @@ class FacepayClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\SosDeleteBindNoRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\SosDeleteBindNoRequestMarshaller::getInstance(),
             Model\SosDeleteBindNoResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

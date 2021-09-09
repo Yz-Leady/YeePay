@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Cnppay;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Cnppay\Model as Model;
 
 class CnppayClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class CnppayClient
 
     /**
      * CnppayClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class CnppayClient
     }
 
     /**
-     * @param Model\BankLimitQueryRequest $request
+     * @param  Model\BankLimitQueryRequest  $request
      * @return Model\BankLimitQueryResponse
      * @throws YopClientException
      */
@@ -39,8 +38,11 @@ class CnppayClient
         if ($request->getMerchantNo() == null) {
             throw new YopClientException("request.merchantNo is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BankLimitQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BankLimitQueryRequestMarshaller::getInstance(),
             Model\BankLimitQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Http;
-
 
 use DateTime;
 use Exception;
@@ -14,6 +12,7 @@ use Yeepay\Yop\Sdk\Utils\DateUtils;
 
 class YopHttpResponse
 {
+
     /**
      * @var LoggerInterface
      */
@@ -41,16 +40,16 @@ class YopHttpResponse
 
     /**
      * YopHttpResponse constructor.
-     * @param Response $response
+     * @param  Response  $response
      */
     public function __construct(Response $response)
     {
         $this->httpResponse = $response;
-        $this->stream = $response->getBody();
+        $this->stream       = $response->getBody();
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return null | string
      */
     public function getHeader($name)
@@ -64,7 +63,7 @@ class YopHttpResponse
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return float
      */
     public function getHeaderAsLong($name)
@@ -90,7 +89,7 @@ class YopHttpResponse
             try {
                 return DateUtils::parseRfc822Date($values[0]);
             } catch (Exception $e) {
-                self::$logger->warning('Invalid ' . $name . ':' . $values[0]);
+                self::$logger->warning('Invalid '.$name.':'.$values[0]);
             }
         }
     }
@@ -113,6 +112,7 @@ class YopHttpResponse
         }
         $this->content = $this->stream->__toString();
         $this->stream->close();
+
         return $this->content;
     }
 
@@ -129,9 +129,12 @@ class YopHttpResponse
      */
     public function getStatusText()
     {
-        return implode(' ', array($this->httpResponse->getProtocolVersion(), $this->httpResponse->getStatusCode(),
-            $this->httpResponse->getReasonPhrase()));
+        return implode(' ', [
+            $this->httpResponse->getProtocolVersion(), $this->httpResponse->getStatusCode(),
+            $this->httpResponse->getReasonPhrase(),
+        ]);
     }
+
 }
 
 YopHttpResponse::__init();

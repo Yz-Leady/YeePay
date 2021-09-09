@@ -1,65 +1,77 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BindcardRequest0Request extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantFlowId;
+
     /**
      * @var string
      */
     private $userNo;
+
     /**
      * @var string
      */
     private $userType;
+
     /**
      * @var string
      */
     private $bankCardNo;
+
     /**
      * @var string
      */
     private $userName;
+
     /**
      * @var string
      */
     private $idCardNo;
+
     /**
      * @var string
      */
     private $phone;
+
     /**
      * @var string
      */
     private $cvv2;
+
     /**
      * @var string
      */
     private $validthru;
+
     /**
      * @var int
      */
     private $orderValidate;
+
     /**
      * @var string
      */
     private $authType;
+
     /**
      * @var string
      */
     private $cardType;
+
     /**
      * @var string
      */
@@ -67,7 +79,6 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -77,18 +88,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BindcardRequest0Request
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantFlowId
-     *
      * @return string
      */
     public function getMerchantFlowId()
@@ -98,18 +109,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets merchantFlowId
-     *
-     * @param string $merchantFlowId
+     * @param  string  $merchantFlowId
      * @return BindcardRequest0Request
      */
     public function setMerchantFlowId($merchantFlowId)
     {
         $this->merchantFlowId = $merchantFlowId;
+
         return $this;
     }
+
     /**
      * Gets userNo
-     *
      * @return string
      */
     public function getUserNo()
@@ -119,18 +130,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets userNo
-     *
-     * @param string $userNo
+     * @param  string  $userNo
      * @return BindcardRequest0Request
      */
     public function setUserNo($userNo)
     {
         $this->userNo = $userNo;
+
         return $this;
     }
+
     /**
      * Gets userType
-     *
      * @return string
      */
     public function getUserType()
@@ -140,18 +151,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets userType
-     *
-     * @param string $userType
+     * @param  string  $userType
      * @return BindcardRequest0Request
      */
     public function setUserType($userType)
     {
         $this->userType = $userType;
+
         return $this;
     }
+
     /**
      * Gets bankCardNo
-     *
      * @return string
      */
     public function getBankCardNo()
@@ -161,18 +172,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets bankCardNo
-     *
-     * @param string $bankCardNo
+     * @param  string  $bankCardNo
      * @return BindcardRequest0Request
      */
     public function setBankCardNo($bankCardNo)
     {
         $this->bankCardNo = $bankCardNo;
+
         return $this;
     }
+
     /**
      * Gets userName
-     *
      * @return string
      */
     public function getUserName()
@@ -182,18 +193,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets userName
-     *
-     * @param string $userName
+     * @param  string  $userName
      * @return BindcardRequest0Request
      */
     public function setUserName($userName)
     {
         $this->userName = $userName;
+
         return $this;
     }
+
     /**
      * Gets idCardNo
-     *
      * @return string
      */
     public function getIdCardNo()
@@ -203,18 +214,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets idCardNo
-     *
-     * @param string $idCardNo
+     * @param  string  $idCardNo
      * @return BindcardRequest0Request
      */
     public function setIdCardNo($idCardNo)
     {
         $this->idCardNo = $idCardNo;
+
         return $this;
     }
+
     /**
      * Gets phone
-     *
      * @return string
      */
     public function getPhone()
@@ -224,18 +235,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets phone
-     *
-     * @param string $phone
+     * @param  string  $phone
      * @return BindcardRequest0Request
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
      * Gets cvv2
-     *
      * @return string
      */
     public function getCvv2()
@@ -245,18 +256,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets cvv2
-     *
-     * @param string $cvv2
+     * @param  string  $cvv2
      * @return BindcardRequest0Request
      */
     public function setCvv2($cvv2)
     {
         $this->cvv2 = $cvv2;
+
         return $this;
     }
+
     /**
      * Gets validthru
-     *
      * @return string
      */
     public function getValidthru()
@@ -266,18 +277,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets validthru
-     *
-     * @param string $validthru
+     * @param  string  $validthru
      * @return BindcardRequest0Request
      */
     public function setValidthru($validthru)
     {
         $this->validthru = $validthru;
+
         return $this;
     }
+
     /**
      * Gets orderValidate
-     *
      * @return int
      */
     public function getOrderValidate()
@@ -287,18 +298,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets orderValidate
-     *
-     * @param int $orderValidate
+     * @param  int  $orderValidate
      * @return BindcardRequest0Request
      */
     public function setOrderValidate($orderValidate)
     {
         $this->orderValidate = $orderValidate;
+
         return $this;
     }
+
     /**
      * Gets authType
-     *
      * @return string
      */
     public function getAuthType()
@@ -308,18 +319,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets authType
-     *
-     * @param string $authType
+     * @param  string  $authType
      * @return BindcardRequest0Request
      */
     public function setAuthType($authType)
     {
         $this->authType = $authType;
+
         return $this;
     }
+
     /**
      * Gets cardType
-     *
      * @return string
      */
     public function getCardType()
@@ -329,18 +340,18 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets cardType
-     *
-     * @param string $cardType
+     * @param  string  $cardType
      * @return BindcardRequest0Request
      */
     public function setCardType($cardType)
     {
         $this->cardType = $cardType;
+
         return $this;
     }
+
     /**
      * Gets isSMS
-     *
      * @return string
      */
     public function getIsSMS()
@@ -350,13 +361,13 @@ class BindcardRequest0Request extends BaseRequest
 
     /**
      * Sets isSMS
-     *
-     * @param string $isSMS
+     * @param  string  $isSMS
      * @return BindcardRequest0Request
      */
     public function setIsSMS($isSMS)
     {
         $this->isSMS = $isSMS;
+
         return $this;
     }
 
@@ -364,6 +375,5 @@ class BindcardRequest0Request extends BaseRequest
     {
         return 'bindcardRequest_0';
     }
-
 
 }

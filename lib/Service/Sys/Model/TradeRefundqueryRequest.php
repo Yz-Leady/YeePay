@@ -1,33 +1,37 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Sys\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class TradeRefundqueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $refundRequestId;
+
     /**
      * @var string
      */
     private $uniqueRefundNo;
+
     /**
      * @var string
      */
@@ -35,7 +39,6 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -45,18 +48,18 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return TradeRefundqueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -66,18 +69,18 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return TradeRefundqueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -87,18 +90,18 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return TradeRefundqueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets refundRequestId
-     *
      * @return string
      */
     public function getRefundRequestId()
@@ -108,18 +111,18 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets refundRequestId
-     *
-     * @param string $refundRequestId
+     * @param  string  $refundRequestId
      * @return TradeRefundqueryRequest
      */
     public function setRefundRequestId($refundRequestId)
     {
         $this->refundRequestId = $refundRequestId;
+
         return $this;
     }
+
     /**
      * Gets uniqueRefundNo
-     *
      * @return string
      */
     public function getUniqueRefundNo()
@@ -129,18 +132,18 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets uniqueRefundNo
-     *
-     * @param string $uniqueRefundNo
+     * @param  string  $uniqueRefundNo
      * @return TradeRefundqueryRequest
      */
     public function setUniqueRefundNo($uniqueRefundNo)
     {
         $this->uniqueRefundNo = $uniqueRefundNo;
+
         return $this;
     }
+
     /**
      * Gets hmac
-     *
      * @return string
      */
     public function getHmac()
@@ -150,13 +153,13 @@ class TradeRefundqueryRequest extends BaseRequest
 
     /**
      * Sets hmac
-     *
-     * @param string $hmac
+     * @param  string  $hmac
      * @return TradeRefundqueryRequest
      */
     public function setHmac($hmac)
     {
         $this->hmac = $hmac;
+
         return $this;
     }
 
@@ -164,6 +167,5 @@ class TradeRefundqueryRequest extends BaseRequest
     {
         return 'tradeRefundquery';
     }
-
 
 }

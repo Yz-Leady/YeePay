@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Model\Transform;
-
 
 use Psr\Log\LoggerInterface;
 use Yeepay\Yop\Sdk\Exception\YopClientException;
@@ -36,6 +34,7 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
         $this->handleResponseMetaData($yopHttpResponse, $response->getMetadata());
         $this->checkSignature($yopHttpResponse, $response->getMetadata()->getYopSign(), $params);
         $this->handleContent($yopHttpResponse, $response->getMetadata()->getContentType(), $response, $params);
+
         return $response;
     }
 
@@ -45,8 +44,8 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
     protected abstract function getResponseInstance();
 
     /**
-     * @param YopHttpResponse $yopHttpResponse
-     * @param YopResponseMetadata $responseMetadata
+     * @param  YopHttpResponse  $yopHttpResponse
+     * @param  YopResponseMetadata  $responseMetadata
      */
     public function handleResponseMetaData($yopHttpResponse, YopResponseMetadata $responseMetadata)
     {
@@ -78,19 +77,24 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
     private function checkSignature(YopHttpResponse $yopHttpResponse, $signature, ResponseUnMarshalParams $params)
     {
         if (isset($signature)) {
-            $params->getSigner()->checkSignature($yopHttpResponse, $signature, $params->getPublicKey(), $params->getSignOptions());
+            $params->getSigner()
+                   ->checkSignature($yopHttpResponse, $signature, $params->getPublicKey(), $params->getSignOptions());
         }
     }
 
     /**
-     * @param YopHttpResponse $yopHttpResponse
+     * @param  YopHttpResponse  $yopHttpResponse
      * @param $contentType
-     * @param BaseResponse $response
-     * @param ResponseUnMarshalParams $params
+     * @param  BaseResponse  $response
+     * @param  ResponseUnMarshalParams  $params
      * @throws YopClientException
      */
-    protected function handleContent(YopHttpResponse $yopHttpResponse, $contentType, BaseResponse $response, ResponseUnMarshalParams $params)
-    {
+    protected function handleContent(
+        YopHttpResponse $yopHttpResponse,
+        $contentType,
+        BaseResponse $response,
+        ResponseUnMarshalParams $params
+    ) {
         $content = $yopHttpResponse->readContent();
         if ($params->isNeedDecrypt() && $contentType == ContentType::APPLICATION_JSON) {
             $content = $params->getEncryptor()->decrypt($content);
@@ -104,18 +108,21 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
         } elseif ($statusCode >= HttpStatus::SC_INTERNAL_SERVER_ERROR && $statusCode != HttpStatus::SC_BAD_GATEWAY) {
             $this->handleErrorResponse($content, $response->getMetadata(), $yopHttpResponse);
         } else {
-            throw new YopClientException("Unexpected http statusCode:" . $statusCode);
+            throw new YopClientException("Unexpected http statusCode:".$statusCode);
         }
     }
 
     /**
      * @param $content
-     * @param YopResponseMetadata $responseMetadata
-     * @param YopHttpResponse $yopHttpResponse
+     * @param  YopResponseMetadata  $responseMetadata
+     * @param  YopHttpResponse  $yopHttpResponse
      * @throws YopServiceException
      */
-    protected function handleErrorResponse($content, YopResponseMetadata $responseMetadata, YopHttpResponse $yopHttpResponse)
-    {
+    protected function handleErrorResponse(
+        $content,
+        YopResponseMetadata $responseMetadata,
+        YopHttpResponse $yopHttpResponse
+    ) {
         $yopServiceException = null;
         if (!empty($content)) {
             try {
@@ -125,7 +132,7 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
                 $yopServiceException->setSubErrorCode($data['subCode']);
                 $yopServiceException->setSubErrorMessage($data['subMessage']);
             } catch (\Exception $e) {
-                self::$logger->error("unable to parse error response, content" . $content);
+                self::$logger->error("unable to parse error response, content".$content);
             }
         }
         if (!isset($yopServiceException)) {

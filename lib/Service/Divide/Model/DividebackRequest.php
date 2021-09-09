@@ -1,37 +1,42 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Divide\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class DividebackRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $divideBackRequestId;
+
     /**
      * @var string
      */
     private $divideRequestId;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $uniqueOrderNo;
+
     /**
      * @var string
      */
@@ -39,7 +44,6 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -49,18 +53,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return DividebackRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -70,18 +74,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return DividebackRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets divideBackRequestId
-     *
      * @return string
      */
     public function getDivideBackRequestId()
@@ -91,18 +95,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets divideBackRequestId
-     *
-     * @param string $divideBackRequestId
+     * @param  string  $divideBackRequestId
      * @return DividebackRequest
      */
     public function setDivideBackRequestId($divideBackRequestId)
     {
         $this->divideBackRequestId = $divideBackRequestId;
+
         return $this;
     }
+
     /**
      * Gets divideRequestId
-     *
      * @return string
      */
     public function getDivideRequestId()
@@ -112,18 +116,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets divideRequestId
-     *
-     * @param string $divideRequestId
+     * @param  string  $divideRequestId
      * @return DividebackRequest
      */
     public function setDivideRequestId($divideRequestId)
     {
         $this->divideRequestId = $divideRequestId;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -133,18 +137,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return DividebackRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets uniqueOrderNo
-     *
      * @return string
      */
     public function getUniqueOrderNo()
@@ -154,18 +158,18 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets uniqueOrderNo
-     *
-     * @param string $uniqueOrderNo
+     * @param  string  $uniqueOrderNo
      * @return DividebackRequest
      */
     public function setUniqueOrderNo($uniqueOrderNo)
     {
         $this->uniqueOrderNo = $uniqueOrderNo;
+
         return $this;
     }
+
     /**
      * Gets divideBackDetail
-     *
      * @return string
      */
     public function getDivideBackDetail()
@@ -175,13 +179,13 @@ class DividebackRequest extends BaseRequest
 
     /**
      * Sets divideBackDetail
-     *
-     * @param string $divideBackDetail
+     * @param  string  $divideBackDetail
      * @return DividebackRequest
      */
     public function setDivideBackDetail($divideBackDetail)
     {
         $this->divideBackDetail = $divideBackDetail;
+
         return $this;
     }
 
@@ -189,6 +193,5 @@ class DividebackRequest extends BaseRequest
     {
         return 'divideback';
     }
-
 
 }

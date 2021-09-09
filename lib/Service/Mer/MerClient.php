@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -12,6 +10,7 @@ use Yeepay\Yop\Sdk\Service\Mer\Model as Model;
 
 class MerClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -19,7 +18,7 @@ class MerClient
 
     /**
      * MerClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -27,7 +26,7 @@ class MerClient
     }
 
     /**
-     * @param Model\AuthStateQueryRequest $request
+     * @param  Model\AuthStateQueryRequest  $request
      * @return Model\AuthStateQueryResponse
      * @throws YopClientException
      */
@@ -39,12 +38,15 @@ class MerClient
         if ($request->getMerchantNo() == null) {
             throw new YopClientException("request.merchantNo is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\AuthStateQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\AuthStateQueryRequestMarshaller::getInstance(),
             Model\AuthStateQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\AuthorizeRelieveRequest $request
+     * @param  Model\AuthorizeRelieveRequest  $request
      * @return Model\AuthorizeRelieveResponse
      * @throws YopClientException
      */
@@ -53,12 +55,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\AuthorizeRelieveRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\AuthorizeRelieveRequestMarshaller::getInstance(),
             Model\AuthorizeRelieveResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\AuthorizeSignRequest $request
+     * @param  Model\AuthorizeSignRequest  $request
      * @return Model\AuthorizeSignResponse
      * @throws YopClientException
      */
@@ -67,12 +72,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\AuthorizeSignRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\AuthorizeSignRequestMarshaller::getInstance(),
             Model\AuthorizeSignResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\BankAccountOpenRequest $request
+     * @param  Model\BankAccountOpenRequest  $request
      * @return Model\BankAccountOpenResponse
      * @throws YopClientException
      */
@@ -81,12 +89,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\BankAccountOpenRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BankAccountOpenRequestMarshaller::getInstance(),
             Model\BankAccountOpenResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\MerchantDisposeQueryRequest $request
+     * @param  Model\MerchantDisposeQueryRequest  $request
      * @return Model\MerchantDisposeQueryResponse
      * @throws YopClientException
      */
@@ -95,12 +106,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\MerchantDisposeQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\MerchantDisposeQueryRequestMarshaller::getInstance(),
             Model\MerchantDisposeQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\MerchantDisposeUnfreezeRequest $request
+     * @param  Model\MerchantDisposeUnfreezeRequest  $request
      * @return Model\MerchantDisposeUnfreezeResponse
      * @throws YopClientException
      */
@@ -109,12 +123,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\MerchantDisposeUnfreezeRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\MerchantDisposeUnfreezeRequestMarshaller::getInstance(),
             Model\MerchantDisposeUnfreezeResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\MerchantWechatauthCancelRequest $request
+     * @param  Model\MerchantWechatauthCancelRequest  $request
      * @return Model\MerchantWechatauthCancelResponse
      * @throws YopClientException
      */
@@ -123,12 +140,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\MerchantWechatauthCancelRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\MerchantWechatauthCancelRequestMarshaller::getInstance(),
             Model\MerchantWechatauthCancelResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\MerchantWechatauthQueryRequest $request
+     * @param  Model\MerchantWechatauthQueryRequest  $request
      * @return Model\MerchantWechatauthQueryResponse
      * @throws YopClientException
      */
@@ -146,12 +166,15 @@ class MerClient
         if ($request->getReportFee() == null) {
             throw new YopClientException("request.reportFee is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\MerchantWechatauthQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\MerchantWechatauthQueryRequestMarshaller::getInstance(),
             Model\MerchantWechatauthQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\NotifyRepeatRequest $request
+     * @param  Model\NotifyRepeatRequest  $request
      * @return Model\NotifyRepeatResponse
      * @throws YopClientException
      */
@@ -162,10 +185,12 @@ class MerClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\NotifyRepeatRequestMarshaller::getInstance(),
             Model\NotifyRepeatResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\ProductFeeModifyRequest $request
+     * @param  Model\ProductFeeModifyRequest  $request
      * @return Model\ProductFeeModifyResponse
      * @throws YopClientException
      */
@@ -174,12 +199,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\ProductFeeModifyRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\ProductFeeModifyRequestMarshaller::getInstance(),
             Model\ProductFeeModifyResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\ProductFeeQueryRequest $request
+     * @param  Model\ProductFeeQueryRequest  $request
      * @return Model\ProductFeeQueryResponse
      * @throws YopClientException
      */
@@ -194,12 +222,15 @@ class MerClient
         if ($request->getMerchantNo() == null) {
             throw new YopClientException("request.merchantNo is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\ProductFeeQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\ProductFeeQueryRequestMarshaller::getInstance(),
             Model\ProductFeeQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\ProductIncrementSettleOpenRequest $request
+     * @param  Model\ProductIncrementSettleOpenRequest  $request
      * @return Model\ProductIncrementSettleOpenResponse
      * @throws YopClientException
      */
@@ -208,12 +239,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\ProductIncrementSettleOpenRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\ProductIncrementSettleOpenRequestMarshaller::getInstance(),
             Model\ProductIncrementSettleOpenResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RegisterContributeMerchantRequest $request
+     * @param  Model\RegisterContributeMerchantRequest  $request
      * @return Model\RegisterContributeMerchantResponse
      * @throws YopClientException
      */
@@ -222,12 +256,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\RegisterContributeMerchantRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\RegisterContributeMerchantRequestMarshaller::getInstance(),
             Model\RegisterContributeMerchantResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RegisterContributeMicroRequest $request
+     * @param  Model\RegisterContributeMicroRequest  $request
      * @return Model\RegisterContributeMicroResponse
      * @throws YopClientException
      */
@@ -236,12 +273,15 @@ class MerClient
         if ($request == null) {
             throw new YopClientException("request is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\RegisterContributeMicroRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\RegisterContributeMicroRequestMarshaller::getInstance(),
             Model\RegisterContributeMicroResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
     /**
-     * @param Model\RegisterQueryRequest $request
+     * @param  Model\RegisterQueryRequest  $request
      * @return Model\RegisterQueryResponse
      * @throws YopClientException
      */
@@ -253,8 +293,11 @@ class MerClient
         if ($request->getRequestNo() == null) {
             throw new YopClientException("request.requestNo is required.");
         }
-        $clientExecutionParams = new ClientExecutionParams($request, Model\RegisterQueryRequestMarshaller::getInstance(),
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\RegisterQueryRequestMarshaller::getInstance(),
             Model\RegisterQueryResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

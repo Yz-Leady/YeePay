@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Client;
-
 
 use GuzzleHttp\Psr7\Uri;
 use Yeepay\Yop\Sdk\Config\Mode;
@@ -33,15 +31,15 @@ class GateWayRouter
 
     /**
      * GateWayRouter constructor.
-     * @param ServerRootSpace $serverRootSpace
+     * @param  ServerRootSpace  $serverRootSpace
      * @param $modes
      */
     public function __construct(ServerRootSpace $serverRootSpace, $modes = [])
     {
-        $this->serverRootSpace = $serverRootSpace;
-        $this->independentApiGroups = array("bank-encryption");
-        $this->defaultMode = getenv("yop.sdk.mode");
-        $this->modes = $modes;
+        $this->serverRootSpace      = $serverRootSpace;
+        $this->independentApiGroups = ["bank-encryption"];
+        $this->defaultMode          = getenv("yop.sdk.mode");
+        $this->modes                = $modes;
     }
 
     /**
@@ -56,7 +54,7 @@ class GateWayRouter
         } else {
             $serverRoot = $request->getYosFlag() ? $this->serverRootSpace->getYosServerRoot() :
                 $this->serverRootSpace->getServerRoot();
-            $apiGroup = str_replace('_', '-', strtolower($request->getServiceName()));
+            $apiGroup   = str_replace('_', '-', strtolower($request->getServiceName()));
             if (in_array($apiGroup, $this->independentApiGroups)) {
                 $result = new Uri();
                 $result->withScheme($serverRoot->getScheme());
@@ -66,6 +64,7 @@ class GateWayRouter
                 $result->withUserInfo($serverRoot->getUserInfo());
                 $result->withQuery($serverRoot->getQuery());
                 $result->withFragment($serverRoot->getFragment());
+
                 return $result;
             } else {
                 return $serverRoot;
@@ -74,7 +73,7 @@ class GateWayRouter
     }
 
     /**
-     * @param string $appKey
+     * @param  string  $appKey
      * @return bool
      */
     private function isAppInSandboxMode($appKey)
@@ -82,13 +81,14 @@ class GateWayRouter
         if (empty($this->defaultMode)) {
             return isset($this->modes[$appKey]) && $this->modes[$appKey] = Mode::SANDBOX;
         }
+
         return $this->defaultMode == Mode::SANDBOX;
     }
 
     /**
-     * @param string $apiGroup
-     * @param string $originHost
-     * @param bool $isYosRequest
+     * @param  string  $apiGroup
+     * @param  string  $originHost
+     * @param  bool  $isYosRequest
      * @return string
      */
     private function getIndependentApiGroupHost($apiGroup, $originHost, $isYosRequest)
@@ -97,6 +97,8 @@ class GateWayRouter
             return $originHost;
         }
         $index = strpos($originHost, '.');
-        return substr($originHost, 0, $index) . '_' . $apiGroup . substr($originHost, $index, -1);
+
+        return substr($originHost, 0, $index).'_'.$apiGroup.substr($originHost, $index, -1);
     }
+
 }

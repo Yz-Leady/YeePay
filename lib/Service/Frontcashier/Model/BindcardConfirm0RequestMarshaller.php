@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BindcardConfirm0RequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BindcardConfirm0RequestMarshaller
      */
@@ -51,9 +50,8 @@ class BindcardConfirm0RequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BindcardConfirm0Request $request
+     * @param  BindcardConfirm0Request  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,18 +67,23 @@ class BindcardConfirm0RequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getParentMerchantNo() != null){
-            $internalRequest->addParameter('parentMerchantNo', ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
         }
-        if($request->getMerchantFlowId() != null){
-            $internalRequest->addParameter('merchantFlowId', ObjectSerializer::sanitizeForSerialization($request->getMerchantFlowId(), 'string'));
+        if ($request->getMerchantFlowId() != null) {
+            $internalRequest->addParameter('merchantFlowId',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantFlowId(), 'string'));
         }
-        if($request->getSmsCode() != null){
-            $internalRequest->addParameter('smsCode', ObjectSerializer::sanitizeForSerialization($request->getSmsCode(), 'string'));
+        if ($request->getSmsCode() != null) {
+            $internalRequest->addParameter('smsCode',
+                ObjectSerializer::sanitizeForSerialization($request->getSmsCode(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BindcardConfirm0RequestMarshaller::__init();

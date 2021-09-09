@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class RefundQueryRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var string
      */
     private $refundRequestId;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -41,18 +43,18 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return RefundQueryRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -62,18 +64,18 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return RefundQueryRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -83,18 +85,18 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return RefundQueryRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets refundRequestId
-     *
      * @return string
      */
     public function getRefundRequestId()
@@ -104,18 +106,18 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Sets refundRequestId
-     *
-     * @param string $refundRequestId
+     * @param  string  $refundRequestId
      * @return RefundQueryRequest
      */
     public function setRefundRequestId($refundRequestId)
     {
         $this->refundRequestId = $refundRequestId;
+
         return $this;
     }
+
     /**
      * Gets uniqueRefundNo
-     *
      * @return string
      */
     public function getUniqueRefundNo()
@@ -125,13 +127,13 @@ class RefundQueryRequest extends BaseRequest
 
     /**
      * Sets uniqueRefundNo
-     *
-     * @param string $uniqueRefundNo
+     * @param  string  $uniqueRefundNo
      * @return RefundQueryRequest
      */
     public function setUniqueRefundNo($uniqueRefundNo)
     {
         $this->uniqueRefundNo = $uniqueRefundNo;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class RefundQueryRequest extends BaseRequest
     {
         return 'refundQuery';
     }
-
 
 }

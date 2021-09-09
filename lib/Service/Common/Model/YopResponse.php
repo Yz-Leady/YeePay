@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Common\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseResponse;
 
 class YopResponse extends BaseResponse
 {
+
     /**
      * @var array
      */
@@ -19,7 +18,7 @@ class YopResponse extends BaseResponse
     }
 
     /**
-     * @param array $result
+     * @param  array  $result
      */
     function setResult($result)
     {

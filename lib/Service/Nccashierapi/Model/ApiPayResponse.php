@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Nccashierapi\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class ApiPayResponse extends BaseResponse
 {
+
     /**
      * @var ApiPayUnifiedAPICashierResponseDTOResult
      */
@@ -18,7 +18,7 @@ class ApiPayResponse extends BaseResponse
     }
 
     /**
-     * @param ApiPayUnifiedAPICashierResponseDTOResult $result
+     * @param  ApiPayUnifiedAPICashierResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class ApiPayResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

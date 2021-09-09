@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Trade\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class RefundResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new RefundResponse();
     }
+
 }
 
 RefundResponseUnMarshaller::__init();

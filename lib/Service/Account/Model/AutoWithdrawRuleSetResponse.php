@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class AutoWithdrawRuleSetResponse extends BaseResponse
 {
+
     /**
      * @var AutoWithdrawRuleSetYopAutoWithdrawRuleSetResponseDTOResult
      */
@@ -18,7 +18,7 @@ class AutoWithdrawRuleSetResponse extends BaseResponse
     }
 
     /**
-     * @param AutoWithdrawRuleSetYopAutoWithdrawRuleSetResponseDTOResult $result
+     * @param  AutoWithdrawRuleSetYopAutoWithdrawRuleSetResponseDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class AutoWithdrawRuleSetResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

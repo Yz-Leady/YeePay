@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Bill;
-
 
 use Yeepay\Yop\Sdk\Client\ClientExecutionParams;
 use Yeepay\Yop\Sdk\Client\ClientHandler;
@@ -14,6 +12,7 @@ use Yeepay\Yop\Sdk\Service\Bill\Model as Model;
 
 class BillClient
 {
+
     /**
      * @var ClientHandler
      */
@@ -21,7 +20,7 @@ class BillClient
 
     /**
      * BillClient constructor.
-     * @param ClientParams $clientParams
+     * @param  ClientParams  $clientParams
      */
     function __construct(ClientParams $clientParams)
     {
@@ -29,7 +28,7 @@ class BillClient
     }
 
     /**
-     * @param Model\DownloadRequest $request
+     * @param  Model\DownloadRequest  $request
      * @return YosDownloadResponse
      * @throws YopClientException
      */
@@ -43,6 +42,8 @@ class BillClient
         }
         $clientExecutionParams = new ClientExecutionParams($request, Model\DownloadRequestMarshaller::getInstance(),
             YosDownloadResponseUnMarshaller::getInstance());
+
         return $this->clientHandler->execute($clientExecutionParams);
     }
+
 }

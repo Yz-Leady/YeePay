@@ -1,53 +1,62 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class EnterpriseWithholdingOrderRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $payerMerchantNo;
+
     /**
      * @var string
      */
     private $orderId;
+
     /**
      * @var float
      */
     private $orderAmount;
+
     /**
      * @var string
      */
     private $fundProcessType;
+
     /**
      * @var string
      */
     private $goodsName;
+
     /**
      * @var string
      */
     private $expiredTime;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $memo;
+
     /**
      * @var string
      */
@@ -55,7 +64,6 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -65,18 +73,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -86,18 +94,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets payerMerchantNo
-     *
      * @return string
      */
     public function getPayerMerchantNo()
@@ -107,18 +115,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets payerMerchantNo
-     *
-     * @param string $payerMerchantNo
+     * @param  string  $payerMerchantNo
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setPayerMerchantNo($payerMerchantNo)
     {
         $this->payerMerchantNo = $payerMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets orderId
-     *
      * @return string
      */
     public function getOrderId()
@@ -128,18 +136,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets orderId
-     *
-     * @param string $orderId
+     * @param  string  $orderId
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
+
     /**
      * Gets orderAmount
-     *
      * @return float
      */
     public function getOrderAmount()
@@ -149,18 +157,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets orderAmount
-     *
-     * @param float $orderAmount
+     * @param  float  $orderAmount
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setOrderAmount($orderAmount)
     {
         $this->orderAmount = $orderAmount;
+
         return $this;
     }
+
     /**
      * Gets fundProcessType
-     *
      * @return string
      */
     public function getFundProcessType()
@@ -170,18 +178,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets fundProcessType
-     *
-     * @param string $fundProcessType
+     * @param  string  $fundProcessType
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setFundProcessType($fundProcessType)
     {
         $this->fundProcessType = $fundProcessType;
+
         return $this;
     }
+
     /**
      * Gets goodsName
-     *
      * @return string
      */
     public function getGoodsName()
@@ -191,18 +199,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets goodsName
-     *
-     * @param string $goodsName
+     * @param  string  $goodsName
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setGoodsName($goodsName)
     {
         $this->goodsName = $goodsName;
+
         return $this;
     }
+
     /**
      * Gets expiredTime
-     *
      * @return string
      */
     public function getExpiredTime()
@@ -212,18 +220,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets expiredTime
-     *
-     * @param string $expiredTime
+     * @param  string  $expiredTime
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setExpiredTime($expiredTime)
     {
         $this->expiredTime = $expiredTime;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -233,18 +241,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets memo
-     *
      * @return string
      */
     public function getMemo()
@@ -254,18 +262,18 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets memo
-     *
-     * @param string $memo
+     * @param  string  $memo
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setMemo($memo)
     {
         $this->memo = $memo;
+
         return $this;
     }
+
     /**
      * Gets payerNotifyUrl
-     *
      * @return string
      */
     public function getPayerNotifyUrl()
@@ -275,13 +283,13 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
 
     /**
      * Sets payerNotifyUrl
-     *
-     * @param string $payerNotifyUrl
+     * @param  string  $payerNotifyUrl
      * @return EnterpriseWithholdingOrderRequest
      */
     public function setPayerNotifyUrl($payerNotifyUrl)
     {
         $this->payerNotifyUrl = $payerNotifyUrl;
+
         return $this;
     }
 
@@ -289,6 +297,5 @@ class EnterpriseWithholdingOrderRequest extends BaseRequest
     {
         return 'enterpriseWithholdingOrder';
     }
-
 
 }

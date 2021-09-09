@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class BalanceQueryResponse extends BaseResponse
 {
+
     /**
      * @var BalanceQueryAccountInfoRespDTOResult
      */
@@ -18,7 +18,7 @@ class BalanceQueryResponse extends BaseResponse
     }
 
     /**
-     * @param BalanceQueryAccountInfoRespDTOResult $result
+     * @param  BalanceQueryAccountInfoRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class BalanceQueryResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

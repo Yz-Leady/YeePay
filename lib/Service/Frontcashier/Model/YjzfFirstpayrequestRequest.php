@@ -1,57 +1,67 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class YjzfFirstpayrequestRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $userNo;
+
     /**
      * @var string
      */
     private $userType;
+
     /**
      * @var string
      */
     private $userIp;
+
     /**
      * @var string
      */
     private $cardNo;
+
     /**
      * @var string
      */
     private $owner;
+
     /**
      * @var string
      */
     private $idNo;
+
     /**
      * @var string
      */
     private $phoneNo;
+
     /**
      * @var string
      */
     private $cvv;
+
     /**
      * @var string
      */
     private $avlidDate;
+
     /**
      * @var string
      */
     private $paymentExt;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
@@ -59,7 +69,6 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Gets userNo
-     *
      * @return string
      */
     public function getUserNo()
@@ -69,18 +78,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets userNo
-     *
-     * @param string $userNo
+     * @param  string  $userNo
      * @return YjzfFirstpayrequestRequest
      */
     public function setUserNo($userNo)
     {
         $this->userNo = $userNo;
+
         return $this;
     }
+
     /**
      * Gets userType
-     *
      * @return string
      */
     public function getUserType()
@@ -90,18 +99,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets userType
-     *
-     * @param string $userType
+     * @param  string  $userType
      * @return YjzfFirstpayrequestRequest
      */
     public function setUserType($userType)
     {
         $this->userType = $userType;
+
         return $this;
     }
+
     /**
      * Gets userIp
-     *
      * @return string
      */
     public function getUserIp()
@@ -111,18 +120,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets userIp
-     *
-     * @param string $userIp
+     * @param  string  $userIp
      * @return YjzfFirstpayrequestRequest
      */
     public function setUserIp($userIp)
     {
         $this->userIp = $userIp;
+
         return $this;
     }
+
     /**
      * Gets cardNo
-     *
      * @return string
      */
     public function getCardNo()
@@ -132,18 +141,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets cardNo
-     *
-     * @param string $cardNo
+     * @param  string  $cardNo
      * @return YjzfFirstpayrequestRequest
      */
     public function setCardNo($cardNo)
     {
         $this->cardNo = $cardNo;
+
         return $this;
     }
+
     /**
      * Gets owner
-     *
      * @return string
      */
     public function getOwner()
@@ -153,18 +162,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets owner
-     *
-     * @param string $owner
+     * @param  string  $owner
      * @return YjzfFirstpayrequestRequest
      */
     public function setOwner($owner)
     {
         $this->owner = $owner;
+
         return $this;
     }
+
     /**
      * Gets idNo
-     *
      * @return string
      */
     public function getIdNo()
@@ -174,18 +183,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets idNo
-     *
-     * @param string $idNo
+     * @param  string  $idNo
      * @return YjzfFirstpayrequestRequest
      */
     public function setIdNo($idNo)
     {
         $this->idNo = $idNo;
+
         return $this;
     }
+
     /**
      * Gets phoneNo
-     *
      * @return string
      */
     public function getPhoneNo()
@@ -195,18 +204,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets phoneNo
-     *
-     * @param string $phoneNo
+     * @param  string  $phoneNo
      * @return YjzfFirstpayrequestRequest
      */
     public function setPhoneNo($phoneNo)
     {
         $this->phoneNo = $phoneNo;
+
         return $this;
     }
+
     /**
      * Gets cvv
-     *
      * @return string
      */
     public function getCvv()
@@ -216,18 +225,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets cvv
-     *
-     * @param string $cvv
+     * @param  string  $cvv
      * @return YjzfFirstpayrequestRequest
      */
     public function setCvv($cvv)
     {
         $this->cvv = $cvv;
+
         return $this;
     }
+
     /**
      * Gets avlidDate
-     *
      * @return string
      */
     public function getAvlidDate()
@@ -237,18 +246,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets avlidDate
-     *
-     * @param string $avlidDate
+     * @param  string  $avlidDate
      * @return YjzfFirstpayrequestRequest
      */
     public function setAvlidDate($avlidDate)
     {
         $this->avlidDate = $avlidDate;
+
         return $this;
     }
+
     /**
      * Gets paymentExt
-     *
      * @return string
      */
     public function getPaymentExt()
@@ -258,18 +267,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets paymentExt
-     *
-     * @param string $paymentExt
+     * @param  string  $paymentExt
      * @return YjzfFirstpayrequestRequest
      */
     public function setPaymentExt($paymentExt)
     {
         $this->paymentExt = $paymentExt;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -279,18 +288,18 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return YjzfFirstpayrequestRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets version
-     *
      * @return string
      */
     public function getVersion()
@@ -300,13 +309,13 @@ class YjzfFirstpayrequestRequest extends BaseRequest
 
     /**
      * Sets version
-     *
-     * @param string $version
+     * @param  string  $version
      * @return YjzfFirstpayrequestRequest
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -314,6 +323,5 @@ class YjzfFirstpayrequestRequest extends BaseRequest
     {
         return 'yjzfFirstpayrequest';
     }
-
 
 }

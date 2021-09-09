@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Settle\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class SelfSettleApplyResponse extends BaseResponse
 {
+
     /**
      * @var SelfSettleApplySelfSettleResponseDtoResult
      */
@@ -18,7 +18,7 @@ class SelfSettleApplyResponse extends BaseResponse
     }
 
     /**
-     * @param SelfSettleApplySelfSettleResponseDtoResult $result
+     * @param  SelfSettleApplySelfSettleResponseDtoResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class SelfSettleApplyResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class EnterpriseAutoPaymentOrderRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var EnterpriseAutoPaymentOrderRequestMarshaller
      */
@@ -51,9 +50,8 @@ class EnterpriseAutoPaymentOrderRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param EnterpriseAutoPaymentOrderRequest $request
+     * @param  EnterpriseAutoPaymentOrderRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,36 +67,47 @@ class EnterpriseAutoPaymentOrderRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getOrderId() != null){
-            $internalRequest->addParameter('orderId', ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
+        if ($request->getOrderId() != null) {
+            $internalRequest->addParameter('orderId',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderId(), 'string'));
         }
-        if($request->getOrderAmount() != null){
-            $internalRequest->addParameter('orderAmount', ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'float'));
+        if ($request->getOrderAmount() != null) {
+            $internalRequest->addParameter('orderAmount',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderAmount(), 'float'));
         }
-        if($request->getFundProcessType() != null){
-            $internalRequest->addParameter('fundProcessType', ObjectSerializer::sanitizeForSerialization($request->getFundProcessType(), 'string'));
+        if ($request->getFundProcessType() != null) {
+            $internalRequest->addParameter('fundProcessType',
+                ObjectSerializer::sanitizeForSerialization($request->getFundProcessType(), 'string'));
         }
-        if($request->getGoodsName() != null){
-            $internalRequest->addParameter('goodsName', ObjectSerializer::sanitizeForSerialization($request->getGoodsName(), 'string'));
+        if ($request->getGoodsName() != null) {
+            $internalRequest->addParameter('goodsName',
+                ObjectSerializer::sanitizeForSerialization($request->getGoodsName(), 'string'));
         }
-        if($request->getExpiredTime() != null){
-            $internalRequest->addParameter('expiredTime', ObjectSerializer::sanitizeForSerialization($request->getExpiredTime(), 'string'));
+        if ($request->getExpiredTime() != null) {
+            $internalRequest->addParameter('expiredTime',
+                ObjectSerializer::sanitizeForSerialization($request->getExpiredTime(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string', 'url'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string', 'url'));
         }
-        if($request->getMemo() != null){
-            $internalRequest->addParameter('memo', ObjectSerializer::sanitizeForSerialization($request->getMemo(), 'string'));
+        if ($request->getMemo() != null) {
+            $internalRequest->addParameter('memo',
+                ObjectSerializer::sanitizeForSerialization($request->getMemo(), 'string'));
         }
-        if($request->getPayerNotifyUrl() != null){
-            $internalRequest->addParameter('payerNotifyUrl', ObjectSerializer::sanitizeForSerialization($request->getPayerNotifyUrl(), 'string', 'url'));
+        if ($request->getPayerNotifyUrl() != null) {
+            $internalRequest->addParameter('payerNotifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getPayerNotifyUrl(), 'string', 'url'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 EnterpriseAutoPaymentOrderRequestMarshaller::__init();

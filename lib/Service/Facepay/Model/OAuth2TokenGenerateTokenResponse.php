@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class OAuth2TokenGenerateTokenResponse extends BaseResponse
 {
+
     /**
      * @var OAuth2TokenGenerateTokenOAuth2TokenResponseResult
      */
@@ -18,7 +18,7 @@ class OAuth2TokenGenerateTokenResponse extends BaseResponse
     }
 
     /**
-     * @param OAuth2TokenGenerateTokenOAuth2TokenResponseResult $result
+     * @param  OAuth2TokenGenerateTokenOAuth2TokenResponseResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class OAuth2TokenGenerateTokenResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

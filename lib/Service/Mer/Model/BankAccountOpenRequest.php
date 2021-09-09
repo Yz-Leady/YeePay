@@ -1,61 +1,72 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class BankAccountOpenRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $parentMerchantNo;
+
     /**
      * @var string
      */
     private $merchantNo;
+
     /**
      * @var string
      */
     private $businessPlacePhoto;
+
     /**
      * @var string
      */
     private $notifyUrl;
+
     /**
      * @var string
      */
     private $deviceip;
+
     /**
      * @var string
      */
     private $token;
+
     /**
      * @var string
      */
     private $merchantSubjectInfo;
+
     /**
      * @var string
      */
     private $settlementAccountInfo;
+
     /**
      * @var string
      */
     private $merchantCorporationInfo;
+
     /**
      * @var string
      */
     private $merchantContactInfo;
+
     /**
      * @var string
      */
     private $shareholdersInfo;
+
     /**
      * @var string
      */
     private $beneficiaryInfo;
+
     /**
      * @var string
      */
@@ -63,7 +74,6 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Gets parentMerchantNo
-     *
      * @return string
      */
     public function getParentMerchantNo()
@@ -73,18 +83,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets parentMerchantNo
-     *
-     * @param string $parentMerchantNo
+     * @param  string  $parentMerchantNo
      * @return BankAccountOpenRequest
      */
     public function setParentMerchantNo($parentMerchantNo)
     {
         $this->parentMerchantNo = $parentMerchantNo;
+
         return $this;
     }
+
     /**
      * Gets merchantNo
-     *
      * @return string
      */
     public function getMerchantNo()
@@ -94,18 +104,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets merchantNo
-     *
-     * @param string $merchantNo
+     * @param  string  $merchantNo
      * @return BankAccountOpenRequest
      */
     public function setMerchantNo($merchantNo)
     {
         $this->merchantNo = $merchantNo;
+
         return $this;
     }
+
     /**
      * Gets businessPlacePhoto
-     *
      * @return string
      */
     public function getBusinessPlacePhoto()
@@ -115,18 +125,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets businessPlacePhoto
-     *
-     * @param string $businessPlacePhoto
+     * @param  string  $businessPlacePhoto
      * @return BankAccountOpenRequest
      */
     public function setBusinessPlacePhoto($businessPlacePhoto)
     {
         $this->businessPlacePhoto = $businessPlacePhoto;
+
         return $this;
     }
+
     /**
      * Gets notifyUrl
-     *
      * @return string
      */
     public function getNotifyUrl()
@@ -136,18 +146,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets notifyUrl
-     *
-     * @param string $notifyUrl
+     * @param  string  $notifyUrl
      * @return BankAccountOpenRequest
      */
     public function setNotifyUrl($notifyUrl)
     {
         $this->notifyUrl = $notifyUrl;
+
         return $this;
     }
+
     /**
      * Gets deviceip
-     *
      * @return string
      */
     public function getDeviceip()
@@ -157,18 +167,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets deviceip
-     *
-     * @param string $deviceip
+     * @param  string  $deviceip
      * @return BankAccountOpenRequest
      */
     public function setDeviceip($deviceip)
     {
         $this->deviceip = $deviceip;
+
         return $this;
     }
+
     /**
      * Gets token
-     *
      * @return string
      */
     public function getToken()
@@ -178,18 +188,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets token
-     *
-     * @param string $token
+     * @param  string  $token
      * @return BankAccountOpenRequest
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
+
     /**
      * Gets merchantSubjectInfo
-     *
      * @return string
      */
     public function getMerchantSubjectInfo()
@@ -199,18 +209,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets merchantSubjectInfo
-     *
-     * @param string $merchantSubjectInfo
+     * @param  string  $merchantSubjectInfo
      * @return BankAccountOpenRequest
      */
     public function setMerchantSubjectInfo($merchantSubjectInfo)
     {
         $this->merchantSubjectInfo = $merchantSubjectInfo;
+
         return $this;
     }
+
     /**
      * Gets settlementAccountInfo
-     *
      * @return string
      */
     public function getSettlementAccountInfo()
@@ -220,18 +230,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets settlementAccountInfo
-     *
-     * @param string $settlementAccountInfo
+     * @param  string  $settlementAccountInfo
      * @return BankAccountOpenRequest
      */
     public function setSettlementAccountInfo($settlementAccountInfo)
     {
         $this->settlementAccountInfo = $settlementAccountInfo;
+
         return $this;
     }
+
     /**
      * Gets merchantCorporationInfo
-     *
      * @return string
      */
     public function getMerchantCorporationInfo()
@@ -241,18 +251,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets merchantCorporationInfo
-     *
-     * @param string $merchantCorporationInfo
+     * @param  string  $merchantCorporationInfo
      * @return BankAccountOpenRequest
      */
     public function setMerchantCorporationInfo($merchantCorporationInfo)
     {
         $this->merchantCorporationInfo = $merchantCorporationInfo;
+
         return $this;
     }
+
     /**
      * Gets merchantContactInfo
-     *
      * @return string
      */
     public function getMerchantContactInfo()
@@ -262,18 +272,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets merchantContactInfo
-     *
-     * @param string $merchantContactInfo
+     * @param  string  $merchantContactInfo
      * @return BankAccountOpenRequest
      */
     public function setMerchantContactInfo($merchantContactInfo)
     {
         $this->merchantContactInfo = $merchantContactInfo;
+
         return $this;
     }
+
     /**
      * Gets shareholdersInfo
-     *
      * @return string
      */
     public function getShareholdersInfo()
@@ -283,18 +293,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets shareholdersInfo
-     *
-     * @param string $shareholdersInfo
+     * @param  string  $shareholdersInfo
      * @return BankAccountOpenRequest
      */
     public function setShareholdersInfo($shareholdersInfo)
     {
         $this->shareholdersInfo = $shareholdersInfo;
+
         return $this;
     }
+
     /**
      * Gets beneficiaryInfo
-     *
      * @return string
      */
     public function getBeneficiaryInfo()
@@ -304,18 +314,18 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets beneficiaryInfo
-     *
-     * @param string $beneficiaryInfo
+     * @param  string  $beneficiaryInfo
      * @return BankAccountOpenRequest
      */
     public function setBeneficiaryInfo($beneficiaryInfo)
     {
         $this->beneficiaryInfo = $beneficiaryInfo;
+
         return $this;
     }
+
     /**
      * Gets requestNo
-     *
      * @return string
      */
     public function getRequestNo()
@@ -325,13 +335,13 @@ class BankAccountOpenRequest extends BaseRequest
 
     /**
      * Sets requestNo
-     *
-     * @param string $requestNo
+     * @param  string  $requestNo
      * @return BankAccountOpenRequest
      */
     public function setRequestNo($requestNo)
     {
         $this->requestNo = $requestNo;
+
         return $this;
     }
 
@@ -339,6 +349,5 @@ class BankAccountOpenRequest extends BaseRequest
     {
         return 'bankAccountOpen';
     }
-
 
 }

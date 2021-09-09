@@ -1,12 +1,12 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Account\Model;
 
-
 use Yeepay\Yop\Sdk\Model\BaseResponse;
+
 class RechargeOrderResponse extends BaseResponse
 {
+
     /**
      * @var RechargeOrderRechargeApiRespDTOResult
      */
@@ -18,7 +18,7 @@ class RechargeOrderResponse extends BaseResponse
     }
 
     /**
-     * @param RechargeOrderRechargeApiRespDTOResult $result
+     * @param  RechargeOrderRechargeApiRespDTOResult  $result
      */
     function setResult($result)
     {
@@ -32,4 +32,5 @@ class RechargeOrderResponse extends BaseResponse
     {
         return $this->result;
     }
+
 }

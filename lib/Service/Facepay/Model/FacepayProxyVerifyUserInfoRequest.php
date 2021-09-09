@@ -1,29 +1,32 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Facepay\Model;
-
 
 use Yeepay\Yop\Sdk\Model\BaseRequest;
 
 class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 {
+
     /**
      * @var string
      */
     private $name;
+
     /**
      * @var string
      */
     private $certificateNo;
+
     /**
      * @var string
      */
     private $bizSystem;
+
     /**
      * @var string
      */
     private $mtToken;
+
     /**
      * @var string
      */
@@ -31,7 +34,6 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Gets name
-     *
      * @return string
      */
     public function getName()
@@ -41,18 +43,18 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Sets name
-     *
-     * @param string $name
+     * @param  string  $name
      * @return FacepayProxyVerifyUserInfoRequest
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
+
     /**
      * Gets certificateNo
-     *
      * @return string
      */
     public function getCertificateNo()
@@ -62,18 +64,18 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Sets certificateNo
-     *
-     * @param string $certificateNo
+     * @param  string  $certificateNo
      * @return FacepayProxyVerifyUserInfoRequest
      */
     public function setCertificateNo($certificateNo)
     {
         $this->certificateNo = $certificateNo;
+
         return $this;
     }
+
     /**
      * Gets bizSystem
-     *
      * @return string
      */
     public function getBizSystem()
@@ -83,18 +85,18 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Sets bizSystem
-     *
-     * @param string $bizSystem
+     * @param  string  $bizSystem
      * @return FacepayProxyVerifyUserInfoRequest
      */
     public function setBizSystem($bizSystem)
     {
         $this->bizSystem = $bizSystem;
+
         return $this;
     }
+
     /**
      * Gets mtToken
-     *
      * @return string
      */
     public function getMtToken()
@@ -104,18 +106,18 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Sets mtToken
-     *
-     * @param string $mtToken
+     * @param  string  $mtToken
      * @return FacepayProxyVerifyUserInfoRequest
      */
     public function setMtToken($mtToken)
     {
         $this->mtToken = $mtToken;
+
         return $this;
     }
+
     /**
      * Gets memberNo
-     *
      * @return string
      */
     public function getMemberNo()
@@ -125,13 +127,13 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
 
     /**
      * Sets memberNo
-     *
-     * @param string $memberNo
+     * @param  string  $memberNo
      * @return FacepayProxyVerifyUserInfoRequest
      */
     public function setMemberNo($memberNo)
     {
         $this->memberNo = $memberNo;
+
         return $this;
     }
 
@@ -139,6 +141,5 @@ class FacepayProxyVerifyUserInfoRequest extends BaseRequest
     {
         return 'facepayProxyVerifyUserInfo';
     }
-
 
 }

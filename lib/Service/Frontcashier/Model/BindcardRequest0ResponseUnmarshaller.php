@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Frontcashier\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class BindcardRequest0ResponseUnMarshaller extends BaseResponseUnMarshaller
     {
         return new BindcardRequest0Response();
     }
+
 }
 
 BindcardRequest0ResponseUnMarshaller::__init();

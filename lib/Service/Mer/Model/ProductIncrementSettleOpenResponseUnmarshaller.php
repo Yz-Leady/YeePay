@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Mer\Model;
-
 
 use Yeepay\Yop\Sdk\Model\Transform\BaseResponseUnMarshaller;
 
@@ -34,6 +32,7 @@ class ProductIncrementSettleOpenResponseUnMarshaller extends BaseResponseUnMarsh
     {
         return new ProductIncrementSettleOpenResponse();
     }
+
 }
 
 ProductIncrementSettleOpenResponseUnMarshaller::__init();

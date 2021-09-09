@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Yeepay\Yop\Sdk\Service\Std\Model;
-
 
 use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
@@ -13,6 +11,7 @@ use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class BillFundbillApplyRequestMarshaller implements RequestMarshaller
 {
+
     /**
      * @var BillFundbillApplyRequestMarshaller
      */
@@ -51,9 +50,8 @@ class BillFundbillApplyRequestMarshaller implements RequestMarshaller
      */
     private $contentType = 'application/x-www-form-urlencoded';
 
-
     /**
-     * @param BillFundbillApplyRequest $request
+     * @param  BillFundbillApplyRequest  $request
      * @return Request
      */
     public function marshal($request)
@@ -69,24 +67,31 @@ class BillFundbillApplyRequestMarshaller implements RequestMarshaller
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
-        if($request->getStartDate() != null){
-            $internalRequest->addParameter('startDate', ObjectSerializer::sanitizeForSerialization($request->getStartDate(), 'string'));
+        if ($request->getStartDate() != null) {
+            $internalRequest->addParameter('startDate',
+                ObjectSerializer::sanitizeForSerialization($request->getStartDate(), 'string'));
         }
-        if($request->getEndDate() != null){
-            $internalRequest->addParameter('endDate', ObjectSerializer::sanitizeForSerialization($request->getEndDate(), 'string'));
+        if ($request->getEndDate() != null) {
+            $internalRequest->addParameter('endDate',
+                ObjectSerializer::sanitizeForSerialization($request->getEndDate(), 'string'));
         }
-        if($request->getMerchantNo() != null){
-            $internalRequest->addParameter('merchantNo', ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
-        if($request->getAccountType() != null){
-            $internalRequest->addParameter('accountType', ObjectSerializer::sanitizeForSerialization($request->getAccountType(), 'string'));
+        if ($request->getAccountType() != null) {
+            $internalRequest->addParameter('accountType',
+                ObjectSerializer::sanitizeForSerialization($request->getAccountType(), 'string'));
         }
-        if($request->getNotifyUrl() != null){
-            $internalRequest->addParameter('notifyUrl', ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
+        if ($request->getNotifyUrl() != null) {
+            $internalRequest->addParameter('notifyUrl',
+                ObjectSerializer::sanitizeForSerialization($request->getNotifyUrl(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 
         return $internalRequest;
     }
+
 }
+
 BillFundbillApplyRequestMarshaller::__init();
