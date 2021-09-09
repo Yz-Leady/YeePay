@@ -124,7 +124,7 @@ class YopHttpClient
         $requestHasPayload  = !empty($request->getContent());
         $putParamsInUri     = !$requestIsPostOrPut || $requestHasPayload;
         if ($putParamsInUri) {
-            $encodedParameters = \GuzzleHttp\Psr7\build_query(HttpUtils::encodedParameters($request->getParameters()));
+            $encodedParameters = \GuzzleHttp\Psr7\Query::build(HttpUtils::encodedParameters($request->getParameters()));
             if (!empty($encodedParameters)) {
                 $uri = $uri.'?'.$encodedParameters;
             }
@@ -134,7 +134,7 @@ class YopHttpClient
             $requestOptions[RequestOptions::BODY] = $request->getContent();
         } else {
             if ($requestIsPostOrPut) {
-                $requestOptions[RequestOptions::BODY] = \GuzzleHttp\Psr7\build_query(HttpUtils::encodedParameters($request->getParameters()));
+                $requestOptions[RequestOptions::BODY] = \GuzzleHttp\Psr7\Query::build(HttpUtils::encodedParameters($request->getParameters()));
             }
         }
 

@@ -2,7 +2,6 @@
 
 namespace Leady\YeePay\Commands;
 
-use Exception;
 use Yeepay\Yop\Sdk\Config\AppSdkConfig;
 use Yeepay\Yop\Sdk\Service\Account\AccountClientBuilder;
 use Yeepay\Yop\Sdk\Service\Account\Model\AccountinfosQueryRequest;
@@ -24,12 +23,9 @@ class Account extends InitConfig
     {
         $request = new AccountinfosQueryRequest();
         $request->setMerchantNo("merchantNo_example");
-        try {
-            $response = $this->client->accountinfosQuery($request);
-            print_r($response->getResult());
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
+        $response = $this->client->accountinfosQuery($request);
+        print_r($response->getResult());
+
     }
 
 }
