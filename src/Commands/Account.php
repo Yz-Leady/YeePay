@@ -2,10 +2,10 @@
 
 namespace Leady\YeePay\Commands;
 
+use Exception;
 use Yeepay\Yop\Sdk\Config\AppSdkConfig;
 use Yeepay\Yop\Sdk\Service\Account\AccountClientBuilder;
 use Yeepay\Yop\Sdk\Service\Account\Model\AccountinfosQueryRequest;
-use Exception;
 
 class Account extends InitConfig
 {
@@ -14,8 +14,9 @@ class Account extends InitConfig
 
     public function __construct()
     {
-        $appSdkConfig = new AppSdkConfig($this->getParams());
+        parent::__construct();
 
+        $appSdkConfig = new AppSdkConfig($this->getParams());
         $this->client = AccountClientBuilder::builder($appSdkConfig)->build();
     }
 
