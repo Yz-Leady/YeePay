@@ -38,7 +38,6 @@ class Mer extends InitConfig
         } catch (Exception $e) {
             return $this->error($e->getMessage());
         }
-
     }
 
 }

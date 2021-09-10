@@ -5,9 +5,18 @@ namespace Leady\YeePay;
 use Exception;
 use Illuminate\Support\Str;
 
+/**
+ * Class YeePay
+ * @package Leady\YeePay
+ */
 class YeePay
 {
 
+    /**
+     * @param  string  $className
+     * @return \Illuminate\Contracts\Foundation\Application|mixed
+     * @throws \Exception
+     */
     public function command(string $className)
     {
         $className = Str::studly($className);
@@ -26,11 +35,10 @@ class YeePay
             $functionName = Str::after($name, '_');
             $class        = $this->command($className);
             if (count($arguments) == 2) {
-                return $class->$functionName($arguments[0],
-                    $arguments[1]);
-            }elseif(count($arguments) == 1){
+                return $class->$functionName($arguments[0], $arguments[1]);
+            } elseif (count($arguments) == 1) {
                 return $class->$functionName($arguments[0]);
-            }else{
+            } else {
                 return $class->$functionName();
             }
         } else {

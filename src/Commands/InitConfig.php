@@ -47,6 +47,11 @@ class InitConfig
         return new AppSdkConfig($this->params);
     }
 
+    public function result()
+    {
+
+    }
+
     public function success($data)
     {
         return $this->message($data, 'SUCCESS', '成功', 200);
