@@ -4,7 +4,7 @@ return [
     'yosServerRoot' => 'https://openapi.yeepay.com/yop-center',
     'appKey'        => '',
     'secretKey'     => '',
-    'encryptKey'    => '=',
+    'encryptKey'    => '',
     'storeType'     => 'string',
     'certType'      => 'RSA2048',
     'yopPublicKey'  => '',

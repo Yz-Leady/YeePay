@@ -14,9 +14,7 @@ class Account extends InitConfig
     public function __construct()
     {
         parent::__construct();
-
-        $appSdkConfig = new AppSdkConfig($this->getParams());
-        $this->client = AccountClientBuilder::builder($appSdkConfig)->build();
+        $this->client = AccountClientBuilder::builder($this->getSdkConfig())->build();
     }
 
     public function accountinfosQuery()
@@ -24,7 +22,8 @@ class Account extends InitConfig
         $request = new AccountinfosQueryRequest();
         $request->setMerchantNo("merchantNo_example");
         $response = $this->client->accountinfosQuery($request);
-        print_r($response->getResult());
+
+        return $response->getResult();
 
     }
 

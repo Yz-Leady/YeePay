@@ -2,6 +2,8 @@
 
 namespace Leady\YeePay\Commands;
 
+use Yeepay\Yop\Sdk\Config\AppSdkConfig;
+
 class InitConfig
 {
 
@@ -38,6 +40,40 @@ class InitConfig
     public function getParams()
     {
         return $this->params;
+    }
+
+    public function getSdkConfig()
+    {
+        return new AppSdkConfig($this->params);
+    }
+
+    public function success($data)
+    {
+        return $this->message($data, 'SUCCESS', '成功', 200);
+    }
+
+    public function error($message, $code = 400)
+    {
+        return $this->message([], 'ERROR', $message, $code);
+    }
+
+    public function message($data, $state, $message, $code)
+    {
+        return [
+            'code'    => $code,
+            'state'   => $state,
+            'message' => $message,
+            'data'    => $data,
+        ];
+    }
+
+    public function getJson($value)
+    {
+        if (is_array($value)) {
+            return json_encode($value);
+        } else {
+            return $value;
+        }
     }
 
     public function __set($name, $value)
