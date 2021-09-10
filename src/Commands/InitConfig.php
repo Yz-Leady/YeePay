@@ -9,8 +9,13 @@ class InitConfig
 
     public function __construct()
     {
-        $this->app_key         = config('yeepay.appKey');
-        $this->aes_secret_key  = config('yeepay.secretKey');
+        $this->app_key = config('yeepay.appKey');
+        if (config('yeepay.secretKey', '')) {
+            $this->aes_secret_key = config('yeepay.secretKey');
+        }
+        if (config('yeepay.secretKey', '')) {
+            $this->encrypt_key = config('yeepay.encryptKey');
+        }
         $this->server_root     = config('yeepay.serverRoot');
         $this->yos_server_root = config('yeepay.yosServerRoot');
         $this->yop_public_key  = [
@@ -27,7 +32,6 @@ class InitConfig
                 'value'      => config('yeepay.isvPrivateKey'),
             ],
         ];
-        $this->encrypt_key     = config('yeepay.encryptKey');
         $this->http_client     = config('yeepay.httpClient');
     }
 
