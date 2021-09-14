@@ -26,11 +26,11 @@ class MultiPartFile
     {
         if (is_string($file)) {
             $this->fileName = ObjectSerializer::sanitizeFilename($file);
-            $this->content  = \GuzzleHttp\Psr7\stream_for($file);
+            $this->content  = \GuzzleHttp\Psr7\Utils::streamFor($file);
         } else {
             $meta_data      = stream_get_meta_data($file);
             $this->fileName = ObjectSerializer::sanitizeFilename($meta_data['uri']);
-            $this->content  = \GuzzleHttp\Psr7\stream_for($file);
+            $this->content  = \GuzzleHttp\Psr7\Utils::streamFor($file);
         }
     }
 

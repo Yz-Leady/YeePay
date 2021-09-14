@@ -102,7 +102,7 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
         $statusCode = $yopHttpResponse->getStatusCode();
         if ($statusCode / 100 == HttpStatus::SC_OK / 100) {
             if ($statusCode != HttpStatus::SC_NO_CONTENT) {
-                $data = \GuzzleHttp\json_decode($content);
+                $data = json_decode($content);
                 $response->setResult(ObjectSerializer::deserialize($data->{'result'}, $response->getResultClass()));
             }
         } elseif ($statusCode >= HttpStatus::SC_INTERNAL_SERVER_ERROR && $statusCode != HttpStatus::SC_BAD_GATEWAY) {
@@ -126,7 +126,7 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
         $yopServiceException = null;
         if (!empty($content)) {
             try {
-                $data = \GuzzleHttp\json_decode($content, true);
+                $data = json_decode($content, true);
                 $yopServiceException = new YopServiceException($data['message'], $data['code']);
                 $yopServiceException->setRequestId($data['requestId']);
                 $yopServiceException->setSubErrorCode($data['subCode']);

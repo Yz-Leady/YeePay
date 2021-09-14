@@ -6,6 +6,7 @@ use Exception;
 use Yeepay\Yop\Sdk\Service\Mer\MerClientBuilder;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMerchantRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMicroRequest;
+use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterQueryRequest;
 
 class Mer extends InitConfig
 {
@@ -34,8 +35,12 @@ class Mer extends InitConfig
                     ->setBusinessAddressInfo($addressInfo)
                     ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMerchant($request);
-
-            return $response->getResult();
+            $result   = $response->getResult();
+            if ($result['returnCode'] == 'NIG00000') {
+                return $this->success($result);
+            } else {
+                return $this->error($result['returnMsg']);
+            }
         } catch (Exception $e) {
             return $this->error($e->getMessage());
         }
@@ -50,18 +55,41 @@ class Mer extends InitConfig
             $addressInfo     = $this->getJson($data['addressInfo'] ?? '');
             $accountInfo     = $this->getJson($data['accountInfo'] ?? '');
             $request         = new RegisterContributeMicroRequest();
-            $request->setBusinessRole($role)
+            $request->setRequestNo($data['requestNo'] ?? '')
+                    ->setBusinessRole($role)
                     ->setMerchantSubjectInfo($subjectInfo)
                     ->setMerchantCorporationInfo($corporationInfo)
                     ->setBusinessAddressInfo($addressInfo)
                     ->setAccountInfo($accountInfo)
                     ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMicro($request);
-
-            return $response->getResult();
+            $result   = $response->getResult();
+            if ($result['returnCode'] == 'NIG00000') {
+                return $this->success($result);
+            } else {
+                return $this->error($result['returnMsg']);
+            }
         } catch (Exception $e) {
             return $this->error($e->getMessage());
         }
+    }
+
+    public function RegisterQuery(string $requestNo)
+    {
+        try {
+            $request = new RegisterQueryRequest();
+            $request->setRequestNo($requestNo);
+            $response = $this->client->registerQuery($request);
+            $result   = $response->getResult();
+            if ($result['returnCode'] == 'NIG00000') {
+                return $this->success($result);
+            } else {
+                return $this->error($result['returnMsg']);
+            }
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
+
     }
 
 }

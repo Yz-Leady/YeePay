@@ -75,7 +75,7 @@ class InitConfig
     public function getJson($value)
     {
         if (is_array($value)) {
-            return json_encode($value);
+            return json_encode($value, JSON_UNESCAPED_UNICODE);
         } else {
             return $value;
         }

@@ -6,6 +6,7 @@ use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
+use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class AccountinfosQueryRequestMarshaller implements RequestMarshaller
@@ -67,7 +68,7 @@ class AccountinfosQueryRequestMarshaller implements RequestMarshaller
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
-
+        $internalRequest->addParameter('merchantNo',ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         return $internalRequest;
     }
 
