@@ -46,7 +46,7 @@ class Mer extends InitConfig
         }
     }
 
-    public function RegIsterContributeMicro(array $data)
+    public function RegisterContributeMicro(array $data)
     {
         try {
             $role            = $data['role'] ?? 'SHARE_MERCHANT';
