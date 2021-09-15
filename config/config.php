@@ -5,6 +5,7 @@ return [
     'appKey'        => '',
     'secretKey'     => '',
     'encryptKey'    => '',
+    'merchantNo'    => '',
     'storeType'     => 'string',
     'certType'      => 'RSA2048',
     'yopPublicKey'  => '',
