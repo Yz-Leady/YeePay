@@ -19,7 +19,7 @@ class Aggpay extends InitConfig
 
     public function PrePay(array $data)
     {
-//        try {
+        try {
             $request = new PrePayRequest();
             $request->setParentMerchantNo(config('yeepay.merchantNo'))
                     ->setMerchantNo(config('yeepay.merchantNo'))
@@ -42,9 +42,9 @@ class Aggpay extends InitConfig
             } else {
                 return $this->error($result['returnMsg']);
             }
-//        } catch (Exception $e) {
-//            return $this->error($e->getMessage());
-//        }
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
 
     }
 

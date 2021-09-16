@@ -28,6 +28,6 @@ class Cashier extends InitConfig
         $response = $this->client->payLinkOrder($request);
         $result   = $response->getResult();
         return $result;
-
     }
+
 }
