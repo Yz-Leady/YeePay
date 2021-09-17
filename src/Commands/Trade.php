@@ -31,7 +31,7 @@ class Trade extends InitConfig
             $respnonse = $this->client->order($request);
 
             $result = $respnonse->getResult();
-
+            
             if ($result['code'] == 'OPR00000') {
                 return $this->success($result);
             } else {

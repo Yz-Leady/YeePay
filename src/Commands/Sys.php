@@ -4,6 +4,7 @@ namespace Leady\YeePay\Commands;
 
 use Exception;
 use Yeepay\Yop\Sdk\Service\Sys\Model\MerchantQualUploadRequest;
+use Yeepay\Yop\Sdk\Service\Sys\Model\TradeOrderRequest;
 use Yeepay\Yop\Sdk\Service\Sys\SysClientBuilder;
 
 class Sys extends InitConfig
@@ -32,7 +33,22 @@ class Sys extends InitConfig
         } catch (Exception $e) {
             return $this->error($e->getMessage());
         }
+    }
 
+    public function TradeOrder(array $data)
+    {
+        $goodsParam   = $this->getJson($data['goodsParam'] ?? '');
+
+        $request=new TradeOrderRequest();
+        $request->setParentMerchantNo(config('yeepay.merchantNo'))
+            ->setMerchantNo(config('yeepay.merchantNo'))
+            ->setOrderId($data['no']??'')
+            ->setOrderAmount($data['amount']??'')
+            ->setNotifyUrl($data['notifyUrl'])
+            ->setGoodsParamExt($goodsParam);
+        $response = $this->client->tradeOrder($request);
+        $result   = $response->getResult();
+        dd($result);
     }
 
 }
