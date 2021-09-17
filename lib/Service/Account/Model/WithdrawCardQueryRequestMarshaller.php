@@ -6,6 +6,7 @@ use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
+use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class WithdrawCardQueryRequestMarshaller implements RequestMarshaller
@@ -65,6 +66,10 @@ class WithdrawCardQueryRequestMarshaller implements RequestMarshaller
         }
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
+        }
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 

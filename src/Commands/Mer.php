@@ -4,6 +4,7 @@ namespace Leady\YeePay\Commands;
 
 use Exception;
 use Yeepay\Yop\Sdk\Service\Mer\MerClientBuilder;
+use Yeepay\Yop\Sdk\Service\Mer\Model\NotifyRepeatRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMerchantRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMicroRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterQueryRequest;
