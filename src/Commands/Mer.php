@@ -4,7 +4,7 @@ namespace Leady\YeePay\Commands;
 
 use Exception;
 use Yeepay\Yop\Sdk\Service\Mer\MerClientBuilder;
-use Yeepay\Yop\Sdk\Service\Mer\Model\NotifyRepeatRequest;
+use Yeepay\Yop\Sdk\Service\Mer\Model\ProductFeeQueryRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMerchantRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMicroRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterQueryRequest;
@@ -28,6 +28,7 @@ class Mer extends InitConfig
             $contactInfo     = $this->getJson($data['contactInfo'] ?? '');
             $corporationInfo = $this->getJson($data['corporationInfo'] ?? '');
             $addressInfo     = $this->getJson($data['addressInfo'] ?? '');
+            $productInfo     = $this->getJson($data['productInfo'] ?? '');
             $request         = new RegisterContributeMerchantRequest();
             $request->setBusinessRole($role)
                     ->setMerchantSubjectInfo($subjectInfo)
@@ -91,6 +92,22 @@ class Mer extends InitConfig
             return $this->error($e->getMessage());
         }
 
+    }
+
+    public function FeeQuery(string $merchantNo)
+    {
+        $request=new ProductFeeQueryRequest();
+        $request->setParentMerchantNo(config('yeepay.merchantNo'))
+            ->setMerchantNo($merchantNo);
+        $response = $this->client->productFeeQuery($request);
+        $result   = $response->getResult();
+
+        dd(json_decode($result['productInfo']));
+        if ($result['returnCode'] == 'NIG00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
+        }
     }
 
 }

@@ -6,6 +6,7 @@ use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
+use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class TransferB2bQueryRequestMarshaller implements RequestMarshaller
@@ -65,6 +66,18 @@ class TransferB2bQueryRequestMarshaller implements RequestMarshaller
         }
         if (!isset($internalRequest->getHeaders()[Headers::YOP_REQUEST_ID])) {
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
+        }
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        }
+        if ($request->getRequestNo() != null) {
+            $internalRequest->addParameter('requestNo',
+                ObjectSerializer::sanitizeForSerialization($request->getRequestNo(), 'string'));
+        }
+        if ($request->getOrderNo() != null) {
+            $internalRequest->addParameter('orderNo',
+                ObjectSerializer::sanitizeForSerialization($request->getOrderNo(), 'string'));
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
 

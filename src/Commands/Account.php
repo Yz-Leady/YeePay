@@ -6,6 +6,8 @@ use Exception;
 use Yeepay\Yop\Sdk\Service\Account\AccountClientBuilder;
 use Yeepay\Yop\Sdk\Service\Account\Model\AccountinfosQueryRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\PayOrderRequest;
+use Yeepay\Yop\Sdk\Service\Account\Model\TransferB2bOrderRequest;
+use Yeepay\Yop\Sdk\Service\Account\Model\TransferB2bQueryRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\WithdrawCardBindRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\WithdrawCardModifyRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\WithdrawCardQueryRequest;
@@ -20,6 +22,45 @@ class Account extends InitConfig
     {
         parent::__construct();
         $this->client = AccountClientBuilder::builder($this->getSdkConfig())->build();
+    }
+
+    public function transferQuery(string $requestNo)
+    {
+        $request = new TransferB2bQueryRequest();
+        $request->setParentMerchantNo(config('yeepay.merchantNo'))
+                ->setRequestNo($requestNo);
+        $response = $this->client->transferB2bQuery($request);
+        $result   = $response->getResult();
+        info($result);
+        if ($result['returnCode'] == 'UA00000') {
+            return $this->success($result);
+        } else {
+            if($result['returnCode']=='UA30012'){
+                return $this->error('平台余额不足');
+            }
+            return $this->error($result['returnMsg']);
+        }
+    }
+
+    public function transfer(array $data)
+    {
+        $request = new TransferB2bOrderRequest();
+        $request->setParentMerchantNo(config('yeepay.merchantNo'))
+                ->setRequestNo($data['requestNo'])
+                ->setFromMerchantNo(config('yeepay.merchantNo'))
+                ->setToMerchantNo($data['merchantNo'])
+                ->setOrderAmount($data['amount'])
+                ->setFeeChargeSide($data['chargeSide'])
+                ->setUsage($data['usage'])
+                ->setNotifyUrl($data['notifyUrl']);
+        $response = $this->client->transferB2bOrder($request);
+        $result   = $response->getResult();
+        info($result);
+        if ($result['returnCode'] == 'UA00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
+        }
     }
 
     public function accountinfosQuery(string $merchantNo)
@@ -110,7 +151,7 @@ class Account extends InitConfig
                 ->setMerchantNo($data['merchantNo'])
                 ->setRequestNo($data['requestNo'])
                 ->setBankCardId($data['bankCardId'])
-                ->setReceiveType('REAL_TIME')
+                ->setReceiveType('TWO_HOUR')
                 ->setOrderAmount($data['amount'])
                 ->setNotifyUrl($data['notifyUrl']);
         $response = $this->client->withdrawOrder($request);
