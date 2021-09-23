@@ -171,6 +171,23 @@ class FrontcashierClient
     }
 
     /**
+     * @param  Model\BindcardResendsmsRequest  $request
+     * @return Model\BindcardResendsmsResponse
+     * @throws YopClientException
+     */
+    public function bindcardResendsms(Model\BindcardResendsmsRequest $request)
+    {
+        if ($request == null) {
+            throw new YopClientException("request is required.");
+        }
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\BindcardResendsmsRequestMarshaller::getInstance(),
+            Model\BindcardResendsmsResponseUnMarshaller::getInstance());
+
+        return $this->clientHandler->execute($clientExecutionParams);
+    }
+
+    /**
      * @param  Model\BindpayConfirmRequest  $request
      * @return Model\BindpayConfirmResponse
      * @throws YopClientException

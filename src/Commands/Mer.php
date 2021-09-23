@@ -66,6 +66,9 @@ class Mer extends InitConfig
                     ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMicro($request);
             $result   = $response->getResult();
+            \Log::channel('yeepay')->info('Mic');
+            \Log::channel('yeepay')->info($result);
+
             if ($result['returnCode'] == 'NIG00000') {
                 return $this->success($result);
             } else {
