@@ -127,6 +127,7 @@ abstract class BaseResponseUnMarshaller implements ResponseUnMarshaller
         if (!empty($content)) {
             try {
                 $data = json_decode($content, true);
+                dd($data);
                 $yopServiceException = new YopServiceException($data['message'], $data['code']);
                 $yopServiceException->setRequestId($data['requestId']);
                 $yopServiceException->setSubErrorCode($data['subCode']);

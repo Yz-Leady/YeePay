@@ -31,6 +31,9 @@ class StdClientBuilder
             AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
         self::$authorizationReqRegistry->register('billTradedaydownload',
             AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+        self::$authorizationReqRegistry->register('tradeOrder',
+            AuthorizationReqSupport::getAuthorizationReq('YOP-RSA2048-SHA256'));
+
     }
 
     /**

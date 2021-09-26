@@ -63,7 +63,11 @@ class Aggpay extends InitConfig
                 ->setAppIdList($appId);
         $response = $this->client->wechatConfigAdd_0($request);
         $result   = $response->getResult();
-        dd($result);
+        if ($result['code'] == '00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
+        }
     }
 
     public function WechatConfigQuery()
@@ -73,7 +77,11 @@ class Aggpay extends InitConfig
                 ->setMerchantNo(config('yeepay.merchantNo'));
         $response = $this->client->wechatConfigQuery_0($request);
         $result   = $response->getResult();
-        dd($result);
+        if ($result['code'] == '00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
+        }
     }
 
 }

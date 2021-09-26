@@ -35,20 +35,6 @@ class Sys extends InitConfig
         }
     }
 
-    public function TradeOrder(array $data)
-    {
-        $goodsParam   = $this->getJson($data['goodsParam'] ?? '');
 
-        $request=new TradeOrderRequest();
-        $request->setParentMerchantNo(config('yeepay.merchantNo'))
-            ->setMerchantNo(config('yeepay.merchantNo'))
-            ->setOrderId($data['no']??'')
-            ->setOrderAmount($data['amount']??'')
-            ->setNotifyUrl($data['notifyUrl'])
-            ->setGoodsParamExt($goodsParam);
-        $response = $this->client->tradeOrder($request);
-        $result   = $response->getResult();
-        dd($result);
-    }
 
 }

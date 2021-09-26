@@ -101,4 +101,21 @@ class StdClient
         return $this->clientHandler->execute($clientExecutionParams);
     }
 
+    /**
+     * @param  Model\TradeOrderRequest  $request
+     * @return Model\TradeOrderResponse
+     * @throws YopClientException
+     */
+    public function tradeOrder(Model\TradeOrderRequest $request)
+    {
+        if ($request == null) {
+            throw new YopClientException("request is required.");
+        }
+        $clientExecutionParams = new ClientExecutionParams($request,
+            Model\TradeOrderRequestMarshaller::getInstance(),
+            Model\TradeOrderRequestUnMarshaller::getInstance());
+
+        return $this->clientHandler->execute($clientExecutionParams);
+    }
+
 }
