@@ -31,6 +31,7 @@ class Mer extends InitConfig
             $productInfo     = $this->getJson($data['productInfo'] ?? '');
             $request         = new RegisterContributeMerchantRequest();
             $request->setBusinessRole($role)
+                    ->setRequestNo($data['requestNo'])
                     ->setMerchantSubjectInfo($subjectInfo)
                     ->setMerchantContactInfo($contactInfo)
                     ->setMerchantCorporationInfo($corporationInfo)
@@ -99,9 +100,9 @@ class Mer extends InitConfig
 
     public function FeeQuery(string $merchantNo)
     {
-        $request=new ProductFeeQueryRequest();
+        $request = new ProductFeeQueryRequest();
         $request->setParentMerchantNo(config('yeepay.merchantNo'))
-            ->setMerchantNo($merchantNo);
+                ->setMerchantNo($merchantNo);
         $response = $this->client->productFeeQuery($request);
         $result   = $response->getResult();
 
