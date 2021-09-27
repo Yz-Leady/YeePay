@@ -28,6 +28,7 @@ class Mer extends InitConfig
             $contactInfo     = $this->getJson($data['contactInfo'] ?? '');
             $corporationInfo = $this->getJson($data['corporationInfo'] ?? '');
             $addressInfo     = $this->getJson($data['addressInfo'] ?? '');
+            $accountInfo     = $this->getJson($data['accountInfo'] ?? '');
             $productInfo     = $this->getJson($data['productInfo'] ?? '');
             $request         = new RegisterContributeMerchantRequest();
             $request->setBusinessRole($role)
@@ -36,6 +37,7 @@ class Mer extends InitConfig
                     ->setMerchantContactInfo($contactInfo)
                     ->setMerchantCorporationInfo($corporationInfo)
                     ->setBusinessAddressInfo($addressInfo)
+                    ->setSettlementAccountInfo($accountInfo)
                     ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMerchant($request);
             $result   = $response->getResult();
