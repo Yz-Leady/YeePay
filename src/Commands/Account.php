@@ -16,6 +16,21 @@ use Yeepay\Yop\Sdk\Service\Account\Model\WithdrawOrderRequest;
 class Account extends InitConfig
 {
 
+    const MESSAGE = [
+        'UA00008' => '产品校验异常，请核对或稍后再试',
+        'UA00010' => '账户不存在或已注销',
+        'UA00011' => '商户账户状态异常',
+        'UA30001' => '系统异常',
+        'UA30006' => '商户不存在或状态异常',
+        'UA30009' => '商户关系异常',
+        'UA30012' => '账户余额不足，核对后再试',
+        'UA30013' => '订单已存在，请勿重复发起',
+        'UA30014' => '商户未开通产品，不能发起该交易',
+        'UA40001' => '金额格式不正确',
+        'UA5007'  => '单笔转账额度超限',
+        'UA5008'  => '字段长度超长',
+    ];
+
     protected $client;
 
     public function __construct()
@@ -35,10 +50,7 @@ class Account extends InitConfig
         if ($result['returnCode'] == 'UA00000') {
             return $this->success($result);
         } else {
-            if($result['returnCode']=='UA30012'){
-                return $this->error('平台余额不足');
-            }
-            return $this->error($result['returnMsg']);
+            return $this->error(self::MESSAGE[$result['returnCode']]);
         }
     }
 
