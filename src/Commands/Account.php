@@ -46,7 +46,6 @@ class Account extends InitConfig
                 ->setRequestNo($requestNo);
         $response = $this->client->transferB2bQuery($request);
         $result   = $response->getResult();
-        info($result);
         if ($result['returnCode'] == 'UA00000') {
             return $this->success($result);
         } else {
