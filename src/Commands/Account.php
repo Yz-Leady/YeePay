@@ -66,11 +66,10 @@ class Account extends InitConfig
                 ->setNotifyUrl($data['notifyUrl']);
         $response = $this->client->transferB2bOrder($request);
         $result   = $response->getResult();
-        info($result);
         if ($result['returnCode'] == 'UA00000') {
             return $this->success($result);
         } else {
-            return $this->error($result['returnMsg']);
+            return $this->error(self::MESSAGE[$result['returnCode']]);
         }
     }
 
