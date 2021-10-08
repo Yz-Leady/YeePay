@@ -4,6 +4,7 @@ namespace Leady\YeePay\Commands;
 
 use Exception;
 use Yeepay\Yop\Sdk\Service\Mer\MerClientBuilder;
+use Yeepay\Yop\Sdk\Service\Mer\Model\NotifyRepeatRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\ProductFeeQueryRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMerchantRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMicroRequest;
@@ -76,6 +77,21 @@ class Mer extends InitConfig
             }
         } catch (Exception $e) {
             return $this->error($e->getMessage());
+        }
+    }
+
+    public function NotifyRepeat(array $data)
+    {
+        $request = new NotifyRepeatRequest();
+        $request->setRequestNo($data['requestNo'] ?? '')
+                ->setApplicationNo($data['applicationNo'] ?? '')
+                ->setType($data['type'] ?? '');
+        $response = $this->client->notifyRepeat($request);
+        $result   = $response->getResult();
+        if ($result['returnCode'] == 'NIG00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
         }
     }
 
