@@ -73,13 +73,15 @@ class Divide extends InitConfig
     public function back(array $data)
     {
         try {
-            $request = new BackRequest();
+            $divideBackDetail = $this->getJson($data['divideBackDetail'] ?? '');
+            $request          = new BackRequest();
             $request->setParentMerchantNo(config('yeepay.merchantNo'))
                 ->setMerchantNo(config('yeepay.merchantNo'))
                 ->setOrderId($data['trade_no'])
                 ->setUniqueOrderNo($data['uniqueOrderNo'])
                 ->setDivideRequestId($data['divideRequestId'])
-                ->setDivideBackRequestId($data['divideBackRequestId']);
+                ->setDivideBackRequestId($data['divideBackRequestId'])
+                ->setDivideBackDetail($divideBackDetail);
             $response = $this->client->back($request);
             $result   = $response->getResult();
             if ($result['code'] == 'OPR00000') {
