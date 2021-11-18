@@ -5,6 +5,7 @@ namespace Leady\YeePay\Commands;
 use Yeepay\Yop\Sdk\Service\Divide\DivideClientBuilder;
 use Exception;
 use Yeepay\Yop\Sdk\Service\Divide\Model\ApplyRequest;
+use Yeepay\Yop\Sdk\Service\Divide\Model\BackRequest;
 use Yeepay\Yop\Sdk\Service\Divide\Model\CompleteRequest;
 
 class Divide extends InitConfig
@@ -58,6 +59,28 @@ class Divide extends InitConfig
                 ->setUniqueOrderNo($data['uniqueOrderNo'])
                 ->setDivideRequestId($data['divideRequestId']);
             $response = $this->client->complete($request);
+            $result   = $response->getResult();
+            if ($result['code'] == 'OPR00000') {
+                return $this->success($result);
+            } else {
+                return $this->error($result['message']);
+            }
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
+    }
+
+    public function back(array $data)
+    {
+        try {
+            $request = new BackRequest();
+            $request->setParentMerchantNo(config('yeepay.merchantNo'))
+                ->setMerchantNo(config('yeepay.merchantNo'))
+                ->setOrderId($data['trade_no'])
+                ->setUniqueOrderNo($data['uniqueOrderNo'])
+                ->setDivideRequestId($data['divideRequestId'])
+                ->setDivideBackRequestId($data['divideBackRequestId']);
+            $response = $this->client->back($request);
             $result   = $response->getResult();
             if ($result['code'] == 'OPR00000') {
                 return $this->success($result);
