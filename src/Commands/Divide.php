@@ -56,7 +56,7 @@ class Divide extends InitConfig
 				->setOrderId($data['trade_no'])
 				->setUniqueOrderNo($data['uniqueOrderNo'])
 				->setDivideRequestId($data['divideRequestId']);
-			$response = $this->client->apply($request);
+			$response = $this->client->complete($request);
 			$result = $response->getResult();
 			if ($result['code'] == 'OPR00000') {
 				return $this->success($result);
