@@ -5,6 +5,7 @@ namespace Leady\YeePay\Commands;
 use Exception;
 use Yeepay\Yop\Sdk\Service\Account\AccountClientBuilder;
 use Yeepay\Yop\Sdk\Service\Account\Model\AccountinfosQueryRequest;
+use Yeepay\Yop\Sdk\Service\Account\Model\AutoWithdrawRuleQueryRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\PayOrderRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\TransferB2bOrderRequest;
 use Yeepay\Yop\Sdk\Service\Account\Model\TransferB2bQueryRequest;
@@ -79,8 +80,8 @@ class Account extends InitConfig
             $request = new AccountinfosQueryRequest();
             $request->setMerchantNo($merchantNo);
             $response = $this->client->accountinfosQuery($request);
-
-            return $response->getResult();
+            $result   = $response->getResult();
+            return $this->success($result);
         } catch (Exception $e) {
             return $this->error($e->getMessage());
         }
@@ -170,6 +171,24 @@ class Account extends InitConfig
             return $this->success($result);
         } else {
             return $this->error($result['returnMsg']);
+        }
+    }
+
+    public function AutoWithdrawRule(string $merchantNo)
+    {
+        try{
+            $request=new AutoWithdrawRuleQueryRequest();
+            $request->setParentMerchantNo(config('yeepay.merchantNo'))
+                ->setMerchantNo($merchantNo);
+            $response=$this->client->autoWithdrawRuleQuery($request);
+            $result=$response->getResult();
+            if ($result['returnCode'] == 'UA00000') {
+                return $this->success($result);
+            } else {
+                return $this->error($result['returnMsg']);
+            }
+        }catch (Exception $e){
+            return $this->error($e->getMessage());
         }
     }
 
