@@ -24,7 +24,6 @@ class Settle extends InitConfig
             ->setSettleRequestEndTime($end_at);
         $response = $this->client->recordsQuery($request);
         $result   = $response->getResult();
-        dd($result);
         if ($result['code'] == '000000') {
             return $this->success($result);
         } else {
