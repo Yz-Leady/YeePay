@@ -6,6 +6,7 @@ use Yeepay\Yop\Sdk\Http\Headers;
 use Yeepay\Yop\Sdk\Internal\DefaultRequest;
 use Yeepay\Yop\Sdk\Internal\Request;
 use Yeepay\Yop\Sdk\Model\Transform\RequestMarshaller;
+use Yeepay\Yop\Sdk\Utils\ObjectSerializer;
 use Yeepay\Yop\Sdk\Utils\UUIDUtils;
 
 class RecordsQueryRequestMarshaller implements RequestMarshaller
@@ -67,7 +68,22 @@ class RecordsQueryRequestMarshaller implements RequestMarshaller
             $internalRequest->addHeader(Headers::YOP_REQUEST_ID, UUIDUtils::uuid());
         }
         $internalRequest->addHeader(Headers::CONTENT_TYPE, $this->contentType);
-
+        if ($request->getParentMerchantNo() != null) {
+            $internalRequest->addParameter('parentMerchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getParentMerchantNo(), 'string'));
+        }
+        if ($request->getMerchantNo() != null) {
+            $internalRequest->addParameter('merchantNo',
+                ObjectSerializer::sanitizeForSerialization($request->getMerchantNo(), 'string'));
+        }
+        if ($request->getSettleRequestBeginTime() != null) {
+            $internalRequest->addParameter('settleRequestBeginTime',
+                ObjectSerializer::sanitizeForSerialization($request->getSettleRequestBeginTime(), 'string'));
+        }
+        if ($request->getSettleRequestEndTime() != null) {
+            $internalRequest->addParameter('settleRequestEndTime',
+                ObjectSerializer::sanitizeForSerialization($request->getSettleRequestEndTime(), 'string'));
+        }
         return $internalRequest;
     }
 
