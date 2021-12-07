@@ -6,6 +6,7 @@ use Exception;
 use Yeepay\Yop\Sdk\Service\Mer\MerClientBuilder;
 use Yeepay\Yop\Sdk\Service\Mer\Model\MerchantDisposeUnfreezeRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\NotifyRepeatRequest;
+use Yeepay\Yop\Sdk\Service\Mer\Model\ProductFeeModifyRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\ProductFeeQueryRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMerchantRequest;
 use Yeepay\Yop\Sdk\Service\Mer\Model\RegisterContributeMicroRequest;
@@ -135,6 +136,24 @@ class Mer extends InitConfig
         ->setRequestNo($data['requestNo'])
         ->setNotifyUrl($data['notifyUrl']);
         $response = $this->client->merchantDisposeUnfreeze($request);
+        $result   = $response->getResult();
+        if ($result['returnCode'] == 'NIG00000') {
+            return $this->success($result);
+        } else {
+            return $this->error($result['returnMsg']);
+        }
+    }
+
+    public function FeeModify(array $data)
+    {
+
+        $productInfo = $this->getJson($data['productInfo'] ?? '');
+        $request     = new ProductFeeModifyRequest();
+        $request->setParentMerchantNo(config('yeepay.merchantNo'))
+                ->setMerchantNo($data['merchantNo'])
+                ->setNotifyUrl($data['notifyUrl'])
+                ->setProductInfo($productInfo);
+        $response = $this->client->productFeeModify($request);
         $result   = $response->getResult();
         if ($result['returnCode'] == 'NIG00000') {
             return $this->success($result);
