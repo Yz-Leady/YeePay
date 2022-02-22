@@ -34,13 +34,14 @@ class Mer extends InitConfig
             $productInfo     = $this->getJson($data['productInfo'] ?? '');
             $request         = new RegisterContributeMerchantRequest();
             $request->setBusinessRole($role)
-                    ->setRequestNo($data['requestNo'])
-                    ->setMerchantSubjectInfo($subjectInfo)
-                    ->setMerchantContactInfo($contactInfo)
-                    ->setMerchantCorporationInfo($corporationInfo)
-                    ->setBusinessAddressInfo($addressInfo)
-                    ->setSettlementAccountInfo($accountInfo)
-                    ->setNotifyUrl($data['notifyUrl'] ?? '');
+                ->setRequestNo($data['requestNo'])
+                ->setMerchantSubjectInfo($subjectInfo)
+                ->setMerchantContactInfo($contactInfo)
+                ->setMerchantCorporationInfo($corporationInfo)
+                ->setBusinessAddressInfo($addressInfo)
+                ->setSettlementAccountInfo($accountInfo)
+                ->setProductInfo($productInfo)
+                ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMerchant($request);
             $result   = $response->getResult();
             if ($result['returnCode'] == 'NIG00000') {
@@ -63,12 +64,12 @@ class Mer extends InitConfig
             $accountInfo     = $this->getJson($data['accountInfo'] ?? '');
             $request         = new RegisterContributeMicroRequest();
             $request->setRequestNo($data['requestNo'] ?? '')
-                    ->setBusinessRole($role)
-                    ->setMerchantSubjectInfo($subjectInfo)
-                    ->setMerchantCorporationInfo($corporationInfo)
-                    ->setBusinessAddressInfo($addressInfo)
-                    ->setAccountInfo($accountInfo)
-                    ->setNotifyUrl($data['notifyUrl'] ?? '');
+                ->setBusinessRole($role)
+                ->setMerchantSubjectInfo($subjectInfo)
+                ->setMerchantCorporationInfo($corporationInfo)
+                ->setBusinessAddressInfo($addressInfo)
+                ->setAccountInfo($accountInfo)
+                ->setNotifyUrl($data['notifyUrl'] ?? '');
             $response = $this->client->registerContributeMicro($request);
             $result   = $response->getResult();
             if ($result['returnCode'] == 'NIG00000') {
@@ -85,8 +86,8 @@ class Mer extends InitConfig
     {
         $request = new NotifyRepeatRequest();
         $request->setRequestNo($data['requestNo'] ?? '')
-                ->setApplicationNo($data['applicationNo'] ?? '')
-                ->setType($data['type'] ?? '');
+            ->setApplicationNo($data['applicationNo'] ?? '')
+            ->setType($data['type'] ?? '');
         $response = $this->client->notifyRepeat($request);
         $result   = $response->getResult();
         if ($result['returnCode'] == 'NIG00000') {
@@ -118,7 +119,7 @@ class Mer extends InitConfig
     {
         $request = new ProductFeeQueryRequest();
         $request->setParentMerchantNo(config('yeepay.merchantNo'))
-                ->setMerchantNo($merchantNo);
+            ->setMerchantNo($merchantNo);
         $response = $this->client->productFeeQuery($request);
         $result   = $response->getResult();
         if ($result['returnCode'] == 'NIG00000') {
@@ -130,10 +131,10 @@ class Mer extends InitConfig
 
     public function UnFreeze($data)
     {
-        $request=new MerchantDisposeUnfreezeRequest();
+        $request = new MerchantDisposeUnfreezeRequest();
         $request->setMerchantNo($data['merchantNo'])
-        ->setRequestNo($data['requestNo'])
-        ->setNotifyUrl($data['notifyUrl']);
+            ->setRequestNo($data['requestNo'])
+            ->setNotifyUrl($data['notifyUrl']);
         $response = $this->client->merchantDisposeUnfreeze($request);
         $result   = $response->getResult();
         if ($result['returnCode'] == 'NIG00000') {
